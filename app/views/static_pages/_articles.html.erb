@@ -1,0 +1,36 @@
+<%
+  def article(text, url)
+    %Q{<li><a href="#{url}" target="_blank">#{text}</a></li>}.html_safe
+  end
+%>
+
+<h3>Articles</h3>
+
+<ul>
+  <%= article(
+        'Sid Tepper Obituary in The Guardian (UK)',
+        'https://www.theguardian.com/music/2015/may/03/sid-tepper'
+      )
+  %>
+  <%= article(
+      'Roy Bennett Obituary in the New York Times',
+      'https://www.nytimes.com/2015/07/14/arts/music/roy-c-bennett-dies-at-96-writer-of-popular-songs.html'
+    )
+  %>
+
+<%= article(
+        'Sid Tepper Obituary in the New York Times',
+        'https://www.nytimes.com/2015/04/30/arts/sid-tepper-dies-at-96-delivered-red-roses-for-a-blue-lady-and-other-songs.html'
+    )
+%>
+<%= article(
+        'Sid Tepper Wikipedia Article',
+        'https://en.wikipedia.org/wiki/Sid_Tepper'
+    )
+%>
+<%= article(
+        'Roy C. Bennett Wikipedia Article',
+        'https://en.wikipedia.org/wiki/Roy_C._Bennett'
+    )
+%>
+</ul>
