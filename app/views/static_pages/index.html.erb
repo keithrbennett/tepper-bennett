@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
 
   <h1 class="title">Sid Tepper and Roy C. Bennett</h1>
@@ -9,35 +10,47 @@
 
   <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-selected="true">Home</a>
-      <a class="nav-item nav-link" id="nav-songs-tab" data-toggle="tab" href="#nav-songs" role="tab" aria-selected="false">Songs</a>
-      <a class="nav-item nav-link" id="nav-resources-tab" data-toggle="tab" href="#nav-resources" role="tab" aria-selected="false">Resources</a>
+      <a class="nav-item nav-link active" id="nav-home-tab"      data-toggle="tab" href="#nav-home"      role="tab" aria-selected="true">Home</a>
+      <a class="nav-item nav-link"        id="nav-songs-tab"     data-toggle="tab" href="#nav-songs"     role="tab" aria-selected="false">Songs</a>
+      <a class="nav-item nav-link"        id="nav-genres-tab"     data-toggle="tab" href="#nav-genres"     role="tab" aria-selected="false">Genres</a>
+      <a class="nav-item nav-link"        id="nav-elvis-tab"     data-toggle="tab" href="#nav-elvis"     role="tab" aria-selected="false">Elvis</a>
+      <a class="nav-item nav-link"        id="nav-resources-tab" data-toggle="tab" href="#nav-resources" role="tab" aria-selected="false">Resources</a>
     </div>
   </nav>
   <br/>
   <br/>
 
   <div class="container">
-  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-content" id="nav-tabContent">
 
 
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-    <%= render 'home' %>
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <%= render 'home' %>
+      </div>
+
+
+      <div class="tab-pane fade" id="nav-songs" role="tabpanel" aria-labelledby="nav-songs-tab">
+        <%= render 'songs' %>
+      </div>
+
+      <div class="tab-pane fade" id="nav-genres" role="tabpanel" aria-labelledby="nav-genres-tab">
+        <%= render 'genres' %>
+      </div>
+
+
+      <div class="tab-pane fade" id="nav-elvis" role="tabpanel" aria-labelledby="nav-elvis-tab">
+        <%= render 'elvis' %>
+      </div>
+
+
+      <div class="tab-pane fade" id="nav-resources" role="tabpanel" aria-labelledby="nav-resources-tab">
+        <%= render 'resources' %>
+      </div>
     </div>
 
 
-    <div class="tab-pane fade" id="nav-resources" role="tabpanel" aria-labelledby="nav-resources-tab">
-      <%= render 'resources' %>
-    </div>
-
-
-    <div class="tab-pane fade" id="nav-songs" role="tabpanel" aria-labelledby="nav-songs-tab">
-      <%= render 'songs' %>
+    <div class="footer">
+      © Bennett Business Solutions, Inc., 2020
     </div>
   </div>
-
-  <div class="footer">
-    © Bennett Business Solutions, Inc., 2020
-  </div>
-</div>
 </div>
