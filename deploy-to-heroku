@@ -1,0 +1,7 @@
+set -x
+
+git push origin master       \
+  && git checkout deploy     \
+  && git rebase master       \
+  && git push origin deploy  \
+  && git checkout master
