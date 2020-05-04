@@ -1,9 +1,3 @@
-<%
-  def external_link(text, url)
-    %Q{<li><a href="#{url}" target="_blank">#{text}</a></li>}.html_safe
-  end
-%>
-
 <h3>Resources</h3>
 <br/>
 
@@ -12,7 +6,7 @@
 <br/>
 
 <ul>
-<%= external_link(
+<%= li_external_link(
     'Tepper and Bennett Discography (discogs.com)',
     'https://www.discogs.com/search/?q=tepper+bennett&type=all'
   )
@@ -24,12 +18,12 @@
 <br/>
 
 <ul>
-<%= external_link(
+<%= li_external_link(
         'Sid Tepper Wikipedia Article',
         'https://en.wikipedia.org/wiki/Sid_Tepper'
     )
 %>
-<%= external_link(
+<%= li_external_link(
         'Roy C. Bennett Wikipedia Article',
         'https://en.wikipedia.org/wiki/Roy_C._Bennett'
     )
@@ -40,18 +34,18 @@
 <h4>Obituaries</h4>
 <br/>
 <ul>
-  <%= external_link(
+  <%= li_external_link(
         'Sid Tepper Obituary in The Guardian (UK)',
         'https://www.theguardian.com/music/2015/may/03/sid-tepper'
       )
   %>
-  <%= external_link(
+  <%= li_external_link(
       'Roy Bennett Obituary in the New York Times',
       'https://www.nytimes.com/2015/07/14/arts/music/roy-c-bennett-dies-at-96-writer-of-popular-songs.html'
     )
   %>
 
-<%= external_link(
+<%= li_external_link(
         'Sid Tepper Obituary in the New York Times',
         'https://www.nytimes.com/2015/04/30/arts/sid-tepper-dies-at-96-delivered-red-roses-for-a-blue-lady-and-other-songs.html'
     )
