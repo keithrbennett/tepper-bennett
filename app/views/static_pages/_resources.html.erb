@@ -34,13 +34,20 @@
 <h4>Obituaries</h4>
 <br/>
 <ul>
+
+<%= render 'li_external_link', locals = {
+  text: 'Sid Tepper Obituary in <i>The New York Times</i>',
+  url: 'https://www.nytimes.com/2015/04/30/arts/sid-tepper-dies-at-96-delivered-red-roses-for-a-blue-lady-and-other-songs.html'
+} %>
+
+
 <%= li_external_link(
-        'Sid Tepper Obituary in the New York Times',
+        'Sid Tepper Obituary in <i>The New York Times</i>',
         'https://www.nytimes.com/2015/04/30/arts/sid-tepper-dies-at-96-delivered-red-roses-for-a-blue-lady-and-other-songs.html'
     )
 %>
 <%= li_external_link(
-          'Roy Bennett Obituary in the New York Times',
+          'Roy Bennett Obituary in <cite>The New York Times</cite>',
           'https://www.nytimes.com/2015/07/14/arts/music/roy-c-bennett-dies-at-96-writer-of-popular-songs.html'
       )
   %>
