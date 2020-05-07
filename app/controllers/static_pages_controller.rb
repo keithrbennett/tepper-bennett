@@ -144,6 +144,11 @@ class StaticPagesController < ActionController::Base
             'Art Mooney & His Orchestra with Barry Gordon',
             'https://www.youtube.com/watch?v=0JCXmuNnrNc'
         ),
+        Recording.new(
+            "It's a Long Way from Your House to My House",
+            'Frank Sinatra',
+            'https://www.youtube.com/watch?v=7-tcw6w4Cj4'
+        )
     ]
   end
 end
