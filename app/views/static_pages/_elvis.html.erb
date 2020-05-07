@@ -6,3 +6,24 @@
 </div>
 
 
+<ul>
+  <div class="table-responsive">
+    <table class="table  thead-dark">
+      <thead class="thead-dark">
+      <tr >
+        <th>Title</th>
+        <th>Movie</th>
+        <th style="text-align: center;">Listen</th>
+      </tr>
+      </thead>
+
+      <% @elvis_recordings.each do |recording| %>
+        <%= song_table_row(recording) %>
+      <% end %>
+    </table>
+  </div>
+
+
+
+
+</ul>

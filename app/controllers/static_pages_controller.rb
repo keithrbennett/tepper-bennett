@@ -3,7 +3,8 @@ class StaticPagesController < ActionController::Base
   Recording = Struct.new(:title, :artist, :url)
 
   def initialize
-    init_recordings
+    init_songs_pane_recordings
+    init_elvis_pane_recordings
   end
 
   def respond
@@ -32,7 +33,7 @@ class StaticPagesController < ActionController::Base
   end
 
 
-  def init_recordings
+  def init_songs_pane_recordings
     @recordings = [
         Recording.new(
             'Red Roses for a Blue Lady',
@@ -135,6 +136,26 @@ class StaticPagesController < ActionController::Base
             'https://youtu.be/ADjm8yzYFW4'
         ),
         Recording.new(
+            'Angel',
+            'Elvis Presley',
+            'https://www.youtube.com/watch?v=7RQuoPVMPT0'
+        ),
+        Recording.new(
+            'Am I Ready',
+            'Elvis Presley',
+            'https://www.youtube.com/watch?v=E2J13o-RsxA'
+        ),
+        Recording.new(
+            'The Lady Loves Me',
+            'Elvis Presley and Ann-Margret',
+            'https://www.youtube.com/watch?v=Fv0bpfGfzls'
+        ),
+        Recording.new(
+            'Puppet on a String',
+            'Elvis Presley',
+            'https://www.youtube.com/watch?v=RjWoFTu0W28'
+        ),
+        Recording.new(
             'Kewpie Doll',
             'Perry Como',
             'https://www.youtube.com/watch?v=YJ9W47TIRR4&feature=youtu.be'
@@ -149,6 +170,36 @@ class StaticPagesController < ActionController::Base
             'Frank Sinatra',
             'https://www.youtube.com/watch?v=7-tcw6w4Cj4'
         )
+    ]
+  end
+
+  def init_elvis_pane_recordings
+    @elvis_recordings = [
+        Recording.new(
+            'Shoppin Around',
+            'Elvis Presley',
+            'https://youtu.be/ADjm8yzYFW4'
+        ),
+        Recording.new(
+            'Angel',
+            'Elvis Presley',
+            'https://www.youtube.com/watch?v=7RQuoPVMPT0'
+        ),
+        Recording.new(
+            'Am I Ready',
+            'Elvis Presley',
+            'https://www.youtube.com/watch?v=E2J13o-RsxA'
+        ),
+        Recording.new(
+            'The Lady Loves Me',
+            'Elvis Presley and Ann-Margret',
+            'https://www.youtube.com/watch?v=Fv0bpfGfzls'
+        ),
+        Recording.new(
+            'Puppet on a String',
+            'Elvis Presley',
+            'https://www.youtube.com/watch?v=RjWoFTu0W28'
+        ),
     ]
   end
 end
