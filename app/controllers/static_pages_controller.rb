@@ -169,7 +169,12 @@ class StaticPagesController < ActionController::Base
             "It's a Long Way from Your House to My House",
             'Frank Sinatra',
             'https://www.youtube.com/watch?v=7-tcw6w4Cj4'
-        )
+        ),
+        Recording.new(
+            'Twenty Tiny Fingers',
+            'The Stargazers',
+            'https://www.youtube.com/watch?v=K0ozZZ_RhP8'
+        ),
     ]
   end
 
