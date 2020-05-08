@@ -23,16 +23,6 @@ class StaticPagesController < ActionController::Base
   def about; end
 
 
-  def blog
-    redirect_to('http://blog.bbs-software.com')
-  end
-
-
-  def techhumans
-    redirect_to('http://techhumans.com')
-  end
-
-
   def init_songs_pane_recordings
     @recordings = [
         Recording.new(
