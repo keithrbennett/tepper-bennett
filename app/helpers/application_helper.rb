@@ -23,13 +23,17 @@ module ApplicationHelper
   end
 
 
+  def validate_artist_or_movie(artist_or_movie)
+    unless %i(artist movie).include?(artist_or_movie)
+      raise "Invalid symbol: #{artist_or_movie}. Must be :artist or :movie."
+    end
+  end
+
+
   # Outputs the <tr> for a table row, with either the artist or the movie occupying the 2nd column,
   # depending on the 2nd argument, :artist or :movie.
   def song_table_row(recording, artist_or_movie)
-    unless %i(artist movie).include?(artist_or_movie)
-      raise "Invalid symbol: #{artist_or_movie}"
-    end
-
+    validate_artist_or_movie(artist_or_movie)
     artist_or_title_value = (artist_or_movie == :artist) ? recording.artist : recording.movie
 
     html = <<HEREDOC
@@ -45,4 +49,31 @@ module ApplicationHelper
 HEREDOC
     html.html_safe
   end
+end
+
+
+def song_table(artist_or_movie)
+  validate_artist_or_movie(artist_or_movie)
+  heading = artist_or_movie.capitalize
+  recordings = artist_or_movie == :artist ? @recordings : @elvis_recordings
+  recordings_html = recordings.map { |r| song_table_row(r, artist_or_movie) }.join("\n")
+
+  html = <<HEREDOC
+<div class="table-responsive">
+  <table class="table  thead-dark">
+    <thead class="thead-dark">
+    <tr>
+      <th>Title</th>
+      <th>#{heading}</th>
+      <th style="text-align: center;">Listen</th>
+    </tr>
+    </thead>
+
+    #{recordings_html}
+  </table>
+</div>
+
+HEREDOC
+
+  html.html_safe
 end

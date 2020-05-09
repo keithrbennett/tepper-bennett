@@ -8,19 +8,4 @@
 
 <br/><br/>
 
-
-<div class="table-responsive">
-  <table class="table  thead-dark">
-    <thead class="thead-dark">
-      <tr >
-        <th>Title</th>
-        <th>Artist</th>
-        <th style="text-align: center;">Listen</th>
-      </tr>
-    </thead>
-
-    <% @recordings.each do |recording| %>
-      <%= song_table_row(recording, :artist) %>
-    <% end %>
-  </table>
-</div>
+<%= song_table(:artist) %>
