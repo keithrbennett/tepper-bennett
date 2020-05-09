@@ -20,7 +20,7 @@
     </thead>
 
     <% @recordings.each do |recording| %>
-      <%= render 'song_table_row', locals = { recording: recording } %>
+      <%= song_table_row(recording, :artist) %>
     <% end %>
   </table>
 </div>

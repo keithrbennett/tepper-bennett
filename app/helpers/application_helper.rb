@@ -21,4 +21,28 @@ module ApplicationHelper
   def youtube_icon_image
     image_path('youtube.png')
   end
+
+
+  # Outputs the <tr> for a table row, with either the artist or the movie occupying the 2nd column,
+  # depending on the 2nd argument, :artist or :movie.
+  def song_table_row(recording, artist_or_movie)
+    unless %i(artist movie).include?(artist_or_movie)
+      raise "Invalid symbol: #{artist_or_movie}"
+    end
+
+    artist_or_title_value = (artist_or_movie == :artist) ? recording.artist : recording.movie
+
+    html = <<HEREDOC
+    <tr>
+      <td>#{recording.title}</td>
+      <td>#{artist_or_title_value}</td>
+      <td>
+        <input type="image" data-toggle="modal" data-target="#exampleModal"
+               onclick="setPlayerYoutubeUrl('#{recording.embed_url}');"
+              src="#{youtube_icon_image}" />
+      </td>
+    </tr>
+HEREDOC
+    html.html_safe
+  end
 end

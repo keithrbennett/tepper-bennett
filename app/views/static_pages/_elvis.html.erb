@@ -26,8 +26,8 @@
       </thead>
 
       <% @elvis_recordings.each do |recording| %>
-        <%= render 'song_table_row', locals = {recording: recording} %>
-      <% end %>
+        <%= song_table_row(recording, :movie) %>
+    <% end %>
     </table>
   </div>
 
