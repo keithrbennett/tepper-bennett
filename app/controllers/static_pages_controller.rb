@@ -60,14 +60,14 @@ class StaticPagesController < ActionController::Base
             'BxNohANhJiA'
         ),
         Recording.new(
-            'The Naughty Lady of Shady Lane',
-            'The Ames Brothers',
-            '9HxB7lxbTnI'
-        ),
-        Recording.new(
             'Kiss of Fire',
             'Louis Armstrong',
             'gVxwN3Eaf_U'
+        ),
+        Recording.new(
+            'The Naughty Lady of Shady Lane',
+            'The Ames Brothers',
+            '9HxB7lxbTnI'
         ),
         Recording.new(
             "Nuttin' for Christmas",
