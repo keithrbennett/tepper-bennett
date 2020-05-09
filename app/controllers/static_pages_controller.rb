@@ -70,6 +70,7 @@ class StaticPagesController < ActionController::Base
 
     @elvis_recordings = [
         r.('G. I. Blues',                       'GkyjCJvHLsA', 'G. I. Blues'),
+        r.('New Orleans',                       'A9C-oQ_mFSc', 'King Creole'),
         r.('Kismet',                            'fnqC2I9QpIU', 'Harum Scarum'),
         r.('Island of Love',                    '6RilIva9usA', 'Blue Hawaii'),
         r.('Angel',                             '7RQuoPVMPT0', 'Follow That Dream'),
