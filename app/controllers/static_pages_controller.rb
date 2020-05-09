@@ -1,6 +1,6 @@
 class StaticPagesController < ActionController::Base
 
-  Recording = Struct.new(:title, :artist, :yt_video_code, :embed_url, :watch_url)
+  Recording = Struct.new(:title, :artist, :yt_video_code, :movie, :embed_url, :watch_url)
   class Recording
     def embed_url; "https://www.youtube.com/embed/#{yt_video_code}";   end
     def watch_url; "https://www.youtube.com/watch?v=#{yt_video_code}"; end
@@ -177,27 +177,32 @@ class StaticPagesController < ActionController::Base
         Recording.new(
             'Shoppin Around',
             'Elvis Presley',
-            'ADjm8yzYFW4'
+            'ADjm8yzYFW4',
+            'G. I. Blues'
         ),
         Recording.new(
             'Angel',
             'Elvis Presley',
-            '7RQuoPVMPT0'
+            '7RQuoPVMPT0',
+            'Follow That Dream'
         ),
         Recording.new(
             'Am I Ready',
             'Elvis Presley',
-            'E2J13o-RsxA'
+            'E2J13o-RsxA',
+            'Spinout'
         ),
         Recording.new(
             'The Lady Loves Me',
             'Elvis Presley and Ann-Margret',
-            'Fv0bpfGfzls'
+            'Fv0bpfGfzls',
+            'Viva Las Vegas'
         ),
         Recording.new(
             'Puppet on a String',
             'Elvis Presley',
-            'RjWoFTu0W28'
+            'RjWoFTu0W28',
+            'Girl Happy'
         ),
     ]
   end
