@@ -56,11 +56,11 @@ class StaticPagesController < ActionController::Base
         r.('Am I Ready',                                  'Elvis Presley',                        'E2J13o-RsxA'),
         r.('The Lady Loves Me',                           'Elvis Presley and Ann-Margret',        'Fv0bpfGfzls'),
         r.('Puppet on a String',                          'Elvis Presley',                        'RjWoFTu0W28'),
+        r.('Teardrops in the Rain',                       'Arthur Prysock',                       '7xVk2GY-TOI'),
         r.('Kewpie Doll',                                 'Perry Como',                           'YJ9W47TIRR4'),
         r.('Santa Claus Looks Just Like Daddy',           'Art Mooney & His Orchestra with Barry Gordon', '0JCXmuNnrNc'),
         r.("It's a Long Way from Your House to My House", 'Frank Sinatra',                        '7-tcw6w4Cj4'),
         r.('Twenty Tiny Fingers',                         'The Stargazers',                       'K0ozZZ_RhP8'),
-        r.('Teardrops in the Rain',                       'Arthur Prysock',                       '7xVk2GY-TOI')
     ]
   end
 
