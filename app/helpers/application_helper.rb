@@ -88,3 +88,13 @@ def nav_tab(panel_name, active = false)
 HEREDOC
   html.html_safe
 end
+
+
+def nav_content(name, active = false)
+  div_class = 'tab-pane fade'
+  div_class += ' show active' if active
+
+  tag.div(class: div_class, id: "nav-#{name}", role: 'tabpanel', 'aria-labelledby'.to_sym => "nav-#{name}-tab") do
+    render(name)
+  end
+end

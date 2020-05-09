@@ -20,37 +20,13 @@
   <br/>
 
   <div class="tab-content" id="nav-tabContent">
-
-
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-      <%= render 'home' %>
-    </div>
-
-
-    <div class="tab-pane fade" id="nav-songs" role="tabpanel" aria-labelledby="nav-songs-tab">
-      <%= render 'songs' %>
-    </div>
-
-    <div class="tab-pane fade" id="nav-genres" role="tabpanel" aria-labelledby="nav-genres-tab">
-      <%= render 'genres' %>
-    </div>
-
-
-    <div class="tab-pane fade" id="nav-elvis" role="tabpanel" aria-labelledby="nav-elvis-tab">
-      <%= render 'elvis' %>
-    </div>
-
-
-    <div class="tab-pane fade" id="nav-inquiries" role="tabpanel" aria-labelledby="nav-inquiries-tab">
-      <%= render 'inquiries' %>
-    </div>
-
-
-    <div class="tab-pane fade" id="nav-resources" role="tabpanel" aria-labelledby="nav-resources-tab">
-      <%= render 'resources' %>
-    </div>
+    <%= nav_content('home', true) %>
+    <%= nav_content('songs') %>
+    <%= nav_content('genres') %>
+    <%= nav_content('elvis') %>
+    <%= nav_content('inquiries') %>
+    <%= nav_content('resources') %>
   </div>
-
 
   <div class="footer">
     © <%= external_link('Bennett Business Solutions, Inc.', 'https://www.bbs-software.com') %>, 2020
