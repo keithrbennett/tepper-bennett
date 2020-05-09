@@ -180,10 +180,22 @@ class StaticPagesController < ActionController::Base
   def init_elvis_pane_recordings
     @elvis_recordings = [
         Recording.new(
-            'Shoppin Around',
+            'G. I. Blues',
             'Elvis Presley',
-            'ADjm8yzYFW4',
+            'GkyjCJvHLsA',
             'G. I. Blues'
+        ),
+        Recording.new(
+            'Kismet',
+            'Elvis Presley',
+            'fnqC2I9QpIU',
+            'Harum Scarum'
+        ),
+        Recording.new(
+            'Island of Love',
+            'Elvis Presley',
+            '6RilIva9usA',
+            'Blue Hawaii'
         ),
         Recording.new(
             'Angel',
@@ -208,6 +220,42 @@ class StaticPagesController < ActionController::Base
             'Elvis Presley',
             'RjWoFTu0W28',
             'Girl Happy'
+        ),
+        Recording.new(
+            'The Bullfighter Was a Lady',
+            'Elvis Presley',
+            'kHTX0kU3sEo',
+            'Fun in Acapulco'
+        ),
+        Recording.new(
+            'Shoppin Around',
+            'Elvis Presley',
+            'ADjm8yzYFW4',
+            'G. I. Blues'
+        ),
+        Recording.new(
+            "It's a Wonderful World",
+            'Elvis Presley',
+            '5GwapUKv5V4',
+            'Roustabout'
+        ),
+        Recording.new(
+            'Western Union',
+            'Elvis Presley',
+            '-cs_R-QWqcA',
+            'Speedway'
+        ),
+        Recording.new(
+            "Petunia, the Gardener's Daughter",
+            'Elvis Presley',
+            'wuzbUsy6snc',
+            'Frankie and Johnny'
+        ),
+        Recording.new(
+            'All That I Am',
+            'Elvis Presley',
+            'IIpNWh_0Tw8',
+            'Spinout'
         ),
     ]
   end
