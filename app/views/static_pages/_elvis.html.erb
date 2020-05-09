@@ -1,16 +1,24 @@
 <h3>The Elvis Movies</h3>
-<br >
+<br>
 
 <div style="margin-bottom: 24px">
   <%= image_tag 'elvis-chante-tepper-bennett.jpg', class: 'img-fluid', width: '100%', alt: 'Elvis Chante Tepper & Bennett' %>
 </div>
 
+<p>
+  Each time an Elvis movie was in the works, the Colonel would send the screenplay to their reliable small stable of
+  songwriters, who’d then submit their work for consideration. Some 42 songs of theirs made their way into the films,
+  more than for any other team. There were beautiful ballads and smart, amusing songs, each crafted for a particular
+  scene. The Presley estate recognized the importance of the duo to Elvis’ career, with both a lifetime achievement
+  award and with the Elvis Fans Choice Award for Best Movie Soundtrack for their five songs in the movie “Blue Hawaii”.
+</p>
+<br/>
 
 <ul>
   <div class="table-responsive">
     <table class="table  thead-dark">
       <thead class="thead-dark">
-      <tr >
+      <tr>
         <th>Title</th>
         <th>Movie</th>
         <th style="text-align: center;">Listen</th>
@@ -18,12 +26,10 @@
       </thead>
 
       <% @elvis_recordings.each do |recording| %>
-        <%= render 'song_table_row', locals = { recording: recording } %>
+        <%= render 'song_table_row', locals = {recording: recording} %>
       <% end %>
     </table>
   </div>
-
-
 
 
 </ul>
