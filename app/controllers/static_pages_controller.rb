@@ -178,85 +178,23 @@ class StaticPagesController < ActionController::Base
   end
 
   def init_elvis_pane_recordings
+    elvis = 'Elvis Presley'
+    r = ->(title, code, movie) { Recording.new(title, elvis, code, movie) }
+
     @elvis_recordings = [
-        Recording.new(
-            'G. I. Blues',
-            'Elvis Presley',
-            'GkyjCJvHLsA',
-            'G. I. Blues'
-        ),
-        Recording.new(
-            'Kismet',
-            'Elvis Presley',
-            'fnqC2I9QpIU',
-            'Harum Scarum'
-        ),
-        Recording.new(
-            'Island of Love',
-            'Elvis Presley',
-            '6RilIva9usA',
-            'Blue Hawaii'
-        ),
-        Recording.new(
-            'Angel',
-            'Elvis Presley',
-            '7RQuoPVMPT0',
-            'Follow That Dream'
-        ),
-        Recording.new(
-            'Am I Ready',
-            'Elvis Presley',
-            'E2J13o-RsxA',
-            'Spinout'
-        ),
-        Recording.new(
-            'The Lady Loves Me',
-            'Elvis Presley and Ann-Margret',
-            'Fv0bpfGfzls',
-            'Viva Las Vegas'
-        ),
-        Recording.new(
-            'Puppet on a String',
-            'Elvis Presley',
-            'RjWoFTu0W28',
-            'Girl Happy'
-        ),
-        Recording.new(
-            'The Bullfighter Was a Lady',
-            'Elvis Presley',
-            'kHTX0kU3sEo',
-            'Fun in Acapulco'
-        ),
-        Recording.new(
-            'Shoppin Around',
-            'Elvis Presley',
-            'ADjm8yzYFW4',
-            'G. I. Blues'
-        ),
-        Recording.new(
-            "It's a Wonderful World",
-            'Elvis Presley',
-            '5GwapUKv5V4',
-            'Roustabout'
-        ),
-        Recording.new(
-            'Western Union',
-            'Elvis Presley',
-            '-cs_R-QWqcA',
-            'Speedway'
-        ),
-        Recording.new(
-            "Petunia, the Gardener's Daughter",
-            'Elvis Presley',
-            'wuzbUsy6snc',
-            'Frankie and Johnny'
-        ),
-        Recording.new(
-            'All That I Am',
-            'Elvis Presley',
-            'IIpNWh_0Tw8',
-            'Spinout'
-        ),
+        r.('G. I. Blues',                       'GkyjCJvHLsA', 'G. I. Blues'),
+        r.('Kismet',                            'fnqC2I9QpIU', 'Harum Scarum'),
+        r.('Island of Love',                    '6RilIva9usA', 'Blue Hawaii'),
+        r.('Angel',                             '7RQuoPVMPT0', 'Follow That Dream'),
+        r.('Am I Ready',                        'E2J13o-RsxA', 'Spinout'),
+        r.('The Lady Loves Me',                 'Fv0bpfGfzls', 'Viva Las Vegas'),
+        r.('Puppet on a String',                'RjWoFTu0W28', 'Girl Happy'),
+        r.('The Bullfighter Was a Lady',        'kHTX0kU3sEo', 'Fun in Acapulco'),
+        r.('Shoppin Around',                    'ADjm8yzYFW4', 'G. I. Blues'),
+        r.("It's a Wonderful World",            '5GwapUKv5V4', 'Roustabout'),
+        r.('Western Union',                     '-cs_R-QWqcA', 'Speedway'),
+        r.("Petunia, the Gardener's Daughter",  'wuzbUsy6snc', 'Frankie and Johnny'),
+        r.('All That I Am',                     'IIpNWh_0Tw8', 'Spinout'),
     ]
   end
 end
