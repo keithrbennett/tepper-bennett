@@ -18,11 +18,7 @@ module ApplicationHelper
     tag.li(external_link(text.html_safe, url)).html_safe
   end
 
-  def song_table_row(recording)
-    tag.tr do
-      tag.td(recording.title) +
-          tag.td(recording.artist) +
-          tag.td(youtube_image_link(recording.url))
-    end.html_safe
+  def youtube_icon_image
+    image_path('youtube.png')
   end
 end

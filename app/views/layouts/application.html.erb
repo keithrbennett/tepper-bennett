@@ -13,10 +13,15 @@
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <script>
+        function setPlayerYoutubeUrl(url) {
+            document.getElementById("youtube-player-iframe").setAttribute("src", url);
+        }
+    </script>
   </head>
 
   <body>
-<!--  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">-->
+  <%= render 'youtube-player-modal' %>
   <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap" rel="stylesheet">
   <%= yield %>
   </body>

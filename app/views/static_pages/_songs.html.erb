@@ -8,6 +8,7 @@
 
 <br/><br/>
 
+
 <div class="table-responsive">
   <table class="table  thead-dark">
     <thead class="thead-dark">
@@ -19,7 +20,7 @@
     </thead>
 
     <% @recordings.each do |recording| %>
-      <%= song_table_row(recording) %>
+      <%= render 'song_table_row', locals = { recording: recording } %>
     <% end %>
   </table>
 </div>

@@ -1,6 +1,10 @@
 class StaticPagesController < ActionController::Base
 
-  Recording = Struct.new(:title, :artist, :url)
+  Recording = Struct.new(:title, :artist, :yt_video_code, :embed_url, :watch_url)
+  class Recording
+    def embed_url; "https://www.youtube.com/embed/#{yt_video_code}";   end
+    def watch_url; "https://www.youtube.com/watch?v=#{yt_video_code}"; end
+  end
 
   def initialize
     init_songs_pane_recordings
@@ -28,142 +32,142 @@ class StaticPagesController < ActionController::Base
         Recording.new(
             'Red Roses for a Blue Lady',
             'Andy Williams',
-            'https://www.youtube.com/watch?v=HssRO5b_ED0'
+            'HssRO5b_ED0'
         ),
         Recording.new(
             'Red Roses for a Blue Lady',
             'Bert Kaempfert and His Orchestra',
-            'https://www.youtube.com/watch?v=zt6WdnrAvpE'
+            'zt6WdnrAvpE'
         ),
         Recording.new(
             'Red Roses for a Blue Lady',
             'Dean Martin',
-            'https://www.youtube.com/watch?v=drU6kuih41w'
+            'drU6kuih41w'
         ),
         Recording.new(
             'Red Roses for a Blue Lady',
             'Frank Sinatra',
-            'https://www.youtube.com/watch?v=yeMFw9tBrGo'
+            'yeMFw9tBrGo'
         ),
         Recording.new(
             'Red Roses for a Blue Lady',
             'Guy Lombardo And His Royal Canadians',
-            'https://www.youtube.com/watch?v=_41H2cpTzNc'
+            '_41H2cpTzNc'
         ),
         Recording.new(
             'The Young Ones',
             'Cliff Richard',
-            'https://www.youtube.com/watch?v=BxNohANhJiA'
+            'BxNohANhJiA'
         ),
         Recording.new(
             'The Naughty Lady of Shady Lane',
             'The Ames Brothers',
-            'https://youtu.be/9HxB7lxbTnI'
+            '9HxB7lxbTnI'
         ),
         Recording.new(
             'Kiss of Fire',
             'Louis Armstrong',
-            'https://youtu.be/gVxwN3Eaf_U'
+            'gVxwN3Eaf_U'
         ),
         Recording.new(
             "Nuttin' for Christmas",
             'Barry Gordon',
-            'https://youtu.be/aUA7BPnog_0'
+            'aUA7BPnog_0'
         ),
         Recording.new(
             'Suzy Snowflake',
             'Rosemary Clooney',
-            'https://www.youtube.com/watch?v=UiFXZhU5kp4'
+            'UiFXZhU5kp4'
         ),
         Recording.new(
             'Wonderful World of the Young',
             'Andy Williams',
-            'https://www.youtube.com/watch?v=eoRVnPH8uUI'
+            'eoRVnPH8uUI'
         ),
         Recording.new(
             'Bagel & Lox',
             'Rob Schneider',
-            'https://www.youtube.com/watch?v=dv4h8yU_N7o'
+            'dv4h8yU_N7o'
         ),
         Recording.new(
             "Don't Come Running Back to Me",
             'Nancy Wilson',
-            'https://youtu.be/QlzCpTEhhQM'
+            'QlzCpTEhhQM'
         ),
         Recording.new(
             "I've Got a Crush on New York Town",
             'Connie Francis',
-            'https://www.youtube.com/watch?v=0_Gycn0UJ9M'
+            '0_Gycn0UJ9M'
         ),
         Recording.new(
             'Say Something Sweet to Your Sweetheart',
             'The Ink Spots',
-            'https://www.youtube.com/watch?v=z617AUVXyMs'
+            'z617AUVXyMs'
         ),
         Recording.new(
             'Summer Sounds',
             'Robert Goulet',
-            'https://www.youtube.com/watch?v=1gGJ8AHYloQ'
+            '1gGJ8AHYloQ'
         ),
         Recording.new(
             'Travelling Light',
             "Herman's Hermits",
-            'https://www.youtube.com/watch?v=stDqoS3zeTE'
+            'stDqoS3zeTE'
         ),
         Recording.new(
             'When the Boy in Your Arms',
             'Connie Francis',
-            'https://youtu.be/FudzowDyQn0'
+            'FudzowDyQn0'
         ),
         Recording.new(
             'Jenny Kissed Me',
             'Eddie Albert',
-            'https://youtu.be/Vf-9-rNHjcE'
+            '/Vf-9-rNHjcE'
         ),
         Recording.new(
             'Shoppin Around',
             'Elvis Presley',
-            'https://youtu.be/ADjm8yzYFW4'
+            'ADjm8yzYFW4'
         ),
         Recording.new(
             'Angel',
             'Elvis Presley',
-            'https://www.youtube.com/watch?v=7RQuoPVMPT0'
+            '7RQuoPVMPT0'
         ),
         Recording.new(
             'Am I Ready',
             'Elvis Presley',
-            'https://www.youtube.com/watch?v=E2J13o-RsxA'
+            'E2J13o-RsxA'
         ),
         Recording.new(
             'The Lady Loves Me',
             'Elvis Presley and Ann-Margret',
-            'https://www.youtube.com/watch?v=Fv0bpfGfzls'
+            'Fv0bpfGfzls'
         ),
         Recording.new(
             'Puppet on a String',
             'Elvis Presley',
-            'https://www.youtube.com/watch?v=RjWoFTu0W28'
+            'RjWoFTu0W28'
         ),
         Recording.new(
             'Kewpie Doll',
             'Perry Como',
-            'https://www.youtube.com/watch?v=YJ9W47TIRR4&feature=youtu.be'
+            'YJ9W47TIRR4'
         ),
         Recording.new(
             'Santa Claus Looks Just Like Daddy',
             'Art Mooney & His Orchestra with Barry Gordon',
-            'https://www.youtube.com/watch?v=0JCXmuNnrNc'
+            '0JCXmuNnrNc'
         ),
         Recording.new(
             "It's a Long Way from Your House to My House",
             'Frank Sinatra',
-            'https://www.youtube.com/watch?v=7-tcw6w4Cj4'
+            '7-tcw6w4Cj4'
         ),
         Recording.new(
             'Twenty Tiny Fingers',
             'The Stargazers',
-            'https://www.youtube.com/watch?v=K0ozZZ_RhP8'
+            'K0ozZZ_RhP8'
         ),
     ]
   end
@@ -173,27 +177,27 @@ class StaticPagesController < ActionController::Base
         Recording.new(
             'Shoppin Around',
             'Elvis Presley',
-            'https://youtu.be/ADjm8yzYFW4'
+            'ADjm8yzYFW4'
         ),
         Recording.new(
             'Angel',
             'Elvis Presley',
-            'https://www.youtube.com/watch?v=7RQuoPVMPT0'
+            '7RQuoPVMPT0'
         ),
         Recording.new(
             'Am I Ready',
             'Elvis Presley',
-            'https://www.youtube.com/watch?v=E2J13o-RsxA'
+            'E2J13o-RsxA'
         ),
         Recording.new(
             'The Lady Loves Me',
             'Elvis Presley and Ann-Margret',
-            'https://www.youtube.com/watch?v=Fv0bpfGfzls'
+            'Fv0bpfGfzls'
         ),
         Recording.new(
             'Puppet on a String',
             'Elvis Presley',
-            'https://www.youtube.com/watch?v=RjWoFTu0W28'
+            'RjWoFTu0W28'
         ),
     ]
   end
