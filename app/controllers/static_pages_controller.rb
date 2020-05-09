@@ -169,6 +169,11 @@ class StaticPagesController < ActionController::Base
             'The Stargazers',
             'K0ozZZ_RhP8'
         ),
+        Recording.new(
+            'Teardrops in the Rain',
+            'Arthur Prysock',
+            '7xVk2GY-TOI'
+        )
     ]
   end
 
