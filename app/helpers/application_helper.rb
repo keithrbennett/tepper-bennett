@@ -40,7 +40,7 @@ module ApplicationHelper
     <tr>
       <td>#{recording.title}</td>
       <td>#{artist_or_title_value}</td>
-      <td>
+      <td align="center">
         <input type="image" data-toggle="modal" data-target="#exampleModal"
                onclick="setPlayerYoutubeUrl('#{recording.embed_url}');"
               src="#{youtube_icon_image}" />
