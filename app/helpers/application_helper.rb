@@ -77,3 +77,14 @@ HEREDOC
 
   html.html_safe
 end
+
+
+def nav_tab(panel_name, active = false)
+  active_text = active ? ' active' : ''
+  aria        = active ? 'true'    : 'false'
+
+  html = <<HEREDOC
+    <a class="nav-item nav-link#{active_text}" id="nav-home-tab" data-toggle="tab" href="#nav-#{panel_name}" role="tab" aria-selected="#{aria}">#{panel_name.capitalize}</a>
+HEREDOC
+  html.html_safe
+end

@@ -8,12 +8,12 @@
 
   <nav class="nav-justified">
       <div class="nav nav-tabs" id="nav-tab" role="tablist" style="align: center">
-        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-selected="true">Home</a>
-        <a class="nav-item nav-link" id="nav-songs-tab" data-toggle="tab" href="#nav-songs" role="tab" aria-selected="false">Songs</a>
-        <a class="nav-item nav-link" id="nav-genres-tab" data-toggle="tab" href="#nav-genres" role="tab" aria-selected="false">Genres</a>
-        <a class="nav-item nav-link" id="nav-elvis-tab" data-toggle="tab" href="#nav-elvis" role="tab" aria-selected="false">Elvis</a>
-        <a class="nav-item nav-link" id="nav-inquiries-tab" data-toggle="tab" href="#nav-inquiries" role="tab" aria-selected="false">Inquiries</a>
-        <a class="nav-item nav-link" id="nav-resources-tab" data-toggle="tab" href="#nav-resources" role="tab" aria-selected="false">Resources</a>
+        <%= nav_tab('home', true) %>
+        <%= nav_tab('songs') %>
+        <%= nav_tab('genres') %>
+        <%= nav_tab('elvis') %>
+        <%= nav_tab('inquiries') %>
+        <%= nav_tab('resources') %>
       </div>
   </nav>
   <br/>
