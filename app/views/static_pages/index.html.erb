@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid no-horiz-padding">
 
   <h1 class="title">Sid Tepper and Roy C. Bennett</h1>
   <h3 class="tagline">
@@ -6,26 +6,31 @@
   </h3>
   <br/>
 
-  <nav class="nav-justified">
-      <div class="nav nav-tabs" id="nav-tab" role="tablist" style="align: center">
-        <%= nav_tab('home', true) %>
-        <%= nav_tab('songs') %>
-        <%= nav_tab('genres') %>
-        <%= nav_tab('elvis') %>
-        <%= nav_tab('inquiries') %>
-        <%= nav_tab('resources') %>
-      </div>
-  </nav>
+  <div class="container nav-container no-horiz-padding">
+    <nav class="nav-justified">
+        <div class="nav nav-tabs" id="nav-tab" role="tablist" style="align: center">
+          <%= nav_tab('home', true) %>
+          <%= nav_tab('songs') %>
+          <%= nav_tab('genres') %>
+          <%= nav_tab('elvis') %>
+          <%= nav_tab('inquiries') %>
+          <%= nav_tab('resources') %>
+        </div>
+    </nav>
+  </div>
+
   <br/>
   <br/>
 
-  <div class="tab-content" id="nav-tabContent">
-    <%= nav_content('home', true) %>
-    <%= nav_content('songs') %>
-    <%= nav_content('genres') %>
-    <%= nav_content('elvis') %>
-    <%= nav_content('inquiries') %>
-    <%= nav_content('resources') %>
+  <div class="container no-horiz-padding">
+    <div class="tab-content" id="nav-tabContent">
+      <%= nav_content('home', true) %>
+      <%= nav_content('songs') %>
+      <%= nav_content('genres') %>
+      <%= nav_content('elvis') %>
+      <%= nav_content('inquiries') %>
+      <%= nav_content('resources') %>
+    </div>
   </div>
 
   <div class="footer">
