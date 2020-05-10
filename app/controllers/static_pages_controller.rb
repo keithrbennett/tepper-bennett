@@ -65,8 +65,7 @@ class StaticPagesController < ActionController::Base
   end
 
   def init_elvis_pane_recordings
-    elvis = 'Elvis Presley'
-    r = ->(title, code, movie) { Recording.new(title, elvis, code, movie) }
+    r = ->(title, code, movie) { Recording.new(title, 'Elvis Presley', code, movie) }
 
     @elvis_recordings = [
         r.('G. I. Blues',                       'GkyjCJvHLsA', 'G. I. Blues'),
