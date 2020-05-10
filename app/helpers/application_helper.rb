@@ -22,6 +22,15 @@ module ApplicationHelper
     image_path('youtube.png')
   end
 
+  def youtube_embed_url(code)
+    "https://www.youtube.com/embed/#{code}"
+  end
+
+
+  def youtube_watch_url(code)
+    "https://www.youtube.com/watch?v=#{code}"
+  end
+
 
   def validate_artist_or_movie(artist_or_movie)
     unless %i(artist movie).include?(artist_or_movie)
@@ -97,4 +106,17 @@ def nav_content(name, active = false)
   tag.div(class: div_class, id: "nav-#{name}", role: 'tabpanel', 'aria-labelledby'.to_sym => "nav-#{name}-tab") do
     render(name)
   end
+end
+
+
+def youtube_text_song_link(text, youtube_code)
+  html = tag.a(
+      href: '#',
+      'data-toggle'.to_sym => 'modal',
+      'data-target'.to_sym => '#youTubeViewerModal',
+      onclick: %Q{setPlayerYoutubeUrl('#{youtube_embed_url(youtube_code)}');}) do
+    text
+  end
+
+  html.html_safe
 end
