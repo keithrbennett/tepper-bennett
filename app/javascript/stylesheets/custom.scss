@@ -59,10 +59,15 @@ img {
 }
 
 .table th, .table td {
+  vertical-align: middle;
   padding: 4px;
 }
 
 .no-horiz-padding {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.image-cell {
+  vertical-align: middle;
 }
