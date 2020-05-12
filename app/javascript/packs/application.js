@@ -23,3 +23,22 @@ document.addEventListener("turbolinks:load", () => {
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
+function setUpYouTubeClicks() {
+    const handler = function() {
+        const url = this.getAttribute("data-url");
+        document.getElementById("youtube-player-iframe").setAttribute("src", url);
+    }
+
+    for(const elem of document.getElementsByClassName("youtube-view")) {
+        elem.addEventListener("click", handler);
+    }
+}
+
+
+// DOMContentLoaded event handling:
+document.addEventListener('DOMContentLoaded', (event) => {
+    setUpYouTubeClicks();
+})
+

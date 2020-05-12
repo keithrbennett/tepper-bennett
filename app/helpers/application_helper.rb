@@ -44,15 +44,18 @@ module ApplicationHelper
   def song_table_row(recording, artist_or_movie)
     validate_artist_or_movie(artist_or_movie)
     artist_or_title_value = (artist_or_movie == :artist) ? recording.artist : recording.movie
+    url = recording.embed_url
 
     html = <<HEREDOC
     <tr>
       <td>#{recording.title}</td>
       <td>#{artist_or_title_value}</td>
       <td align="center">
-        <input type="image" class="image-cell" data-toggle="modal" data-target="#youTubeViewerModal"
-               onclick="setPlayerYoutubeUrl('#{recording.embed_url}');"
-              src="#{youtube_icon_image}" />
+        <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal"
+          data-url="#{url}"
+        />
+          #{image_tag('youtube.png', alt: 'Listen')}
+        </a>
       </td>
     </tr>
 HEREDOC
@@ -112,9 +115,11 @@ end
 def youtube_text_song_link(text, youtube_code)
   html = tag.a(
       href: '#',
+      class: "youtube-view",
+      'data-url'.to_sym => youtube_embed_url(youtube_code),
       'data-toggle'.to_sym => 'modal',
-      'data-target'.to_sym => '#youTubeViewerModal',
-      onclick: %Q{setPlayerYoutubeUrl('#{youtube_embed_url(youtube_code)}');}) do
+      'data-target'.to_sym => '#youTubeViewerModal') do
+      # onclick: %Q{setPlayerYoutubeUrl('#{youtube_embed_url(youtube_code)}');}) do
     text
   end
 
