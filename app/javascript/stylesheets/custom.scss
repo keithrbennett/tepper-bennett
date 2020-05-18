@@ -73,3 +73,12 @@ img {
 .image-cell {
   vertical-align: middle;
 }
+
+.responsive-xs-only {
+  @extend .d-sm-none;
+}
+
+.responsive-no-xs {
+  @extend .d-none;
+  @extend .d-sm-block;
+}
