@@ -37,42 +37,42 @@ function setUpYouTubeClicks() {
 }
 
 
-function setUpColorPopup() {
-    const handler = function() {
-        alert("Color chooser");
-    }
-    for(const elem of document.getElementsByClassName("color-popup")) {
-        elem.addEventListener("click", handler)
-    }
-}
-
-
 function setUpColorPicker() {
 
-    const colorPicker = document.getElementById("bgcolor-picker");
+    const colorPicker     = document.getElementById("bgcolor-picker");
+    const bgColorResetter = document.getElementById("bgcolor-resetter");
 
-    // Sets the color of the color picker to the body's background color after the UI is loaded:
-    // function setInitialColor() {
-    //     const color = document.body.style.background;
-    //     console.log("Background color is " + color);
-    //     colorPicker.value = "#333333";
-    // }
-    // window.addEventListener("load", setInitialColor, false);
-
-    const colorChangeHandler = function(event) {
-        const newColor = event.target.value;
-        document.body.style.background = newColor;
-        document.getElementById("bg-color-value-text").innerHTML = newColor;
+    function setBackgroundColor(color) {
+        colorPicker.setAttribute("value", color);
+        document.body.style.background = color;
+        localStorage.setItem("background-color", color);
+        document.getElementById("bg-color-value-text").innerHTML = color;
     }
 
+    function setInitialColor() {
+        let color = localStorage.getItem("background-color");
+        if(color == null)
+            color = "#f5deb3";
+        setBackgroundColor(color);
+    }
+
+    function colorChangeHandler(event) {
+        setBackgroundColor(event.target.value);
+    }
+
+    function resetBackgroundColor() {
+        setBackgroundColor("#f5deb3");
+    }
+
+    window.addEventListener("load", setInitialColor, false);
     colorPicker.addEventListener("input", colorChangeHandler, false);
     colorPicker.addEventListener("change", colorChangeHandler, false);
+    bgColorResetter.addEventListener("click", resetBackgroundColor);
 }
 
 // DOMContentLoaded event handling:
 document.addEventListener('DOMContentLoaded', (event) => {
     setUpYouTubeClicks();
-    setUpColorPopup();
     setUpColorPicker();
 })
 
