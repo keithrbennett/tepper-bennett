@@ -37,8 +37,43 @@ function setUpYouTubeClicks() {
 }
 
 
+function setUpColorPopup() {
+    const handler = function() {
+        alert("Color chooser");
+    }
+    for(const elem of document.getElementsByClassName("color-popup")) {
+        elem.addEventListener("click", handler)
+    }
+}
+
+
+function setUpColorPicker() {
+
+    const colorPicker = document.getElementById("bgcolor-picker");
+
+    // Sets the color of the color picker to the body's background color after the UI is loaded:
+    // function setInitialColor() {
+    //     const color = document.body.style.background;
+    //     console.log("Background color is " + color);
+    //     colorPicker.value = "#333333";
+    // }
+    // window.addEventListener("load", setInitialColor, false);
+
+    const colorChangeHandler = function(event) {
+        const newColor = event.target.value;
+        document.body.style.background = newColor;
+        document.getElementById("bg-color-value-text").innerHTML = newColor;
+    }
+
+    colorPicker.addEventListener("input", colorChangeHandler, false);
+    colorPicker.addEventListener("change", colorChangeHandler, false);
+}
+
 // DOMContentLoaded event handling:
 document.addEventListener('DOMContentLoaded', (event) => {
     setUpYouTubeClicks();
+    setUpColorPopup();
+    setUpColorPicker();
 })
+
 
