@@ -64,7 +64,7 @@ function setUpColorPicker() {
         setBackgroundColor("#f5deb3");
     }
 
-    window.addEventListener("load", setInitialColor, false);
+    setInitialColor();
     colorPicker.addEventListener("input", colorChangeHandler, false);
     colorPicker.addEventListener("change", colorChangeHandler, false);
     bgColorResetter.addEventListener("click", resetBackgroundColor);
