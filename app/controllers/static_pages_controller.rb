@@ -39,6 +39,7 @@ class StaticPagesController < ActionController::Base
         r.('Red Roses for a Blue Lady',                   'Guy Lombardo And His Royal Canadians', '_41H2cpTzNc'),
         r.('The Young Ones',                              'Cliff Richard',                        'BxNohANhJiA'),
         r.('Kiss of Fire',                                'Louis Armstrong',                      'gVxwN3Eaf_U'),
+        r.('Kiss of Fire',                                'Georgia Gibbs',                        'mLpzfER6w3c'),
         r.('The Naughty Lady of Shady Lane',              'The Ames Brothers',                    '9HxB7lxbTnI'),
         r.("Nuttin' for Christmas",                       'Barry Gordon',                         'aUA7BPnog_0'),
         r.('Suzy Snowflake',                              'Rosemary Clooney',                     'UiFXZhU5kp4'),
