@@ -2,7 +2,7 @@
 def add_genres
   genres = %w(bluegrass blues children country funny hit movie rock romantic tv)
   print "Adding #{genres.size} genres..."
-  genres.each { |genre| Genre.create!(name: genre) }
+  genres.each { |genre| Genre.create!(code: genre, name: genre) }
   puts 'done.'
 end
 
@@ -22,31 +22,31 @@ end
 
 def add_movies
   movies = [
-      { year: 1957, name: "Loving You" },
-      { year: 1958, name: "King Creole" },
-      { year: 1960, name: "Flaming Star" },
-      { year: 1960, name: "G. I. Blues" },
-      { year: 1961, name: "Blue Hawaii" },
-      { year: 1962, name: "Follow That Dream" },
-      { year: 1962, name: "Girls! Girls! Girls!" },
-      { year: 1962, name: "The Young Ones" },
-      { year: 1963, name: "Fun in Acapulco" },
-      { year: 1963, name: "It Happened at the World's Fair" },
-      { year: 1964, name: "Girl Happy" },
-      { year: 1964, name: "Kissin' Cousins" },
-      { year: 1964, name: "Roustabout" },
-      { year: 1964, name: "Viva Las Vegas" },
-      { year: 1965, name: "Harum Scarum" },
-      { year: 1966, name: "Frankie and Johnny" },
-      { year: 1966, name: "Paradise, Hawaiian Style" },
-      { year: 1966, name: "Spinout" },
-      { year: 1967, name: "Clambake" },
-      { year: 1967, name: "Double Trouble" },
-      { year: 1968, name: "Speedway" },
-      { year: 1968, name: "Stay Away, Joe" },
+      { code:  'lov_you',    year: 1957, name: "Loving You" },
+      { code:  'k-creole',   year: 1958, name: "King Creole" },
+      { code:  'flam-star',  year: 1960, name: "Flaming Star" },
+      { code:  'gi-blues',   year: 1960, name: "G. I. Blues" },
+      { code:  'b-hawaii',   year: 1961, name: "Blue Hawaii" },
+      { code:  'foll-dream', year: 1962, name: "Follow That Dream" },
+      { code:  'girls',      year:1962, name: "Girls! Girls! Girls!" },
+      { code:  'young-ones', year:1962, name: "The Young Ones" },
+      { code:  'acapulco',   year:1963, name: "Fun in Acapulco" },
+      { code:  'w-fair',     year:1963, name: "It Happened at the World's Fair" },
+      { code:  'g-happy',    year:1964, name: "Girl Happy" },
+      { code:  'k-cousins',  year:1964, name: "Kissin' Cousins" },
+      { code:  'roust',      year:1964, name: "Roustabout" },
+      { code:  'vegas',      year:1964, name: "Viva Las Vegas" },
+      { code:  'h-scarum',   year:1965, name: "Harum Scarum" },
+      { code:  'f-johnny',   year:1966, name: "Frankie and Johnny" },
+      { code:  'paradise',   year:1966, name: "Paradise, Hawaiian Style" },
+      { code:  'spinout',    year:1966, name: "Spinout" },
+      { code:  'clambake',   year:1967, name: "Clambake" },
+      { code:  'd-trouble',  year:1967, name: "Double Trouble" },
+      { code:  'speedway',   year:1968, name: "Speedway" },
+      { code:  's-a-joe',    year:1968, name: "Stay Away, Joe" },
   ]
   print "Adding #{movies.size} movies..."
-  movies.each { |m| Movie.create!(year: m[:year], name: m[:name]) }
+  movies.each { |m| Movie.create!(code: m[:code], year: m[:year], name: m[:name]) }
   puts 'done.'
 end
 
@@ -192,7 +192,7 @@ def add_non_elvis_songs
   songs = [
       { code: "bagel-lox"     , name: "Bagels & Lox",                              performers: %w(rob-schneid) },
       { code: "run-back-me"   , name: "Don't Come Running Back to Me" ,            performers: %w(n-wilson) },
-      { code: "egbert"        , name: "Eggbert, The Easter Egg" ,                  performers: %w(r-clooney) },
+      { code: "eggbert"       , name: "Eggbert, The Easter Egg" ,                  performers: %w(r-clooney) },
       { code: "glad"          , name: "Glad All Over" ,                            performers: %w(beatles jeff-beck) },
       { code: "bye-boys"      , name: "Goodbye Boys, Goodbye" ,                    performers: %w(jay-amer) },
       { code: "crush-ny"      , name: "I've Got a Crush on New York Town" ,        performers: %w(c-francis) },
@@ -240,7 +240,7 @@ def add_song_plays
       { song_code: 'crush-ny'      , performer_code: 'c-francis'     , youtube_key: '0_Gycn0UJ9M' },
       { song_code: 'drums-islands' , performer_code: 'elvis'         , youtube_key: '4pXqiV-gbEk' },
       { song_code: 'earth-boy'     , performer_code: 'elvis'         , youtube_key: 'h_i4Dmfowjs' },
-      { song_code: 'egbert'        , performer_code: 'r-clooney'     , youtube_key: 'xkLGm9B60oY' },
+      { song_code: 'eggbert'       , performer_code: 'r-clooney'     , youtube_key: 'xkLGm9B60oY' },
       { song_code: 'five-heads'    , performer_code: 'elvis'         , youtube_key: 'tZK2FcTjBsE' },
       { song_code: 'ft-laud'       , performer_code: 'elvis'         , youtube_key: '3In-gZ5IL7s' },
       { song_code: 'g-i-blues'     , performer_code: 'elvis'         , youtube_key: 'GkyjCJvHLsA' },

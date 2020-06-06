@@ -9,7 +9,7 @@ class Movie < ApplicationRecord
     report = StringIO.new
     report << "          Movies\n\n"
     report << '   Code        Year    Name'
-    report << "\n"
+    report << "\n\n"
     all.each { |record| report << record.as_report_string << "\n" }
     report.string
   end
