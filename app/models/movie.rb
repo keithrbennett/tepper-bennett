@@ -6,19 +6,4 @@ class Movie < ApplicationRecord
   validates :name, presence: true
   validates :name, uniqueness: true
 
-  def self.as_report_string
-    report = StringIO.new
-    report << "          Movies\n\n"
-    report << '   Code        Year    Name'
-    report << "\n\n"
-    all.each { |record| report << record.as_report_string << "\n" }
-    report.string
-  end
-
-  def as_report_string
-    '%-14s  %4.4d  %s' % [code, year, name]
-  end
-
-
-
 end
