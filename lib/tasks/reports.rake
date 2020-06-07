@@ -7,16 +7,26 @@ namespace :reports do
 
   def gen_task(task_type)
     desc "Generates a list of #{task_type}"
-    task task_type do
+    task_name = task_type.to_s + '_codes_names'
+    task task_name do
       klass = Kernel.const_get("Report" + task_type.to_s.capitalize[0..-2] + 'CodesNames')
       puts klass.new.report_string
     end
 
-    DEFINED_TASKS << task_type
+    DEFINED_TASKS << task_name
   end
 
 
   %i(genres writers movies performers organizations songs).each { |task_type| gen_task(task_type) }
 
+
+  desc 'List song information'
+  task :songs do
+    puts SongReport.new.report_string
+  end
+  DEFINED_TASKS << :songs
+
   task all: DEFINED_TASKS
+
+  puts DEFINED_TASKS
 end
