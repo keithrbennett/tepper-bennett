@@ -7,10 +7,11 @@ class Song < ApplicationRecord
   has_and_belongs_to_many :rights_admin_orgs, class_name: 'Organization'
   has_many :song_plays
 
+  validates_length_of :code, maximum: max_code_length
   validates :name, presence: true
   validates :name, uniqueness: true
 
-  def self.as_report_strings
+  def self.as_report_string
     report = StringIO.new
     report << "          Songs\n\n"
     report << '   Code           Name'
