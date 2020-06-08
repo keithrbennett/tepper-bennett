@@ -41,7 +41,7 @@ class StaticPagesController < ActionController::Base
         r.('Kiss of Fire',                                'Louis Armstrong',                      'gVxwN3Eaf_U'),
         r.('Kiss of Fire',                                'Georgia Gibbs',                        'mLpzfER6w3c'),
         r.('The Naughty Lady of Shady Lane',              'The Ames Brothers',                    '9HxB7lxbTnI'),
-        r.("Nuttin' for Christmas",                       'Barry Gordon',                         'aUA7BPnog_0'),
+        r.("Nuttin' for Christmas",                       'Barry Gordon',                         '9J-hyQGmhlo'),
         r.('Suzy Snowflake',                              'Rosemary Clooney',                     'UiFXZhU5kp4'),
         r.('Wonderful World of the Young',                'Andy Williams',                        'eoRVnPH8uUI'),
         r.('Bagel & Lox',                                 'Rob Schneider',                        'dv4h8yU_N7o'),
