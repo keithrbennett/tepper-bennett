@@ -352,7 +352,7 @@ def add_song_genres
   movie_genre = Genre.find_by_code('movie')
   Song.all.select { |song| song.performer_codes.include?('elvis') }.each do |song|
     song.genres << elvis_genre
-    song.genres << movie_genre
+    song.genres << movie_genre unless song['code'] == 'old-sake'
   end
 end
 
