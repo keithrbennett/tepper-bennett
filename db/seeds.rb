@@ -58,6 +58,7 @@ def add_performers
       { code: "ames-bros"     , name: "The Ames Brothers" },
       { code: "andy-wms"      , name: "Andy Williams" },
       { code: "anne-lloyd"    , name: "Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra" },
+      { code: "ann-margret"   , name: "Ann-Margret" },
       { code: "b-gordon"      , name: "Barry Gordon" },
       { code: "beatles"       , name: "The Beatles" },
       { code: "ben-mill"      , name: "Tex Beneke and The Miller Orchestra" },
@@ -208,10 +209,12 @@ def add_elvis_songs
   print "Adding #{songs.size} Elvis songs..."
 
   songs.each do |s|
-    add_song(code: s[:code], name: s[:name], performers: ['elvis'], genres: s[:genres], movies: s[:movies])
+    performers = (s[:code] == 'lady-loves') ? %w{elvis ann-margret} : %w{elvis}
+    add_song(code: s[:code], name: s[:name], performers: performers, genres: s[:genres], movies: s[:movies])
   end
   puts 'done.'
 end
+
 
 def add_non_elvis_songs
 
