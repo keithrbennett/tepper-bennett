@@ -17,7 +17,7 @@ namespace :reports do
   end
 
 
-  %i(genres writers movies performers organizations songs).each { |task_type| gen_task(task_type) }
+  %i(genres writers performers organizations songs).each { |task_type| gen_task(task_type) }
 
 
   desc 'List song information'
@@ -39,6 +39,13 @@ namespace :reports do
     puts ReportGenreSongs.new.report_string
   end
   DEFINED_TASKS << :genre_songs
+
+
+  desc 'List movies'
+  task :movies do
+    puts ReportMovies.new.report_string
+  end
+  DEFINED_TASKS << :movies
 
 
   task all: DEFINED_TASKS
