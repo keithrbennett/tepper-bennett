@@ -25,7 +25,7 @@ def add_movies
       { code:  'lov-you',    year: 1957, name: "Loving You" },
       { code:  'k-creole',   year: 1958, name: "King Creole" },
       { code:  'flam-star',  year: 1960, name: "Flaming Star" },
-      { code:  'g-i-blues',   year: 1960, name: "G. I. Blues" },
+      { code:  'g-i-blues',  year: 1960, name: "G. I. Blues" },
       { code:  'b-hawaii',   year: 1961, name: "Blue Hawaii" },
       { code:  'foll-dream', year: 1962, name: "Follow That Dream" },
       { code:  'girls',      year: 1962, name: "Girls! Girls! Girls!" },
@@ -163,7 +163,7 @@ def add_elvis_songs
       { code: "all-i-am"      , name: "All That I Am", genres: %w{romantic},                      movies: %w{spinout} },
       { code: "am-i-ready"    , name: "Am I Ready", genres: %w{romantic},                         movies: %w{spinout}  },
       { code: "angel"         , name: "Angel", genres: %w{romantic},                              movies: %w{foll-dream} },
-      { code: "b-b-blues"     , name: "Beach Boy Blues",                                          movies: %w{b-hawaii} },
+      { code: "b-b-blues"     , name: "Beach Boy Blues", genres: %w{blues}                        movies: %w{b-hawaii} },
       { code: "beg-luck"      , name: "Beginners Luck", genres: %w{romantic},                     movies: %w{f-johnny} },
       { code: "confidence"    , name: "Confidence",                                               movies: %w{clambake} },
       { code: "drums-isles"   , name: "Drums of the Islands",                                     movies: %w{paradise} },
@@ -171,7 +171,7 @@ def add_elvis_songs
       { code: "five-heads"    , name: "Five Sleepy Heads",                                        movies: %w{speedway} },
       { code: "millionth"     , name: "For the Millionth and Last Time",                          movies: %w{foll-dream} },
       { code: "ft-laud"       , name: "Fort Lauderdale Chamber of Commerce",                      movies: %w{girl-happy} },
-      { code: "g-i-blues"     , name: "G. I. Blues",                                              movies: %w{g-i-blues} },
+      { code: "g-i-blues"     , name: "G. I. Blues", genres: %w{blues},                           movies: %w{g-i-blues} },
       { code: "h-sunset"      , name: "Hawaiian Sunset",                                          movies: %w{b-hawaii} },
       { code: "one-girl"      , name: "I Love Only One Girl",                                     movies: %w{d-trouble} },
       { code: "isl-love"      , name: "Island of Love", genres: %w{romantic},                     movies: %w{b-hawaii} },
@@ -201,6 +201,15 @@ def add_elvis_songs
       { code: "wheels-heels"  , name: "Wheels on My Heels",                                       movies: %w{roust} },
   ]
 
+  add_elvis_and_movie_genres = -> do
+    elvis_genre = Genre.find_by_code('elvis')
+    movie_genre = Genre.find_by_code('movie')
+    Song.all.select { |song| song.performer_codes.include?('elvis') }.each do |song|
+      song.genres << elvis_genre
+      song.genres << movie_genre unless song['code'] == 'old-sake'
+    end
+  end
+
   songs_with_long_codes = songs.map { |h| h[:code] }.select { |code| code.length > 12 }
   unless songs_with_long_codes.empty?
     raise "Song codes too long: #{songs_with_long_codes}"
@@ -212,6 +221,8 @@ def add_elvis_songs
     performers = (s[:code] == 'lady-loves') ? %w{elvis ann-margret} : %w{elvis}
     add_song(code: s[:code], name: s[:name], performers: performers, genres: s[:genres], movies: s[:movies])
   end
+
+  add_elvis_and_movie_genres.()
   puts 'done.'
 end
 
@@ -229,9 +240,9 @@ def add_non_elvis_songs
       { code: "jenny-kiss"    , name: "Jenny Kissed Me" ,                          performers: %w(ed-albert),   genres: %w{romantic} },
       { code: "kewpie-doll"   , name: "Kewpie Doll" ,                              performers: %w(p-como) },
       { code: "kiss-fire"     , name: "Kiss of Fire" ,                             performers: %w(louis-arm),   genres: %w{romantic} },
-      { code: "n-for-xmas"    , name: "Nuttin' for Christmas" ,                    performers: %w(b-gordon),    genres: %w{children} },
+      { code: "n-for-xmas"    , name: "Nuttin' for Christmas" ,                    performers: %w(a-mooney b-gordon),    genres: %w{children} },
       { code: "red-roses"     , name: "Red Roses for a Blue Lady" ,                performers: %w(andy-wms bert-kmft dean-martin p-como r-conniff sinatra v-monroe w-newton), genres: %w{romantic} },
-      { code: "santa-daddy"   , name: "Santa Claus Looks Just Like Daddy" ,        performers: %w(b-gordon),    genres: %w{children} },
+      { code: "santa-daddy"   , name: "Santa Claus Looks Just Like Daddy" ,        performers: %w(a-mooney b-gordon),    genres: %w{children} },
       { code: "ssss-heart"    , name: "Say Something Sweet to Your Sweetheart" ,   performers: %w(ink-spots),   genres: %w{romantic} },
       { code: "soft-love"     , name: "Softly My Love" ,                           performers: %w(della-reese), genres: %w{romantic} },
       { code: "smr-sounds"    , name: "Summer Sounds" ,                            performers: %w(r-goulet) },
