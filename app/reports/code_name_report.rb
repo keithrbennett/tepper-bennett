@@ -32,7 +32,7 @@ class CodeNameReport
     report << "%s%-s\n" % [indentation, report_title]
     report << separator_line
     report << "\n   Code           Name\n\n"
-    ar_class.all.each { |record| report << record_report_string(record) << "\n" }
+    ar_class.order(:name).all.each { |record| report << record_report_string(record) << "\n" }
     report << "\n\n"
     report.string
   end
