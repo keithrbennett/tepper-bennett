@@ -121,23 +121,42 @@ def add_organizations
 end
 
 
-def add_elvis_songs
-  elvis = Performer.find_by_code('elvis')
-  tepper_bennett = [Writer.find_by_code('tepper'), Writer.find_by_code('bennett')]
+def default_writers
+  @default_writers ||= [Writer.find_by_code('tepper'), Writer.find_by_code('bennett')]
+end
 
-  add_song = ->(song) do
-    elvis.songs << Song.create!(code: song[:code], name: song[:name], writers: tepper_bennett)
+
+def add_song(code:, name:, performers: [], genres: [], writers: default_writers)
+  db_song = Song.new(code: code, name: name, writers: writers)
+
+  performers ||= []
+  performers.each do |code|
+    performer = Performer.find_by_code(code)
+    raise "Performer for code '#{code}' not found." if performer.nil?
+    db_song.performers << performer
   end
 
+  genres ||= []
+  genres.each do |code|
+    genre = Genre.find_by_code(code)
+    raise "Genre for code '#{code}' not found." if genre.nil?
+    db_song.genres << genre
+  end
+
+  db_song.save!
+end
+
+
+def add_elvis_songs
   songs = [
       { code: "boy-like-me"   , name: "A Boy Like Me, A Girl Like You" },
       { code: "cane-collar"   , name: "A Cane and A High Starched Collar" },
-      { code: "h-everything"  , name: "A House That Has Everything" },
-      { code: "all-i-am"      , name: "All That I Am" },
-      { code: "am-i-ready"    , name: "Am I Ready" },
-      { code: "angel"         , name: "Angel" },
+      { code: "h-everything"  , name: "A House That Has Everything",  genres: %w{romantic} },
+      { code: "all-i-am"      , name: "All That I Am", genres: %w{romantic} },
+      { code: "am-i-ready"    , name: "Am I Ready", genres: %w{romantic} },
+      { code: "angel"         , name: "Angel", genres: %w{romantic} },
       { code: "b-b-blues"     , name: "Beach Boy Blues" },
-      { code: "beg-luck"      , name: "Beginners Luck" },
+      { code: "beg-luck"      , name: "Beginners Luck", genres: %w{romantic} },
       { code: "confidence"    , name: "Confidence" },
       { code: "drums-isles"   , name: "Drums of the Islands" },
       { code: "earth-boy"     , name: "Earth Boy" },
@@ -147,7 +166,7 @@ def add_elvis_songs
       { code: "g-i-blues"     , name: "G. I. Blues" },
       { code: "h-sunset"      , name: "Hawaiian Sunset" },
       { code: "one-girl"      , name: "I Love Only One Girl" },
-      { code: "isl-love"      , name: "Island of Love" },
+      { code: "isl-love"      , name: "Island of Love", genres: %w{romantic} },
       { code: "wond-world"    , name: "It's a Wonderful World" },
       { code: "ito-eats"      , name: "Ito Eats" },
       { code: "old-sake"      , name: "Just for Old Time Sake" },
@@ -157,8 +176,8 @@ def add_elvis_songs
       { code: "mine"          , name: "Mine" },
       { code: "n-orleans"     , name: "New Orleans" },
       { code: "once-enough"   , name: "Once is Enough" },
-      { code: "petunia"       , name: "Petunia, the Gardener's Daughter" },
-      { code: "puppet"        , name: "Puppet on a String" },
+      { code: "petunia"       , name: "Petunia, the Gardener's Daughter", genres: %w{romantic} },
+      { code: "puppet"        , name: "Puppet on a String", genres: %w{romantic} },
       { code: "relax"         , name: "Relax" },
       { code: "shop-arnd"     , name: "Shoppin' Around" },
       { code: "sl-sand"       , name: "Slicin' Sand" },
@@ -166,8 +185,8 @@ def add_elvis_songs
       { code: "shrimp"        , name: "Song of the Shrimp" },
       { code: "stay-away"     , name: "Stay Away" },
       { code: "take-me-fair"  , name: "Take Me to the Fair" },
-      { code: "bullfighter"   , name: "The Bullfighter Was a Lady" },
-      { code: "lady-loves"    , name: "The Lady Loves Me" },
+      { code: "bullfighter"   , name: "The Bullfighter Was a Lady", genres: %w{romantic} },
+      { code: "lady-loves"    , name: "The Lady Loves Me", genres: %w{romantic} },
       { code: "walls-ears"    , name: "The Walls Have Ears" },
       { code: "vino"          , name: "Vino, Dinero y Amor" },
       { code: "west-union"    , name: "Western Union" },
@@ -175,52 +194,49 @@ def add_elvis_songs
   ]
 
   puts "Song codes too long: #{songs.map { |h| h[:code] }.select { |code| code.length > 12 }}"
-  print"Adding #{songs.size} Elvis songs..."
-  songs.each { |song| add_song.(song) }
+  print "Adding #{songs.size} Elvis songs..."
+
+  songs.each do |s|
+    add_song(code: s[:code], name: s[:name], performers: ['elvis'], genres: s[:genres])
+  end
   puts 'done.'
 end
 
 def add_non_elvis_songs
-  tepper_bennett = [Writer.find_by_code('tepper'), Writer.find_by_code('bennett')]
-
-  add_song = ->(song) do
-    db_song = Song.new(code: song[:code], name: song[:name], writers: tepper_bennett)
-    db_song.performers = (song[:performers].map { |code| Performer.find_by_code(code) })
-    db_song.save!
-  end
-
 
   songs = [
       { code: "bagel-lox"     , name: "Bagels & Lox",                              performers: %w(rob-schneid) },
-      { code: "run-back-me"   , name: "Don't Come Running Back to Me" ,            performers: %w(n-wilson) },
-      { code: "eggbert"       , name: "Eggbert, The Easter Egg" ,                  performers: %w(r-clooney) },
+      { code: "run-back-me"   , name: "Don't Come Running Back to Me" ,            performers: %w(n-wilson),    genres: %w{romantic} },
+      { code: "eggbert"       , name: "Eggbert, The Easter Egg" ,                  performers: %w(r-clooney),   genres: %w{children} },
       { code: "glad"          , name: "Glad All Over" ,                            performers: %w(beatles jeff-beck) },
       { code: "bye-boys"      , name: "Goodbye Boys, Goodbye" ,                    performers: %w(jay-amer) },
       { code: "crush-ny"      , name: "I've Got a Crush on New York Town" ,        performers: %w(c-francis) },
-      { code: "long-way"      , name: "It's a Long Way from Your House to My House" , performers: %w(sinatra) },
-      { code: "jenny-kiss"    , name: "Jenny Kissed Me" ,                          performers: %w(ed-albert) },
+      { code: "long-way"      , name: "It's a Long Way from Your House to My House" , performers: %w(sinatra),  genres: %w{romantic} },
+      { code: "jenny-kiss"    , name: "Jenny Kissed Me" ,                          performers: %w(ed-albert),   genres: %w{romantic} },
       { code: "kewpie-doll"   , name: "Kewpie Doll" ,                              performers: %w(p-como) },
-      { code: "kiss-fire"     , name: "Kiss of Fire" ,                             performers: %w(louis-arm) },
-      { code: "n-for-xmas"    , name: "Nuttin' for Christmas" ,                    performers: %w(b-gordon) },
-      { code: "red-roses"     , name: "Red Roses for a Blue Lady" ,                performers: %w(andy-wms bert-kmft dean-martin p-como r-conniff sinatra v-monroe w-newton) },
-      { code: "santa-daddy"   , name: "Santa Claus Looks Just Like Daddy" ,        performers: %w(b-gordon) },
-      { code: "ssss-heart"    , name: "Say Something Sweet to Your Sweetheart" ,   performers: %w(ink-spots) },
-      { code: "soft-love"     , name: "Softly My Love" ,                           performers: %w(della-reese) },
+      { code: "kiss-fire"     , name: "Kiss of Fire" ,                             performers: %w(louis-arm),   genres: %w{romantic} },
+      { code: "n-for-xmas"    , name: "Nuttin' for Christmas" ,                    performers: %w(b-gordon),    genres: %w{children} },
+      { code: "red-roses"     , name: "Red Roses for a Blue Lady" ,                performers: %w(andy-wms bert-kmft dean-martin p-como r-conniff sinatra v-monroe w-newton), genres: %w{romantic} },
+      { code: "santa-daddy"   , name: "Santa Claus Looks Just Like Daddy" ,        performers: %w(b-gordon),    genres: %w{children} },
+      { code: "ssss-heart"    , name: "Say Something Sweet to Your Sweetheart" ,   performers: %w(ink-spots),   genres: %w{romantic} },
+      { code: "soft-love"     , name: "Softly My Love" ,                           performers: %w(della-reese), genres: %w{romantic} },
       { code: "smr-sounds"    , name: "Summer Sounds" ,                            performers: %w(r-goulet) },
-      { code: "suzy-snow"     , name: "Suzy Snowflake" ,                           performers: %w(r-clooney) },
-      { code: "tear-rain"     , name: "Teardrops in the Rain" ,                    performers: %w(a-prysock) },
-      { code: "train-ahchoo"  , name: "The Little Train Who Said 'Ah Choo" ,       performers: %w(anne-lloyd) },
-      { code: "nty-lady"      , name: "The Naughty Lady of Shady Lane" ,           performers: %w(ames-bros) },
+      { code: "suzy-snow"     , name: "Suzy Snowflake" ,                           performers: %w(r-clooney),   genres: %w{children} },
+      { code: "tear-rain"     , name: "Teardrops in the Rain" ,                    performers: %w(a-prysock),   genres: %w{romantic} },
+      { code: "train-ahchoo"  , name: "The Little Train Who Said 'Ah Choo" ,       performers: %w(anne-lloyd),  genres: %w{children} },
+      { code: "nty-lady"      , name: "The Naughty Lady of Shady Lane" ,           performers: %w(ames-bros),   genres: %w{funny} },
       { code: "woodchuck"     , name: "The Woodchuck Song" ,                       performers: %w(ben-mill) },
-      { code: "yng-ones"      , name: "The Young Ones" ,                           performers: %w(clf-rich) },
+      { code: "yng-ones"      , name: "The Young Ones" ,                           performers: %w(clf-rich),    genres: %w{tv movie} },
       { code: "tr-light"      , name: "Travelling Light" ,                         performers: %w(clf-rich jay-amer) },
-      { code: "t-t-fingers"   , name: "Twenty Tiny Fingers" ,                      performers: %w(stargazers) },
-      { code: "when-arms"     , name: "When the Boy (Girl) in Your Arms" ,         performers: %w(c-francis) },
+      { code: "t-t-fingers"   , name: "Twenty Tiny Fingers" ,                      performers: %w(stargazers),  genres: %w{children} },
+      { code: "when-arms"     , name: "When the Boy (Girl) in Your Arms" ,         performers: %w(c-francis),   genres: %w{romantic} },
       { code: "ww-young"      , name: "Wonderful World of the Young" ,             performers: %w(andy-wms clf-rich) },
   ]
 
   print "Adding #{songs.count} non-Elvis songs..."
-  songs.each { |song| add_song.(song) }
+  songs.each do |s|
+    add_song(code: s[:code], name: s[:name], performers: s[:performers], genres: s[:genres])
+  end
   puts 'done.'
 end
 
@@ -319,8 +335,10 @@ end
 
 def add_song_genres
   elvis_genre = Genre.find_by_code('elvis')
+  movie_genre = Genre.find_by_code('movie')
   Song.all.select { |song| song.performer_codes.include?('elvis') }.each do |song|
     song.genres << elvis_genre
+    song.genres << movie_genre
   end
 end
 

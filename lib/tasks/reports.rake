@@ -35,5 +35,4 @@ namespace :reports do
 
   task all: DEFINED_TASKS
 
-  puts DEFINED_TASKS
 end
