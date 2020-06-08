@@ -22,7 +22,7 @@ end
 
 def add_movies
   movies = [
-      { code:  'lov_you',    year: 1957, name: "Loving You" },
+      { code:  'lov-you',    year: 1957, name: "Loving You" },
       { code:  'k-creole',   year: 1958, name: "King Creole" },
       { code:  'flam-star',  year: 1960, name: "Flaming Star" },
       { code:  'gi-blues',   year: 1960, name: "G. I. Blues" },
@@ -126,7 +126,7 @@ def default_writers
 end
 
 
-def add_song(code:, name:, performers: [], genres: [], writers: default_writers)
+def add_song(code:, name:, performers: [], genres: [], writers: default_writers, movies: nil)
   db_song = Song.new(code: code, name: name, writers: writers)
 
   performers ||= []
@@ -143,57 +143,68 @@ def add_song(code:, name:, performers: [], genres: [], writers: default_writers)
     db_song.genres << genre
   end
 
+  movies ||= []
+  movies.each do |code|
+    movie = Movie.find_by_code(code)
+    raise "Movie for code '#{code}' not found." if movie.nil?
+    db_song.movies << movie
+  end
+
   db_song.save!
 end
 
 
 def add_elvis_songs
   songs = [
-      { code: "boy-like-me"   , name: "A Boy Like Me, A Girl Like You" },
-      { code: "cane-collar"   , name: "A Cane and A High Starched Collar" },
-      { code: "h-everything"  , name: "A House That Has Everything",  genres: %w{romantic} },
-      { code: "all-i-am"      , name: "All That I Am", genres: %w{romantic} },
-      { code: "am-i-ready"    , name: "Am I Ready", genres: %w{romantic} },
-      { code: "angel"         , name: "Angel", genres: %w{romantic} },
-      { code: "b-b-blues"     , name: "Beach Boy Blues" },
-      { code: "beg-luck"      , name: "Beginners Luck", genres: %w{romantic} },
-      { code: "confidence"    , name: "Confidence" },
-      { code: "drums-isles"   , name: "Drums of the Islands" },
-      { code: "earth-boy"     , name: "Earth Boy" },
-      { code: "five-heads"    , name: "Five Sleepy Heads" },
-      { code: "millionth"     , name: "For the Millionth and Last Time" },
-      { code: "ft-laud"       , name: "Fort Lauderdale Chamber of Commerce" },
-      { code: "g-i-blues"     , name: "G. I. Blues" },
-      { code: "h-sunset"      , name: "Hawaiian Sunset" },
-      { code: "one-girl"      , name: "I Love Only One Girl" },
-      { code: "isl-love"      , name: "Island of Love", genres: %w{romantic} },
-      { code: "wond-world"    , name: "It's a Wonderful World" },
-      { code: "ito-eats"      , name: "Ito Eats" },
-      { code: "old-sake"      , name: "Just for Old Time Sake" },
-      { code: "kismet"        , name: "Kismet" },
-      { code: "l-cowboy"      , name: "Lonesome Cowboy" },
-      { code: "mexico"        , name: "Mexico" },
-      { code: "mine"          , name: "Mine" },
-      { code: "n-orleans"     , name: "New Orleans" },
-      { code: "once-enough"   , name: "Once is Enough" },
-      { code: "petunia"       , name: "Petunia, the Gardener's Daughter", genres: %w{romantic} },
-      { code: "puppet"        , name: "Puppet on a String", genres: %w{romantic} },
-      { code: "relax"         , name: "Relax" },
-      { code: "shop-arnd"     , name: "Shoppin' Around" },
-      { code: "sl-sand"       , name: "Slicin' Sand" },
-      { code: "smorgasbord"   , name: "Smorgasbord" },
-      { code: "shrimp"        , name: "Song of the Shrimp" },
-      { code: "stay-away"     , name: "Stay Away" },
-      { code: "take-me-fair"  , name: "Take Me to the Fair" },
-      { code: "bullfighter"   , name: "The Bullfighter Was a Lady", genres: %w{romantic} },
-      { code: "lady-loves"    , name: "The Lady Loves Me", genres: %w{romantic} },
-      { code: "walls-ears"    , name: "The Walls Have Ears" },
-      { code: "vino"          , name: "Vino, Dinero y Amor" },
-      { code: "west-union"    , name: "Western Union" },
-      { code: "wheels-heels"  , name: "Wheels on My Heels" },
+      { code: "boy-like-me"   , name: "A Boy Like Me, A Girl Like You" , movie: %w{girls} },
+      { code: "cane-collar"   , name: "A Cane and A High Starched Collar", movie: %w{flam-star} },
+      { code: "h-everything"  , name: "A House That Has Everything",  genres: %w{romantic}, movie: %w{clambake} },
+      { code: "all-i-am"      , name: "All That I Am", genres: %w{romantic}, movie: %w{spinout} },
+      { code: "am-i-ready"    , name: "Am I Ready", genres: %w{romantic}, movie: %w{spinout}  },
+      { code: "angel"         , name: "Angel", genres: %w{romantic}, movie: %w{foll-dream} },
+      { code: "b-b-blues"     , name: "Beach Boy Blues", movie: %w{b-hawaii} },
+      { code: "beg-luck"      , name: "Beginners Luck", genres: %w{romantic}, movie: %w{f-johnny} },
+      { code: "confidence"    , name: "Confidence", movie: %w{clambake} },
+      { code: "drums-isles"   , name: "Drums of the Islands", movie: %w{paradise} },
+      { code: "earth-boy"     , name: "Earth Boy", movie: %w{girls} },
+      { code: "five-heads"    , name: "Five Sleepy Heads", movie: %w{speedway} },
+      { code: "millionth"     , name: "For the Millionth and Last Time", movie: %w{foll-dream} },
+      { code: "ft-laud"       , name: "Fort Lauderdale Chamber of Commerce", movie: %w{girl-happy} },
+      { code: "g-i-blues"     , name: "G. I. Blues", movie: %w{g-i-blues} },
+      { code: "h-sunset"      , name: "Hawaiian Sunset", movie: %w{b-hawaii} },
+      { code: "one-girl"      , name: "I Love Only One Girl", movie: %w{d-trouble} },
+      { code: "isl-love"      , name: "Island of Love", genres: %w{romantic}, movie: %w{b-hawaii} },
+      { code: "wond-world"    , name: "It%w{s a Wonderful World", movie: %w{roust} },
+      { code: "ito-eats"      , name: "Ito Eats", movie: %w{b-hawaii} },
+      { code: "old-sake"      , name: "Just for Old Time Sake", movie: nil }, # *not* in a movie!
+      { code: "kismet"        , name: "Kismet", movie: %w{h-scarum} },
+      { code: "l-cowboy"      , name: "Lonesome Cowboy", movie: %w{lov-you} },
+      { code: "mexico"        , name: "Mexico", movie: %w{acapulco} },
+      { code: "mine"          , name: "Mine", movie: %w{speedway} },
+      { code: "n-orleans"     , name: "New Orleans", movie: %w{k-creole} },
+      { code: "once-enough"   , name: "Once is Enough", movie: %w{k-cousins} },
+      { code: "petunia"       , name: "Petunia, the Gardener%w{s Daughter", genres: %w{romantic}, movie: %w{f-johnny} },
+      { code: "puppet"        , name: "Puppet on a String", genres: %w{romantic}, movie: %w{g-happy} },
+      { code: "relax"         , name: "Relax", movie: %w{w-fair} },
+      { code: "shop-arnd"     , name: "Shoppin%w{ Around", movie: %w{g-i-blues} },
+      { code: "sl-sand"       , name: "Slicin' Sand", movie: %w{b-hawaii} },
+      { code: "smorgasbord"   , name: "Smorgasbord", movie: %w{spinout} },
+      { code: "shrimp"        , name: "Song of the Shrimp", movie: %w{girls} },
+      { code: "stay-away"     , name: "Stay Away", movie: %w{s-a-joe} },
+      { code: "take-me-fair"  , name: "Take Me to the Fair", movie: %w{w-fair} },
+      { code: "bullfighter"   , name: "The Bullfighter Was a Lady", genres: %w{romantic}, movie: %w{acapulco} },
+      { code: "lady-loves"    , name: "The Lady Loves Me", genres: %w{romantic}, movie: %w{vegas} },
+      { code: "walls-ears"    , name: "The Walls Have Ears", movie: %w{girls} },
+      { code: "vino"          , name: "Vino, Dinero y Amor", movie: %w{acapulco} },
+      { code: "west-union"    , name: "Western Union", movie: %w{speedway} },
+      { code: "wheels-heels"  , name: "Wheels on My Heels", movie: %w{roust} },
   ]
 
-  puts "Song codes too long: #{songs.map { |h| h[:code] }.select { |code| code.length > 12 }}"
+  songs_with_long_codes = songs.map { |h| h[:code] }.select { |code| code.length > 12 }
+  unless songs_with_long_codes.empty?
+    raise "Song codes too long: #{songs_with_long_codes}"
+  end
+
   print "Adding #{songs.size} Elvis songs..."
 
   songs.each do |s|
@@ -226,7 +237,7 @@ def add_non_elvis_songs
       { code: "train-ahchoo"  , name: "The Little Train Who Said 'Ah Choo" ,       performers: %w(anne-lloyd),  genres: %w{children} },
       { code: "nty-lady"      , name: "The Naughty Lady of Shady Lane" ,           performers: %w(ames-bros),   genres: %w{funny} },
       { code: "woodchuck"     , name: "The Woodchuck Song" ,                       performers: %w(ben-mill) },
-      { code: "yng-ones"      , name: "The Young Ones" ,                           performers: %w(clf-rich),    genres: %w{tv movie} },
+      { code: "yng-ones"      , name: "The Young Ones" ,                           performers: %w(clf-rich),    genres: %w{tv movie}, movies: %w{young-ones} },
       { code: "tr-light"      , name: "Travelling Light" ,                         performers: %w(clf-rich jay-amer) },
       { code: "t-t-fingers"   , name: "Twenty Tiny Fingers" ,                      performers: %w(stargazers),  genres: %w{children} },
       { code: "when-arms"     , name: "When the Boy (Girl) in Your Arms" ,         performers: %w(c-francis),   genres: %w{romantic} },
@@ -235,7 +246,7 @@ def add_non_elvis_songs
 
   print "Adding #{songs.count} non-Elvis songs..."
   songs.each do |s|
-    add_song(code: s[:code], name: s[:name], performers: s[:performers], genres: s[:genres])
+    add_song(code: s[:code], name: s[:name], performers: s[:performers], genres: s[:genres], movies: s[:movies])
   end
   puts 'done.'
 end
