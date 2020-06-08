@@ -1,4 +1,4 @@
-class SongReport
+class ReportSongs
 
   attr_reader :heading, :title, :line_length, :separator_line, :report_string_continuation_indent
 

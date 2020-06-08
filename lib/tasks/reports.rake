@@ -22,9 +22,16 @@ namespace :reports do
 
   desc 'List song information'
   task :songs do
-    puts SongReport.new.report_string
+    puts ReportSongs.new.report_string
   end
   DEFINED_TASKS << :songs
+
+
+  desc 'Report song genres'
+  task :song_genres do
+    puts ReportSongGenres.new.report_string
+  end
+  DEFINED_TASKS << :song_genres
 
   task all: DEFINED_TASKS
 

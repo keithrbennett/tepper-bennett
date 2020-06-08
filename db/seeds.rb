@@ -1,6 +1,6 @@
 
 def add_genres
-  genres = %w(bluegrass blues children country funny hit movie rock romantic tv)
+  genres = %w(bluegrass blues children country elvis funny hit movie rock romantic tv)
   print "Adding #{genres.size} genres..."
   genres.each { |genre| Genre.create!(code: genre, name: genre) }
   puts 'done.'
@@ -28,22 +28,22 @@ def add_movies
       { code:  'gi-blues',   year: 1960, name: "G. I. Blues" },
       { code:  'b-hawaii',   year: 1961, name: "Blue Hawaii" },
       { code:  'foll-dream', year: 1962, name: "Follow That Dream" },
-      { code:  'girls',      year:1962, name: "Girls! Girls! Girls!" },
-      { code:  'young-ones', year:1962, name: "The Young Ones" },
-      { code:  'acapulco',   year:1963, name: "Fun in Acapulco" },
-      { code:  'w-fair',     year:1963, name: "It Happened at the World's Fair" },
-      { code:  'g-happy',    year:1964, name: "Girl Happy" },
-      { code:  'k-cousins',  year:1964, name: "Kissin' Cousins" },
-      { code:  'roust',      year:1964, name: "Roustabout" },
-      { code:  'vegas',      year:1964, name: "Viva Las Vegas" },
-      { code:  'h-scarum',   year:1965, name: "Harum Scarum" },
-      { code:  'f-johnny',   year:1966, name: "Frankie and Johnny" },
-      { code:  'paradise',   year:1966, name: "Paradise, Hawaiian Style" },
-      { code:  'spinout',    year:1966, name: "Spinout" },
-      { code:  'clambake',   year:1967, name: "Clambake" },
-      { code:  'd-trouble',  year:1967, name: "Double Trouble" },
-      { code:  'speedway',   year:1968, name: "Speedway" },
-      { code:  's-a-joe',    year:1968, name: "Stay Away, Joe" },
+      { code:  'girls',      year: 1962, name: "Girls! Girls! Girls!" },
+      { code:  'young-ones', year: 1962, name: "The Young Ones" },
+      { code:  'acapulco',   year: 1963, name: "Fun in Acapulco" },
+      { code:  'w-fair',     year: 1963, name: "It Happened at the World's Fair" },
+      { code:  'g-happy',    year: 1964, name: "Girl Happy" },
+      { code:  'k-cousins',  year: 1964, name: "Kissin' Cousins" },
+      { code:  'roust',      year: 1964, name: "Roustabout" },
+      { code:  'vegas',      year: 1964, name: "Viva Las Vegas" },
+      { code:  'h-scarum',   year: 1965, name: "Harum Scarum" },
+      { code:  'f-johnny',   year: 1966, name: "Frankie and Johnny" },
+      { code:  'paradise',   year: 1966, name: "Paradise, Hawaiian Style" },
+      { code:  'spinout',    year: 1966, name: "Spinout" },
+      { code:  'clambake',   year: 1967, name: "Clambake" },
+      { code:  'd-trouble',  year: 1967, name: "Double Trouble" },
+      { code:  'speedway',   year: 1968, name: "Speedway" },
+      { code:  's-a-joe',    year: 1968, name: "Stay Away, Joe" },
   ]
   print "Adding #{movies.size} movies..."
   movies.each { |m| Movie.create!(code: m[:code], year: m[:year], name: m[:name]) }
@@ -317,6 +317,13 @@ def add_song_plays
 end
 
 
+def add_song_genres
+  elvis_genre = Genre.find_by_code('elvis')
+  Song.all.select { |song| song.performer_codes.include?('elvis') }.each do |song|
+    song.genres << elvis_genre
+  end
+end
+
 
 add_genres
 add_writers
@@ -326,3 +333,4 @@ add_organizations
 add_elvis_songs
 add_non_elvis_songs
 add_song_plays
+add_song_genres
