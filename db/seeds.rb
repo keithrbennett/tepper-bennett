@@ -301,7 +301,7 @@ def add_song_plays
       { song_code: 'kismet'        , performer_codes: 'elvis'         , youtube_key: 'fnqC2I9QpIU' },
       { song_code: 'kiss-fire'     , performer_codes: 'louis-arm'     , youtube_key: 'gVxwN3Eaf_U' },
       { song_code: 'l-cowboy'      , performer_codes: 'elvis'         , youtube_key: 'DxComjngP2Q' },
-      { song_code: 'lady-loves'    , performer_codes: %w{ann-margret elvis} , youtube_key: 'Fv0bpfGfzls' },
+      { song_code: 'lady-loves'    , performer_codes: %w{elvis ann-margret} , youtube_key: 'Fv0bpfGfzls' },
       { song_code: 'long-way'      , performer_codes: 'sinatra'       , youtube_key: '7-tcw6w4Cj4' },
       { song_code: 'mexico'        , performer_codes: 'elvis'         , youtube_key: 'eCQrdpoBass' },
       { song_code: 'millionth'     , performer_codes: 'elvis'         , youtube_key: '0hhN13Qzl-Q' },

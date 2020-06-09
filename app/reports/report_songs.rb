@@ -37,14 +37,19 @@ class ReportSongs
 
 
   def record_report_string(record)
-    performers = record.performers.all.to_a
+    # performers = record.performers # This results in very strange behavior; see "The Lady Loves Me" in report
+    # and Stack Overflow page:
+    # https://stackoverflow.com/questions/62273455/activerecord-associationrelation-weird-first-last-behavior
+
+    performers = record.performers.order(:name).to_a
     sio = StringIO.new
     sio << '%-*s  %-*s  %-*s  %s' %
         [Song.max_code_length, record.code, Song.max_name_length, record.name,
-         Song.max_code_length, performers[0].code, performers[0].name]
+         Song.max_code_length, performers.first.code, performers.first.name]
+
     performers[1..-1].each do |performer|
-      sio << ("\n%-*s%-*s  %s" %
-          [@report_string_continuation_indent, '', Song.max_code_length, performer.code, performer.name])
+      sio << "\n%-*s%-*s  %s" %
+          [@report_string_continuation_indent, '', Song.max_code_length, performer.code, performer.name]
     end
     sio.string
   end
