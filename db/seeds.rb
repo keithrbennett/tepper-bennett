@@ -163,7 +163,7 @@ def add_elvis_songs
       { code: "all-i-am"      , name: "All That I Am", genres: %w{romantic},                      movies: %w{spinout} },
       { code: "am-i-ready"    , name: "Am I Ready", genres: %w{romantic},                         movies: %w{spinout}  },
       { code: "angel"         , name: "Angel", genres: %w{romantic},                              movies: %w{foll-dream} },
-      { code: "b-b-blues"     , name: "Beach Boy Blues", genres: %w{blues}                        movies: %w{b-hawaii} },
+      { code: "b-b-blues"     , name: "Beach Boy Blues", genres: %w{blues},                       movies: %w{b-hawaii} },
       { code: "beg-luck"      , name: "Beginners Luck", genres: %w{romantic},                     movies: %w{f-johnny} },
       { code: "confidence"    , name: "Confidence",                                               movies: %w{clambake} },
       { code: "drums-isles"   , name: "Drums of the Islands",                                     movies: %w{paradise} },
@@ -202,26 +202,30 @@ def add_elvis_songs
   ]
 
   add_elvis_and_movie_genres = -> do
-    elvis_genre = Genre.find_by_code('elvis')
-    movie_genre = Genre.find_by_code('movie')
     Song.all.select { |song| song.performer_codes.include?('elvis') }.each do |song|
-      song.genres << elvis_genre
-      song.genres << movie_genre unless song['code'] == 'old-sake'
+      song.add_genre('elvis')
+      song.add_genre('movie') unless song['code'] == 'old-sake'
     end
   end
 
+  validate_code_lengths = -> do
   songs_with_long_codes = songs.map { |h| h[:code] }.select { |code| code.length > 12 }
-  unless songs_with_long_codes.empty?
-    raise "Song codes too long: #{songs_with_long_codes}"
+    unless songs_with_long_codes.empty?
+      raise "Song codes too long: #{songs_with_long_codes}"
+    end
   end
 
-  print "Adding #{songs.size} Elvis songs..."
-
-  songs.each do |s|
-    performers = (s[:code] == 'lady-loves') ? %w{elvis ann-margret} : %w{elvis}
-    add_song(code: s[:code], name: s[:name], performers: performers, genres: s[:genres], movies: s[:movies])
+  add_songs = -> do
+    print "Adding #{songs.size} Elvis songs..."
+    songs.each do |s|
+      performers = (s[:code] == 'lady-loves') ? %w{elvis ann-margret} : %w{elvis}
+      add_song(code: s[:code], name: s[:name], performers: performers, genres: s[:genres], movies: s[:movies])
+    end
   end
 
+  # ----
+  validate_code_lengths.()
+  add_songs.()
   add_elvis_and_movie_genres.()
   puts 'done.'
 end
@@ -362,16 +366,6 @@ def add_song_plays
 end
 
 
-def add_song_genres
-  elvis_genre = Genre.find_by_code('elvis')
-  movie_genre = Genre.find_by_code('movie')
-  Song.all.select { |song| song.performer_codes.include?('elvis') }.each do |song|
-    song.genres << elvis_genre
-    song.genres << movie_genre unless song['code'] == 'old-sake'
-  end
-end
-
-
 add_genres
 add_writers
 add_movies
@@ -380,4 +374,3 @@ add_organizations
 add_elvis_songs
 add_non_elvis_songs
 add_song_plays
-add_song_genres

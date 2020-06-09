@@ -37,11 +37,11 @@ class ReportSongs
 
 
   def record_report_string(record)
-    performers = record.performers
+    performers = record.performers.all.to_a
     sio = StringIO.new
     sio << '%-*s  %-*s  %-*s  %s' %
         [Song.max_code_length, record.code, Song.max_name_length, record.name,
-         Song.max_code_length, performers.first.code, performers.first.name]
+         Song.max_code_length, performers[0].code, performers[0].name]
     performers[1..-1].each do |performer|
       sio << ("\n%-*s%-*s  %s" %
           [@report_string_continuation_indent, '', Song.max_code_length, performer.code, performer.name])
