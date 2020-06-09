@@ -5,8 +5,8 @@ namespace :reports do
   # Would this be shared by other files? (Bad if so.)
   DEFINED_TASKS = []
 
-  def gen_task(task_type)
-    desc "Generates a list of #{task_type}"
+  def gen_code_name_report_task(task_type)
+    desc "Generates a list of codes and names for #{task_type}s"
     task_name = task_type.to_s + '_codes_names'
     task task_name do
       klass = Kernel.const_get("Report" + task_type.to_s.capitalize[0..-2] + 'CodesNames')
@@ -16,36 +16,23 @@ namespace :reports do
     DEFINED_TASKS << task_name
   end
 
-
-  %i(genres writers performers organizations songs).each { |task_type| gen_task(task_type) }
-
-
-  desc 'List song information'
-  task :songs do
-    puts ReportSongs.new.report_string
+  def gen_report_task(task_name, report_class, description)
+    desc description
+    task task_name do
+      puts report_class.new.report_string
+    end
+    DEFINED_TASKS << task_name
   end
-  DEFINED_TASKS << :songs
 
 
-  desc 'Report song genres'
-  task :song_genres do
-    puts ReportSongGenres.new.report_string
-  end
-  DEFINED_TASKS << :song_genres
+  %i(genres writers performers organizations songs).each { |task_type| gen_code_name_report_task(task_type) }
 
 
-  desc 'List songs of each genre'
-  task :genre_songs do
-    puts ReportGenreSongs.new.report_string
-  end
-  DEFINED_TASKS << :genre_songs
-
-
-  desc 'List movies'
-  task :movies do
-    puts ReportMovies.new.report_string
-  end
-  DEFINED_TASKS << :movies
+  gen_report_task(:songs,        ReportSongs,       'List song information')
+  gen_report_task(:song_genres,  ReportSongGenres,  'Report song genres')
+  gen_report_task(:genre_songs,  ReportGenreSongs,  'List songs of each genre')
+  gen_report_task(:movies,       ReportMovies,      'List movies')
+  gen_report_task(:movie_songs,  ReportMovieSongs,  'List songs for each movie')
 
 
   task all: DEFINED_TASKS
