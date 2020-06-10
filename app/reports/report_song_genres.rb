@@ -1,12 +1,11 @@
-class ReportSongGenres
+class ReportSongGenres < BaseReport
 
-  attr_reader :heading, :title, :line_length, :separator_line, :report_string_continuation_indent
+  attr_reader :heading, :report_title, :line_length, :separator_line, :report_string_continuation_indent
 
   def initialize
     @line_length = [Song.max_code_length, Song.max_name_length, Performer.max_code_length, Performer.max_name_length].sum + 6
     @heading = build_heading
-    @title = build_title
-    @separator_line = ('-' * line_length) + "\n"
+    @report_title = title_with_gen_date('Song Genres')
   end
 
 
@@ -18,16 +17,9 @@ class ReportSongGenres
   end
 
 
-  def build_title
-    text = 'Song Genres'
-    indentation = ' ' * ((line_length - text.length) / 2)
-    indentation + text
-  end
-
-
   def report_string
     report = StringIO.new
-    report << "#{separator_line}#{title}\n#{separator_line}\n\n#{heading}\n\n"
+    report << "#{separator_line}#{title_indentation}#{report_title}\n#{separator_line}\n\n#{heading}\n\n"
     Song.all.each { |record| report << record_report_string(record) << "\n" }
     report << "\n\n"
     report.string

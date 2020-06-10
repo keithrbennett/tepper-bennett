@@ -1,4 +1,4 @@
-class ReportMovies
+class ReportMovies < BaseReport
 
 
   attr_reader :report_title, :ar_class

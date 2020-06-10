@@ -1,5 +1,8 @@
-class ReportGenreSongs
+class ReportGenreSongs < BaseReport
 
+  def initialize
+    @report_title = title_with_gen_date('Songs by Genre')
+  end
 
   def line_length
     Song.max_code_length + Song.max_name_length + 2

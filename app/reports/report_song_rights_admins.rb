@@ -1,4 +1,4 @@
-class ReportSongRightsAdmins
+class ReportSongRightsAdmins < BaseReport
 
   attr_reader :heading, :title, :line_length, :separator_line, :report_string_continuation_indent
 
@@ -21,7 +21,7 @@ class ReportSongRightsAdmins
 
 
   def build_title
-    text = 'Songs Rights Administrators'
+    text = 'Songs Rights Administrators -- '
     indentation = ' ' * ((line_length - text.length) / 2)
     indentation + text
   end
