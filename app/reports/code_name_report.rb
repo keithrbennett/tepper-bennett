@@ -4,7 +4,7 @@ class CodeNameReport < BaseReport
   attr_reader :report_title, :ar_class
 
   def initialize(ar_class)
-    @report_title = title_with_gen_date(ar_class.to_s + " Codes/Names")
+    @report_title = ar_class.to_s + " Codes/Names"
     @ar_class     = ar_class
   end
 
@@ -17,10 +17,7 @@ class CodeNameReport < BaseReport
   def report_string
     report = StringIO.new
 
-    report << separator_line
-    report << "%s%-s\n" % [title_indentation, report_title]
-    report << separator_line
-    report << "\n   Code           Name\n\n"
+    report << title_banner << "   Code           Name\n\n"
     ar_class.order(:name).all.each { |record| report << record_report_string(record) << "\n" }
     report << "\n\n"
     report.string
