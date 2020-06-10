@@ -1,0 +1,727 @@
+---------------------------------------------------
+Genre Codes/Names -- Generated 2020-06-10  3:48 UTC
+---------------------------------------------------
+
+
+   Code           Name
+
+bluegrass      bluegrass
+blues          blues
+children       children
+country        country
+elvis          elvis
+funny          funny
+hit            hit
+movie          movie
+rock           rock
+romantic       romantic
+tv             tv
+
+
+------------------------------------------------------
+ Writer Codes/Names -- Generated 2020-06-10  3:48 UTC
+------------------------------------------------------
+
+
+   Code           Name
+
+kent           Arthur Kent
+shayne         Gloria Shayne
+bennett        Roy C. Bennett
+tepper         Sid Tepper
+
+
+--------------------------------------------------------------------------
+         Performer Codes/Names -- Generated 2020-06-10  3:48 UTC
+--------------------------------------------------------------------------
+
+
+   Code           Name
+
+andy-wms       Andy Williams
+ann-margret    Ann-Margret
+anne-lloyd     Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra
+a-mooney       Art Mooney & His Orchestra
+a-prysock      Arthur Prysock
+b-gordon       Barry Gordon
+bert-kmft      Bert Kaempfert and His Orchestra
+clf-rich       Cliff Richards
+c-francis      Connie Francis
+dean-martin    Dean Martin
+della-reese    Della Reese
+fisch-sauer    Denis Fischer & Carsten Sauer
+eartha-kitt    Eartha Kitt
+ed-albert      Eddie Albert
+elvis          Elvis Presley
+sinatra        Frank Sinatra
+h-hermits      Herman's Hermits
+homer-jethro   Homer and Jethro
+jay-amer       Jay and the Americans
+jeff-beck      Jeff Beck
+kilburn        Kilburn and the High Roads
+louis-arm      Louis Armstrong
+mickey-katz    Mickey Katz
+moscow-jazz    Moscow City Jazz Band
+n-wilson       Nancy Wilson
+naysayer       Naysayer
+p-como         Perry Como
+plain-white    Plain White T's
+r-conniff      Ray Conniff Singers
+rob-schneid    Rob Schneider
+r-goulet       Robert Goulet
+r-clooney      Rosemary Clooney
+sugarland      Sugarland
+ben-mill       Tex Beneke and The Miller Orchestra
+ames-bros      The Ames Brothers
+beatles        The Beatles
+ink-spots      The Ink Spots
+stargazers     The Stargazers
+v-monroe       Vaughn Monroe
+vic-dana       Vic Dana
+vic-choir      Victoria Junior College Choir (Singapore)
+w-newton       Wayne Newton
+
+
+----------------------------------------------------------
+Organization Codes/Names -- Generated 2020-06-10  3:48 UTC
+----------------------------------------------------------
+
+
+   Code           Name
+
+ascap          ASCAP
+bmi            BMI
+emi-uk         EMI (United Kingdom)
+emi-us         EMI (United States)
+example        Example Music
+kobalt         Kobalt Music Group
+mem-lane       Memory Lane
+raleigh        Peter Raleigh Music
+sony           Sony ATV Music
+univ           Universal Music
+warner         Warner Chappel
+
+
+----------------------------------------------------------------
+       Song Codes/Names -- Generated 2020-06-10  3:48 UTC
+----------------------------------------------------------------
+
+
+   Code           Name
+
+boy-like-me    A Boy Like Me, A Girl Like You
+cane-collar    A Cane and A High Starched Collar
+h-everything   A House That Has Everything
+all-i-am       All That I Am
+am-i-ready     Am I Ready
+angel          Angel
+bagel-lox      Bagels & Lox
+b-b-blues      Beach Boy Blues
+beg-luck       Beginners Luck
+confidence     Confidence
+run-back-me    Don't Come Running Back to Me
+drums-isles    Drums of the Islands
+earth-boy      Earth Boy
+eggbert        Eggbert, The Easter Egg
+five-heads     Five Sleepy Heads
+millionth      For the Millionth and Last Time
+ft-laud        Fort Lauderdale Chamber of Commerce
+g-i-blues      G. I. Blues
+glad           Glad All Over
+bye-boys       Goodbye Boys, Goodbye
+h-sunset       Hawaiian Sunset
+one-girl       I Love Only One Girl
+crush-ny       I've Got a Crush on New York Town
+isl-love       Island of Love
+long-way       It's a Long Way from Your House to My House
+wond-world     It's a Wonderful World
+ito-eats       Ito Eats
+jenny-kiss     Jenny Kissed Me
+old-sake       Just for Old Time Sake
+kewpie-doll    Kewpie Doll
+kismet         Kismet
+kiss-fire      Kiss of Fire
+l-cowboy       Lonesome Cowboy
+mexico         Mexico
+mine           Mine
+n-orleans      New Orleans
+n-for-xmas     Nuttin' for Christmas
+once-enough    Once is Enough
+petunia        Petunia, the Gardener's Daughter
+puppet         Puppet on a String
+red-roses      Red Roses for a Blue Lady
+relax          Relax
+santa-daddy    Santa Claus Looks Just Like Daddy
+ssss-heart     Say Something Sweet to Your Sweetheart
+shop-arnd      Shoppin' Around
+sl-sand        Slicin' Sand
+smorgasbord    Smorgasbord
+soft-love      Softly My Love
+shrimp         Song of the Shrimp
+stay-away      Stay Away
+smr-sounds     Summer Sounds
+suzy-snow      Suzy Snowflake
+take-me-fair   Take Me to the Fair
+tear-rain      Teardrops in the Rain
+bullfighter    The Bullfighter Was a Lady
+lady-loves     The Lady Loves Me
+train-ahchoo   The Little Train Who Said 'Ah Choo
+nty-lady       The Naughty Lady of Shady Lane
+walls-ears     The Walls Have Ears
+woodchuck      The Woodchuck Song
+yng-ones       The Young Ones
+tr-light       Travelling Light
+t-t-fingers    Twenty Tiny Fingers
+vino           Vino, Dinero y Amor
+west-union     Western Union
+wheels-heels   Wheels on My Heels
+when-arms      When the Boy (Girl) in Your Arms
+ww-young       Wonderful World of the Young
+
+
+------------------------------------------------------------------------------------------------------------------------
+                             Songs Rights Administrators -- Generated 2020-06-10  3:48 UTC
+------------------------------------------------------------------------------------------------------------------------
+
+
+   Code       Name                                                Admin Code    Rights Administrator Name               
+
+boy-like-me   A Boy Like Me, A Girl Like You                      ?             ?
+cane-collar   A Cane and A High Starched Collar                   ?             ?
+h-everything  A House That Has Everything                         ?             ?
+all-i-am      All That I Am                                       ?             ?
+am-i-ready    Am I Ready                                          ?             ?
+angel         Angel                                               ?             ?
+bagel-lox     Bagels & Lox                                        ?             ?
+b-b-blues     Beach Boy Blues                                     ?             ?
+beg-luck      Beginners Luck                                      ?             ?
+confidence    Confidence                                          ?             ?
+run-back-me   Don't Come Running Back to Me                       ?             ?
+drums-isles   Drums of the Islands                                ?             ?
+earth-boy     Earth Boy                                           ?             ?
+eggbert       Eggbert, The Easter Egg                             ?             ?
+five-heads    Five Sleepy Heads                                   ?             ?
+millionth     For the Millionth and Last Time                     ?             ?
+ft-laud       Fort Lauderdale Chamber of Commerce                 ?             ?
+g-i-blues     G. I. Blues                                         ?             ?
+glad          Glad All Over                                       ?             ?
+bye-boys      Goodbye Boys, Goodbye                               ?             ?
+h-sunset      Hawaiian Sunset                                     ?             ?
+one-girl      I Love Only One Girl                                ?             ?
+crush-ny      I've Got a Crush on New York Town                   ?             ?
+isl-love      Island of Love                                      ?             ?
+long-way      It's a Long Way from Your House to My House         ?             ?
+wond-world    It's a Wonderful World                              ?             ?
+ito-eats      Ito Eats                                            ?             ?
+jenny-kiss    Jenny Kissed Me                                     ?             ?
+old-sake      Just for Old Time Sake                              ?             ?
+kewpie-doll   Kewpie Doll                                         ?             ?
+kismet        Kismet                                              ?             ?
+kiss-fire     Kiss of Fire                                        ?             ?
+l-cowboy      Lonesome Cowboy                                     ?             ?
+mexico        Mexico                                              ?             ?
+mine          Mine                                                ?             ?
+n-orleans     New Orleans                                         ?             ?
+n-for-xmas    Nuttin' for Christmas                               ?             ?
+once-enough   Once is Enough                                      ?             ?
+petunia       Petunia, the Gardener's Daughter                    ?             ?
+puppet        Puppet on a String                                  ?             ?
+red-roses     Red Roses for a Blue Lady                           ?             ?
+relax         Relax                                               ?             ?
+santa-daddy   Santa Claus Looks Just Like Daddy                   ?             ?
+ssss-heart    Say Something Sweet to Your Sweetheart              ?             ?
+shop-arnd     Shoppin' Around                                     ?             ?
+sl-sand       Slicin' Sand                                        ?             ?
+smorgasbord   Smorgasbord                                         ?             ?
+soft-love     Softly My Love                                      ?             ?
+shrimp        Song of the Shrimp                                  ?             ?
+stay-away     Stay Away                                           ?             ?
+smr-sounds    Summer Sounds                                       ?             ?
+suzy-snow     Suzy Snowflake                                      ?             ?
+take-me-fair  Take Me to the Fair                                 ?             ?
+tear-rain     Teardrops in the Rain                               ?             ?
+bullfighter   The Bullfighter Was a Lady                          ?             ?
+lady-loves    The Lady Loves Me                                   ?             ?
+train-ahchoo  The Little Train Who Said 'Ah Choo                  ?             ?
+nty-lady      The Naughty Lady of Shady Lane                      ?             ?
+walls-ears    The Walls Have Ears                                 ?             ?
+woodchuck     The Woodchuck Song                                  ?             ?
+yng-ones      The Young Ones                                      ?             ?
+tr-light      Travelling Light                                    ?             ?
+t-t-fingers   Twenty Tiny Fingers                                 ?             ?
+vino          Vino, Dinero y Amor                                 ?             ?
+west-union    Western Union                                       ?             ?
+wheels-heels  Wheels on My Heels                                  ?             ?
+when-arms     When the Boy (Girl) in Your Arms                    ?             ?
+ww-young      Wonderful World of the Young                        ?             ?
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+                                             Song Performers -- Generated 2020-06-10  3:48 UTC
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+   Code       Name                                                Perf Code     Performer Name                                              
+
+boy-like-me   A Boy Like Me, A Girl Like You                      elvis         Elvis Presley
+cane-collar   A Cane and A High Starched Collar                   elvis         Elvis Presley
+h-everything  A House That Has Everything                         elvis         Elvis Presley
+all-i-am      All That I Am                                       elvis         Elvis Presley
+am-i-ready    Am I Ready                                          elvis         Elvis Presley
+angel         Angel                                               elvis         Elvis Presley
+b-b-blues     Beach Boy Blues                                     elvis         Elvis Presley
+beg-luck      Beginners Luck                                      elvis         Elvis Presley
+confidence    Confidence                                          elvis         Elvis Presley
+drums-isles   Drums of the Islands                                elvis         Elvis Presley
+earth-boy     Earth Boy                                           elvis         Elvis Presley
+five-heads    Five Sleepy Heads                                   elvis         Elvis Presley
+millionth     For the Millionth and Last Time                     elvis         Elvis Presley
+ft-laud       Fort Lauderdale Chamber of Commerce                 elvis         Elvis Presley
+g-i-blues     G. I. Blues                                         elvis         Elvis Presley
+h-sunset      Hawaiian Sunset                                     elvis         Elvis Presley
+one-girl      I Love Only One Girl                                elvis         Elvis Presley
+isl-love      Island of Love                                      elvis         Elvis Presley
+wond-world    It's a Wonderful World                              elvis         Elvis Presley
+ito-eats      Ito Eats                                            elvis         Elvis Presley
+old-sake      Just for Old Time Sake                              elvis         Elvis Presley
+kismet        Kismet                                              elvis         Elvis Presley
+l-cowboy      Lonesome Cowboy                                     elvis         Elvis Presley
+mexico        Mexico                                              elvis         Elvis Presley
+mine          Mine                                                elvis         Elvis Presley
+n-orleans     New Orleans                                         elvis         Elvis Presley
+once-enough   Once is Enough                                      elvis         Elvis Presley
+petunia       Petunia, the Gardener's Daughter                    elvis         Elvis Presley
+puppet        Puppet on a String                                  elvis         Elvis Presley
+relax         Relax                                               elvis         Elvis Presley
+shop-arnd     Shoppin' Around                                     elvis         Elvis Presley
+sl-sand       Slicin' Sand                                        elvis         Elvis Presley
+smorgasbord   Smorgasbord                                         elvis         Elvis Presley
+shrimp        Song of the Shrimp                                  elvis         Elvis Presley
+stay-away     Stay Away                                           elvis         Elvis Presley
+take-me-fair  Take Me to the Fair                                 elvis         Elvis Presley
+bullfighter   The Bullfighter Was a Lady                          elvis         Elvis Presley
+lady-loves    The Lady Loves Me                                   ann-margret   Ann-Margret
+                                                                  elvis         Elvis Presley
+walls-ears    The Walls Have Ears                                 elvis         Elvis Presley
+vino          Vino, Dinero y Amor                                 elvis         Elvis Presley
+west-union    Western Union                                       elvis         Elvis Presley
+wheels-heels  Wheels on My Heels                                  elvis         Elvis Presley
+bagel-lox     Bagels & Lox                                        rob-schneid   Rob Schneider
+run-back-me   Don't Come Running Back to Me                       n-wilson      Nancy Wilson
+eggbert       Eggbert, The Easter Egg                             r-clooney     Rosemary Clooney
+glad          Glad All Over                                       jeff-beck     Jeff Beck
+                                                                  beatles       The Beatles
+bye-boys      Goodbye Boys, Goodbye                               jay-amer      Jay and the Americans
+crush-ny      I've Got a Crush on New York Town                   c-francis     Connie Francis
+long-way      It's a Long Way from Your House to My House         sinatra       Frank Sinatra
+jenny-kiss    Jenny Kissed Me                                     ed-albert     Eddie Albert
+kewpie-doll   Kewpie Doll                                         p-como        Perry Como
+kiss-fire     Kiss of Fire                                        louis-arm     Louis Armstrong
+n-for-xmas    Nuttin' for Christmas                               a-mooney      Art Mooney & His Orchestra
+                                                                  b-gordon      Barry Gordon
+red-roses     Red Roses for a Blue Lady                           andy-wms      Andy Williams
+                                                                  bert-kmft     Bert Kaempfert and His Orchestra
+                                                                  dean-martin   Dean Martin
+                                                                  sinatra       Frank Sinatra
+                                                                  p-como        Perry Como
+                                                                  r-conniff     Ray Conniff Singers
+                                                                  v-monroe      Vaughn Monroe
+                                                                  w-newton      Wayne Newton
+santa-daddy   Santa Claus Looks Just Like Daddy                   a-mooney      Art Mooney & His Orchestra
+                                                                  b-gordon      Barry Gordon
+ssss-heart    Say Something Sweet to Your Sweetheart              ink-spots     The Ink Spots
+soft-love     Softly My Love                                      della-reese   Della Reese
+smr-sounds    Summer Sounds                                       r-goulet      Robert Goulet
+suzy-snow     Suzy Snowflake                                      r-clooney     Rosemary Clooney
+tear-rain     Teardrops in the Rain                               a-prysock     Arthur Prysock
+train-ahchoo  The Little Train Who Said 'Ah Choo                  anne-lloyd    Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra
+nty-lady      The Naughty Lady of Shady Lane                      ames-bros     The Ames Brothers
+woodchuck     The Woodchuck Song                                  ben-mill      Tex Beneke and The Miller Orchestra
+yng-ones      The Young Ones                                      clf-rich      Cliff Richards
+tr-light      Travelling Light                                    clf-rich      Cliff Richards
+                                                                  jay-amer      Jay and the Americans
+t-t-fingers   Twenty Tiny Fingers                                 stargazers    The Stargazers
+when-arms     When the Boy (Girl) in Your Arms                    c-francis     Connie Francis
+ww-young      Wonderful World of the Young                        andy-wms      Andy Williams
+                                                                  clf-rich      Cliff Richards
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+                                               Song Genres -- Generated 2020-06-10  3:48 UTC
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+   Code       Name                                                      Genres
+
+boy-like-me   A Boy Like Me, A Girl Like You                      elvis  movie
+cane-collar   A Cane and A High Starched Collar                   elvis  movie
+h-everything  A House That Has Everything                         elvis  movie  romantic
+all-i-am      All That I Am                                       elvis  movie  romantic
+am-i-ready    Am I Ready                                          elvis  movie  romantic
+angel         Angel                                               elvis  movie  romantic
+b-b-blues     Beach Boy Blues                                     blues  elvis  movie
+beg-luck      Beginners Luck                                      elvis  movie  romantic
+confidence    Confidence                                          elvis  movie
+drums-isles   Drums of the Islands                                elvis  movie
+earth-boy     Earth Boy                                           elvis  movie
+five-heads    Five Sleepy Heads                                   elvis  movie
+millionth     For the Millionth and Last Time                     elvis  movie
+ft-laud       Fort Lauderdale Chamber of Commerce                 elvis  movie
+g-i-blues     G. I. Blues                                         blues  elvis  movie
+h-sunset      Hawaiian Sunset                                     elvis  movie
+one-girl      I Love Only One Girl                                elvis  movie
+isl-love      Island of Love                                      elvis  movie  romantic
+wond-world    It's a Wonderful World                              elvis  movie
+ito-eats      Ito Eats                                            elvis  movie
+old-sake      Just for Old Time Sake                              elvis
+kismet        Kismet                                              elvis  movie
+l-cowboy      Lonesome Cowboy                                     elvis  movie
+mexico        Mexico                                              elvis  movie
+mine          Mine                                                elvis  movie
+n-orleans     New Orleans                                         elvis  movie
+once-enough   Once is Enough                                      elvis  movie
+petunia       Petunia, the Gardener's Daughter                    elvis  movie  romantic
+puppet        Puppet on a String                                  elvis  movie  romantic
+relax         Relax                                               elvis  movie
+shop-arnd     Shoppin' Around                                     elvis  movie
+sl-sand       Slicin' Sand                                        elvis  movie
+smorgasbord   Smorgasbord                                         elvis  movie
+shrimp        Song of the Shrimp                                  elvis  movie
+stay-away     Stay Away                                           elvis  movie
+take-me-fair  Take Me to the Fair                                 elvis  movie
+bullfighter   The Bullfighter Was a Lady                          elvis  movie  romantic
+lady-loves    The Lady Loves Me                                   elvis  movie  romantic
+walls-ears    The Walls Have Ears                                 elvis  movie
+vino          Vino, Dinero y Amor                                 elvis  movie
+west-union    Western Union                                       elvis  movie
+wheels-heels  Wheels on My Heels                                  elvis  movie
+bagel-lox     Bagels & Lox                                        
+run-back-me   Don't Come Running Back to Me                       romantic
+eggbert       Eggbert, The Easter Egg                             children
+glad          Glad All Over                                       
+bye-boys      Goodbye Boys, Goodbye                               
+crush-ny      I've Got a Crush on New York Town                   
+long-way      It's a Long Way from Your House to My House         romantic
+jenny-kiss    Jenny Kissed Me                                     romantic
+kewpie-doll   Kewpie Doll                                         
+kiss-fire     Kiss of Fire                                        romantic
+n-for-xmas    Nuttin' for Christmas                               children
+red-roses     Red Roses for a Blue Lady                           romantic
+santa-daddy   Santa Claus Looks Just Like Daddy                   children
+ssss-heart    Say Something Sweet to Your Sweetheart              romantic
+soft-love     Softly My Love                                      romantic
+smr-sounds    Summer Sounds                                       
+suzy-snow     Suzy Snowflake                                      children
+tear-rain     Teardrops in the Rain                               romantic
+train-ahchoo  The Little Train Who Said 'Ah Choo                  children
+nty-lady      The Naughty Lady of Shady Lane                      funny
+woodchuck     The Woodchuck Song                                  
+yng-ones      The Young Ones                                      movie  tv
+tr-light      Travelling Light                                    
+t-t-fingers   Twenty Tiny Fingers                                 children
+when-arms     When the Boy (Girl) in Your Arms                    romantic
+ww-young      Wonderful World of the Young                        
+
+
+----------------------------------------------------------------
+        Songs by Genre -- Generated 2020-06-10  3:48 UTC
+----------------------------------------------------------------
+
+
+Genre: bluegrass
+
+[None]
+
+----------------------------------------------------------------
+Genre: blues
+
+b-b-blues     Beach Boy Blues
+g-i-blues     G. I. Blues
+
+----------------------------------------------------------------
+Genre: children
+
+eggbert       Eggbert, The Easter Egg
+n-for-xmas    Nuttin' for Christmas
+santa-daddy   Santa Claus Looks Just Like Daddy
+suzy-snow     Suzy Snowflake
+train-ahchoo  The Little Train Who Said 'Ah Choo
+t-t-fingers   Twenty Tiny Fingers
+
+----------------------------------------------------------------
+Genre: country
+
+[None]
+
+----------------------------------------------------------------
+Genre: elvis
+
+boy-like-me   A Boy Like Me, A Girl Like You
+cane-collar   A Cane and A High Starched Collar
+h-everything  A House That Has Everything
+all-i-am      All That I Am
+am-i-ready    Am I Ready
+angel         Angel
+b-b-blues     Beach Boy Blues
+beg-luck      Beginners Luck
+confidence    Confidence
+drums-isles   Drums of the Islands
+earth-boy     Earth Boy
+five-heads    Five Sleepy Heads
+millionth     For the Millionth and Last Time
+ft-laud       Fort Lauderdale Chamber of Commerce
+g-i-blues     G. I. Blues
+h-sunset      Hawaiian Sunset
+one-girl      I Love Only One Girl
+isl-love      Island of Love
+wond-world    It's a Wonderful World
+ito-eats      Ito Eats
+old-sake      Just for Old Time Sake
+kismet        Kismet
+l-cowboy      Lonesome Cowboy
+mexico        Mexico
+mine          Mine
+n-orleans     New Orleans
+once-enough   Once is Enough
+petunia       Petunia, the Gardener's Daughter
+puppet        Puppet on a String
+relax         Relax
+shop-arnd     Shoppin' Around
+sl-sand       Slicin' Sand
+smorgasbord   Smorgasbord
+shrimp        Song of the Shrimp
+stay-away     Stay Away
+take-me-fair  Take Me to the Fair
+bullfighter   The Bullfighter Was a Lady
+lady-loves    The Lady Loves Me
+walls-ears    The Walls Have Ears
+vino          Vino, Dinero y Amor
+west-union    Western Union
+wheels-heels  Wheels on My Heels
+
+----------------------------------------------------------------
+Genre: funny
+
+nty-lady      The Naughty Lady of Shady Lane
+
+----------------------------------------------------------------
+Genre: hit
+
+[None]
+
+----------------------------------------------------------------
+Genre: movie
+
+boy-like-me   A Boy Like Me, A Girl Like You
+cane-collar   A Cane and A High Starched Collar
+h-everything  A House That Has Everything
+all-i-am      All That I Am
+am-i-ready    Am I Ready
+angel         Angel
+b-b-blues     Beach Boy Blues
+beg-luck      Beginners Luck
+confidence    Confidence
+drums-isles   Drums of the Islands
+earth-boy     Earth Boy
+five-heads    Five Sleepy Heads
+millionth     For the Millionth and Last Time
+ft-laud       Fort Lauderdale Chamber of Commerce
+g-i-blues     G. I. Blues
+h-sunset      Hawaiian Sunset
+one-girl      I Love Only One Girl
+isl-love      Island of Love
+wond-world    It's a Wonderful World
+ito-eats      Ito Eats
+kismet        Kismet
+l-cowboy      Lonesome Cowboy
+mexico        Mexico
+mine          Mine
+n-orleans     New Orleans
+once-enough   Once is Enough
+petunia       Petunia, the Gardener's Daughter
+puppet        Puppet on a String
+relax         Relax
+shop-arnd     Shoppin' Around
+sl-sand       Slicin' Sand
+smorgasbord   Smorgasbord
+shrimp        Song of the Shrimp
+stay-away     Stay Away
+take-me-fair  Take Me to the Fair
+bullfighter   The Bullfighter Was a Lady
+lady-loves    The Lady Loves Me
+walls-ears    The Walls Have Ears
+vino          Vino, Dinero y Amor
+west-union    Western Union
+wheels-heels  Wheels on My Heels
+yng-ones      The Young Ones
+
+----------------------------------------------------------------
+Genre: rock
+
+[None]
+
+----------------------------------------------------------------
+Genre: romantic
+
+h-everything  A House That Has Everything
+all-i-am      All That I Am
+am-i-ready    Am I Ready
+angel         Angel
+beg-luck      Beginners Luck
+isl-love      Island of Love
+petunia       Petunia, the Gardener's Daughter
+puppet        Puppet on a String
+bullfighter   The Bullfighter Was a Lady
+lady-loves    The Lady Loves Me
+run-back-me   Don't Come Running Back to Me
+long-way      It's a Long Way from Your House to My House
+jenny-kiss    Jenny Kissed Me
+kiss-fire     Kiss of Fire
+red-roses     Red Roses for a Blue Lady
+ssss-heart    Say Something Sweet to Your Sweetheart
+soft-love     Softly My Love
+tear-rain     Teardrops in the Rain
+when-arms     When the Boy (Girl) in Your Arms
+
+----------------------------------------------------------------
+Genre: tv
+
+yng-ones      The Young Ones
+
+
+
+--------------------------------------------------------------
+   Movies in Title Order -- Generated 2020-06-10  3:48 UTC
+--------------------------------------------------------------
+
+
+   Code         Year         Name
+
+b-hawaii        1961   Blue Hawaii
+clambake        1967   Clambake
+d-trouble       1967   Double Trouble
+flam-star       1960   Flaming Star
+foll-dream      1962   Follow That Dream
+f-johnny        1966   Frankie and Johnny
+acapulco        1963   Fun in Acapulco
+g-i-blues       1960   G. I. Blues
+girl-happy      1964   Girl Happy
+girls           1962   Girls! Girls! Girls!
+h-scarum        1965   Harum Scarum
+w-fair          1963   It Happened at the World's Fair
+k-creole        1958   King Creole
+k-cousins       1964   Kissin' Cousins
+lov-you         1957   Loving You
+paradise        1966   Paradise, Hawaiian Style
+roust           1964   Roustabout
+speedway        1968   Speedway
+spinout         1966   Spinout
+s-a-joe         1968   Stay Away, Joe
+young-ones      1962   The Young Ones
+vegas           1964   Viva Las Vegas
+
+
+--------------------------------------------------------------
+    Movies in Year Order -- Generated 2020-06-10  3:48 UTC
+--------------------------------------------------------------
+
+
+   Code         Year         Name
+
+lov-you         1957   Loving You
+k-creole        1958   King Creole
+flam-star       1960   Flaming Star
+g-i-blues       1960   G. I. Blues
+b-hawaii        1961   Blue Hawaii
+foll-dream      1962   Follow That Dream
+girls           1962   Girls! Girls! Girls!
+young-ones      1962   The Young Ones
+acapulco        1963   Fun in Acapulco
+w-fair          1963   It Happened at the World's Fair
+girl-happy      1964   Girl Happy
+k-cousins       1964   Kissin' Cousins
+roust           1964   Roustabout
+vegas           1964   Viva Las Vegas
+h-scarum        1965   Harum Scarum
+f-johnny        1966   Frankie and Johnny
+paradise        1966   Paradise, Hawaiian Style
+spinout         1966   Spinout
+clambake        1967   Clambake
+d-trouble       1967   Double Trouble
+speedway        1968   Speedway
+s-a-joe         1968   Stay Away, Joe
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+                                              Songs by Movie -- Generated 2020-06-10  3:48 UTC
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Year     Code       Name                                      Song Code     Song Name                                         
+
+
+1957  lov-you       Loving You                                l-cowboy      Lonesome Cowboy
+
+1958  k-creole      King Creole                               n-orleans     New Orleans
+
+1960  flam-star     Flaming Star                              cane-collar   A Cane and A High Starched Collar
+
+1960  g-i-blues     G. I. Blues                               g-i-blues     G. I. Blues
+                                                              shop-arnd     Shoppin' Around
+
+1961  b-hawaii      Blue Hawaii                               b-b-blues     Beach Boy Blues
+                                                              h-sunset      Hawaiian Sunset
+                                                              isl-love      Island of Love
+                                                              ito-eats      Ito Eats
+                                                              sl-sand       Slicin' Sand
+
+1962  foll-dream    Follow That Dream                         angel         Angel
+                                                              millionth     For the Millionth and Last Time
+
+1962  girls         Girls! Girls! Girls!                      boy-like-me   A Boy Like Me, A Girl Like You
+                                                              earth-boy     Earth Boy
+                                                              shrimp        Song of the Shrimp
+                                                              walls-ears    The Walls Have Ears
+
+1962  young-ones    The Young Ones                            yng-ones      The Young Ones
+
+1963  acapulco      Fun in Acapulco                           mexico        Mexico
+                                                              bullfighter   The Bullfighter Was a Lady
+                                                              vino          Vino, Dinero y Amor
+
+1963  w-fair        It Happened at the World's Fair           relax         Relax
+                                                              take-me-fair  Take Me to the Fair
+
+1964  girl-happy    Girl Happy                                ft-laud       Fort Lauderdale Chamber of Commerce
+                                                              puppet        Puppet on a String
+
+1964  k-cousins     Kissin' Cousins                           once-enough   Once is Enough
+
+1964  roust         Roustabout                                wond-world    It's a Wonderful World
+                                                              wheels-heels  Wheels on My Heels
+
+1964  vegas         Viva Las Vegas                            lady-loves    The Lady Loves Me
+
+1965  h-scarum      Harum Scarum                              kismet        Kismet
+
+1966  f-johnny      Frankie and Johnny                        beg-luck      Beginners Luck
+                                                              petunia       Petunia, the Gardener's Daughter
+
+1966  paradise      Paradise, Hawaiian Style                  drums-isles   Drums of the Islands
+
+1966  spinout       Spinout                                   all-i-am      All That I Am
+                                                              am-i-ready    Am I Ready
+                                                              smorgasbord   Smorgasbord
+
+1967  clambake      Clambake                                  h-everything  A House That Has Everything
+                                                              confidence    Confidence
+
+1967  d-trouble     Double Trouble                            one-girl      I Love Only One Girl
+
+1968  speedway      Speedway                                  five-heads    Five Sleepy Heads
+                                                              mine          Mine
+                                                              west-union    Western Union
+
+1968  s-a-joe       Stay Away, Joe                            stay-away     Stay Away
+
+

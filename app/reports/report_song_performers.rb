@@ -1,10 +1,10 @@
-class ReportSongs < BaseReport
+class ReportSongPerformers < BaseReport
 
   attr_reader :report_title, :line_length, :report_string_continuation_indent
 
   def initialize
     @line_length = [Song.max_code_length, Song.max_name_length, Performer.max_code_length, Performer.max_name_length].sum + 6
-    @report_title = 'Performers by Song'
+    @report_title = 'Song Performers'
     @report_string_continuation_indent = Song.max_code_length + Song.max_name_length + 4
   end
 
