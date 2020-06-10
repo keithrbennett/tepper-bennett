@@ -1,22 +1,17 @@
 class ReportMovies < BaseReport
 
 
-  attr_reader :report_title, :ar_class
+  attr_reader :report_title, :line_length
 
 
-  def line_length
+  def initialize
+    @line_length = calc_line_length
+  end
+
+
+  def calc_line_length
     year_column_length = 4 + 2  # 4 digit year + buffer
     Movie.max_code_length + year_column_length + Movie.max_name_length + 4
-  end
-
-
-  def title_indent(title)
-    (line_length - title.length) / 2
-  end
-
-
-  def separator_line
-    ('-' * line_length) + "\n"
   end
 
 
@@ -24,12 +19,8 @@ class ReportMovies < BaseReport
     report = StringIO.new
 
     report_by_order = ->(display_name, order) do
-      report << separator_line
-      title = "Movies in #{display_name} Order"
-      indentation = ' ' * title_indent(title)
-      report << "#{indentation}#{title}\n"
-      report << separator_line
-      report << "\n   Code         Year         Name\n\n"
+      @report_title = "Movies in #{display_name} Order"
+      report << title_banner << "   Code         Year         Name\n\n"
       Movie.order(order).all.each { |record| report << record_report_string(record) << "\n" }
       report << "\n\n"
     end

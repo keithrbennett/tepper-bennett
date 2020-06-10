@@ -1,17 +1,15 @@
 class ReportMovieSongs < BaseReport
 
-  attr_reader :heading, :title, :line_length, :separator_line, :report_string_continuation_indent
+  attr_reader :report_title, :line_length, :report_string_continuation_indent
 
   def initialize
     @line_length = [Song.max_code_length, Song.max_name_length, Performer.max_code_length, Performer.max_name_length].sum + 6
-    @heading = build_heading
-    @title = build_title
+    @report_title = 'Songs by Movie'
     @report_string_continuation_indent = Movie.max_code_length + Movie.max_name_length + 4 + 6 # 6 = 4-digit year + 2
-    @separator_line = ('-' * line_length) + "\n"
   end
 
 
-  def build_heading
+  def heading
     'Year  %-*s  %-*s  %-*s  %-*s' %
         [Movie.max_code_length,      '   Code',
          Movie.max_name_length,      'Name',
@@ -20,16 +18,9 @@ class ReportMovieSongs < BaseReport
   end
 
 
-  def build_title
-    text = 'Songs by Movie'
-    indentation = ' ' * ((line_length - text.length) / 2)
-    indentation + text
-  end
-
-
   def report_string
     report = StringIO.new
-    report << "#{separator_line}#{title}\n#{separator_line}\n\n#{heading}\n\n"
+    report << "#{title_banner}#{heading}\n\n"
     Movie.order(:year, :name).all.each { |record| report << record_report_string(record) << "\n" }
     report << "\n\n"
     report.string

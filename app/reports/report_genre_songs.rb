@@ -1,33 +1,26 @@
 class ReportGenreSongs < BaseReport
 
+  attr_reader :report_title, :ar_class
+
+
   def initialize
-    @report_title = title_with_gen_date('Songs by Genre')
+    @report_title = 'Songs by Genre'
   end
+
 
   def line_length
     Song.max_code_length + Song.max_name_length + 2
   end
 
 
-  def title_indent(title)
-    (line_length - title.length) / 2
-  end
-
-
-  def separator_line
-    ('-' * line_length) + "\n"
-  end
-
-
   def report_string
     report = StringIO.new
 
-    report << separator_line
-    report_title = 'Songs by Genre'
-    indentation = ' ' * title_indent(report_title)
-    report << "%s%-s\n%s\n\n\n" % [indentation, report_title, separator_line]
+    report << title_banner
     Genre.order(:name).all.each_with_index do |record, index|
-      report << separator_line if index > 0
+      if index > 0
+        report << separator_line << "\n"
+      end
       report << "Genre: #{record.name}\n\n"
       report << record_report_string(record) << "\n"
     end
