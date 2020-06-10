@@ -5,12 +5,20 @@ namespace :reports do
   # Would this be shared by other files? (Bad if so.)
   DEFINED_TASKS = []
 
+
+  def write_report(task_name, report_text)
+    filespec = File.join(Rails.root, 'outputs', "#{task_name}_report.txt")
+    puts "Writing #{task_name} report to #{filespec}..."
+    File.write(filespec, report_text)
+  end
+
+
   def gen_code_name_report_task(task_type)
     desc "Generates a list of codes and names for #{task_type}s"
     task_name = task_type.to_s + '_codes_names'
     task task_name do
       klass = Kernel.const_get("Report" + task_type.to_s.capitalize[0..-2] + 'CodesNames')
-      puts klass.new.report_string
+      write_report(task_name, klass.new.report_string)
     end
 
     DEFINED_TASKS << task_name
@@ -19,7 +27,7 @@ namespace :reports do
   def gen_report_task(task_name, report_class, description)
     desc description
     task task_name do
-      puts report_class.new.report_string
+      write_report(task_name, report_class.new.report_string)
     end
     DEFINED_TASKS << task_name
   end
