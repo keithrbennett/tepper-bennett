@@ -35,17 +35,17 @@ class ReportsController < ApplicationController
 
 def initialize
     @report_metadata ||= [
-        ['songs_codes_names', 'Songs'],
-        ['performers_codes_names', 'Performers'],
-        ['genres_codes_names', 'Genres'],
+        ['song_codes_names', 'Songs'],
+        ['performer_codes_names', 'Performers'],
+        ['genre_codes_names', 'Genres'],
         ['song_performers',  'Song Performers'],
         ['song_genres', 'Genres by Song'],
         ['genre_songs', 'Songs by Genre'],
         ['movies', 'Movies'],
         ['movie_songs', 'Movies Songs'],
-        ['organizations_codes_names', 'Organizations'],
+        ['organization_codes_names', 'Organizations'],
         ['song_rights_admins', 'Song Rights Administrators'],
-        ['writers_codes_names', 'Writers'],
+        ['writer_codes_names', 'Writers'],
     ].map { |(key, title)| ReportMetadata.new(key, title) }
   end
 

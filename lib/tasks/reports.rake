@@ -17,7 +17,7 @@ namespace :reports do
     desc "Generates a list of codes and names for #{task_type}s"
     task_name = task_type.to_s + '_codes_names'
     task task_name do
-      klass = Kernel.const_get("Report" + task_type.to_s.capitalize[0..-2] + 'CodesNames')
+      klass = Kernel.const_get("Report" + task_type.to_s.capitalize + 'CodesNames')
       write_report(task_name, klass.new.report_string)
     end
 
@@ -33,7 +33,7 @@ namespace :reports do
   end
 
 
-  %i(genres writers performers organizations songs).each { |task_type| gen_code_name_report_task(task_type) }
+  %i(genre writer performer organization song).each { |task_type| gen_code_name_report_task(task_type) }
 
 
   gen_report_task(:song_rights_admins, ReportSongRightsAdmins, 'List rights administrator(s) for each song')
