@@ -1,2 +1,15 @@
 <h1>Tepper/Bennett Songs -- Reports</h1>
 
+<div class="container-fluid no-horiz-padding">
+<div>
+<div id="accordion">
+<br/><br/>
+
+<% @report_metadata.each do |rm| %>
+  <%= render partial: 'report_card', locals: rm.locals %>
+<% end %>
+
+</div>
+</div>
+</div>
+
