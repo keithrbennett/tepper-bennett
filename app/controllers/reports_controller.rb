@@ -25,7 +25,6 @@ class ReportsController < ApplicationController
 
     def report_text
       unless @report_text
-        lines = File.readlines(report_filespec).map { |line| '<p>'.html_safe + line + '</p>'.html_safe}
         @report_text = "<div><pre>\n".html_safe + File.read(report_filespec) + "\n</pre></div>\n".html_safe
       end
       @report_text
