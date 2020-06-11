@@ -3,7 +3,7 @@ class BaseReport
   TITLE_TIME_LENGTH = 34
 
   def title_with_gen_date(title)
-    title + ' -- Generated ' + Time.now.utc.strftime('%Y-%m-%d %l:%M UTC')
+    title + ' -- Generated ' + Time.now.utc.strftime('%Y-%m-%d %H:%M UTC')
   end
 
   def separator_line
