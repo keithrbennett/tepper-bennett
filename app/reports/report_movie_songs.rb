@@ -20,7 +20,7 @@ class ReportMovieSongs < BaseReport
 
   def report_string
     report = StringIO.new
-    report << "#{title_banner}#{heading}\n\n"
+    report << "#{title_banner}#{heading}\n"
     Movie.order(:year, :name).all.each { |record| report << record_report_string(record) << "\n" }
     report << "\n\n"
     report.string
