@@ -17,6 +17,11 @@ document.addEventListener("turbolinks:load", () => {
 })
 
 
+function defaultBackgroundColor() {
+    return "#c9d0f1";
+}
+
+
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
@@ -43,6 +48,7 @@ function setUpColorPicker() {
     const bgColorResetter = document.getElementById("bgcolor-resetter");
 
     function setBackgroundColor(color) {
+        console.log("Setting background color to " + color);
         colorPicker.setAttribute("value", color);
         document.body.style.background = color;
         localStorage.setItem("background-color", color);
@@ -52,7 +58,7 @@ function setUpColorPicker() {
     function setInitialColor() {
         let color = localStorage.getItem("background-color");
         if(color == null)
-            color = "#f5deb3";
+            color = defaultBackgroundColor();
         setBackgroundColor(color);
     }
 
@@ -61,7 +67,7 @@ function setUpColorPicker() {
     }
 
     function resetBackgroundColor() {
-        setBackgroundColor("#f5deb3");
+        setBackgroundColor(defaultBackgroundColor());
     }
 
     setInitialColor();
