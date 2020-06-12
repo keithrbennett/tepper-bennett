@@ -314,7 +314,6 @@ def add_song_plays
       { song_code: 'once-enough'   , performer_codes: 'elvis'         , youtube_key: 'vxhe3_dTaBM' },
       { song_code: 'one-girl'      , performer_codes: 'elvis'         , youtube_key: 'ito_RR2kwS0' },
       { song_code: 'petunia'       , performer_codes: 'elvis'         , youtube_key: 'wuzbUsy6snc' },
-      { song_code: 'petunia'       , performer_codes: 'elvis'         , youtube_key: 'wuzbUsy6snc' },
       { song_code: 'puppet'        , performer_codes: 'elvis'         , youtube_key: 'RjWoFTu0W28' },
       { song_code: 'red-roses'     , performer_codes: 'moscow-jazz'   , youtube_key: '8-kRyR9c0uc' },
       { song_code: 'red-roses'     , performer_codes: 'sinatra'       , youtube_key: 'hu5qvkiQVjE' },
