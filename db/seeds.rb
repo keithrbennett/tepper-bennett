@@ -296,7 +296,7 @@ def add_song_plays
       { song_code: 'h-sunset'      , performer_codes: 'elvis'         , youtube_key: 'ggjntl7S7oA' },
       { song_code: 'isl-love'      , performer_codes: 'elvis'         , youtube_key: '6RilIva9usA' },
       { song_code: 'ito-eats'      , performer_codes: 'elvis'         , youtube_key: 's1jb7o8GlrQ' },
-      { song_code: 'jenny-kiss'    , performer_codes: 'ed-albert'     , youtube_key: '/Vf-9-rNHjcE' },
+      { song_code: 'jenny-kiss'    , performer_codes: 'ed-albert'     , youtube_key: 'Vf-9-rNHjcE' },
       { song_code: 'kewpie-doll'   , performer_codes: 'p-como'        , youtube_key: 'YJ9W47TIRR4' },
       { song_code: 'kismet'        , performer_codes: 'elvis'         , youtube_key: 'fnqC2I9QpIU' },
       { song_code: 'kiss-fire'     , performer_codes: 'louis-arm'     , youtube_key: 'gVxwN3Eaf_U' },
