@@ -8,7 +8,8 @@ body {
   //background-color: #fffbc2;
   //background-color: #fff0c2;
   //background-color: #FAC962;
-  background-color: #f5deb3;  // wheat
+  //background-color: #f5deb3;  // wheat
+  background-color: #c9d0f1;  // light violet
   margin: 16px;
   font-family: 'Spectral', serif;
   font-size: 18px;
@@ -53,7 +54,7 @@ img {
 
 .nav-link {
   color: black;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .modal-lg {
@@ -81,4 +82,9 @@ img {
 .responsive-no-xs {
   @extend .d-none;
   @extend .d-sm-block;
+}
+
+.accordion-btn-text {
+  font-size: 30px;
+  font-weight: bold;
 }
