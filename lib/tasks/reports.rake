@@ -38,6 +38,7 @@ namespace :reports do
 
   gen_report_task(:song_rights_admins, ReportSongRightsAdmins, 'List rights administrator(s) for each song')
   gen_report_task(:song_performers,    ReportSongPerformers,   'List song information')
+  gen_report_task(:song_plays,         ReportSongPlays,        'List song plays (YouTube)')
   gen_report_task(:song_genres,        ReportSongGenres,       'Report song genres')
   gen_report_task(:genre_songs,        ReportGenreSongs,       'List songs of each genre')
   gen_report_task(:movies,             ReportMovies,           'List movies')

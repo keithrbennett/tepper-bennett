@@ -5,20 +5,15 @@ class SongPlay < ApplicationRecord
 
   validates_length_of :code, maximum: max_code_length
 
-  def self.as_report_string
-    report = StringIO.new
-    report << "                                           Song Plays\n\n"
-    report << 'YouTube Key  Song Code     Perf Code      Song Title                                 Performer Title                 URL'
-    report << "\n\n"
-    all.each { |record| report << record.as_report_string << "\n" }
-    report.string
+  YOUTUBE_KEY_LENGTH = 11
+  YOUTUBE_WATCH_URL_LENGTH = 43
+  YOUTUBE_EMBED_URL_LENGTH = 41
+
+  def youtube_watch_url
+    "https://www.youtube.com/watch?v=#{youtube_key}"
   end
 
-  def as_report_string
-    performer = performers.first
-    '%-10s  %-12s  %-12s   %-40.40s   %-40.40s  %s' % \
-        [youtube_key, song.code, performer.code, song.name, performer.name, url]
+  def youtube_embed_url
+    "https://www.youtube.com/embed/#{youtube_key}"
   end
-
-
 end
