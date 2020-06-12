@@ -46,7 +46,7 @@ def add_movies
       { code:  's-a-joe',    year: 1968, imdb_key: 'tt0063643', name: "Stay Away, Joe" },
   ]
   print "Adding #{movies.size} movies..."
-  movies.each { |m| Movie.create!(code: m[:code], year: m[:year], name: m[:name]) }
+  movies.each { |m| Movie.create!(code: m[:code], year: m[:year], imdb_key: m[:imdb_key], name: m[:name]) }
   puts 'done.'
 end
 
