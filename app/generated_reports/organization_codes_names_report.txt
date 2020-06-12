@@ -1,0 +1,20 @@
+----------------------------------------------------------
+Organization Codes/Names -- Generated 2020-06-12 03:32 UTC
+----------------------------------------------------------
+
+
+   Code           Name
+
+ascap          ASCAP
+bmi            BMI
+emi-uk         EMI (United Kingdom)
+emi-us         EMI (United States)
+example        Example Music
+kobalt         Kobalt Music Group
+mem-lane       Memory Lane
+raleigh        Peter Raleigh Music
+sony           Sony ATV Music
+univ           Universal Music
+warner         Warner Chappel
+
+

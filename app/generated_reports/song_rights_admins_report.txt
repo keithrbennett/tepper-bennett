@@ -1,0 +1,77 @@
+------------------------------------------------------------------------------------------------------------------------
+                             Songs Rights Administrators -- Generated 2020-06-12 03:32 UTC
+------------------------------------------------------------------------------------------------------------------------
+
+
+   Code       Name                                                Admin Code    Rights Administrator Name               
+
+boy-like-me   A Boy Like Me, A Girl Like You                      ?             ?
+cane-collar   A Cane and A High Starched Collar                   ?             ?
+h-everything  A House That Has Everything                         ?             ?
+all-i-am      All That I Am                                       ?             ?
+am-i-ready    Am I Ready                                          ?             ?
+angel         Angel                                               ?             ?
+bagel-lox     Bagels & Lox                                        ?             ?
+b-b-blues     Beach Boy Blues                                     ?             ?
+beg-luck      Beginners Luck                                      ?             ?
+confidence    Confidence                                          ?             ?
+run-back-me   Don't Come Running Back to Me                       ?             ?
+drums-isles   Drums of the Islands                                ?             ?
+earth-boy     Earth Boy                                           ?             ?
+eggbert       Eggbert, The Easter Egg                             ?             ?
+five-heads    Five Sleepy Heads                                   ?             ?
+millionth     For the Millionth and Last Time                     ?             ?
+ft-laud       Fort Lauderdale Chamber of Commerce                 ?             ?
+g-i-blues     G. I. Blues                                         ?             ?
+glad          Glad All Over                                       ?             ?
+bye-boys      Goodbye Boys, Goodbye                               ?             ?
+h-sunset      Hawaiian Sunset                                     ?             ?
+one-girl      I Love Only One Girl                                ?             ?
+crush-ny      I've Got a Crush on New York Town                   ?             ?
+isl-love      Island of Love                                      ?             ?
+long-way      It's a Long Way from Your House to My House         ?             ?
+wond-world    It's a Wonderful World                              ?             ?
+ito-eats      Ito Eats                                            ?             ?
+jenny-kiss    Jenny Kissed Me                                     ?             ?
+old-sake      Just for Old Time Sake                              ?             ?
+kewpie-doll   Kewpie Doll                                         ?             ?
+kismet        Kismet                                              ?             ?
+kiss-fire     Kiss of Fire                                        ?             ?
+l-cowboy      Lonesome Cowboy                                     ?             ?
+mexico        Mexico                                              ?             ?
+mine          Mine                                                ?             ?
+n-orleans     New Orleans                                         ?             ?
+n-for-xmas    Nuttin' for Christmas                               ?             ?
+once-enough   Once is Enough                                      ?             ?
+petunia       Petunia, the Gardener's Daughter                    ?             ?
+puppet        Puppet on a String                                  ?             ?
+red-roses     Red Roses for a Blue Lady                           ?             ?
+relax         Relax                                               ?             ?
+santa-daddy   Santa Claus Looks Just Like Daddy                   ?             ?
+ssss-heart    Say Something Sweet to Your Sweetheart              ?             ?
+shop-arnd     Shoppin' Around                                     ?             ?
+sl-sand       Slicin' Sand                                        ?             ?
+smorgasbord   Smorgasbord                                         ?             ?
+soft-love     Softly My Love                                      ?             ?
+shrimp        Song of the Shrimp                                  ?             ?
+stay-away     Stay Away                                           ?             ?
+smr-sounds    Summer Sounds                                       ?             ?
+suzy-snow     Suzy Snowflake                                      ?             ?
+take-me-fair  Take Me to the Fair                                 ?             ?
+tear-rain     Teardrops in the Rain                               ?             ?
+bullfighter   The Bullfighter Was a Lady                          ?             ?
+lady-loves    The Lady Loves Me                                   ?             ?
+train-ahchoo  The Little Train Who Said 'Ah Choo                  ?             ?
+nty-lady      The Naughty Lady of Shady Lane                      ?             ?
+walls-ears    The Walls Have Ears                                 ?             ?
+woodchuck     The Woodchuck Song                                  ?             ?
+yng-ones      The Young Ones                                      ?             ?
+tr-light      Travelling Light                                    ?             ?
+t-t-fingers   Twenty Tiny Fingers                                 ?             ?
+vino          Vino, Dinero y Amor                                 ?             ?
+west-union    Western Union                                       ?             ?
+wheels-heels  Wheels on My Heels                                  ?             ?
+when-arms     When the Boy (Girl) in Your Arms                    ?             ?
+ww-young      Wonderful World of the Young                        ?             ?
+
+

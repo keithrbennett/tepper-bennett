@@ -1,0 +1,167 @@
+----------------------------------------------------------------
+        Songs by Genre -- Generated 2020-06-12 03:32 UTC
+----------------------------------------------------------------
+
+
+Genre: bluegrass
+
+[None]
+
+----------------------------------------------------------------
+Genre: blues
+
+b-b-blues     Beach Boy Blues
+g-i-blues     G. I. Blues
+
+----------------------------------------------------------------
+Genre: children
+
+eggbert       Eggbert, The Easter Egg
+n-for-xmas    Nuttin' for Christmas
+santa-daddy   Santa Claus Looks Just Like Daddy
+suzy-snow     Suzy Snowflake
+train-ahchoo  The Little Train Who Said 'Ah Choo
+t-t-fingers   Twenty Tiny Fingers
+
+----------------------------------------------------------------
+Genre: country
+
+[None]
+
+----------------------------------------------------------------
+Genre: elvis
+
+boy-like-me   A Boy Like Me, A Girl Like You
+cane-collar   A Cane and A High Starched Collar
+h-everything  A House That Has Everything
+all-i-am      All That I Am
+am-i-ready    Am I Ready
+angel         Angel
+b-b-blues     Beach Boy Blues
+beg-luck      Beginners Luck
+confidence    Confidence
+drums-isles   Drums of the Islands
+earth-boy     Earth Boy
+five-heads    Five Sleepy Heads
+millionth     For the Millionth and Last Time
+ft-laud       Fort Lauderdale Chamber of Commerce
+g-i-blues     G. I. Blues
+h-sunset      Hawaiian Sunset
+one-girl      I Love Only One Girl
+isl-love      Island of Love
+wond-world    It's a Wonderful World
+ito-eats      Ito Eats
+old-sake      Just for Old Time Sake
+kismet        Kismet
+l-cowboy      Lonesome Cowboy
+mexico        Mexico
+mine          Mine
+n-orleans     New Orleans
+once-enough   Once is Enough
+petunia       Petunia, the Gardener's Daughter
+puppet        Puppet on a String
+relax         Relax
+shop-arnd     Shoppin' Around
+sl-sand       Slicin' Sand
+smorgasbord   Smorgasbord
+shrimp        Song of the Shrimp
+stay-away     Stay Away
+take-me-fair  Take Me to the Fair
+bullfighter   The Bullfighter Was a Lady
+lady-loves    The Lady Loves Me
+walls-ears    The Walls Have Ears
+vino          Vino, Dinero y Amor
+west-union    Western Union
+wheels-heels  Wheels on My Heels
+
+----------------------------------------------------------------
+Genre: funny
+
+nty-lady      The Naughty Lady of Shady Lane
+
+----------------------------------------------------------------
+Genre: hit
+
+[None]
+
+----------------------------------------------------------------
+Genre: movie
+
+boy-like-me   A Boy Like Me, A Girl Like You
+cane-collar   A Cane and A High Starched Collar
+h-everything  A House That Has Everything
+all-i-am      All That I Am
+am-i-ready    Am I Ready
+angel         Angel
+b-b-blues     Beach Boy Blues
+beg-luck      Beginners Luck
+confidence    Confidence
+drums-isles   Drums of the Islands
+earth-boy     Earth Boy
+five-heads    Five Sleepy Heads
+millionth     For the Millionth and Last Time
+ft-laud       Fort Lauderdale Chamber of Commerce
+g-i-blues     G. I. Blues
+h-sunset      Hawaiian Sunset
+one-girl      I Love Only One Girl
+isl-love      Island of Love
+wond-world    It's a Wonderful World
+ito-eats      Ito Eats
+kismet        Kismet
+l-cowboy      Lonesome Cowboy
+mexico        Mexico
+mine          Mine
+n-orleans     New Orleans
+once-enough   Once is Enough
+petunia       Petunia, the Gardener's Daughter
+puppet        Puppet on a String
+relax         Relax
+shop-arnd     Shoppin' Around
+sl-sand       Slicin' Sand
+smorgasbord   Smorgasbord
+shrimp        Song of the Shrimp
+stay-away     Stay Away
+take-me-fair  Take Me to the Fair
+bullfighter   The Bullfighter Was a Lady
+lady-loves    The Lady Loves Me
+walls-ears    The Walls Have Ears
+vino          Vino, Dinero y Amor
+west-union    Western Union
+wheels-heels  Wheels on My Heels
+yng-ones      The Young Ones
+
+----------------------------------------------------------------
+Genre: rock
+
+[None]
+
+----------------------------------------------------------------
+Genre: romantic
+
+h-everything  A House That Has Everything
+all-i-am      All That I Am
+am-i-ready    Am I Ready
+angel         Angel
+beg-luck      Beginners Luck
+isl-love      Island of Love
+petunia       Petunia, the Gardener's Daughter
+puppet        Puppet on a String
+bullfighter   The Bullfighter Was a Lady
+lady-loves    The Lady Loves Me
+run-back-me   Don't Come Running Back to Me
+long-way      It's a Long Way from Your House to My House
+jenny-kiss    Jenny Kissed Me
+kiss-fire     Kiss of Fire
+red-roses     Red Roses for a Blue Lady
+ssss-heart    Say Something Sweet to Your Sweetheart
+soft-love     Softly My Love
+tear-rain     Teardrops in the Rain
+when-arms     When the Boy (Girl) in Your Arms
+
+----------------------------------------------------------------
+Genre: tv
+
+yng-ones      The Young Ones
+
+
+

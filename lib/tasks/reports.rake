@@ -7,7 +7,7 @@ namespace :reports do
 
 
   def write_report(task_name, report_text)
-    filespec = File.join(Rails.root, 'outputs', "#{task_name}_report.txt")
+    filespec = File.join(Rails.root, 'app', 'generated_reports', "#{task_name}_report.txt")
     puts "Writing #{task_name} report to #{filespec}..."
     File.write(filespec, report_text)
   end

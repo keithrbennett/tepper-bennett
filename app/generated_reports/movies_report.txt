@@ -1,0 +1,62 @@
+--------------------------------------------------------------
+   Movies in Title Order -- Generated 2020-06-12 03:32 UTC
+--------------------------------------------------------------
+
+
+   Code         Year         Name
+
+b-hawaii        1961   Blue Hawaii
+clambake        1967   Clambake
+d-trouble       1967   Double Trouble
+flam-star       1960   Flaming Star
+foll-dream      1962   Follow That Dream
+f-johnny        1966   Frankie and Johnny
+acapulco        1963   Fun in Acapulco
+g-i-blues       1960   G. I. Blues
+girl-happy      1964   Girl Happy
+girls           1962   Girls! Girls! Girls!
+h-scarum        1965   Harum Scarum
+w-fair          1963   It Happened at the World's Fair
+k-creole        1958   King Creole
+k-cousins       1964   Kissin' Cousins
+lov-you         1957   Loving You
+paradise        1966   Paradise, Hawaiian Style
+roust           1964   Roustabout
+speedway        1968   Speedway
+spinout         1966   Spinout
+s-a-joe         1968   Stay Away, Joe
+young-ones      1962   The Young Ones
+vegas           1964   Viva Las Vegas
+
+
+--------------------------------------------------------------
+    Movies in Year Order -- Generated 2020-06-12 03:32 UTC
+--------------------------------------------------------------
+
+
+   Code         Year         Name
+
+lov-you         1957   Loving You
+k-creole        1958   King Creole
+flam-star       1960   Flaming Star
+g-i-blues       1960   G. I. Blues
+b-hawaii        1961   Blue Hawaii
+foll-dream      1962   Follow That Dream
+girls           1962   Girls! Girls! Girls!
+young-ones      1962   The Young Ones
+acapulco        1963   Fun in Acapulco
+w-fair          1963   It Happened at the World's Fair
+girl-happy      1964   Girl Happy
+k-cousins       1964   Kissin' Cousins
+roust           1964   Roustabout
+vegas           1964   Viva Las Vegas
+h-scarum        1965   Harum Scarum
+f-johnny        1966   Frankie and Johnny
+paradise        1966   Paradise, Hawaiian Style
+spinout         1966   Spinout
+clambake        1967   Clambake
+d-trouble       1967   Double Trouble
+speedway        1968   Speedway
+s-a-joe         1968   Stay Away, Joe
+
+

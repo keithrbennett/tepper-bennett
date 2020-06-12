@@ -20,7 +20,7 @@ class ReportsController < ApplicationController
     end
 
     def report_filespec
-      File.join(Rails.root, 'outputs', "#{key}_report.txt")
+      File.join(Rails.root, 'app', 'generated_reports', "#{key}_report.txt")
     end
 
     def report_text

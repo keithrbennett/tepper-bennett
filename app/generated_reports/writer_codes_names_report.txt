@@ -1,0 +1,13 @@
+------------------------------------------------------
+ Writer Codes/Names -- Generated 2020-06-12 03:32 UTC
+------------------------------------------------------
+
+
+   Code           Name
+
+kent           Arthur Kent
+shayne         Gloria Shayne
+bennett        Roy C. Bennett
+tepper         Sid Tepper
+
+

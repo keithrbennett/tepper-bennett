@@ -1,0 +1,51 @@
+--------------------------------------------------------------------------
+         Performer Codes/Names -- Generated 2020-06-12 03:32 UTC
+--------------------------------------------------------------------------
+
+
+   Code           Name
+
+andy-wms       Andy Williams
+ann-margret    Ann-Margret
+anne-lloyd     Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra
+a-mooney       Art Mooney & His Orchestra
+a-prysock      Arthur Prysock
+b-gordon       Barry Gordon
+bert-kmft      Bert Kaempfert and His Orchestra
+clf-rich       Cliff Richards
+c-francis      Connie Francis
+dean-martin    Dean Martin
+della-reese    Della Reese
+fisch-sauer    Denis Fischer & Carsten Sauer
+eartha-kitt    Eartha Kitt
+ed-albert      Eddie Albert
+elvis          Elvis Presley
+sinatra        Frank Sinatra
+h-hermits      Herman's Hermits
+homer-jethro   Homer and Jethro
+jay-amer       Jay and the Americans
+jeff-beck      Jeff Beck
+kilburn        Kilburn and the High Roads
+louis-arm      Louis Armstrong
+mickey-katz    Mickey Katz
+moscow-jazz    Moscow City Jazz Band
+n-wilson       Nancy Wilson
+naysayer       Naysayer
+p-como         Perry Como
+plain-white    Plain White T's
+r-conniff      Ray Conniff Singers
+rob-schneid    Rob Schneider
+r-goulet       Robert Goulet
+r-clooney      Rosemary Clooney
+sugarland      Sugarland
+ben-mill       Tex Beneke and The Miller Orchestra
+ames-bros      The Ames Brothers
+beatles        The Beatles
+ink-spots      The Ink Spots
+stargazers     The Stargazers
+v-monroe       Vaughn Monroe
+vic-dana       Vic Dana
+vic-choir      Victoria Junior College Choir (Singapore)
+w-newton       Wayne Newton
+
+

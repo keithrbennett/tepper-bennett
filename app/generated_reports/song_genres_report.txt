@@ -1,0 +1,77 @@
+--------------------------------------------------------------------------------------------------------------------------------------------
+                                               Song Genres -- Generated 2020-06-12 03:32 UTC
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+   Code       Name                                                      Genres
+
+boy-like-me   A Boy Like Me, A Girl Like You                      elvis  movie
+cane-collar   A Cane and A High Starched Collar                   elvis  movie
+h-everything  A House That Has Everything                         elvis  movie  romantic
+all-i-am      All That I Am                                       elvis  movie  romantic
+am-i-ready    Am I Ready                                          elvis  movie  romantic
+angel         Angel                                               elvis  movie  romantic
+b-b-blues     Beach Boy Blues                                     blues  elvis  movie
+beg-luck      Beginners Luck                                      elvis  movie  romantic
+confidence    Confidence                                          elvis  movie
+drums-isles   Drums of the Islands                                elvis  movie
+earth-boy     Earth Boy                                           elvis  movie
+five-heads    Five Sleepy Heads                                   elvis  movie
+millionth     For the Millionth and Last Time                     elvis  movie
+ft-laud       Fort Lauderdale Chamber of Commerce                 elvis  movie
+g-i-blues     G. I. Blues                                         blues  elvis  movie
+h-sunset      Hawaiian Sunset                                     elvis  movie
+one-girl      I Love Only One Girl                                elvis  movie
+isl-love      Island of Love                                      elvis  movie  romantic
+wond-world    It's a Wonderful World                              elvis  movie
+ito-eats      Ito Eats                                            elvis  movie
+old-sake      Just for Old Time Sake                              elvis
+kismet        Kismet                                              elvis  movie
+l-cowboy      Lonesome Cowboy                                     elvis  movie
+mexico        Mexico                                              elvis  movie
+mine          Mine                                                elvis  movie
+n-orleans     New Orleans                                         elvis  movie
+once-enough   Once is Enough                                      elvis  movie
+petunia       Petunia, the Gardener's Daughter                    elvis  movie  romantic
+puppet        Puppet on a String                                  elvis  movie  romantic
+relax         Relax                                               elvis  movie
+shop-arnd     Shoppin' Around                                     elvis  movie
+sl-sand       Slicin' Sand                                        elvis  movie
+smorgasbord   Smorgasbord                                         elvis  movie
+shrimp        Song of the Shrimp                                  elvis  movie
+stay-away     Stay Away                                           elvis  movie
+take-me-fair  Take Me to the Fair                                 elvis  movie
+bullfighter   The Bullfighter Was a Lady                          elvis  movie  romantic
+lady-loves    The Lady Loves Me                                   elvis  movie  romantic
+walls-ears    The Walls Have Ears                                 elvis  movie
+vino          Vino, Dinero y Amor                                 elvis  movie
+west-union    Western Union                                       elvis  movie
+wheels-heels  Wheels on My Heels                                  elvis  movie
+bagel-lox     Bagels & Lox                                        
+run-back-me   Don't Come Running Back to Me                       romantic
+eggbert       Eggbert, The Easter Egg                             children
+glad          Glad All Over                                       
+bye-boys      Goodbye Boys, Goodbye                               
+crush-ny      I've Got a Crush on New York Town                   
+long-way      It's a Long Way from Your House to My House         romantic
+jenny-kiss    Jenny Kissed Me                                     romantic
+kewpie-doll   Kewpie Doll                                         
+kiss-fire     Kiss of Fire                                        romantic
+n-for-xmas    Nuttin' for Christmas                               children
+red-roses     Red Roses for a Blue Lady                           romantic
+santa-daddy   Santa Claus Looks Just Like Daddy                   children
+ssss-heart    Say Something Sweet to Your Sweetheart              romantic
+soft-love     Softly My Love                                      romantic
+smr-sounds    Summer Sounds                                       
+suzy-snow     Suzy Snowflake                                      children
+tear-rain     Teardrops in the Rain                               romantic
+train-ahchoo  The Little Train Who Said 'Ah Choo                  children
+nty-lady      The Naughty Lady of Shady Lane                      funny
+woodchuck     The Woodchuck Song                                  
+yng-ones      The Young Ones                                      movie  tv
+tr-light      Travelling Light                                    
+t-t-fingers   Twenty Tiny Fingers                                 children
+when-arms     When the Boy (Girl) in Your Arms                    romantic
+ww-young      Wonderful World of the Young                        
+
+

@@ -1,0 +1,82 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                 Song Plays (YouTube) -- Generated 2020-06-12 03:32 UTC
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+YouTube URL                                  Song Code     Perf Code     Song Name                                           Performer Name                                              
+
+https://www.youtube.com/watch?v=ireqvLFf08A  all-i-am      elvis         All That I Am                                       Elvis Presley                                               
+https://www.youtube.com/watch?v=E2J13o-RsxA  am-i-ready    elvis         Am I Ready                                          Elvis Presley                                               
+https://www.youtube.com/watch?v=7RQuoPVMPT0  angel         elvis         Angel                                               Elvis Presley                                               
+https://www.youtube.com/watch?v=Oq8BI8wB8Fk  b-b-blues     elvis         Beach Boy Blues                                     Elvis Presley                                               
+https://www.youtube.com/watch?v=dv4h8yU_N7o  bagel-lox     rob-schneid   Bagels & Lox                                        Rob Schneider                                               
+https://www.youtube.com/watch?v=0IGp5zqeLLk  beg-luck      elvis         Beginners Luck                                      Elvis Presley                                               
+https://www.youtube.com/watch?v=cPQ5nnwYA2Q  boy-like-me   elvis         A Boy Like Me, A Girl Like You                      Elvis Presley                                               
+https://www.youtube.com/watch?v=kHTX0kU3sEo  bullfighter   elvis         The Bullfighter Was a Lady                          Elvis Presley                                               
+https://www.youtube.com/watch?v=BWyneW_A4_8  bye-boys      jay-amer      Goodbye Boys, Goodbye                               Jay and the Americans                                       
+https://www.youtube.com/watch?v=AE78rPjs6Mo  cane-collar   elvis         A Cane and A High Starched Collar                   Elvis Presley                                               
+https://www.youtube.com/watch?v=DE9Mc9cnBkg  confidence    elvis         Confidence                                          Elvis Presley                                               
+https://www.youtube.com/watch?v=0_Gycn0UJ9M  crush-ny      c-francis     I've Got a Crush on New York Town                   Connie Francis                                              
+https://www.youtube.com/watch?v=4pXqiV-gbEk  drums-isles   elvis         Drums of the Islands                                Elvis Presley                                               
+https://www.youtube.com/watch?v=h_i4Dmfowjs  earth-boy     elvis         Earth Boy                                           Elvis Presley                                               
+https://www.youtube.com/watch?v=xkLGm9B60oY  eggbert       r-clooney     Eggbert, The Easter Egg                             Rosemary Clooney                                            
+https://www.youtube.com/watch?v=tZK2FcTjBsE  five-heads    elvis         Five Sleepy Heads                                   Elvis Presley                                               
+https://www.youtube.com/watch?v=3In-gZ5IL7s  ft-laud       elvis         Fort Lauderdale Chamber of Commerce                 Elvis Presley                                               
+https://www.youtube.com/watch?v=GkyjCJvHLsA  g-i-blues     elvis         G. I. Blues                                         Elvis Presley                                               
+https://www.youtube.com/watch?v=ghag_1WCEuQ  glad          beatles       Glad All Over                                       The Beatles                                                 
+https://www.youtube.com/watch?v=OP0JNb6jfqU  glad          jeff-beck     Glad All Over                                       Jeff Beck                                                   
+https://www.youtube.com/watch?v=oh2wVSAnv98  h-everything  elvis         A House That Has Everything                         Elvis Presley                                               
+https://www.youtube.com/watch?v=ggjntl7S7oA  h-sunset      elvis         Hawaiian Sunset                                     Elvis Presley                                               
+https://www.youtube.com/watch?v=6RilIva9usA  isl-love      elvis         Island of Love                                      Elvis Presley                                               
+https://www.youtube.com/watch?v=s1jb7o8GlrQ  ito-eats      elvis         Ito Eats                                            Elvis Presley                                               
+https://www.youtube.com/watch?v=Vf-9-rNHjcE  jenny-kiss    ed-albert     Jenny Kissed Me                                     Eddie Albert                                                
+https://www.youtube.com/watch?v=YJ9W47TIRR4  kewpie-doll   p-como        Kewpie Doll                                         Perry Como                                                  
+https://www.youtube.com/watch?v=fnqC2I9QpIU  kismet        elvis         Kismet                                              Elvis Presley                                               
+https://www.youtube.com/watch?v=gVxwN3Eaf_U  kiss-fire     louis-arm     Kiss of Fire                                        Louis Armstrong                                             
+https://www.youtube.com/watch?v=DxComjngP2Q  l-cowboy      elvis         Lonesome Cowboy                                     Elvis Presley                                               
+https://www.youtube.com/watch?v=Fv0bpfGfzls  lady-loves    elvis         The Lady Loves Me                                   Elvis Presley                                               
+https://www.youtube.com/watch?v=7-tcw6w4Cj4  long-way      sinatra       It's a Long Way from Your House to My House         Frank Sinatra                                               
+https://www.youtube.com/watch?v=eCQrdpoBass  mexico        elvis         Mexico                                              Elvis Presley                                               
+https://www.youtube.com/watch?v=0hhN13Qzl-Q  millionth     elvis         For the Millionth and Last Time                     Elvis Presley                                               
+https://www.youtube.com/watch?v=GVMaaTaucsQ  mine          elvis         Mine                                                Elvis Presley                                               
+https://www.youtube.com/watch?v=9J-hyQGmhlo  n-for-xmas    b-gordon      Nuttin' for Christmas                               Barry Gordon                                                
+https://www.youtube.com/watch?v=VTjUZlLdmu8  n-for-xmas    sugarland     Nuttin' for Christmas                               Sugarland                                                   
+https://www.youtube.com/watch?v=A9C-oQ_mFSc  n-orleans     elvis         New Orleans                                         Elvis Presley                                               
+https://www.youtube.com/watch?v=9HxB7lxbTnI  nty-lady      ames-bros     The Naughty Lady of Shady Lane                      The Ames Brothers                                           
+https://www.youtube.com/watch?v=hyQSTzn58b0  old-sake      elvis         Just for Old Time Sake                              Elvis Presley                                               
+https://www.youtube.com/watch?v=vxhe3_dTaBM  once-enough   elvis         Once is Enough                                      Elvis Presley                                               
+https://www.youtube.com/watch?v=ito_RR2kwS0  one-girl      elvis         I Love Only One Girl                                Elvis Presley                                               
+https://www.youtube.com/watch?v=wuzbUsy6snc  petunia       elvis         Petunia, the Gardener's Daughter                    Elvis Presley                                               
+https://www.youtube.com/watch?v=RjWoFTu0W28  puppet        elvis         Puppet on a String                                  Elvis Presley                                               
+https://www.youtube.com/watch?v=8-kRyR9c0uc  red-roses     moscow-jazz   Red Roses for a Blue Lady                           Moscow City Jazz Band                                       
+https://www.youtube.com/watch?v=hu5qvkiQVjE  red-roses     sinatra       Red Roses for a Blue Lady                           Frank Sinatra                                               
+https://www.youtube.com/watch?v=HssRO5b_ED0  red-roses     w-newton      Red Roses for a Blue Lady                           Wayne Newton                                                
+https://www.youtube.com/watch?v=DDH5xsR2b6g  relax         elvis         Relax                                               Elvis Presley                                               
+https://www.youtube.com/watch?v=QlzCpTEhhQM  run-back-me   n-wilson      Don't Come Running Back to Me                       Nancy Wilson                                                
+https://www.youtube.com/watch?v=0JCXmuNnrNc  santa-daddy   b-gordon      Santa Claus Looks Just Like Daddy                   Barry Gordon                                                
+https://www.youtube.com/watch?v=ADjm8yzYFW4  shop-arnd     elvis         Shoppin' Around                                     Elvis Presley                                               
+https://www.youtube.com/watch?v=_GEKrj_ZloI  shrimp        elvis         Song of the Shrimp                                  Elvis Presley                                               
+https://www.youtube.com/watch?v=ri3oqaZqAjo  sl-sand       elvis         Slicin' Sand                                        Elvis Presley                                               
+https://www.youtube.com/watch?v=PzGLzYnSNes  smorgasbord   elvis         Smorgasbord                                         Elvis Presley                                               
+https://www.youtube.com/watch?v=1gGJ8AHYloQ  smr-sounds    r-goulet      Summer Sounds                                       Robert Goulet                                               
+https://www.youtube.com/watch?v=f4MXVgw_3hg  soft-love     della-reese   Softly My Love                                      Della Reese                                                 
+https://www.youtube.com/watch?v=z617AUVXyMs  ssss-heart    ink-spots     Say Something Sweet to Your Sweetheart              The Ink Spots                                               
+https://www.youtube.com/watch?v=wr6MQtFLX6k  stay-away     elvis         Stay Away                                           Elvis Presley                                               
+https://www.youtube.com/watch?v=UiFXZhU5kp4  suzy-snow     r-clooney     Suzy Snowflake                                      Rosemary Clooney                                            
+https://www.youtube.com/watch?v=K0ozZZ_RhP8  t-t-fingers   stargazers    Twenty Tiny Fingers                                 The Stargazers                                              
+https://www.youtube.com/watch?v=K0ozZZ_RhP8  t-t-fingers   stargazers    Twenty Tiny Fingers                                 The Stargazers                                              
+https://www.youtube.com/watch?v=DaOGCwGkdCE  take-me-fair  elvis         Take Me to the Fair                                 Elvis Presley                                               
+https://www.youtube.com/watch?v=7xVk2GY-TOI  tear-rain     a-prysock     Teardrops in the Rain                               Arthur Prysock                                              
+https://www.youtube.com/watch?v=stDqoS3zeTE  tr-light      h-hermits     Travelling Light                                    Herman's Hermits                                            
+https://www.youtube.com/watch?v=S2PFb24d2Ak  train-ahchoo  anne-lloyd    The Little Train Who Said 'Ah Choo                  Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra     
+https://www.youtube.com/watch?v=iRZcg4nXprY  vino          elvis         Vino, Dinero y Amor                                 Elvis Presley                                               
+https://www.youtube.com/watch?v=4dGrDNvSdNM  walls-ears    elvis         The Walls Have Ears                                 Elvis Presley                                               
+https://www.youtube.com/watch?v=-cs_R-QWqcA  west-union    elvis         Western Union                                       Elvis Presley                                               
+https://www.youtube.com/watch?v=zxn5EWXpUOE  wheels-heels  elvis         Wheels on My Heels                                  Elvis Presley                                               
+https://www.youtube.com/watch?v=FudzowDyQn0  when-arms     c-francis     When the Boy (Girl) in Your Arms                    Connie Francis                                              
+https://www.youtube.com/watch?v=5GwapUKv5V4  wond-world    elvis         It's a Wonderful World                              Elvis Presley                                               
+https://www.youtube.com/watch?v=06BlIlEjhV8  woodchuck     ben-mill      The Woodchuck Song                                  Tex Beneke and The Miller Orchestra                         
+https://www.youtube.com/watch?v=eoRVnPH8uUI  ww-young      andy-wms      Wonderful World of the Young                        Andy Williams                                               
+https://www.youtube.com/watch?v=BxNohANhJiA  yng-ones      clf-rich      The Young Ones                                      Cliff Richards                                              
+
+

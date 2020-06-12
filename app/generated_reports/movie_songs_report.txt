@@ -1,0 +1,72 @@
+--------------------------------------------------------------------------------------------------------------------------------------------
+                                              Songs by Movie -- Generated 2020-06-12 03:32 UTC
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Year     Code       Name                                      Song Code     Song Name                                         
+
+1957  lov-you       Loving You                                l-cowboy      Lonesome Cowboy
+
+1958  k-creole      King Creole                               n-orleans     New Orleans
+
+1960  flam-star     Flaming Star                              cane-collar   A Cane and A High Starched Collar
+
+1960  g-i-blues     G. I. Blues                               g-i-blues     G. I. Blues
+                                                              shop-arnd     Shoppin' Around
+
+1961  b-hawaii      Blue Hawaii                               b-b-blues     Beach Boy Blues
+                                                              h-sunset      Hawaiian Sunset
+                                                              isl-love      Island of Love
+                                                              ito-eats      Ito Eats
+                                                              sl-sand       Slicin' Sand
+
+1962  foll-dream    Follow That Dream                         angel         Angel
+                                                              millionth     For the Millionth and Last Time
+
+1962  girls         Girls! Girls! Girls!                      boy-like-me   A Boy Like Me, A Girl Like You
+                                                              earth-boy     Earth Boy
+                                                              shrimp        Song of the Shrimp
+                                                              walls-ears    The Walls Have Ears
+
+1962  young-ones    The Young Ones                            yng-ones      The Young Ones
+
+1963  acapulco      Fun in Acapulco                           mexico        Mexico
+                                                              bullfighter   The Bullfighter Was a Lady
+                                                              vino          Vino, Dinero y Amor
+
+1963  w-fair        It Happened at the World's Fair           relax         Relax
+                                                              take-me-fair  Take Me to the Fair
+
+1964  girl-happy    Girl Happy                                ft-laud       Fort Lauderdale Chamber of Commerce
+                                                              puppet        Puppet on a String
+
+1964  k-cousins     Kissin' Cousins                           once-enough   Once is Enough
+
+1964  roust         Roustabout                                wond-world    It's a Wonderful World
+                                                              wheels-heels  Wheels on My Heels
+
+1964  vegas         Viva Las Vegas                            lady-loves    The Lady Loves Me
+
+1965  h-scarum      Harum Scarum                              kismet        Kismet
+
+1966  f-johnny      Frankie and Johnny                        beg-luck      Beginners Luck
+                                                              petunia       Petunia, the Gardener's Daughter
+
+1966  paradise      Paradise, Hawaiian Style                  drums-isles   Drums of the Islands
+
+1966  spinout       Spinout                                   all-i-am      All That I Am
+                                                              am-i-ready    Am I Ready
+                                                              smorgasbord   Smorgasbord
+
+1967  clambake      Clambake                                  h-everything  A House That Has Everything
+                                                              confidence    Confidence
+
+1967  d-trouble     Double Trouble                            one-girl      I Love Only One Girl
+
+1968  speedway      Speedway                                  five-heads    Five Sleepy Heads
+                                                              mine          Mine
+                                                              west-union    Western Union
+
+1968  s-a-joe       Stay Away, Joe                            stay-away     Stay Away
+
+
