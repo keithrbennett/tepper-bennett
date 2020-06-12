@@ -56,9 +56,7 @@ function setUpColorPicker() {
     }
 
     function setInitialColor() {
-        let color = localStorage.getItem("background-color");
-        if(color == null)
-            color = defaultBackgroundColor();
+        let color = localStorage.getItem("background-color") || defaultBackgroundColor();
         setBackgroundColor(color);
     }
 

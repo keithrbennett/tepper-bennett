@@ -9,9 +9,12 @@ body {
   //background-color: #fff0c2;
   //background-color: #FAC962;
   //background-color: #f5deb3;  // wheat
-  background-color: #c9d0f1;  // light violet
-  background-color: #72ff08;  // light chartreuse
+  //background-color: #c9d0f1;  // light violet
+  //background-color: #72ff08;  // light chartreuse
+
+  // The background-color attribute will be overwritten by JavaScript initialization:
   background-color: #2fc726;  // lime green
+
   margin: 16px;
   font-family: 'Spectral', serif;
   font-size: 18px;
