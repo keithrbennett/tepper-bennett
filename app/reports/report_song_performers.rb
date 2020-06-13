@@ -5,7 +5,7 @@ class ReportSongPerformers < BaseReport
   def initialize
     @line_length = [Song.max_code_length, Song.max_name_length, Performer.max_code_length, Performer.max_name_length].sum + 6
     @report_title = 'Song Performers'
-    @report_string_continuation_indent = Song.max_code_length + Song.max_name_length + 4
+    @report_string_continuation_indent = ' ' * (Song.max_code_length + Song.max_name_length + 4)
   end
 
 
@@ -36,11 +36,11 @@ class ReportSongPerformers < BaseReport
     sio = StringIO.new
     sio << '%-*s  %-*s  %-*s  %s' %
         [Song.max_code_length, record.code, Song.max_name_length, record.name,
-         Song.max_code_length, performers.first.code, performers.first.name]
+         Song.max_code_length, performers&.first&.code, performers&.first&.name]
 
-    performers[1..-1].each do |performer|
-      sio << "\n%-*s%-*s  %s" %
-          [@report_string_continuation_indent, '', Song.max_code_length, performer.code, performer.name]
+    (performers[1..-1] || []).each do |performer|
+      sio << "\n%s%-*s  %s" %
+          [@report_string_continuation_indent, Song.max_code_length, performer.code, performer.name]
     end
     sio.string
   end

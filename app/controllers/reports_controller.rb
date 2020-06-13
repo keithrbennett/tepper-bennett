@@ -39,6 +39,7 @@ def initialize
         ['performer_codes_names', 'Performers'],
         ['genre_codes_names', 'Genres'],
         ['song_performers',  'Song Performers'],
+        ['performer_songs',  'Performer Songs'],
         ['song_genres', 'Genres by Song'],
         ['genre_songs', 'Songs by Genre'],
         ['movies', 'Movies'],

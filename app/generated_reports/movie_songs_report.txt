@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
-                                              Songs by Movie -- Generated 2020-06-12 03:32 UTC
+                                              Songs by Movie -- Generated 2020-06-13 00:47 UTC
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -28,7 +28,7 @@ Year     Code       Name                                      Song Code     Song
                                                               shrimp        Song of the Shrimp
                                                               walls-ears    The Walls Have Ears
 
-1962  young-ones    The Young Ones                            yng-ones      The Young Ones
+1962  young-ones    The Young Ones (USA: Wonderful to Be Young!)  yng-ones      The Young Ones
 
 1963  acapulco      Fun in Acapulco                           mexico        Mexico
                                                               bullfighter   The Bullfighter Was a Lady

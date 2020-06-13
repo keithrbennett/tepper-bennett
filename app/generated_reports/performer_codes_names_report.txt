@@ -1,15 +1,15 @@
 --------------------------------------------------------------------------
-         Performer Codes/Names -- Generated 2020-06-12 03:32 UTC
+         Performer Codes/Names -- Generated 2020-06-13 00:47 UTC
 --------------------------------------------------------------------------
 
 
    Code           Name
 
 andy-wms       Andy Williams
-ann-margret    Ann-Margret
 anne-lloyd     Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra
-a-mooney       Art Mooney & His Orchestra
+ann-margret    Ann-Margret
 a-prysock      Arthur Prysock
+a-mooney       Art Mooney & His Orchestra
 b-gordon       Barry Gordon
 bert-kmft      Bert Kaempfert and His Orchestra
 clf-rich       Cliff Richards
@@ -34,8 +34,8 @@ naysayer       Naysayer
 p-como         Perry Como
 plain-white    Plain White T's
 r-conniff      Ray Conniff Singers
-rob-schneid    Rob Schneider
 r-goulet       Robert Goulet
+rob-schneid    Rob Schneider
 r-clooney      Rosemary Clooney
 sugarland      Sugarland
 ben-mill       Tex Beneke and The Miller Orchestra
