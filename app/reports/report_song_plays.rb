@@ -13,19 +13,22 @@ class ReportSongPlays < BaseReport
 
 
   def data
-    SongPlay.joins(:song).all.order('songs.name, id').map do |song_play|
+    return @data if @data
+
+    records = SongPlay.joins(:song).all.order('songs.name, id').map do |song_play|
       performers = song_play.performers.order(:name).map do |performer|
         { 'code' => performer.code, 'name' => performer.name }
       end
-      if performers.count > 1
-        require 'pry'; binding.pry
-      end
       {
-        'song_code' => song_play.song.code,
-        'song_name' => song_play.song.name,
+        'song_code'   => song_play.song.code,
+        'song_name'   => song_play.song.name,
         'youtube_key' => song_play.youtube_key,
-        'performers' => performers
+        'performers'  => performers
       }
+    end
+
+    @data = records.sort_by do |record|
+      [record['song_name'], record['performers'].map { |p| p['name']}]
     end
   end
 
