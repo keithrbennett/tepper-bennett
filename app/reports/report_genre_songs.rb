@@ -12,7 +12,7 @@ class ReportGenreSongs < BaseReport
   def data
     @data ||= Genre.order(:name).all.each_with_object({}) do |genre, songs_by_genre|
       songs = genre.songs
-      songs_by_genre[genre.name] = songs.map { |song| { 'code' => song.code, 'name' => song.name } }
+      songs_by_genre[genre.name] = songs.map { |song| attr_hash(song, %w{code name}) }
     end
   end
 

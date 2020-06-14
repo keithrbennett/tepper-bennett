@@ -11,9 +11,7 @@ class CodeNameReport < BaseReport
 
 
   def data
-    @data ||= ar_class.order(:name).all.map do |record|
-      { 'code' => record['code'], 'name' => record['name'] }
-    end
+    @data ||= ar_class.order(:name).all.map { |record| attr_hash(record, %w{code name}) }
   end
 
 

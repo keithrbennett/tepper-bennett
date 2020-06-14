@@ -12,8 +12,10 @@ class ReportMovieSongs < BaseReport
 
   def data
     @data ||= Movie.order(:year, :name).all.map do |movie|
-      songs = movie.songs.order(:name).map { |song| { 'code' => song.code, 'name' => song.name } }
-      { 'code' => movie.code, 'year' => movie.year, 'name' => movie.name, 'songs' => songs }
+      songs = movie.songs.order(:name).map { |song| attr_hash(song, %w{code name}) }
+      movie_hash = attr_hash(movie, %w{code year name})
+      movie_hash['songs'] = songs
+      movie_hash
     end
   end
 
