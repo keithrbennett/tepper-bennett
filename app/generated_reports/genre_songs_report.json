@@ -1,0 +1,484 @@
+{
+  "title": "Songs by Genre",
+  "generation_time": "2020-06-14 22:23 UTC",
+  "data": {
+    "bluegrass": [
+
+    ],
+    "blues": [
+      {
+        "code": "b-b-blues",
+        "name": "Beach Boy Blues"
+      },
+      {
+        "code": "g-i-blues",
+        "name": "G. I. Blues"
+      }
+    ],
+    "children": [
+      {
+        "code": "eggbert",
+        "name": "Eggbert, The Easter Egg"
+      },
+      {
+        "code": "n-for-xmas",
+        "name": "Nuttin' for Christmas"
+      },
+      {
+        "code": "santa-daddy",
+        "name": "Santa Claus Looks Just Like Daddy"
+      },
+      {
+        "code": "suzy-snow",
+        "name": "Suzy Snowflake"
+      },
+      {
+        "code": "train-ahchoo",
+        "name": "The Little Train Who Said 'Ah Choo"
+      },
+      {
+        "code": "t-t-fingers",
+        "name": "Twenty Tiny Fingers"
+      }
+    ],
+    "country": [
+
+    ],
+    "elvis": [
+      {
+        "code": "boy-like-me",
+        "name": "A Boy Like Me, A Girl Like You"
+      },
+      {
+        "code": "cane-collar",
+        "name": "A Cane and A High Starched Collar"
+      },
+      {
+        "code": "h-everything",
+        "name": "A House That Has Everything"
+      },
+      {
+        "code": "all-i-am",
+        "name": "All That I Am"
+      },
+      {
+        "code": "am-i-ready",
+        "name": "Am I Ready"
+      },
+      {
+        "code": "angel",
+        "name": "Angel"
+      },
+      {
+        "code": "b-b-blues",
+        "name": "Beach Boy Blues"
+      },
+      {
+        "code": "beg-luck",
+        "name": "Beginners Luck"
+      },
+      {
+        "code": "confidence",
+        "name": "Confidence"
+      },
+      {
+        "code": "drums-isles",
+        "name": "Drums of the Islands"
+      },
+      {
+        "code": "earth-boy",
+        "name": "Earth Boy"
+      },
+      {
+        "code": "five-heads",
+        "name": "Five Sleepy Heads"
+      },
+      {
+        "code": "millionth",
+        "name": "For the Millionth and Last Time"
+      },
+      {
+        "code": "ft-laud",
+        "name": "Fort Lauderdale Chamber of Commerce"
+      },
+      {
+        "code": "g-i-blues",
+        "name": "G. I. Blues"
+      },
+      {
+        "code": "h-sunset",
+        "name": "Hawaiian Sunset"
+      },
+      {
+        "code": "one-girl",
+        "name": "I Love Only One Girl"
+      },
+      {
+        "code": "isl-love",
+        "name": "Island of Love"
+      },
+      {
+        "code": "wond-world",
+        "name": "It's a Wonderful World"
+      },
+      {
+        "code": "ito-eats",
+        "name": "Ito Eats"
+      },
+      {
+        "code": "old-sake",
+        "name": "Just for Old Time Sake"
+      },
+      {
+        "code": "kismet",
+        "name": "Kismet"
+      },
+      {
+        "code": "l-cowboy",
+        "name": "Lonesome Cowboy"
+      },
+      {
+        "code": "mexico",
+        "name": "Mexico"
+      },
+      {
+        "code": "mine",
+        "name": "Mine"
+      },
+      {
+        "code": "n-orleans",
+        "name": "New Orleans"
+      },
+      {
+        "code": "once-enough",
+        "name": "Once is Enough"
+      },
+      {
+        "code": "petunia",
+        "name": "Petunia, the Gardener's Daughter"
+      },
+      {
+        "code": "puppet",
+        "name": "Puppet on a String"
+      },
+      {
+        "code": "relax",
+        "name": "Relax"
+      },
+      {
+        "code": "shop-arnd",
+        "name": "Shoppin' Around"
+      },
+      {
+        "code": "sl-sand",
+        "name": "Slicin' Sand"
+      },
+      {
+        "code": "smorgasbord",
+        "name": "Smorgasbord"
+      },
+      {
+        "code": "shrimp",
+        "name": "Song of the Shrimp"
+      },
+      {
+        "code": "stay-away",
+        "name": "Stay Away"
+      },
+      {
+        "code": "take-me-fair",
+        "name": "Take Me to the Fair"
+      },
+      {
+        "code": "bullfighter",
+        "name": "The Bullfighter Was a Lady"
+      },
+      {
+        "code": "lady-loves",
+        "name": "The Lady Loves Me"
+      },
+      {
+        "code": "walls-ears",
+        "name": "The Walls Have Ears"
+      },
+      {
+        "code": "vino",
+        "name": "Vino, Dinero y Amor"
+      },
+      {
+        "code": "west-union",
+        "name": "Western Union"
+      },
+      {
+        "code": "wheels-heels",
+        "name": "Wheels on My Heels"
+      }
+    ],
+    "funny": [
+      {
+        "code": "nty-lady",
+        "name": "The Naughty Lady of Shady Lane"
+      }
+    ],
+    "hit": [
+
+    ],
+    "movie": [
+      {
+        "code": "boy-like-me",
+        "name": "A Boy Like Me, A Girl Like You"
+      },
+      {
+        "code": "cane-collar",
+        "name": "A Cane and A High Starched Collar"
+      },
+      {
+        "code": "h-everything",
+        "name": "A House That Has Everything"
+      },
+      {
+        "code": "all-i-am",
+        "name": "All That I Am"
+      },
+      {
+        "code": "am-i-ready",
+        "name": "Am I Ready"
+      },
+      {
+        "code": "angel",
+        "name": "Angel"
+      },
+      {
+        "code": "b-b-blues",
+        "name": "Beach Boy Blues"
+      },
+      {
+        "code": "beg-luck",
+        "name": "Beginners Luck"
+      },
+      {
+        "code": "confidence",
+        "name": "Confidence"
+      },
+      {
+        "code": "drums-isles",
+        "name": "Drums of the Islands"
+      },
+      {
+        "code": "earth-boy",
+        "name": "Earth Boy"
+      },
+      {
+        "code": "five-heads",
+        "name": "Five Sleepy Heads"
+      },
+      {
+        "code": "millionth",
+        "name": "For the Millionth and Last Time"
+      },
+      {
+        "code": "ft-laud",
+        "name": "Fort Lauderdale Chamber of Commerce"
+      },
+      {
+        "code": "g-i-blues",
+        "name": "G. I. Blues"
+      },
+      {
+        "code": "h-sunset",
+        "name": "Hawaiian Sunset"
+      },
+      {
+        "code": "one-girl",
+        "name": "I Love Only One Girl"
+      },
+      {
+        "code": "isl-love",
+        "name": "Island of Love"
+      },
+      {
+        "code": "wond-world",
+        "name": "It's a Wonderful World"
+      },
+      {
+        "code": "ito-eats",
+        "name": "Ito Eats"
+      },
+      {
+        "code": "kismet",
+        "name": "Kismet"
+      },
+      {
+        "code": "l-cowboy",
+        "name": "Lonesome Cowboy"
+      },
+      {
+        "code": "mexico",
+        "name": "Mexico"
+      },
+      {
+        "code": "mine",
+        "name": "Mine"
+      },
+      {
+        "code": "n-orleans",
+        "name": "New Orleans"
+      },
+      {
+        "code": "once-enough",
+        "name": "Once is Enough"
+      },
+      {
+        "code": "petunia",
+        "name": "Petunia, the Gardener's Daughter"
+      },
+      {
+        "code": "puppet",
+        "name": "Puppet on a String"
+      },
+      {
+        "code": "relax",
+        "name": "Relax"
+      },
+      {
+        "code": "shop-arnd",
+        "name": "Shoppin' Around"
+      },
+      {
+        "code": "sl-sand",
+        "name": "Slicin' Sand"
+      },
+      {
+        "code": "smorgasbord",
+        "name": "Smorgasbord"
+      },
+      {
+        "code": "shrimp",
+        "name": "Song of the Shrimp"
+      },
+      {
+        "code": "stay-away",
+        "name": "Stay Away"
+      },
+      {
+        "code": "take-me-fair",
+        "name": "Take Me to the Fair"
+      },
+      {
+        "code": "bullfighter",
+        "name": "The Bullfighter Was a Lady"
+      },
+      {
+        "code": "lady-loves",
+        "name": "The Lady Loves Me"
+      },
+      {
+        "code": "walls-ears",
+        "name": "The Walls Have Ears"
+      },
+      {
+        "code": "vino",
+        "name": "Vino, Dinero y Amor"
+      },
+      {
+        "code": "west-union",
+        "name": "Western Union"
+      },
+      {
+        "code": "wheels-heels",
+        "name": "Wheels on My Heels"
+      },
+      {
+        "code": "yng-ones",
+        "name": "The Young Ones"
+      }
+    ],
+    "rock": [
+
+    ],
+    "romantic": [
+      {
+        "code": "h-everything",
+        "name": "A House That Has Everything"
+      },
+      {
+        "code": "all-i-am",
+        "name": "All That I Am"
+      },
+      {
+        "code": "am-i-ready",
+        "name": "Am I Ready"
+      },
+      {
+        "code": "angel",
+        "name": "Angel"
+      },
+      {
+        "code": "beg-luck",
+        "name": "Beginners Luck"
+      },
+      {
+        "code": "isl-love",
+        "name": "Island of Love"
+      },
+      {
+        "code": "petunia",
+        "name": "Petunia, the Gardener's Daughter"
+      },
+      {
+        "code": "puppet",
+        "name": "Puppet on a String"
+      },
+      {
+        "code": "bullfighter",
+        "name": "The Bullfighter Was a Lady"
+      },
+      {
+        "code": "lady-loves",
+        "name": "The Lady Loves Me"
+      },
+      {
+        "code": "run-back-me",
+        "name": "Don't Come Running Back to Me"
+      },
+      {
+        "code": "long-way",
+        "name": "It's a Long Way from Your House to My House"
+      },
+      {
+        "code": "jenny-kiss",
+        "name": "Jenny Kissed Me"
+      },
+      {
+        "code": "kiss-fire",
+        "name": "Kiss of Fire"
+      },
+      {
+        "code": "red-roses",
+        "name": "Red Roses for a Blue Lady"
+      },
+      {
+        "code": "ssss-heart",
+        "name": "Say Something Sweet to Your Sweetheart"
+      },
+      {
+        "code": "soft-love",
+        "name": "Softly My Love"
+      },
+      {
+        "code": "tear-rain",
+        "name": "Teardrops in the Rain"
+      },
+      {
+        "code": "when-arms",
+        "name": "When the Boy (Girl) in Your Arms"
+      }
+    ],
+    "tv": [
+      {
+        "code": "yng-ones",
+        "name": "The Young Ones"
+      }
+    ]
+  }
+}

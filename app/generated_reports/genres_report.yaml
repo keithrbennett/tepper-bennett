@@ -1,0 +1,37 @@
+---
+title: Genres
+generation_time: 2020-06-14 22:23 UTC
+data:
+- code: bluegrass
+  name: bluegrass
+  song_count: 0
+- code: blues
+  name: blues
+  song_count: 2
+- code: children
+  name: children
+  song_count: 6
+- code: country
+  name: country
+  song_count: 0
+- code: elvis
+  name: elvis
+  song_count: 42
+- code: funny
+  name: funny
+  song_count: 1
+- code: hit
+  name: hit
+  song_count: 0
+- code: movie
+  name: movie
+  song_count: 42
+- code: rock
+  name: rock
+  song_count: 0
+- code: romantic
+  name: romantic
+  song_count: 19
+- code: tv
+  name: tv
+  song_count: 1

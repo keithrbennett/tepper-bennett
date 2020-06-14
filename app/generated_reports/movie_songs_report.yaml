@@ -1,0 +1,176 @@
+---
+title: Songs by Movie
+generation_time: 2020-06-14 22:23 UTC
+data:
+- code: lov-you
+  year: 1957
+  name: Loving You
+  songs:
+  - code: l-cowboy
+    name: Lonesome Cowboy
+- code: k-creole
+  year: 1958
+  name: King Creole
+  songs:
+  - code: n-orleans
+    name: New Orleans
+- code: flam-star
+  year: 1960
+  name: Flaming Star
+  songs:
+  - code: cane-collar
+    name: A Cane and A High Starched Collar
+- code: g-i-blues
+  year: 1960
+  name: G. I. Blues
+  songs:
+  - code: g-i-blues
+    name: G. I. Blues
+  - code: shop-arnd
+    name: Shoppin' Around
+- code: b-hawaii
+  year: 1961
+  name: Blue Hawaii
+  songs:
+  - code: b-b-blues
+    name: Beach Boy Blues
+  - code: h-sunset
+    name: Hawaiian Sunset
+  - code: isl-love
+    name: Island of Love
+  - code: ito-eats
+    name: Ito Eats
+  - code: sl-sand
+    name: Slicin' Sand
+- code: foll-dream
+  year: 1962
+  name: Follow That Dream
+  songs:
+  - code: angel
+    name: Angel
+  - code: millionth
+    name: For the Millionth and Last Time
+- code: girls
+  year: 1962
+  name: Girls! Girls! Girls!
+  songs:
+  - code: boy-like-me
+    name: A Boy Like Me, A Girl Like You
+  - code: earth-boy
+    name: Earth Boy
+  - code: shrimp
+    name: Song of the Shrimp
+  - code: walls-ears
+    name: The Walls Have Ears
+- code: young-ones
+  year: 1962
+  name: 'The Young Ones (USA: Wonderful to Be Young!)'
+  songs:
+  - code: yng-ones
+    name: The Young Ones
+- code: acapulco
+  year: 1963
+  name: Fun in Acapulco
+  songs:
+  - code: mexico
+    name: Mexico
+  - code: bullfighter
+    name: The Bullfighter Was a Lady
+  - code: vino
+    name: Vino, Dinero y Amor
+- code: w-fair
+  year: 1963
+  name: It Happened at the World's Fair
+  songs:
+  - code: relax
+    name: Relax
+  - code: take-me-fair
+    name: Take Me to the Fair
+- code: girl-happy
+  year: 1964
+  name: Girl Happy
+  songs:
+  - code: ft-laud
+    name: Fort Lauderdale Chamber of Commerce
+  - code: puppet
+    name: Puppet on a String
+- code: k-cousins
+  year: 1964
+  name: Kissin' Cousins
+  songs:
+  - code: once-enough
+    name: Once is Enough
+- code: roust
+  year: 1964
+  name: Roustabout
+  songs:
+  - code: wond-world
+    name: It's a Wonderful World
+  - code: wheels-heels
+    name: Wheels on My Heels
+- code: vegas
+  year: 1964
+  name: Viva Las Vegas
+  songs:
+  - code: lady-loves
+    name: The Lady Loves Me
+- code: h-scarum
+  year: 1965
+  name: Harum Scarum
+  songs:
+  - code: kismet
+    name: Kismet
+- code: f-johnny
+  year: 1966
+  name: Frankie and Johnny
+  songs:
+  - code: beg-luck
+    name: Beginners Luck
+  - code: petunia
+    name: Petunia, the Gardener's Daughter
+- code: paradise
+  year: 1966
+  name: Paradise, Hawaiian Style
+  songs:
+  - code: drums-isles
+    name: Drums of the Islands
+- code: spinout
+  year: 1966
+  name: Spinout
+  songs:
+  - code: all-i-am
+    name: All That I Am
+  - code: am-i-ready
+    name: Am I Ready
+  - code: smorgasbord
+    name: Smorgasbord
+- code: clambake
+  year: 1967
+  name: Clambake
+  songs:
+  - code: h-everything
+    name: A House That Has Everything
+  - code: confidence
+    name: Confidence
+- code: d-trouble
+  year: 1967
+  name: Double Trouble
+  songs:
+  - code: one-girl
+    name: I Love Only One Girl
+- code: speedway
+  year: 1968
+  name: Speedway
+  songs:
+  - code: five-heads
+    name: Five Sleepy Heads
+  - code: mine
+    name: Mine
+  - code: west-union
+    name: Western Union
+- code: s-a-joe
+  year: 1968
+  name: Stay Away, Joe
+  songs:
+  - code: stay-away
+    name: Stay Away

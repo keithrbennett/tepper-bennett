@@ -1,0 +1,594 @@
+{
+  "title": "Performer Songs",
+  "generation_time": "2020-06-14 22:23 UTC",
+  "data": [
+    {
+      "code": "andy-wms",
+      "name": "Andy Williams",
+      "songs": [
+        {
+          "code": "red-roses",
+          "name": "Red Roses for a Blue Lady"
+        },
+        {
+          "code": "ww-young",
+          "name": "Wonderful World of the Young"
+        }
+      ]
+    },
+    {
+      "code": "ann-margret",
+      "name": "Ann-Margret",
+      "songs": [
+        {
+          "code": "lady-loves",
+          "name": "The Lady Loves Me"
+        }
+      ]
+    },
+    {
+      "code": "anne-lloyd",
+      "name": "Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra",
+      "songs": [
+        {
+          "code": "train-ahchoo",
+          "name": "The Little Train Who Said 'Ah Choo"
+        }
+      ]
+    },
+    {
+      "code": "a-mooney",
+      "name": "Art Mooney & His Orchestra",
+      "songs": [
+        {
+          "code": "n-for-xmas",
+          "name": "Nuttin' for Christmas"
+        },
+        {
+          "code": "santa-daddy",
+          "name": "Santa Claus Looks Just Like Daddy"
+        }
+      ]
+    },
+    {
+      "code": "a-prysock",
+      "name": "Arthur Prysock",
+      "songs": [
+        {
+          "code": "tear-rain",
+          "name": "Teardrops in the Rain"
+        }
+      ]
+    },
+    {
+      "code": "b-gordon",
+      "name": "Barry Gordon",
+      "songs": [
+        {
+          "code": "n-for-xmas",
+          "name": "Nuttin' for Christmas"
+        },
+        {
+          "code": "santa-daddy",
+          "name": "Santa Claus Looks Just Like Daddy"
+        }
+      ]
+    },
+    {
+      "code": "bert-kmft",
+      "name": "Bert Kaempfert and His Orchestra",
+      "songs": [
+        {
+          "code": "red-roses",
+          "name": "Red Roses for a Blue Lady"
+        }
+      ]
+    },
+    {
+      "code": "clf-rich",
+      "name": "Cliff Richards",
+      "songs": [
+        {
+          "code": "yng-ones",
+          "name": "The Young Ones"
+        },
+        {
+          "code": "tr-light",
+          "name": "Travelling Light"
+        },
+        {
+          "code": "ww-young",
+          "name": "Wonderful World of the Young"
+        }
+      ]
+    },
+    {
+      "code": "c-francis",
+      "name": "Connie Francis",
+      "songs": [
+        {
+          "code": "crush-ny",
+          "name": "I've Got a Crush on New York Town"
+        },
+        {
+          "code": "when-arms",
+          "name": "When the Boy (Girl) in Your Arms"
+        }
+      ]
+    },
+    {
+      "code": "dean-martin",
+      "name": "Dean Martin",
+      "songs": [
+        {
+          "code": "red-roses",
+          "name": "Red Roses for a Blue Lady"
+        }
+      ]
+    },
+    {
+      "code": "della-reese",
+      "name": "Della Reese",
+      "songs": [
+        {
+          "code": "soft-love",
+          "name": "Softly My Love"
+        }
+      ]
+    },
+    {
+      "code": "fisch-sauer",
+      "name": "Denis Fischer & Carsten Sauer",
+      "songs": [
+
+      ]
+    },
+    {
+      "code": "eartha-kitt",
+      "name": "Eartha Kitt",
+      "songs": [
+
+      ]
+    },
+    {
+      "code": "ed-albert",
+      "name": "Eddie Albert",
+      "songs": [
+        {
+          "code": "jenny-kiss",
+          "name": "Jenny Kissed Me"
+        }
+      ]
+    },
+    {
+      "code": "elvis",
+      "name": "Elvis Presley",
+      "songs": [
+        {
+          "code": "boy-like-me",
+          "name": "A Boy Like Me, A Girl Like You"
+        },
+        {
+          "code": "cane-collar",
+          "name": "A Cane and A High Starched Collar"
+        },
+        {
+          "code": "h-everything",
+          "name": "A House That Has Everything"
+        },
+        {
+          "code": "all-i-am",
+          "name": "All That I Am"
+        },
+        {
+          "code": "am-i-ready",
+          "name": "Am I Ready"
+        },
+        {
+          "code": "angel",
+          "name": "Angel"
+        },
+        {
+          "code": "b-b-blues",
+          "name": "Beach Boy Blues"
+        },
+        {
+          "code": "beg-luck",
+          "name": "Beginners Luck"
+        },
+        {
+          "code": "confidence",
+          "name": "Confidence"
+        },
+        {
+          "code": "drums-isles",
+          "name": "Drums of the Islands"
+        },
+        {
+          "code": "earth-boy",
+          "name": "Earth Boy"
+        },
+        {
+          "code": "five-heads",
+          "name": "Five Sleepy Heads"
+        },
+        {
+          "code": "millionth",
+          "name": "For the Millionth and Last Time"
+        },
+        {
+          "code": "ft-laud",
+          "name": "Fort Lauderdale Chamber of Commerce"
+        },
+        {
+          "code": "g-i-blues",
+          "name": "G. I. Blues"
+        },
+        {
+          "code": "h-sunset",
+          "name": "Hawaiian Sunset"
+        },
+        {
+          "code": "one-girl",
+          "name": "I Love Only One Girl"
+        },
+        {
+          "code": "isl-love",
+          "name": "Island of Love"
+        },
+        {
+          "code": "wond-world",
+          "name": "It's a Wonderful World"
+        },
+        {
+          "code": "ito-eats",
+          "name": "Ito Eats"
+        },
+        {
+          "code": "old-sake",
+          "name": "Just for Old Time Sake"
+        },
+        {
+          "code": "kismet",
+          "name": "Kismet"
+        },
+        {
+          "code": "l-cowboy",
+          "name": "Lonesome Cowboy"
+        },
+        {
+          "code": "mexico",
+          "name": "Mexico"
+        },
+        {
+          "code": "mine",
+          "name": "Mine"
+        },
+        {
+          "code": "n-orleans",
+          "name": "New Orleans"
+        },
+        {
+          "code": "once-enough",
+          "name": "Once is Enough"
+        },
+        {
+          "code": "petunia",
+          "name": "Petunia, the Gardener's Daughter"
+        },
+        {
+          "code": "puppet",
+          "name": "Puppet on a String"
+        },
+        {
+          "code": "relax",
+          "name": "Relax"
+        },
+        {
+          "code": "shop-arnd",
+          "name": "Shoppin' Around"
+        },
+        {
+          "code": "sl-sand",
+          "name": "Slicin' Sand"
+        },
+        {
+          "code": "smorgasbord",
+          "name": "Smorgasbord"
+        },
+        {
+          "code": "shrimp",
+          "name": "Song of the Shrimp"
+        },
+        {
+          "code": "stay-away",
+          "name": "Stay Away"
+        },
+        {
+          "code": "take-me-fair",
+          "name": "Take Me to the Fair"
+        },
+        {
+          "code": "bullfighter",
+          "name": "The Bullfighter Was a Lady"
+        },
+        {
+          "code": "lady-loves",
+          "name": "The Lady Loves Me"
+        },
+        {
+          "code": "walls-ears",
+          "name": "The Walls Have Ears"
+        },
+        {
+          "code": "vino",
+          "name": "Vino, Dinero y Amor"
+        },
+        {
+          "code": "west-union",
+          "name": "Western Union"
+        },
+        {
+          "code": "wheels-heels",
+          "name": "Wheels on My Heels"
+        }
+      ]
+    },
+    {
+      "code": "sinatra",
+      "name": "Frank Sinatra",
+      "songs": [
+        {
+          "code": "long-way",
+          "name": "It's a Long Way from Your House to My House"
+        },
+        {
+          "code": "red-roses",
+          "name": "Red Roses for a Blue Lady"
+        }
+      ]
+    },
+    {
+      "code": "h-hermits",
+      "name": "Herman's Hermits",
+      "songs": [
+
+      ]
+    },
+    {
+      "code": "homer-jethro",
+      "name": "Homer and Jethro",
+      "songs": [
+
+      ]
+    },
+    {
+      "code": "jay-amer",
+      "name": "Jay and the Americans",
+      "songs": [
+        {
+          "code": "bye-boys",
+          "name": "Goodbye Boys, Goodbye"
+        },
+        {
+          "code": "tr-light",
+          "name": "Travelling Light"
+        }
+      ]
+    },
+    {
+      "code": "jeff-beck",
+      "name": "Jeff Beck",
+      "songs": [
+        {
+          "code": "glad",
+          "name": "Glad All Over"
+        }
+      ]
+    },
+    {
+      "code": "kilburn",
+      "name": "Kilburn and the High Roads",
+      "songs": [
+
+      ]
+    },
+    {
+      "code": "louis-arm",
+      "name": "Louis Armstrong",
+      "songs": [
+        {
+          "code": "kiss-fire",
+          "name": "Kiss of Fire"
+        }
+      ]
+    },
+    {
+      "code": "mickey-katz",
+      "name": "Mickey Katz",
+      "songs": [
+
+      ]
+    },
+    {
+      "code": "moscow-jazz",
+      "name": "Moscow City Jazz Band",
+      "songs": [
+
+      ]
+    },
+    {
+      "code": "n-wilson",
+      "name": "Nancy Wilson",
+      "songs": [
+        {
+          "code": "run-back-me",
+          "name": "Don't Come Running Back to Me"
+        }
+      ]
+    },
+    {
+      "code": "naysayer",
+      "name": "Naysayer",
+      "songs": [
+
+      ]
+    },
+    {
+      "code": "p-como",
+      "name": "Perry Como",
+      "songs": [
+        {
+          "code": "kewpie-doll",
+          "name": "Kewpie Doll"
+        },
+        {
+          "code": "red-roses",
+          "name": "Red Roses for a Blue Lady"
+        }
+      ]
+    },
+    {
+      "code": "plain-white",
+      "name": "Plain White T's",
+      "songs": [
+
+      ]
+    },
+    {
+      "code": "r-conniff",
+      "name": "Ray Conniff Singers",
+      "songs": [
+        {
+          "code": "red-roses",
+          "name": "Red Roses for a Blue Lady"
+        }
+      ]
+    },
+    {
+      "code": "rob-schneid",
+      "name": "Rob Schneider",
+      "songs": [
+        {
+          "code": "bagel-lox",
+          "name": "Bagels & Lox"
+        }
+      ]
+    },
+    {
+      "code": "r-goulet",
+      "name": "Robert Goulet",
+      "songs": [
+        {
+          "code": "smr-sounds",
+          "name": "Summer Sounds"
+        }
+      ]
+    },
+    {
+      "code": "r-clooney",
+      "name": "Rosemary Clooney",
+      "songs": [
+        {
+          "code": "eggbert",
+          "name": "Eggbert, The Easter Egg"
+        },
+        {
+          "code": "suzy-snow",
+          "name": "Suzy Snowflake"
+        }
+      ]
+    },
+    {
+      "code": "sugarland",
+      "name": "Sugarland",
+      "songs": [
+
+      ]
+    },
+    {
+      "code": "ben-mill",
+      "name": "Tex Beneke and The Miller Orchestra",
+      "songs": [
+        {
+          "code": "woodchuck",
+          "name": "The Woodchuck Song"
+        }
+      ]
+    },
+    {
+      "code": "ames-bros",
+      "name": "The Ames Brothers",
+      "songs": [
+        {
+          "code": "nty-lady",
+          "name": "The Naughty Lady of Shady Lane"
+        }
+      ]
+    },
+    {
+      "code": "beatles",
+      "name": "The Beatles",
+      "songs": [
+        {
+          "code": "glad",
+          "name": "Glad All Over"
+        }
+      ]
+    },
+    {
+      "code": "ink-spots",
+      "name": "The Ink Spots",
+      "songs": [
+        {
+          "code": "ssss-heart",
+          "name": "Say Something Sweet to Your Sweetheart"
+        }
+      ]
+    },
+    {
+      "code": "stargazers",
+      "name": "The Stargazers",
+      "songs": [
+        {
+          "code": "t-t-fingers",
+          "name": "Twenty Tiny Fingers"
+        }
+      ]
+    },
+    {
+      "code": "v-monroe",
+      "name": "Vaughn Monroe",
+      "songs": [
+        {
+          "code": "red-roses",
+          "name": "Red Roses for a Blue Lady"
+        }
+      ]
+    },
+    {
+      "code": "vic-dana",
+      "name": "Vic Dana",
+      "songs": [
+
+      ]
+    },
+    {
+      "code": "vic-choir",
+      "name": "Victoria Junior College Choir (Singapore)",
+      "songs": [
+
+      ]
+    },
+    {
+      "code": "w-newton",
+      "name": "Wayne Newton",
+      "songs": [
+        {
+          "code": "red-roses",
+          "name": "Red Roses for a Blue Lady"
+        }
+      ]
+    }
+  ]
+}

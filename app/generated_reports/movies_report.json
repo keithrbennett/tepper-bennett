@@ -1,0 +1,138 @@
+{
+  "title": "Movies",
+  "generation_time": "2020-06-14 22:23 UTC",
+  "data": [
+    {
+      "code": "b-hawaii",
+      "name": "Blue Hawaii",
+      "year": 1961,
+      "imdb_key": "tt0054692"
+    },
+    {
+      "code": "clambake",
+      "name": "Clambake",
+      "year": 1967,
+      "imdb_key": "tt0061489"
+    },
+    {
+      "code": "d-trouble",
+      "name": "Double Trouble",
+      "year": 1967,
+      "imdb_key": "tt0061595"
+    },
+    {
+      "code": "flam-star",
+      "name": "Flaming Star",
+      "year": 1960,
+      "imdb_key": "tt0053825"
+    },
+    {
+      "code": "foll-dream",
+      "name": "Follow That Dream",
+      "year": 1962,
+      "imdb_key": "tt0054692"
+    },
+    {
+      "code": "f-johnny",
+      "name": "Frankie and Johnny",
+      "year": 1966,
+      "imdb_key": "tt0060429"
+    },
+    {
+      "code": "acapulco",
+      "name": "Fun in Acapulco",
+      "year": 1963,
+      "imdb_key": "tt0055626"
+    },
+    {
+      "code": "g-i-blues",
+      "name": "G. I. Blues",
+      "year": 1960,
+      "imdb_key": "tt0053848"
+    },
+    {
+      "code": "girl-happy",
+      "name": "Girl Happy",
+      "year": 1964,
+      "imdb_key": "tt0059224"
+    },
+    {
+      "code": "girls",
+      "name": "Girls! Girls! Girls!",
+      "year": 1962,
+      "imdb_key": "tt0056023"
+    },
+    {
+      "code": "h-scarum",
+      "name": "Harum Scarum",
+      "year": 1965,
+      "imdb_key": "tt0059255"
+    },
+    {
+      "code": "w-fair",
+      "name": "It Happened at the World's Fair",
+      "year": 1963,
+      "imdb_key": "tt0057191"
+    },
+    {
+      "code": "k-creole",
+      "name": "King Creole",
+      "year": 1958,
+      "imdb_key": "tt0051818"
+    },
+    {
+      "code": "k-cousins",
+      "name": "Kissin' Cousins",
+      "year": 1964,
+      "imdb_key": "tt0057227"
+    },
+    {
+      "code": "lov-you",
+      "name": "Loving You",
+      "year": 1957,
+      "imdb_key": "tt0050659"
+    },
+    {
+      "code": "paradise",
+      "name": "Paradise, Hawaiian Style",
+      "year": 1966,
+      "imdb_key": "tt0059563"
+    },
+    {
+      "code": "roust",
+      "name": "Roustabout",
+      "year": 1964,
+      "imdb_key": "tt0058534"
+    },
+    {
+      "code": "speedway",
+      "name": "Speedway",
+      "year": 1968,
+      "imdb_key": "tt0063634"
+    },
+    {
+      "code": "spinout",
+      "name": "Spinout",
+      "year": 1966,
+      "imdb_key": "tt0061015"
+    },
+    {
+      "code": "s-a-joe",
+      "name": "Stay Away, Joe",
+      "year": 1968,
+      "imdb_key": "tt0063643"
+    },
+    {
+      "code": "young-ones",
+      "name": "The Young Ones (USA: Wonderful to Be Young!)",
+      "year": 1962,
+      "imdb_key": "tt0055626"
+    },
+    {
+      "code": "vegas",
+      "name": "Viva Las Vegas",
+      "year": 1964,
+      "imdb_key": "tt0058725"
+    }
+  ]
+}
