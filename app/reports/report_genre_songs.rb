@@ -9,16 +9,16 @@ class ReportGenreSongs < BaseReport
   end
 
 
-  def line_length
-    Song.max_code_length + Song.max_name_length + 2
-  end
-
-
   def data
     @data ||= Genre.order(:name).all.each_with_object({}) do |genre, songs_by_genre|
       songs = genre.songs
       songs_by_genre[genre.name] = songs.map { |song| { 'code' => song.code, 'name' => song.name } }
     end
+  end
+
+
+  def line_length
+    Song.max_code_length + Song.max_name_length + 2
   end
 
 

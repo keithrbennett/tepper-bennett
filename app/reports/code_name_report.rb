@@ -6,12 +6,12 @@ class CodeNameReport < BaseReport
   def initialize(ar_class)
     @report_title = ar_class.to_s + " Codes/Names"
     @ar_class     = ar_class
-    build_report_hash(generate_report_data)
+    build_report_hash(data)
   end
 
 
-  def generate_report_data
-    ar_class.order(:name).all.map do |record|
+  def data
+    @data ||= ar_class.order(:name).all.map do |record|
       { 'code' => record['code'], 'name' => record['name'] }
     end
   end
