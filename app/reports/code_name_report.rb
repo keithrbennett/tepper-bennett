@@ -6,11 +6,7 @@ class CodeNameReport < BaseReport
   def initialize(ar_class)
     @report_title = ar_class.to_s + " Codes/Names"
     @ar_class     = ar_class
-    @report_data  = {
-        'title' => @report_title,
-        'generation_time' => date_time_string,
-        'data' => generate_report_data
-    }
+    build_report_hash(generate_report_data)
   end
 
 

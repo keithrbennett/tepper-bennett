@@ -28,4 +28,12 @@ class BaseReport
 
     HEREDOC
   end
+  M
+  def build_report_hash(data)
+    @report_data  = {
+        'title' => @report_title,
+        'generation_time' => date_time_string,
+        'data' => data
+    }
+  end
 end
