@@ -14,6 +14,9 @@
           <%= nav_tab('genres') %>
           <%= nav_tab('elvis') %>
           <%= nav_tab('resources') %>
+          <% if @include_reports %>
+            <%= nav_tab('reports') %>
+          <% end %>
           <%= nav_tab('inquiries') %>
         </div>
     </nav>
@@ -29,6 +32,9 @@
       <%= nav_content('genres') %>
       <%= nav_content('elvis') %>
       <%= nav_content('resources') %>
+      <% if @include_reports %>
+        <%= nav_content('reports') %>
+      <% end %>
       <%= nav_content('inquiries') %>
     </div>
   </div>

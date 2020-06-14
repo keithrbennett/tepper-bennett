@@ -9,6 +9,7 @@ class StaticPagesController < ActionController::Base
   def initialize
     init_songs_pane_recordings
     init_elvis_pane_recordings
+    init_reports_metadata
   end
 
   def respond
@@ -18,9 +19,14 @@ class StaticPagesController < ActionController::Base
   end
 
 
-  def index
+  def index(include_reports = false)
+    @include_reports = include_reports
     respond
-    render layout: "application"
+    render :index, layout: "application"
+  end
+
+  def include_reports
+    index(true)
   end
 
 
@@ -86,5 +92,57 @@ class StaticPagesController < ActionController::Base
         r.('All That I Am',                     'IIpNWh_0Tw8', 'Spinout'),
     ]
   end
+
+
+  class ReportMetadata < Struct.new(:key, :title)
+
+    def button_id
+      key + '_button'
+    end
+
+    def content_id
+      key + '_content'
+    end
+
+    def locals
+      {
+          card_button_id: button_id,
+          card_content_id: content_id,
+          report_title: title,
+          report_text: report_text
+      }
+    end
+
+    def report_filespec
+      File.join(Rails.root, 'app', 'generated_reports', "#{key}_report.txt")
+    end
+
+    def report_text
+      unless @report_text
+        @report_text = "<div><pre>\n".html_safe + File.read(report_filespec) + "\n</pre></div>\n".html_safe
+      end
+      @report_text
+    end
+  end
+  # ---- end ReportMetadata class
+
+
+  def init_reports_metadata
+    @report_metadata ||= [
+        ['song_codes_names',          'Songs'],
+        ['performer_codes_names',     'Performers'],
+        ['genre_codes_names',         'Genres'],
+        ['song_performers',           'Song Performers'],
+        ['performer_songs',           'Performer Songs'],
+        ['song_genres',               'Genres by Song'],
+        ['genre_songs',               'Songs by Genre'],
+        ['movies',                    'Movies'],
+        ['movie_songs',               'Movies Songs'],
+        ['organization_codes_names',  'Organizations'],
+        ['song_rights_admins',        'Song Rights Administrators'],
+        ['writer_codes_names',        'Writers'],
+    ].map { |(key, title)| ReportMetadata.new(key, title) }
+  end
+
 end
 
