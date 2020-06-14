@@ -42,12 +42,10 @@ class ReportMovieSongs < BaseReport
     songs = record['songs']
     sio = StringIO.new
     sio << "\n"
-    first_song_code = songs&.first&.[]('code')
-    first_song_name = songs&.first&.[]('name')
 
     sio << '%4d  %-*s  %-*s  %-*s  %s' %
         [record['year'], Movie.max_code_length, record['code'], Movie.max_name_length, record['name'],
-         Song.max_code_length, first_song_code, first_song_name]
+         Song.max_code_length, songs&.first&.[]('code'), songs&.first&.[]('name')]
     (songs[1..-1] || []).each do |song|
       sio << ("\n%-*s%-*s  %s" %
           [@report_string_continuation_indent, '', Song.max_code_length, song['code'], song['name']])
