@@ -6,8 +6,8 @@ namespace :reports do
   DEFINED_TASKS = []
 
 
-  def write_report(task_name, report_text)
-    filespec = File.join(Rails.root, 'app', 'generated_reports', "#{task_name}_report.txt")
+  def write_report(task_name, format, report_text)  # format in %i[txt json yaml]
+    filespec = File.join(Rails.root, 'app', 'generated_reports', "#{task_name}_report.#{format}")
     puts "Writing #{task_name} report to #{filespec}..."
     File.write(filespec, report_text)
   end
@@ -18,7 +18,10 @@ namespace :reports do
     task_name = task_type.to_s + '_codes_names'
     task task_name do
       klass = Kernel.const_get("Report" + task_type.to_s.capitalize + 'CodesNames')
-      write_report(task_name, klass.new.report_string)
+      reporter = klass.new
+      write_report(task_name, :txt,  reporter.to_text)
+      write_report(task_name, :json, reporter.to_json)
+      write_report(task_name, :yaml, reporter.to_yaml)
     end
 
     DEFINED_TASKS << task_name
@@ -27,7 +30,7 @@ namespace :reports do
   def gen_report_task(task_name, report_class, description)
     desc description
     task task_name do
-      write_report(task_name, report_class.new.report_string)
+      write_report(task_name, :txt, report_class.new.report_string)
     end
     DEFINED_TASKS << task_name
   end

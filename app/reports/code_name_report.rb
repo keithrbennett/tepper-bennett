@@ -6,6 +6,18 @@ class CodeNameReport < BaseReport
   def initialize(ar_class)
     @report_title = ar_class.to_s + " Codes/Names"
     @ar_class     = ar_class
+    @report_data  = {
+        'title' => @report_title,
+        'generation_time' => date_time_string,
+        'data' => generate_report_data
+    }
+  end
+
+
+  def generate_report_data
+    ar_class.order(:name).all.map do |record|
+      { 'code' => record['code'], 'name' => record['name'] }
+    end
   end
 
 
@@ -16,16 +28,30 @@ class CodeNameReport < BaseReport
 
   def report_string
     report = StringIO.new
-
     report << title_banner << "   Code           Name\n\n"
-    ar_class.order(:name).all.each { |record| report << record_report_string(record) << "\n" }
+    @report_data['data'].each { |record| report << record_report_string(record) << "\n" }
     report << "\n\n"
     report.string
   end
 
 
   def record_report_string(record)
-    '%-14s %s' % [record.code, record.name]
+    '%-14s %s' % [record['code'], record['name']]
+  end
+
+
+  def to_text
+    report_string
+  end
+
+
+  def to_json
+    JSON.pretty_generate(@report_data)
+  end
+
+
+  def to_yaml
+    @report_data.to_yaml
   end
 
 end
