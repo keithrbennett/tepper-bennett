@@ -6,6 +6,15 @@ class ReportMovieSongs < BaseReport
     @line_length = [Song.max_code_length, Song.max_name_length, Performer.max_code_length, Performer.max_name_length].sum + 6
     @report_title = 'Songs by Movie'
     @report_string_continuation_indent = Movie.max_code_length + Movie.max_name_length + 4 + 6 # 6 = 4-digit year + 2
+    build_report_hash(data)
+  end
+
+
+  def data
+    @data ||= Movie.order(:year, :name).all.map do |movie|
+      songs = movie.songs.order(:name).map { |song| { 'code' => song.code, 'name' => song.name } }
+      { 'code' => movie.code, 'year' => movie.year, 'name' => movie.name, 'songs' => songs }
+    end
   end
 
 
@@ -21,22 +30,25 @@ class ReportMovieSongs < BaseReport
   def report_string
     report = StringIO.new
     report << "#{title_banner}#{heading}\n"
-    Movie.order(:year, :name).all.each { |record| report << record_report_string(record) << "\n" }
+    data.each { |record| report << record_report_string(record) << "\n" }
     report << "\n\n"
     report.string
   end
 
 
   def record_report_string(record)
-    songs = record.songs.order(:name).all.to_a
+    songs = record['songs']
     sio = StringIO.new
     sio << "\n"
+    first_song_code = songs&.first&.[]('code')
+    first_song_name = songs&.first&.[]('name')
+
     sio << '%4d  %-*s  %-*s  %-*s  %s' %
-        [record.year, Movie.max_code_length, record.code, Movie.max_name_length, record.name,
-         Song.max_code_length, songs.first.code, songs.first.name]
-    songs[1..-1].each do |song|
+        [record['year'], Movie.max_code_length, record['code'], Movie.max_name_length, record['name'],
+         Song.max_code_length, first_song_code, first_song_name]
+    (songs[1..-1] || []).each do |song|
       sio << ("\n%-*s%-*s  %s" %
-          [@report_string_continuation_indent, '', Song.max_code_length, song.code, song.name])
+          [@report_string_continuation_indent, '', Song.max_code_length, song['code'], song['name']])
     end
     sio.string
   end
