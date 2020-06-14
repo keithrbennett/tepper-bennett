@@ -30,7 +30,11 @@ namespace :reports do
   def gen_report_task(task_name, report_class, description)
     desc description
     task task_name do
-      write_report(task_name, :txt, report_class.new.report_string)
+      reporter = report_class.new
+      write_report(task_name, :txt, reporter.report_string)
+      write_report(task_name, :json, reporter.to_json) if %i(genre_songs).include?(task_name)
+      write_report(task_name, :yaml, reporter.to_yaml) if task_name == :genre_songs
+
     end
     DEFINED_TASKS << task_name
   end
