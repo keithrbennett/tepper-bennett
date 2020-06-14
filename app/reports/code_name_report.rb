@@ -34,20 +34,4 @@ class CodeNameReport < BaseReport
   def record_report_string(record)
     '%-14s %s' % [record['code'], record['name']]
   end
-
-
-  def to_text
-    report_string
-  end
-
-
-  def to_json
-    JSON.pretty_generate(@report_data)
-  end
-
-
-  def to_yaml
-    @report_data.to_yaml
-  end
-
 end

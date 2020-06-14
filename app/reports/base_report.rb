@@ -28,7 +28,7 @@ class BaseReport
 
     HEREDOC
   end
-  M
+
   def build_report_hash(data)
     @report_data  = {
         'title' => @report_title,
@@ -36,4 +36,20 @@ class BaseReport
         'data' => data
     }
   end
+
+  def to_text
+    report_string
+  end
+
+
+  def to_json
+    JSON.pretty_generate(@report_data)
+  end
+
+
+  def to_yaml
+    @report_data.to_yaml
+  end
+
+
 end

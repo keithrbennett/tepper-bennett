@@ -1,5 +1,5 @@
 --------------------------------------------------------------
-   Movies in Title Order -- Generated 2020-06-14 02:31 UTC
+   Movies in Title Order -- Generated 2020-06-14 17:34 UTC
 --------------------------------------------------------------
 
 
@@ -34,7 +34,7 @@ For example, for the key "tt0053848", the URL would be "https://www.imdb.com/tit
 
 
 --------------------------------------------------------------
-    Movies in Year Order -- Generated 2020-06-14 02:31 UTC
+    Movies in Year Order -- Generated 2020-06-14 17:34 UTC
 --------------------------------------------------------------
 
 
