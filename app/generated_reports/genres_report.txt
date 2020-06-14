@@ -1,0 +1,20 @@
+----------------------------------------
+Genres -- Generated 2020-06-14 02:31 UTC
+----------------------------------------
+
+
+   Code       Name          Song Count
+
+bluegrass     bluegrass          0
+blues         blues              2
+children      children           6
+country       country            0
+elvis         elvis             42
+funny         funny              1
+hit           hit                0
+movie         movie             42
+rock          rock               0
+romantic      romantic          19
+tv            tv                 1
+
+

@@ -131,7 +131,7 @@ class StaticPagesController < ActionController::Base
     @report_metadata ||= [
         ['song_codes_names',          'Songs'],
         ['performer_codes_names',     'Performers'],
-        ['genre_codes_names',         'Genres'],
+        ['genres',                    'Genres'],
         ['song_performers',           'Song Performers'],
         ['performer_songs',           'Performer Songs'],
         ['song_genres',               'Genres by Song'],
