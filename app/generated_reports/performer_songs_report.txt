@@ -1,0 +1,119 @@
+--------------------------------------------------------------------------------------------------------------------------------------------
+                                             Performer Songs -- Generated 2020-06-14 01:32 UTC
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Perf Code     Performer Name                                                Song Code     Song Name                                         
+
+a-mooney      Art Mooney & His Orchestra                                    n-for-xmas    Nuttin' for Christmas
+                                                                            santa-daddy   Santa Claus Looks Just Like Daddy
+a-prysock     Arthur Prysock                                                tear-rain     Teardrops in the Rain
+ames-bros     The Ames Brothers                                             nty-lady      The Naughty Lady of Shady Lane
+andy-wms      Andy Williams                                                 red-roses     Red Roses for a Blue Lady
+                                                                            ww-young      Wonderful World of the Young
+anne-lloyd    Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra       train-ahchoo  The Little Train Who Said 'Ah Choo
+ann-margret   Ann-Margret                                                   lady-loves    The Lady Loves Me
+b-gordon      Barry Gordon                                                  n-for-xmas    Nuttin' for Christmas
+                                                                            santa-daddy   Santa Claus Looks Just Like Daddy
+beatles       The Beatles                                                   glad          Glad All Over
+ben-mill      Tex Beneke and The Miller Orchestra                           woodchuck     The Woodchuck Song
+bert-kmft     Bert Kaempfert and His Orchestra                              red-roses     Red Roses for a Blue Lady
+c-francis     Connie Francis                                                crush-ny      I've Got a Crush on New York Town
+                                                                            when-arms     When the Boy (Girl) in Your Arms
+clf-rich      Cliff Richards                                                yng-ones      The Young Ones
+                                                                            tr-light      Travelling Light
+                                                                            ww-young      Wonderful World of the Young
+dean-martin   Dean Martin                                                   red-roses     Red Roses for a Blue Lady
+della-reese   Della Reese                                                   soft-love     Softly My Love
+eartha-kitt   Eartha Kitt                                                                 
+ed-albert     Eddie Albert                                                  jenny-kiss    Jenny Kissed Me
+elvis         Elvis Presley                                                 boy-like-me   A Boy Like Me, A Girl Like You
+                                                                            cane-collar   A Cane and A High Starched Collar
+                                                                            h-everything  A House That Has Everything
+                                                                            all-i-am      All That I Am
+                                                                            am-i-ready    Am I Ready
+                                                                            angel         Angel
+                                                                            b-b-blues     Beach Boy Blues
+                                                                            beg-luck      Beginners Luck
+                                                                            confidence    Confidence
+                                                                            drums-isles   Drums of the Islands
+                                                                            earth-boy     Earth Boy
+                                                                            five-heads    Five Sleepy Heads
+                                                                            millionth     For the Millionth and Last Time
+                                                                            ft-laud       Fort Lauderdale Chamber of Commerce
+                                                                            g-i-blues     G. I. Blues
+                                                                            h-sunset      Hawaiian Sunset
+                                                                            one-girl      I Love Only One Girl
+                                                                            isl-love      Island of Love
+                                                                            wond-world    It's a Wonderful World
+                                                                            ito-eats      Ito Eats
+                                                                            old-sake      Just for Old Time Sake
+                                                                            kismet        Kismet
+                                                                            l-cowboy      Lonesome Cowboy
+                                                                            mexico        Mexico
+                                                                            mine          Mine
+                                                                            n-orleans     New Orleans
+                                                                            once-enough   Once is Enough
+                                                                            petunia       Petunia, the Gardener's Daughter
+                                                                            puppet        Puppet on a String
+                                                                            relax         Relax
+                                                                            shop-arnd     Shoppin' Around
+                                                                            sl-sand       Slicin' Sand
+                                                                            smorgasbord   Smorgasbord
+                                                                            shrimp        Song of the Shrimp
+                                                                            stay-away     Stay Away
+                                                                            take-me-fair  Take Me to the Fair
+                                                                            bullfighter   The Bullfighter Was a Lady
+                                                                            lady-loves    The Lady Loves Me
+                                                                            walls-ears    The Walls Have Ears
+                                                                            vino          Vino, Dinero y Amor
+                                                                            west-union    Western Union
+                                                                            wheels-heels  Wheels on My Heels
+fisch-sauer   Denis Fischer & Carsten Sauer                                               
+h-hermits     Herman's Hermits                                                            
+homer-jethro  Homer and Jethro                                                            
+ink-spots     The Ink Spots                                                 ssss-heart    Say Something Sweet to Your Sweetheart
+jay-amer      Jay and the Americans                                         bye-boys      Goodbye Boys, Goodbye
+                                                                            tr-light      Travelling Light
+jeff-beck     Jeff Beck                                                     glad          Glad All Over
+kilburn       Kilburn and the High Roads                                                  
+louis-arm     Louis Armstrong                                               kiss-fire     Kiss of Fire
+mickey-katz   Mickey Katz                                                                 
+moscow-jazz   Moscow City Jazz Band                                                       
+n-wilson      Nancy Wilson                                                  run-back-me   Don't Come Running Back to Me
+naysayer      Naysayer                                                                    
+p-como        Perry Como                                                    kewpie-doll   Kewpie Doll
+                                                                            red-roses     Red Roses for a Blue Lady
+plain-white   Plain White T's                                                             
+r-clooney     Rosemary Clooney                                              eggbert       Eggbert, The Easter Egg
+                                                                            suzy-snow     Suzy Snowflake
+r-conniff     Ray Conniff Singers                                           red-roses     Red Roses for a Blue Lady
+r-goulet      Robert Goulet                                                 smr-sounds    Summer Sounds
+rob-schneid   Rob Schneider                                                 bagel-lox     Bagels & Lox
+sinatra       Frank Sinatra                                                 long-way      It's a Long Way from Your House to My House
+                                                                            red-roses     Red Roses for a Blue Lady
+stargazers    The Stargazers                                                t-t-fingers   Twenty Tiny Fingers
+sugarland     Sugarland                                                                   
+v-monroe      Vaughn Monroe                                                 red-roses     Red Roses for a Blue Lady
+vic-choir     Victoria Junior College Choir (Singapore)                                   
+vic-dana      Vic Dana                                                                    
+w-newton      Wayne Newton                                                  red-roses     Red Roses for a Blue Lady
+
+
+The following performers do not have any songs associated with them:
+
+Denis Fischer & Carsten Sauer
+Eartha Kitt
+Herman's Hermits
+Homer and Jethro
+Kilburn and the High Roads
+Mickey Katz
+Moscow City Jazz Band
+Naysayer
+Plain White T's
+Sugarland
+Vic Dana
+Victoria Junior College Choir (Singapore)
+
+
+
