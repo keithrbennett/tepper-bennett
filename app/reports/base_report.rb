@@ -37,6 +37,12 @@ class BaseReport
     }
   end
 
+  def attr_hash(record, attributes)
+    attributes.each_with_object({}) do |attr, attr_hash|
+      attr_hash[attr] = record[attr]
+    end
+  end
+
   def to_text
     report_string
   end

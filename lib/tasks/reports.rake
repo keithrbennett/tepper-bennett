@@ -32,7 +32,7 @@ namespace :reports do
     task task_name do
       reporter = report_class.new
       write_report(task_name, :txt, reporter.report_string)
-      if %i(genres  genre_songs  movie_songs).include?(task_name)
+      if %i(genres  genre_songs  movie_songs  movies).include?(task_name)
         write_report(task_name, :json, reporter.to_json)
         write_report(task_name, :yaml, reporter.to_yaml)
       end
