@@ -94,7 +94,7 @@ class StaticPagesController < ActionController::Base
   end
 
 
-  class ReportMetadata < Struct.new(:key, :title)
+  class Report < Struct.new(:key, :title) #, :report_text, :report_json, :report_yaml)
 
     def button_id
       key + '_button'
@@ -106,29 +106,39 @@ class StaticPagesController < ActionController::Base
 
     def locals
       {
-          card_button_id: button_id,
+          card_button_id:  button_id,
           card_content_id: content_id,
-          report_title: title,
-          report_text: report_text
+          report_title:    title,
+          report_text:     report_text
       }
     end
 
-    def report_filespec
-      File.join(Rails.root, 'app', 'generated_reports', "#{key}_report.txt")
+    def report_filespec(extension)
+      File.join(Rails.root, 'app', 'generated_reports', "#{key}_report#{extension}")
+    end
+
+
+    def preize_file_content(extension)
+      "<div><pre>\n".html_safe + File.read(report_filespec(extension)) + "</pre></div>\n".html_safe
     end
 
     def report_text
-      unless @report_text
-        @report_text = "<div><pre>\n".html_safe + File.read(report_filespec) + "\n</pre></div>\n".html_safe
-      end
-      @report_text
+      @report_text ||= preize_file_content('.txt')
+    end
+
+    def report_json
+      @report_json ||= preize_file_content('.json')
+    end
+
+    def report_yaml
+      @report_yaml ||= preize_file_content('.yaml')
     end
   end
-  # ---- end ReportMetadata class
+  # ---- end Report class
 
 
   def init_reports_metadata
-    @report_metadata ||= [
+    @reports ||= [
         ['song_codes_names',          'Songs'],
         ['performer_codes_names',     'Performers'],
         ['genres',                    'Genres'],
@@ -141,7 +151,7 @@ class StaticPagesController < ActionController::Base
         ['organization_codes_names',  'Organizations'],
         ['song_rights_admins',        'Song Rights Administrators'],
         ['writer_codes_names',        'Writers'],
-    ].map { |(key, title)| ReportMetadata.new(key, title) }
+    ].map { |(key, title)| Report.new(key, title) }
   end
 
 end
