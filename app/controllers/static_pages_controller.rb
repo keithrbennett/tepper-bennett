@@ -113,6 +113,8 @@ class StaticPagesController < ActionController::Base
           report_text:     report_text,
           report_json:     report_json,
           report_yaml:     report_yaml,
+          copy_button_id:  "btn-copy-#{key}",
+          content_tab_id:  "content-tab-#{key}"
       }
     end
 

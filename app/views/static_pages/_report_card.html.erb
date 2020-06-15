@@ -23,8 +23,8 @@
               </nav>
             </div>
           </div>
-          <div id="button-div" class="col-4 align-self-center" style="text-align: right;">
-            <button>Copy</button>
+          <div class="col-4 align-self-center" style="text-align: right;">
+            <button id="<%= copy_button_id %>" class="rpt-copy-button">Copy</button>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
       <br/>
 
       <div class="container no-horiz-padding">
-        <div class="tab-content" id="nav-tabContent">
+        <div class="tab-content" id="<%= content_tab_id %>">
           <%= nav_content(name: name + '_text', html_text: report_text, active: true) %>
           <%= nav_content(name: name + '_json', html_text: report_json) %>
           <%= nav_content(name: name + '_yaml', html_text: report_yaml) %>

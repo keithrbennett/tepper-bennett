@@ -74,10 +74,28 @@ function setUpColorPicker() {
     bgColorResetter.addEventListener("click", resetBackgroundColor);
 }
 
+
+function setUpReportCopyButtons() {
+
+    const handler = function(e) {
+        const elementKey = e.target.id.split("btn-copy-")[1];
+        const contentTabId = "content-tab-" + elementKey;
+        const contentElement = document.getElementById(contentTabId);
+        const activeTab = contentElement.getElementsByClassName("active")[0];
+        const textToCopy = activeTab.innerHTML.split("<div><pre>")[1].split("</pre></div>")[0]
+        navigator.clipboard.writeText(textToCopy).then(() => { console.log("Copied to clipboard: " + activeTab.id); })
+    }
+
+    for(const elem of document.getElementsByClassName("rpt-copy-button")) {
+        elem.addEventListener("click", handler);
+    }
+}
+
 // DOMContentLoaded event handling:
 document.addEventListener('DOMContentLoaded', (event) => {
     setUpYouTubeClicks();
     setUpColorPicker();
+    setUpReportCopyButtons();
 })
 
 
