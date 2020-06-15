@@ -9,15 +9,15 @@
   <div class="container nav-container no-horiz-padding">
     <nav class="nav-justified">
         <div class="nav nav-tabs" id="nav-tab" role="tablist" style="align: center">
-          <%= nav_tab('home', true) %>
-          <%= nav_tab('songs') %>
-          <%= nav_tab('genres') %>
-          <%= nav_tab('elvis') %>
-          <%= nav_tab('resources') %>
+          <%= nav_tab('home', 'Home', true) %>
+          <%= nav_tab('songs', 'Songs') %>
+          <%= nav_tab('genres', 'Genres') %>
+          <%= nav_tab('elvis', 'Elvis') %>
+          <%= nav_tab('resources', 'Resources') %>
           <% if @include_reports %>
-            <%= nav_tab('reports') %>
+            <%= nav_tab('reports', 'Reports') %>
           <% end %>
-          <%= nav_tab('inquiries') %>
+          <%= nav_tab('inquiries', 'Inquiries') %>
         </div>
     </nav>
   </div>
@@ -27,15 +27,15 @@
 
   <div class="container no-horiz-padding">
     <div class="tab-content" id="nav-tabContent">
-      <%= nav_content('home', true) %>
-      <%= nav_content('songs') %>
-      <%= nav_content('genres') %>
-      <%= nav_content('elvis') %>
-      <%= nav_content('resources') %>
+      <%= nav_content(name: 'home', active: true) %>
+      <%= nav_content(name: 'songs') %>
+      <%= nav_content(name: 'genres') %>
+      <%= nav_content(name: 'elvis') %>
+      <%= nav_content(name: 'resources') %>
       <% if @include_reports %>
-        <%= nav_content('reports') %>
+        <%= nav_content(name: 'reports') %>
       <% end %>
-      <%= nav_content('inquiries') %>
+      <%= nav_content(name: 'inquiries') %>
     </div>
   </div>
 

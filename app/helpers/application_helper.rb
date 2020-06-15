@@ -91,23 +91,28 @@ HEREDOC
 end
 
 
-def nav_tab(panel_name, active = false)
+def nav_tab(panel_internal_name, panel_display_name, active = false)
   active_text = active ? ' active' : ''
   aria        = active ? 'true'    : 'false'
 
   html = <<HEREDOC
-    <a class="nav-item nav-link#{active_text}" id="nav-home-tab" data-toggle="tab" href="#nav-#{panel_name}" role="tab" aria-selected="#{aria}">#{panel_name.capitalize}</a>
+    <a class="nav-item nav-link#{active_text}" id="nav-home-tab" data-toggle="tab" href="#nav-#{panel_internal_name}" role="tab" aria-selected="#{aria}">#{panel_display_name}</a>
 HEREDOC
   html.html_safe
 end
 
 
-def nav_content(name, active = false)
+# If html_text is specified, render that, else render the partial whose name is `name`.
+def nav_content(name:, html_text: nil, active: false)
   div_class = 'tab-pane'
   div_class += ' show active' if active
 
   tag.div(class: div_class, id: "nav-#{name}", role: 'tabpanel', 'aria-labelledby'.to_sym => "nav-#{name}-tab") do
-    render(name)
+    if html_text
+      html_text
+    else
+      render(name)
+    end
   end
 end
 

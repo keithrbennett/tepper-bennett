@@ -9,7 +9,27 @@
 
   <div id="<%= card_content_id %>" class="collapse" aria-labelledby="<%= card_button_id %>" data-parent="#accordion">
     <div class="card-body">
-      <%= report_text %>
+
+      <div class="container nav-container no-horiz-padding">
+        <nav class="nav-justified">
+          <div class="nav nav-tabs" id="nav-tab" role="tablist" style="align: center">
+            <%= nav_tab(name + '_text', 'Text', true) %>
+            <%= nav_tab(name + '_json', 'JSON') %>
+            <%= nav_tab(name + '_yaml', 'YAML') %>
+          </div>
+        </nav>
+      </div>
+
+      <br/>
+      <br/>
+
+      <div class="container no-horiz-padding">
+        <div class="tab-content" id="nav-tabContent">
+          <%= nav_content(name: name + '_text', html_text: report_text, active: true) %>
+          <%= nav_content(name: name + '_json', html_text: report_json) %>
+          <%= nav_content(name: name + '_yaml', html_text: report_yaml) %>
+       </div>
+      </div>
     </div>
   </div>
 </div>

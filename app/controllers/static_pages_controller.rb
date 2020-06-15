@@ -106,10 +106,13 @@ class StaticPagesController < ActionController::Base
 
     def locals
       {
+          name:            key,
           card_button_id:  button_id,
           card_content_id: content_id,
           report_title:    title,
-          report_text:     report_text
+          report_text:     report_text,
+          report_json:     report_json,
+          report_yaml:     report_yaml,
       }
     end
 
