@@ -96,7 +96,7 @@ def nav_tab(panel_internal_name, panel_display_name, active = false)
   aria        = active ? 'true'    : 'false'
 
   html = <<HEREDOC
-    <a class="nav-item nav-link#{active_text}" id="nav-home-tab" data-toggle="tab" href="#nav-#{panel_internal_name}" role="tab" aria-selected="#{aria}">#{panel_display_name}</a>
+    <a class="nav-item nav-link#{active_text}" id="nav-#{panel_internal_name}-tab" data-toggle="tab" href="#nav-#{panel_internal_name}" role="tab" aria-selected="#{aria}">#{panel_display_name}</a>
 HEREDOC
   html.html_safe
 end
