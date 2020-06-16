@@ -7,7 +7,7 @@
     </h1>
   </div>
 
-  <div id="<%= card_content_id %>" class="collapse" aria-labelledby="<%= card_button_id %>" data-parent="#accordion">
+  <div id="<%= card_content_id %>" class="collapse" aria-labelledby="<%= card_button_id %>" data-parent="#reports-accordion">
     <div class="card-body">
 
       <div class="container">
@@ -16,9 +16,9 @@
             <div class="container nav-container no-horiz-padding">
               <nav class="nav-justified">
                 <div class="nav nav-tabs" role="tablist">
-                  <%= nav_tab(name + '_text', 'Text', true) %>
-                  <%= nav_tab(name + '_json', 'JSON') %>
-                  <%= nav_tab(name + '_yaml', 'YAML') %>
+                  <%= report_formats_nav_tab(name + '_text', 'Text', active: true) %>
+                  <%= report_formats_nav_tab(name + '_json', 'JSON') %>
+                  <%= report_formats_nav_tab(name + '_yaml', 'YAML') %>
                 </div>
               </nav>
             </div>
