@@ -1,1 +1,370 @@
 ---
+title: Song Performers
+generation_time: 2020-06-16 03:18 UTC
+data:
+- code: boy-like-me
+  name: A Boy Like Me, A Girl Like You
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: cane-collar
+  name: A Cane and A High Starched Collar
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: h-everything
+  name: A House That Has Everything
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: all-i-am
+  name: All That I Am
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: am-i-ready
+  name: Am I Ready
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: angel
+  name: Angel
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: bagel-lox
+  name: Bagels & Lox
+  performers:
+  - code: rob-schneid
+    name: Rob Schneider
+- code: b-b-blues
+  name: Beach Boy Blues
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: beg-luck
+  name: Beginners Luck
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: confidence
+  name: Confidence
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: run-back-me
+  name: Don't Come Running Back to Me
+  performers:
+  - code: n-wilson
+    name: Nancy Wilson
+- code: drums-isles
+  name: Drums of the Islands
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: earth-boy
+  name: Earth Boy
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: eggbert
+  name: Eggbert, The Easter Egg
+  performers:
+  - code: r-clooney
+    name: Rosemary Clooney
+- code: five-heads
+  name: Five Sleepy Heads
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: millionth
+  name: For the Millionth and Last Time
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: ft-laud
+  name: Fort Lauderdale Chamber of Commerce
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: g-i-blues
+  name: G. I. Blues
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: glad
+  name: Glad All Over
+  performers:
+  - code: beatles
+    name: The Beatles
+  - code: jeff-beck
+    name: Jeff Beck
+- code: bye-boys
+  name: Goodbye Boys, Goodbye
+  performers:
+  - code: jay-amer
+    name: Jay and the Americans
+- code: h-sunset
+  name: Hawaiian Sunset
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: one-girl
+  name: I Love Only One Girl
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: crush-ny
+  name: I've Got a Crush on New York Town
+  performers:
+  - code: c-francis
+    name: Connie Francis
+- code: isl-love
+  name: Island of Love
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: long-way
+  name: It's a Long Way from Your House to My House
+  performers:
+  - code: sinatra
+    name: Frank Sinatra
+- code: wond-world
+  name: It's a Wonderful World
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: ito-eats
+  name: Ito Eats
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: jenny-kiss
+  name: Jenny Kissed Me
+  performers:
+  - code: ed-albert
+    name: Eddie Albert
+- code: old-sake
+  name: Just for Old Time Sake
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: kewpie-doll
+  name: Kewpie Doll
+  performers:
+  - code: p-como
+    name: Perry Como
+- code: kismet
+  name: Kismet
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: kiss-fire
+  name: Kiss of Fire
+  performers:
+  - code: louis-arm
+    name: Louis Armstrong
+- code: l-cowboy
+  name: Lonesome Cowboy
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: mexico
+  name: Mexico
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: mine
+  name: Mine
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: n-orleans
+  name: New Orleans
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: n-for-xmas
+  name: Nuttin' for Christmas
+  performers:
+  - code: a-mooney
+    name: Art Mooney & His Orchestra
+  - code: b-gordon
+    name: Barry Gordon
+- code: once-enough
+  name: Once is Enough
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: petunia
+  name: Petunia, the Gardener's Daughter
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: puppet
+  name: Puppet on a String
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: red-roses
+  name: Red Roses for a Blue Lady
+  performers:
+  - code: andy-wms
+    name: Andy Williams
+  - code: bert-kmft
+    name: Bert Kaempfert and His Orchestra
+  - code: dean-martin
+    name: Dean Martin
+  - code: p-como
+    name: Perry Como
+  - code: r-conniff
+    name: Ray Conniff Singers
+  - code: sinatra
+    name: Frank Sinatra
+  - code: v-monroe
+    name: Vaughn Monroe
+  - code: w-newton
+    name: Wayne Newton
+- code: relax
+  name: Relax
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: santa-daddy
+  name: Santa Claus Looks Just Like Daddy
+  performers:
+  - code: a-mooney
+    name: Art Mooney & His Orchestra
+  - code: b-gordon
+    name: Barry Gordon
+- code: ssss-heart
+  name: Say Something Sweet to Your Sweetheart
+  performers:
+  - code: ink-spots
+    name: The Ink Spots
+- code: shop-arnd
+  name: Shoppin' Around
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: sl-sand
+  name: Slicin' Sand
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: smorgasbord
+  name: Smorgasbord
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: soft-love
+  name: Softly My Love
+  performers:
+  - code: della-reese
+    name: Della Reese
+- code: shrimp
+  name: Song of the Shrimp
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: stay-away
+  name: Stay Away
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: smr-sounds
+  name: Summer Sounds
+  performers:
+  - code: r-goulet
+    name: Robert Goulet
+- code: suzy-snow
+  name: Suzy Snowflake
+  performers:
+  - code: r-clooney
+    name: Rosemary Clooney
+- code: take-me-fair
+  name: Take Me to the Fair
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: tear-rain
+  name: Teardrops in the Rain
+  performers:
+  - code: a-prysock
+    name: Arthur Prysock
+- code: bullfighter
+  name: The Bullfighter Was a Lady
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: lady-loves
+  name: The Lady Loves Me
+  performers:
+  - code: elvis
+    name: Elvis Presley
+  - code: ann-margret
+    name: Ann-Margret
+- code: train-ahchoo
+  name: The Little Train Who Said 'Ah Choo
+  performers:
+  - code: anne-lloyd
+    name: Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra
+- code: nty-lady
+  name: The Naughty Lady of Shady Lane
+  performers:
+  - code: ames-bros
+    name: The Ames Brothers
+- code: walls-ears
+  name: The Walls Have Ears
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: woodchuck
+  name: The Woodchuck Song
+  performers:
+  - code: ben-mill
+    name: Tex Beneke and The Miller Orchestra
+- code: yng-ones
+  name: The Young Ones
+  performers:
+  - code: clf-rich
+    name: Cliff Richards
+- code: tr-light
+  name: Travelling Light
+  performers:
+  - code: clf-rich
+    name: Cliff Richards
+  - code: jay-amer
+    name: Jay and the Americans
+- code: t-t-fingers
+  name: Twenty Tiny Fingers
+  performers:
+  - code: stargazers
+    name: The Stargazers
+- code: vino
+  name: Vino, Dinero y Amor
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: west-union
+  name: Western Union
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: wheels-heels
+  name: Wheels on My Heels
+  performers:
+  - code: elvis
+    name: Elvis Presley
+- code: when-arms
+  name: When the Boy (Girl) in Your Arms
+  performers:
+  - code: c-francis
+    name: Connie Francis
+- code: ww-young
+  name: Wonderful World of the Young
+  performers:
+  - code: andy-wms
+    name: Andy Williams
+  - code: clf-rich
+    name: Cliff Richards

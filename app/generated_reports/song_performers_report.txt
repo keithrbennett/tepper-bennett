@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
-                                             Song Performers -- Generated 2020-06-14 22:23 UTC
+                                             Song Performers -- Generated 2020-06-16 03:18 UTC
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -11,78 +11,78 @@ h-everything  A House That Has Everything                         elvis         
 all-i-am      All That I Am                                       elvis         Elvis Presley
 am-i-ready    Am I Ready                                          elvis         Elvis Presley
 angel         Angel                                               elvis         Elvis Presley
+bagel-lox     Bagels & Lox                                        rob-schneid   Rob Schneider
 b-b-blues     Beach Boy Blues                                     elvis         Elvis Presley
 beg-luck      Beginners Luck                                      elvis         Elvis Presley
 confidence    Confidence                                          elvis         Elvis Presley
+run-back-me   Don't Come Running Back to Me                       n-wilson      Nancy Wilson
 drums-isles   Drums of the Islands                                elvis         Elvis Presley
 earth-boy     Earth Boy                                           elvis         Elvis Presley
+eggbert       Eggbert, The Easter Egg                             r-clooney     Rosemary Clooney
 five-heads    Five Sleepy Heads                                   elvis         Elvis Presley
 millionth     For the Millionth and Last Time                     elvis         Elvis Presley
 ft-laud       Fort Lauderdale Chamber of Commerce                 elvis         Elvis Presley
 g-i-blues     G. I. Blues                                         elvis         Elvis Presley
+glad          Glad All Over                                       beatles       The Beatles
+                                                                  jeff-beck     Jeff Beck
+bye-boys      Goodbye Boys, Goodbye                               jay-amer      Jay and the Americans
 h-sunset      Hawaiian Sunset                                     elvis         Elvis Presley
 one-girl      I Love Only One Girl                                elvis         Elvis Presley
+crush-ny      I've Got a Crush on New York Town                   c-francis     Connie Francis
 isl-love      Island of Love                                      elvis         Elvis Presley
+long-way      It's a Long Way from Your House to My House         sinatra       Frank Sinatra
 wond-world    It's a Wonderful World                              elvis         Elvis Presley
 ito-eats      Ito Eats                                            elvis         Elvis Presley
+jenny-kiss    Jenny Kissed Me                                     ed-albert     Eddie Albert
 old-sake      Just for Old Time Sake                              elvis         Elvis Presley
+kewpie-doll   Kewpie Doll                                         p-como        Perry Como
 kismet        Kismet                                              elvis         Elvis Presley
+kiss-fire     Kiss of Fire                                        louis-arm     Louis Armstrong
 l-cowboy      Lonesome Cowboy                                     elvis         Elvis Presley
 mexico        Mexico                                              elvis         Elvis Presley
 mine          Mine                                                elvis         Elvis Presley
 n-orleans     New Orleans                                         elvis         Elvis Presley
+n-for-xmas    Nuttin' for Christmas                               a-mooney      Art Mooney & His Orchestra
+                                                                  b-gordon      Barry Gordon
 once-enough   Once is Enough                                      elvis         Elvis Presley
 petunia       Petunia, the Gardener's Daughter                    elvis         Elvis Presley
 puppet        Puppet on a String                                  elvis         Elvis Presley
-relax         Relax                                               elvis         Elvis Presley
-shop-arnd     Shoppin' Around                                     elvis         Elvis Presley
-sl-sand       Slicin' Sand                                        elvis         Elvis Presley
-smorgasbord   Smorgasbord                                         elvis         Elvis Presley
-shrimp        Song of the Shrimp                                  elvis         Elvis Presley
-stay-away     Stay Away                                           elvis         Elvis Presley
-take-me-fair  Take Me to the Fair                                 elvis         Elvis Presley
-bullfighter   The Bullfighter Was a Lady                          elvis         Elvis Presley
-lady-loves    The Lady Loves Me                                   ann-margret   Ann-Margret
-                                                                  elvis         Elvis Presley
-walls-ears    The Walls Have Ears                                 elvis         Elvis Presley
-vino          Vino, Dinero y Amor                                 elvis         Elvis Presley
-west-union    Western Union                                       elvis         Elvis Presley
-wheels-heels  Wheels on My Heels                                  elvis         Elvis Presley
-bagel-lox     Bagels & Lox                                        rob-schneid   Rob Schneider
-run-back-me   Don't Come Running Back to Me                       n-wilson      Nancy Wilson
-eggbert       Eggbert, The Easter Egg                             r-clooney     Rosemary Clooney
-glad          Glad All Over                                       jeff-beck     Jeff Beck
-                                                                  beatles       The Beatles
-bye-boys      Goodbye Boys, Goodbye                               jay-amer      Jay and the Americans
-crush-ny      I've Got a Crush on New York Town                   c-francis     Connie Francis
-long-way      It's a Long Way from Your House to My House         sinatra       Frank Sinatra
-jenny-kiss    Jenny Kissed Me                                     ed-albert     Eddie Albert
-kewpie-doll   Kewpie Doll                                         p-como        Perry Como
-kiss-fire     Kiss of Fire                                        louis-arm     Louis Armstrong
-n-for-xmas    Nuttin' for Christmas                               a-mooney      Art Mooney & His Orchestra
-                                                                  b-gordon      Barry Gordon
 red-roses     Red Roses for a Blue Lady                           andy-wms      Andy Williams
                                                                   bert-kmft     Bert Kaempfert and His Orchestra
                                                                   dean-martin   Dean Martin
-                                                                  sinatra       Frank Sinatra
                                                                   p-como        Perry Como
                                                                   r-conniff     Ray Conniff Singers
+                                                                  sinatra       Frank Sinatra
                                                                   v-monroe      Vaughn Monroe
                                                                   w-newton      Wayne Newton
+relax         Relax                                               elvis         Elvis Presley
 santa-daddy   Santa Claus Looks Just Like Daddy                   a-mooney      Art Mooney & His Orchestra
                                                                   b-gordon      Barry Gordon
 ssss-heart    Say Something Sweet to Your Sweetheart              ink-spots     The Ink Spots
+shop-arnd     Shoppin' Around                                     elvis         Elvis Presley
+sl-sand       Slicin' Sand                                        elvis         Elvis Presley
+smorgasbord   Smorgasbord                                         elvis         Elvis Presley
 soft-love     Softly My Love                                      della-reese   Della Reese
+shrimp        Song of the Shrimp                                  elvis         Elvis Presley
+stay-away     Stay Away                                           elvis         Elvis Presley
 smr-sounds    Summer Sounds                                       r-goulet      Robert Goulet
 suzy-snow     Suzy Snowflake                                      r-clooney     Rosemary Clooney
+take-me-fair  Take Me to the Fair                                 elvis         Elvis Presley
 tear-rain     Teardrops in the Rain                               a-prysock     Arthur Prysock
+bullfighter   The Bullfighter Was a Lady                          elvis         Elvis Presley
+lady-loves    The Lady Loves Me                                   elvis         Elvis Presley
+                                                                  ann-margret   Ann-Margret
 train-ahchoo  The Little Train Who Said 'Ah Choo                  anne-lloyd    Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra
 nty-lady      The Naughty Lady of Shady Lane                      ames-bros     The Ames Brothers
+walls-ears    The Walls Have Ears                                 elvis         Elvis Presley
 woodchuck     The Woodchuck Song                                  ben-mill      Tex Beneke and The Miller Orchestra
 yng-ones      The Young Ones                                      clf-rich      Cliff Richards
 tr-light      Travelling Light                                    clf-rich      Cliff Richards
                                                                   jay-amer      Jay and the Americans
 t-t-fingers   Twenty Tiny Fingers                                 stargazers    The Stargazers
+vino          Vino, Dinero y Amor                                 elvis         Elvis Presley
+west-union    Western Union                                       elvis         Elvis Presley
+wheels-heels  Wheels on My Heels                                  elvis         Elvis Presley
 when-arms     When the Boy (Girl) in Your Arms                    c-francis     Connie Francis
 ww-young      Wonderful World of the Young                        andy-wms      Andy Williams
                                                                   clf-rich      Cliff Richards
