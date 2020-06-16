@@ -1,6 +1,6 @@
 ---
 title: Song Performers
-generation_time: 2020-06-16 03:18 UTC
+generation_time: 2020-06-16 20:36 UTC
 data:
 - code: boy-like-me
   name: A Boy Like Me, A Girl Like You
@@ -162,13 +162,19 @@ data:
 - code: kiss-fire
   name: Kiss of Fire
   performers:
+  - code: a-sherman
+    name: Allan Sherman
   - code: louis-arm
     name: Louis Armstrong
+  - code: mickey-katz
+    name: Mickey Katz
 - code: l-cowboy
   name: Lonesome Cowboy
   performers:
   - code: elvis
     name: Elvis Presley
+  - code: fisch-sauer
+    name: Denis Fischer & Carsten Sauer
 - code: mexico
   name: Mexico
   performers:
@@ -191,6 +197,14 @@ data:
     name: Art Mooney & His Orchestra
   - code: b-gordon
     name: Barry Gordon
+  - code: eartha-kitt
+    name: Eartha Kitt
+  - code: homer-jethro
+    name: Homer and Jethro
+  - code: plain-white
+    name: Plain White T's
+  - code: sugarland
+    name: Sugarland
 - code: once-enough
   name: Once is Enough
   performers:
@@ -215,6 +229,8 @@ data:
     name: Bert Kaempfert and His Orchestra
   - code: dean-martin
     name: Dean Martin
+  - code: moscow-jazz
+    name: Moscow City Jazz Band
   - code: p-como
     name: Perry Como
   - code: r-conniff
@@ -223,6 +239,10 @@ data:
     name: Frank Sinatra
   - code: v-monroe
     name: Vaughn Monroe
+  - code: vic-choir
+    name: Victoria Junior College Choir (Singapore)
+  - code: vic-dana
+    name: Vic Dana
   - code: w-newton
     name: Wayne Newton
 - code: relax
@@ -267,6 +287,8 @@ data:
   performers:
   - code: elvis
     name: Elvis Presley
+  - code: naysayer
+    name: Naysayer
 - code: stay-away
   name: Stay Away
   performers:
@@ -300,10 +322,10 @@ data:
 - code: lady-loves
   name: The Lady Loves Me
   performers:
-  - code: elvis
-    name: Elvis Presley
   - code: ann-margret
     name: Ann-Margret
+  - code: elvis
+    name: Elvis Presley
 - code: train-ahchoo
   name: The Little Train Who Said 'Ah Choo
   performers:
@@ -334,11 +356,15 @@ data:
   performers:
   - code: clf-rich
     name: Cliff Richards
+  - code: h-hermits
+    name: Herman's Hermits
   - code: jay-amer
     name: Jay and the Americans
 - code: t-t-fingers
   name: Twenty Tiny Fingers
   performers:
+  - code: kilburn
+    name: Kilburn and the High Roads
   - code: stargazers
     name: The Stargazers
 - code: vino

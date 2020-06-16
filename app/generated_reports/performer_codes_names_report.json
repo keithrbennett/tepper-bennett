@@ -1,7 +1,11 @@
 {
   "title": "Performer Codes/Names",
-  "generation_time": "2020-06-14 22:23 UTC",
+  "generation_time": "2020-06-16 20:36 UTC",
   "data": [
+    {
+      "code": "a-sherman",
+      "name": "Allan Sherman"
+    },
     {
       "code": "andy-wms",
       "name": "Andy Williams"

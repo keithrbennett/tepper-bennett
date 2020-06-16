@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
-                                             Song Performers -- Generated 2020-06-16 03:18 UTC
+                                             Song Performers -- Generated 2020-06-16 20:36 UTC
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -37,23 +37,33 @@ jenny-kiss    Jenny Kissed Me                                     ed-albert     
 old-sake      Just for Old Time Sake                              elvis         Elvis Presley
 kewpie-doll   Kewpie Doll                                         p-como        Perry Como
 kismet        Kismet                                              elvis         Elvis Presley
-kiss-fire     Kiss of Fire                                        louis-arm     Louis Armstrong
+kiss-fire     Kiss of Fire                                        a-sherman     Allan Sherman
+                                                                  louis-arm     Louis Armstrong
+                                                                  mickey-katz   Mickey Katz
 l-cowboy      Lonesome Cowboy                                     elvis         Elvis Presley
+                                                                  fisch-sauer   Denis Fischer & Carsten Sauer
 mexico        Mexico                                              elvis         Elvis Presley
 mine          Mine                                                elvis         Elvis Presley
 n-orleans     New Orleans                                         elvis         Elvis Presley
 n-for-xmas    Nuttin' for Christmas                               a-mooney      Art Mooney & His Orchestra
                                                                   b-gordon      Barry Gordon
+                                                                  eartha-kitt   Eartha Kitt
+                                                                  homer-jethro  Homer and Jethro
+                                                                  plain-white   Plain White T's
+                                                                  sugarland     Sugarland
 once-enough   Once is Enough                                      elvis         Elvis Presley
 petunia       Petunia, the Gardener's Daughter                    elvis         Elvis Presley
 puppet        Puppet on a String                                  elvis         Elvis Presley
 red-roses     Red Roses for a Blue Lady                           andy-wms      Andy Williams
                                                                   bert-kmft     Bert Kaempfert and His Orchestra
                                                                   dean-martin   Dean Martin
+                                                                  moscow-jazz   Moscow City Jazz Band
                                                                   p-como        Perry Como
                                                                   r-conniff     Ray Conniff Singers
                                                                   sinatra       Frank Sinatra
                                                                   v-monroe      Vaughn Monroe
+                                                                  vic-choir     Victoria Junior College Choir (Singapore)
+                                                                  vic-dana      Vic Dana
                                                                   w-newton      Wayne Newton
 relax         Relax                                               elvis         Elvis Presley
 santa-daddy   Santa Claus Looks Just Like Daddy                   a-mooney      Art Mooney & His Orchestra
@@ -64,22 +74,25 @@ sl-sand       Slicin' Sand                                        elvis         
 smorgasbord   Smorgasbord                                         elvis         Elvis Presley
 soft-love     Softly My Love                                      della-reese   Della Reese
 shrimp        Song of the Shrimp                                  elvis         Elvis Presley
+                                                                  naysayer      Naysayer
 stay-away     Stay Away                                           elvis         Elvis Presley
 smr-sounds    Summer Sounds                                       r-goulet      Robert Goulet
 suzy-snow     Suzy Snowflake                                      r-clooney     Rosemary Clooney
 take-me-fair  Take Me to the Fair                                 elvis         Elvis Presley
 tear-rain     Teardrops in the Rain                               a-prysock     Arthur Prysock
 bullfighter   The Bullfighter Was a Lady                          elvis         Elvis Presley
-lady-loves    The Lady Loves Me                                   elvis         Elvis Presley
-                                                                  ann-margret   Ann-Margret
+lady-loves    The Lady Loves Me                                   ann-margret   Ann-Margret
+                                                                  elvis         Elvis Presley
 train-ahchoo  The Little Train Who Said 'Ah Choo                  anne-lloyd    Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra
 nty-lady      The Naughty Lady of Shady Lane                      ames-bros     The Ames Brothers
 walls-ears    The Walls Have Ears                                 elvis         Elvis Presley
 woodchuck     The Woodchuck Song                                  ben-mill      Tex Beneke and The Miller Orchestra
 yng-ones      The Young Ones                                      clf-rich      Cliff Richards
 tr-light      Travelling Light                                    clf-rich      Cliff Richards
+                                                                  h-hermits     Herman's Hermits
                                                                   jay-amer      Jay and the Americans
-t-t-fingers   Twenty Tiny Fingers                                 stargazers    The Stargazers
+t-t-fingers   Twenty Tiny Fingers                                 kilburn       Kilburn and the High Roads
+                                                                  stargazers    The Stargazers
 vino          Vino, Dinero y Amor                                 elvis         Elvis Presley
 west-union    Western Union                                       elvis         Elvis Presley
 wheels-heels  Wheels on My Heels                                  elvis         Elvis Presley

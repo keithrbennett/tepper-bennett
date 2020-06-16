@@ -1,7 +1,17 @@
 {
   "title": "Performer Songs",
-  "generation_time": "2020-06-14 22:23 UTC",
+  "generation_time": "2020-06-16 20:36 UTC",
   "data": [
+    {
+      "code": "a-sherman",
+      "name": "Allan Sherman",
+      "songs": [
+        {
+          "code": "kiss-fire",
+          "name": "Kiss of Fire"
+        }
+      ]
+    },
     {
       "code": "andy-wms",
       "name": "Andy Williams",
@@ -140,14 +150,20 @@
       "code": "fisch-sauer",
       "name": "Denis Fischer & Carsten Sauer",
       "songs": [
-
+        {
+          "code": "l-cowboy",
+          "name": "Lonesome Cowboy"
+        }
       ]
     },
     {
       "code": "eartha-kitt",
       "name": "Eartha Kitt",
       "songs": [
-
+        {
+          "code": "n-for-xmas",
+          "name": "Nuttin' for Christmas"
+        }
       ]
     },
     {
@@ -352,14 +368,20 @@
       "code": "h-hermits",
       "name": "Herman's Hermits",
       "songs": [
-
+        {
+          "code": "tr-light",
+          "name": "Travelling Light"
+        }
       ]
     },
     {
       "code": "homer-jethro",
       "name": "Homer and Jethro",
       "songs": [
-
+        {
+          "code": "n-for-xmas",
+          "name": "Nuttin' for Christmas"
+        }
       ]
     },
     {
@@ -390,7 +412,10 @@
       "code": "kilburn",
       "name": "Kilburn and the High Roads",
       "songs": [
-
+        {
+          "code": "t-t-fingers",
+          "name": "Twenty Tiny Fingers"
+        }
       ]
     },
     {
@@ -407,14 +432,20 @@
       "code": "mickey-katz",
       "name": "Mickey Katz",
       "songs": [
-
+        {
+          "code": "kiss-fire",
+          "name": "Kiss of Fire"
+        }
       ]
     },
     {
       "code": "moscow-jazz",
       "name": "Moscow City Jazz Band",
       "songs": [
-
+        {
+          "code": "red-roses",
+          "name": "Red Roses for a Blue Lady"
+        }
       ]
     },
     {
@@ -431,7 +462,10 @@
       "code": "naysayer",
       "name": "Naysayer",
       "songs": [
-
+        {
+          "code": "shrimp",
+          "name": "Song of the Shrimp"
+        }
       ]
     },
     {
@@ -452,7 +486,10 @@
       "code": "plain-white",
       "name": "Plain White T's",
       "songs": [
-
+        {
+          "code": "n-for-xmas",
+          "name": "Nuttin' for Christmas"
+        }
       ]
     },
     {
@@ -503,7 +540,10 @@
       "code": "sugarland",
       "name": "Sugarland",
       "songs": [
-
+        {
+          "code": "n-for-xmas",
+          "name": "Nuttin' for Christmas"
+        }
       ]
     },
     {
@@ -570,14 +610,20 @@
       "code": "vic-dana",
       "name": "Vic Dana",
       "songs": [
-
+        {
+          "code": "red-roses",
+          "name": "Red Roses for a Blue Lady"
+        }
       ]
     },
     {
       "code": "vic-choir",
       "name": "Victoria Junior College Choir (Singapore)",
       "songs": [
-
+        {
+          "code": "red-roses",
+          "name": "Red Roses for a Blue Lady"
+        }
       ]
     },
     {

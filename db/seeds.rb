@@ -55,6 +55,7 @@ def add_performers
   performers = [
       { code: "a-mooney"      , name: "Art Mooney & His Orchestra" },
       { code: "a-prysock"     , name: "Arthur Prysock" },
+      { code: "a-sherman"     , name: "Allan Sherman" },
       { code: "ames-bros"     , name: "The Ames Brothers" },
       { code: "andy-wms"      , name: "Andy Williams" },
       { code: "anne-lloyd"    , name: "Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra" },
@@ -218,7 +219,16 @@ def add_elvis_songs
   add_songs = -> do
     print "Adding #{songs.size} Elvis songs..."
     songs.each do |s|
-      performers = (s[:code] == 'lady-loves') ? %w{elvis ann-margret} : %w{elvis}
+      performers = %w{elvis}
+      case s[:code]
+      when 'l-cowboy'
+        performers << 'fisch-sauer'
+      when 'lady-loves'
+        performers << 'ann-margret'
+      when 'shrimp'
+        performers << 'naysayer'
+      end
+
       add_song(code: s[:code], name: s[:name], performers: performers, genres: s[:genres], movies: s[:movies])
     end
   end
@@ -243,9 +253,9 @@ def add_non_elvis_songs
       { code: "long-way"      , name: "It's a Long Way from Your House to My House" , performers: %w(sinatra),  genres: %w{romantic} },
       { code: "jenny-kiss"    , name: "Jenny Kissed Me" ,                          performers: %w(ed-albert),   genres: %w{romantic} },
       { code: "kewpie-doll"   , name: "Kewpie Doll" ,                              performers: %w(p-como) },
-      { code: "kiss-fire"     , name: "Kiss of Fire" ,                             performers: %w(louis-arm),   genres: %w{romantic} },
-      { code: "n-for-xmas"    , name: "Nuttin' for Christmas" ,                    performers: %w(a-mooney b-gordon),    genres: %w{children} },
-      { code: "red-roses"     , name: "Red Roses for a Blue Lady" ,                performers: %w(andy-wms bert-kmft dean-martin p-como r-conniff sinatra v-monroe w-newton), genres: %w{romantic} },
+      { code: "kiss-fire"     , name: "Kiss of Fire" ,                             performers: %w(a-sherman louis-arm mickey-katz),   genres: %w{romantic} },
+      { code: "n-for-xmas"    , name: "Nuttin' for Christmas" ,                    performers: %w(a-mooney b-gordon eartha-kitt homer-jethro plain-white sugarland),    genres: %w{children} },
+      { code: "red-roses"     , name: "Red Roses for a Blue Lady" ,                performers: %w(andy-wms bert-kmft dean-martin moscow-jazz p-como r-conniff sinatra vic-choir vic-dana v-monroe w-newton), genres: %w{romantic} },
       { code: "santa-daddy"   , name: "Santa Claus Looks Just Like Daddy" ,        performers: %w(a-mooney b-gordon),    genres: %w{children} },
       { code: "ssss-heart"    , name: "Say Something Sweet to Your Sweetheart" ,   performers: %w(ink-spots),   genres: %w{romantic} },
       { code: "soft-love"     , name: "Softly My Love" ,                           performers: %w(della-reese), genres: %w{romantic} },
@@ -256,8 +266,8 @@ def add_non_elvis_songs
       { code: "nty-lady"      , name: "The Naughty Lady of Shady Lane" ,           performers: %w(ames-bros),   genres: %w{funny} },
       { code: "woodchuck"     , name: "The Woodchuck Song" ,                       performers: %w(ben-mill) },
       { code: "yng-ones"      , name: "The Young Ones" ,                           performers: %w(clf-rich),    genres: %w{tv movie}, movies: %w{young-ones} },
-      { code: "tr-light"      , name: "Travelling Light" ,                         performers: %w(clf-rich jay-amer) },
-      { code: "t-t-fingers"   , name: "Twenty Tiny Fingers" ,                      performers: %w(stargazers),  genres: %w{children} },
+      { code: "tr-light"      , name: "Travelling Light" ,                         performers: %w(clf-rich h-hermits jay-amer) },
+      { code: "t-t-fingers"   , name: "Twenty Tiny Fingers" ,                      performers: %w(kilburn stargazers),  genres: %w{children} },
       { code: "when-arms"     , name: "When the Boy (Girl) in Your Arms" ,         performers: %w(c-francis),   genres: %w{romantic} },
       { code: "ww-young"      , name: "Wonderful World of the Young" ,             performers: %w(andy-wms clf-rich) },
   ]
@@ -301,7 +311,7 @@ def add_song_plays
       { song_code: 'kismet'        , performer_codes: 'elvis'         , youtube_key: 'fnqC2I9QpIU' },
       { song_code: 'kiss-fire'     , performer_codes: 'louis-arm'     , youtube_key: 'gVxwN3Eaf_U' },
       { song_code: 'l-cowboy'      , performer_codes: 'elvis'         , youtube_key: 'DxComjngP2Q' },
-      { song_code: 'lady-loves'    , performer_codes: %w{elvis ann-margret} , youtube_key: 'Fv0bpfGfzls' },
+      { song_code: 'lady-loves'    , performer_codes: %w{elvis ann-margret}, youtube_key: 'Fv0bpfGfzls' },
       { song_code: 'long-way'      , performer_codes: 'sinatra'       , youtube_key: '7-tcw6w4Cj4' },
       { song_code: 'mexico'        , performer_codes: 'elvis'         , youtube_key: 'eCQrdpoBass' },
       { song_code: 'millionth'     , performer_codes: 'elvis'         , youtube_key: '0hhN13Qzl-Q' },

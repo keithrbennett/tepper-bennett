@@ -1,6 +1,6 @@
 {
   "title": "Song Genres",
-  "generation_time": "2020-06-14 22:23 UTC",
+  "generation_time": "2020-06-16 20:36 UTC",
   "data": [
     {
       "code": "boy-like-me",
@@ -49,9 +49,9 @@
       "code": "angel",
       "name": "Angel",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
@@ -74,9 +74,9 @@
       "code": "beg-luck",
       "name": "Beginners Luck",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
@@ -191,9 +191,9 @@
       "code": "isl-love",
       "name": "Island of Love",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
@@ -306,18 +306,18 @@
       "code": "petunia",
       "name": "Petunia, the Gardener's Daughter",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
       "code": "puppet",
       "name": "Puppet on a String",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
@@ -429,18 +429,18 @@
       "code": "bullfighter",
       "name": "The Bullfighter Was a Lady",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
       "code": "lady-loves",
       "name": "The Lady Loves Me",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
@@ -476,8 +476,8 @@
       "code": "yng-ones",
       "name": "The Young Ones",
       "genres": [
-        "tv",
-        "movie"
+        "movie",
+        "tv"
       ]
     },
     {

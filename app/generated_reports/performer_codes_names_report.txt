@@ -1,10 +1,11 @@
 --------------------------------------------------------------------------
-         Performer Codes/Names -- Generated 2020-06-14 22:23 UTC
+         Performer Codes/Names -- Generated 2020-06-16 20:36 UTC
 --------------------------------------------------------------------------
 
 
    Code           Name
 
+a-sherman      Allan Sherman
 andy-wms       Andy Williams
 ann-margret    Ann-Margret
 anne-lloyd     Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra

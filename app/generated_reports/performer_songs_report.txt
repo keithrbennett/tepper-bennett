@@ -1,10 +1,11 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
-                                             Performer Songs -- Generated 2020-06-14 22:23 UTC
+                                             Performer Songs -- Generated 2020-06-16 20:36 UTC
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
 Perf Code     Performer Name                                                Song Code     Song Name                                         
 
+a-sherman     Allan Sherman                                                 kiss-fire     Kiss of Fire
 andy-wms      Andy Williams                                                 red-roses     Red Roses for a Blue Lady
                                                                             ww-young      Wonderful World of the Young
 ann-margret   Ann-Margret                                                   lady-loves    The Lady Loves Me
@@ -22,8 +23,8 @@ c-francis     Connie Francis                                                crus
                                                                             when-arms     When the Boy (Girl) in Your Arms
 dean-martin   Dean Martin                                                   red-roses     Red Roses for a Blue Lady
 della-reese   Della Reese                                                   soft-love     Softly My Love
-fisch-sauer   Denis Fischer & Carsten Sauer                                               
-eartha-kitt   Eartha Kitt                                                                 
+fisch-sauer   Denis Fischer & Carsten Sauer                                 l-cowboy      Lonesome Cowboy
+eartha-kitt   Eartha Kitt                                                   n-for-xmas    Nuttin' for Christmas
 ed-albert     Eddie Albert                                                  jenny-kiss    Jenny Kissed Me
 elvis         Elvis Presley                                                 boy-like-me   A Boy Like Me, A Girl Like You
                                                                             cane-collar   A Cane and A High Starched Collar
@@ -69,51 +70,36 @@ elvis         Elvis Presley                                                 boy-
                                                                             wheels-heels  Wheels on My Heels
 sinatra       Frank Sinatra                                                 long-way      It's a Long Way from Your House to My House
                                                                             red-roses     Red Roses for a Blue Lady
-h-hermits     Herman's Hermits                                                            
-homer-jethro  Homer and Jethro                                                            
+h-hermits     Herman's Hermits                                              tr-light      Travelling Light
+homer-jethro  Homer and Jethro                                              n-for-xmas    Nuttin' for Christmas
 jay-amer      Jay and the Americans                                         bye-boys      Goodbye Boys, Goodbye
                                                                             tr-light      Travelling Light
 jeff-beck     Jeff Beck                                                     glad          Glad All Over
-kilburn       Kilburn and the High Roads                                                  
+kilburn       Kilburn and the High Roads                                    t-t-fingers   Twenty Tiny Fingers
 louis-arm     Louis Armstrong                                               kiss-fire     Kiss of Fire
-mickey-katz   Mickey Katz                                                                 
-moscow-jazz   Moscow City Jazz Band                                                       
+mickey-katz   Mickey Katz                                                   kiss-fire     Kiss of Fire
+moscow-jazz   Moscow City Jazz Band                                         red-roses     Red Roses for a Blue Lady
 n-wilson      Nancy Wilson                                                  run-back-me   Don't Come Running Back to Me
-naysayer      Naysayer                                                                    
+naysayer      Naysayer                                                      shrimp        Song of the Shrimp
 p-como        Perry Como                                                    kewpie-doll   Kewpie Doll
                                                                             red-roses     Red Roses for a Blue Lady
-plain-white   Plain White T's                                                             
+plain-white   Plain White T's                                               n-for-xmas    Nuttin' for Christmas
 r-conniff     Ray Conniff Singers                                           red-roses     Red Roses for a Blue Lady
 rob-schneid   Rob Schneider                                                 bagel-lox     Bagels & Lox
 r-goulet      Robert Goulet                                                 smr-sounds    Summer Sounds
 r-clooney     Rosemary Clooney                                              eggbert       Eggbert, The Easter Egg
                                                                             suzy-snow     Suzy Snowflake
-sugarland     Sugarland                                                                   
+sugarland     Sugarland                                                     n-for-xmas    Nuttin' for Christmas
 ben-mill      Tex Beneke and The Miller Orchestra                           woodchuck     The Woodchuck Song
 ames-bros     The Ames Brothers                                             nty-lady      The Naughty Lady of Shady Lane
 beatles       The Beatles                                                   glad          Glad All Over
 ink-spots     The Ink Spots                                                 ssss-heart    Say Something Sweet to Your Sweetheart
 stargazers    The Stargazers                                                t-t-fingers   Twenty Tiny Fingers
 v-monroe      Vaughn Monroe                                                 red-roses     Red Roses for a Blue Lady
-vic-dana      Vic Dana                                                                    
-vic-choir     Victoria Junior College Choir (Singapore)                                   
+vic-dana      Vic Dana                                                      red-roses     Red Roses for a Blue Lady
+vic-choir     Victoria Junior College Choir (Singapore)                     red-roses     Red Roses for a Blue Lady
 w-newton      Wayne Newton                                                  red-roses     Red Roses for a Blue Lady
 
-
-The following performers do not have any songs associated with them:
-
-Denis Fischer & Carsten Sauer
-Eartha Kitt
-Herman's Hermits
-Homer and Jethro
-Kilburn and the High Roads
-Mickey Katz
-Moscow City Jazz Band
-Naysayer
-Plain White T's
-Sugarland
-Vic Dana
-Victoria Junior College Choir (Singapore)
 
 
 

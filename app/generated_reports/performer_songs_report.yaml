@@ -1,7 +1,12 @@
 ---
 title: Performer Songs
-generation_time: 2020-06-14 22:23 UTC
+generation_time: 2020-06-16 20:36 UTC
 data:
+- code: a-sherman
+  name: Allan Sherman
+  songs:
+  - code: kiss-fire
+    name: Kiss of Fire
 - code: andy-wms
   name: Andy Williams
   songs:
@@ -71,10 +76,14 @@ data:
     name: Softly My Love
 - code: fisch-sauer
   name: Denis Fischer & Carsten Sauer
-  songs: []
+  songs:
+  - code: l-cowboy
+    name: Lonesome Cowboy
 - code: eartha-kitt
   name: Eartha Kitt
-  songs: []
+  songs:
+  - code: n-for-xmas
+    name: Nuttin' for Christmas
 - code: ed-albert
   name: Eddie Albert
   songs:
@@ -176,10 +185,14 @@ data:
     name: Red Roses for a Blue Lady
 - code: h-hermits
   name: Herman's Hermits
-  songs: []
+  songs:
+  - code: tr-light
+    name: Travelling Light
 - code: homer-jethro
   name: Homer and Jethro
-  songs: []
+  songs:
+  - code: n-for-xmas
+    name: Nuttin' for Christmas
 - code: jay-amer
   name: Jay and the Americans
   songs:
@@ -194,7 +207,9 @@ data:
     name: Glad All Over
 - code: kilburn
   name: Kilburn and the High Roads
-  songs: []
+  songs:
+  - code: t-t-fingers
+    name: Twenty Tiny Fingers
 - code: louis-arm
   name: Louis Armstrong
   songs:
@@ -202,10 +217,14 @@ data:
     name: Kiss of Fire
 - code: mickey-katz
   name: Mickey Katz
-  songs: []
+  songs:
+  - code: kiss-fire
+    name: Kiss of Fire
 - code: moscow-jazz
   name: Moscow City Jazz Band
-  songs: []
+  songs:
+  - code: red-roses
+    name: Red Roses for a Blue Lady
 - code: n-wilson
   name: Nancy Wilson
   songs:
@@ -213,7 +232,9 @@ data:
     name: Don't Come Running Back to Me
 - code: naysayer
   name: Naysayer
-  songs: []
+  songs:
+  - code: shrimp
+    name: Song of the Shrimp
 - code: p-como
   name: Perry Como
   songs:
@@ -223,7 +244,9 @@ data:
     name: Red Roses for a Blue Lady
 - code: plain-white
   name: Plain White T's
-  songs: []
+  songs:
+  - code: n-for-xmas
+    name: Nuttin' for Christmas
 - code: r-conniff
   name: Ray Conniff Singers
   songs:
@@ -248,7 +271,9 @@ data:
     name: Suzy Snowflake
 - code: sugarland
   name: Sugarland
-  songs: []
+  songs:
+  - code: n-for-xmas
+    name: Nuttin' for Christmas
 - code: ben-mill
   name: Tex Beneke and The Miller Orchestra
   songs:
@@ -281,10 +306,14 @@ data:
     name: Red Roses for a Blue Lady
 - code: vic-dana
   name: Vic Dana
-  songs: []
+  songs:
+  - code: red-roses
+    name: Red Roses for a Blue Lady
 - code: vic-choir
   name: Victoria Junior College Choir (Singapore)
-  songs: []
+  songs:
+  - code: red-roses
+    name: Red Roses for a Blue Lady
 - code: w-newton
   name: Wayne Newton
   songs:
