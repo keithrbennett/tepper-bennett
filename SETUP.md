@@ -81,3 +81,12 @@ Remember to turn this mode off when the app is no longer being changed frequentl
 Since Cloudflare is doing the caching, disabling the cache may result in much more traffic to Heroku.
 
 This setting is on the "Overview" panel of the Cloudflare dashboard.
+
+
+### Recreating the Postgres Data Base on Heroku
+
+```
+heroku pg:reset
+heroku run rake db:migrate
+heroku run rake db:seed
+```
