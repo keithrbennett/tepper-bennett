@@ -55,13 +55,8 @@ HEREDOC
 
     data = Song.order(:name).map do |song|
       rights_admins = song.rights_admin_orgs.order(:name)
-      if rights_admins.empty?
-        rights_admin_codes = '?'
-        rights_admin_names = '?'
-      else
-        rights_admin_codes = rights_admins.pluck(:code).join("<br/>")
-        rights_admin_names = rights_admins.pluck(:name).join("<br/>")
-      end
+      rights_admin_codes = rights_admins.pluck(:code).join("<br/>")
+      rights_admin_names = rights_admins.pluck(:name).join("<br/>")
       [song.code, song.name, rights_admin_codes, rights_admin_names]
     end
 
