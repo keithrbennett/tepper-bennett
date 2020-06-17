@@ -52,11 +52,17 @@ HEREDOC
 
   def self.rights_admins_report
     headings = ['Song Code', 'Song Name', 'RA Code', 'Rights Admin Name']
+
     data = Song.order(:name).map do |song|
-      rights_admin = song.rights_admin_orgs.order(:name).first
-      rights_admin_code = rights_admin ? rights_admin.code : '?'
-      rights_admin_name = rights_admin ? rights_admin.name : '?'
-      [song.code, song.name, rights_admin_code, rights_admin_name]
+      rights_admins = song.rights_admin_orgs.order(:name)
+      if rights_admins.empty?
+        rights_admin_codes = '?'
+        rights_admin_names = '?'
+      else
+        rights_admin_codes = rights_admins.pluck(:code).join("<br/>")
+        rights_admin_names = rights_admins.pluck(:name).join("<br/>")
+      end
+      [song.code, song.name, rights_admin_codes, rights_admin_names]
     end
 
     table_data = records_to_cell_data(data)
