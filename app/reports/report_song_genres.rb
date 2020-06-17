@@ -14,7 +14,7 @@ class ReportSongGenres < BaseReport
       {
           'code'   => song.code,
           'name'   => song.name,
-          'genres' => song.genres.pluck(:code)
+          'genres' => song.genres.pluck(:code).sort
       }
     end
   end
