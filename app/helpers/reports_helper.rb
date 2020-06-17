@@ -11,7 +11,7 @@ module ReportsHelper
       record.each do |field_value|
         html << "<td>" << field_value << "</td>"
       end
-      html << "</tr>"
+      html << "</tr>\n"
     end
     html.string.html_safe
   end
@@ -49,6 +49,21 @@ HEREDOC
     html_report_table(headings, table_data.join("\n"))
   end
 
+
+  def self.rights_admins_report
+    headings = ['Song Code', 'Song Name', 'RA Code', 'Rights Admin Name']
+    data = Song.order(:name).map do |song|
+      rights_admin = song.rights_admin_orgs.order(:name).first
+      rights_admin_code = rights_admin ? rights_admin.code : '?'
+      rights_admin_name = rights_admin ? rights_admin.name : '?'
+      [song.code, song.name, rights_admin_code, rights_admin_name]
+    end
+
+    table_data = records_to_cell_data(data)
+    html_report_table(headings, table_data)
+  end
+
+
   def self.init_reports_metadata
     sample_html_report = '<h1>Sample</h1>'
 
@@ -63,7 +78,7 @@ HEREDOC
         ['movies',                    'Movies',            movie_report],
         ['movie_songs',               'Movies Songs',      sample_html_report],
         ['organization_codes_names',  'Organizations',     html_code_name_report_table(Organization)],
-        ['song_rights_admins',        'Song Rights Administrators', sample_html_report],
+        ['song_rights_admins',        'Song Rights Administrators', rights_admins_report],
         ['writer_codes_names',        'Writers',           html_code_name_report_table(Writer)],
     ].map { |(key, title, html_report)| Report.new(key, title, html_report) }
   end
