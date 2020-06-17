@@ -17,7 +17,7 @@ module ReportsHelper
   end
 
 
-  def self.html_report_table(column_headings, records)
+  def self.html_report_table(column_headings, table_data)
 
     html = <<HEREDOC
     <div class="table-responsive">
@@ -25,7 +25,7 @@ module ReportsHelper
     <thead class="thead-dark">
       <tr>#{column_headings.map { |h| "<th>#{h}</th>"}.join}</tr>
     </thead>
-    #{records_to_cell_data(records)}
+    #{table_data}
     </table>
     </div>
 HEREDOC
@@ -34,7 +34,8 @@ HEREDOC
 
 
   def self.html_code_name_report_table(ar_class)
-    html_report_table(%w{code name}, ar_class.order(:name).pluck(:code, :name))
+    table_data = records_to_cell_data(ar_class.order(:name).pluck(:code, :name))
+    html_report_table(%w{Code Name}, table_data)
   end
 
 
