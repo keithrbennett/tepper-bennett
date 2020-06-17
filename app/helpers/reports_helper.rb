@@ -40,7 +40,13 @@ HEREDOC
 
 
   def self.movie_report
+    headings = ['Code', 'Year', 'IMDB Key', 'Name']
+    table_data = Movie.order(:name).map do |m|
+      imdb_anchor = %Q{<a href="#{m.imdb_url}", target="_blank">#{m.imdb_key}</a>}
+      %Q{<tr><td>#{m.code}</td><td>#{m.year}</td><td>#{imdb_anchor}</td><td>#{m.name}</td></tr>}
+    end
 
+    html_report_table(headings, table_data.join("\n"))
   end
 
   def self.init_reports_metadata
@@ -54,7 +60,7 @@ HEREDOC
         ['performer_songs',           'Performer Songs',   sample_html_report],
         ['song_genres',               'Genres by Song',    sample_html_report],
         ['genre_songs',               'Songs by Genre',    sample_html_report],
-        ['movies',                    'Movies',            sample_html_report],
+        ['movies',                    'Movies',            movie_report],
         ['movie_songs',               'Movies Songs',      sample_html_report],
         ['organization_codes_names',  'Organizations',     html_code_name_report_table(Organization)],
         ['song_rights_admins',        'Song Rights Administrators', sample_html_report],
