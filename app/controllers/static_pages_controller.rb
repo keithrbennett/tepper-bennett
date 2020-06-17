@@ -94,7 +94,7 @@ class StaticPagesController < ActionController::Base
   end
 
 
-  class Report < Struct.new(:key, :title) #, :report_text, :report_json, :report_yaml)
+  class Report < Struct.new(:key, :title, :html_report) #, :report_text, :report_json, :report_yaml)
 
     def button_id
       key + '_button'
@@ -110,6 +110,7 @@ class StaticPagesController < ActionController::Base
           card_button_id:  button_id,
           card_content_id: content_id,
           report_title:    title,
+          report_html:     html_report,
           report_text:     report_text,
           report_json:     report_json,
           report_yaml:     report_yaml,
@@ -143,6 +144,8 @@ class StaticPagesController < ActionController::Base
 
 
   def init_reports_metadata
+    html_report = render_to_string('_html_report')
+
     @reports ||= [
         ['song_codes_names',          'Songs'],
         ['performer_codes_names',     'Performers'],
@@ -156,7 +159,7 @@ class StaticPagesController < ActionController::Base
         ['organization_codes_names',  'Organizations'],
         ['song_rights_admins',        'Song Rights Administrators'],
         ['writer_codes_names',        'Writers'],
-    ].map { |(key, title)| Report.new(key, title) }
+    ].map { |(key, title)| Report.new(key, title, html_report) }
   end
 
 end
