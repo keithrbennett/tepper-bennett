@@ -1,3 +1,5 @@
+require_relative '../helpers/reports_helper'
+
 class StaticPagesController < ActionController::Base
 
   Recording = Struct.new(:title, :artist, :yt_video_code, :movie, :embed_url, :watch_url)
@@ -9,7 +11,7 @@ class StaticPagesController < ActionController::Base
   def initialize
     init_songs_pane_recordings
     init_elvis_pane_recordings
-    init_reports_metadata
+    @reports = ReportsHelper.init_reports_metadata
   end
 
   def respond
@@ -91,75 +93,6 @@ class StaticPagesController < ActionController::Base
         r.("Petunia, the Gardener's Daughter",  'wuzbUsy6snc', 'Frankie and Johnny'),
         r.('All That I Am',                     'IIpNWh_0Tw8', 'Spinout'),
     ]
-  end
-
-
-  class Report < Struct.new(:key, :title, :html_report) #, :report_text, :report_json, :report_yaml)
-
-    def button_id
-      key + '_button'
-    end
-
-    def content_id
-      key + '_content'
-    end
-
-    def locals
-      {
-          name:            key,
-          card_button_id:  button_id,
-          card_content_id: content_id,
-          report_title:    title,
-          report_html:     html_report,
-          report_text:     report_text,
-          report_json:     report_json,
-          report_yaml:     report_yaml,
-          copy_button_id:  "btn-copy-#{key}",
-          content_tab_id:  "content-tab-#{key}"
-      }
-    end
-
-    def report_filespec(extension)
-      File.join(Rails.root, 'app', 'generated_reports', "#{key}_report#{extension}")
-    end
-
-
-    def preize_file_content(extension)
-      "<div><pre>\n".html_safe + File.read(report_filespec(extension)) + "</pre></div>\n".html_safe
-    end
-
-    def report_text
-      @report_text ||= preize_file_content('.txt')
-    end
-
-    def report_json
-      @report_json ||= preize_file_content('.json')
-    end
-
-    def report_yaml
-      @report_yaml ||= preize_file_content('.yaml')
-    end
-  end
-  # ---- end Report class
-
-
-  def init_reports_metadata
-    html_report = render_to_string('_html_report')
-
-    @reports ||= [
-        ['song_codes_names',          'Songs'],
-        ['performer_codes_names',     'Performers'],
-        ['genres',                    'Genres'],
-        ['song_performers',           'Song Performers'],
-        ['performer_songs',           'Performer Songs'],
-        ['song_genres',               'Genres by Song'],
-        ['genre_songs',               'Songs by Genre'],
-        ['movies',                    'Movies'],
-        ['movie_songs',               'Movies Songs'],
-        ['organization_codes_names',  'Organizations'],
-        ['song_rights_admins',        'Song Rights Administrators'],
-        ['writer_codes_names',        'Writers'],
-    ].map { |(key, title)| Report.new(key, title, html_report) }
   end
 
 end

@@ -71,19 +71,19 @@ def song_table(artist_or_movie)
   recordings_html = recordings.map { |r| song_table_row(r, artist_or_movie) }.join("\n")
 
   html = <<HEREDOC
-<div class="table-responsive">
-  <table class="table thead-dark table-striped">
-    <thead class="thead-dark">
-    <tr>
-      <th>Title</th>
-      <th>#{heading}</th>
-      <th style="text-align: center;">Listen</th>
-    </tr>
-    </thead>
-
-    #{recordings_html}
-  </table>
-</div>
+    <div class="table-responsive">
+      <table class="table thead-dark table-striped">
+        <thead class="thead-dark">
+        <tr>
+          <th>Title</th>
+          <th>#{heading}</th>
+          <th style="text-align: center;">Listen</th>
+        </tr>
+        </thead>
+    
+        #{recordings_html}
+      </table>
+    </div>
 
 HEREDOC
 
