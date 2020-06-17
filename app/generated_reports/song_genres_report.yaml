@@ -1,6 +1,6 @@
 ---
 title: Song Genres
-generation_time: 2020-06-17 05:32 UTC
+generation_time: 2020-06-17 07:06 UTC
 data:
 - code: boy-like-me
   name: A Boy Like Me, A Girl Like You
@@ -33,9 +33,9 @@ data:
 - code: angel
   name: Angel
   genres:
-  - romantic
   - elvis
   - movie
+  - romantic
 - code: bagel-lox
   name: Bagels & Lox
   genres: []
@@ -48,9 +48,9 @@ data:
 - code: beg-luck
   name: Beginners Luck
   genres:
-  - romantic
   - elvis
   - movie
+  - romantic
 - code: confidence
   name: Confidence
   genres:
@@ -114,9 +114,9 @@ data:
 - code: isl-love
   name: Island of Love
   genres:
-  - romantic
   - elvis
   - movie
+  - romantic
 - code: ito-eats
   name: Ito Eats
   genres:
@@ -153,6 +153,7 @@ data:
 - code: kiss-fire
   name: Kiss of Fire
   genres:
+  - hit
   - romantic
 - code: l-cowboy
   name: Lonesome Cowboy
@@ -178,6 +179,7 @@ data:
   name: Nuttin' for Christmas
   genres:
   - children
+  - hit
 - code: once-enough
   name: Once is Enough
   genres:
@@ -186,18 +188,19 @@ data:
 - code: petunia
   name: Petunia, the Gardener's Daughter
   genres:
-  - romantic
   - elvis
   - movie
+  - romantic
 - code: puppet
   name: Puppet on a String
   genres:
-  - romantic
   - elvis
   - movie
+  - romantic
 - code: red-roses
   name: Red Roses for a Blue Lady
   genres:
+  - hit
   - romantic
 - code: relax
   name: Relax
@@ -260,15 +263,15 @@ data:
 - code: bullfighter
   name: The Bullfighter Was a Lady
   genres:
-  - romantic
   - elvis
   - movie
+  - romantic
 - code: lady-loves
   name: The Lady Loves Me
   genres:
-  - romantic
   - elvis
   - movie
+  - romantic
 - code: train-ahchoo
   name: The Little Train Who Said 'Ah Choo
   genres:
@@ -277,6 +280,7 @@ data:
   name: The Naughty Lady of Shady Lane
   genres:
   - funny
+  - hit
 - code: walls-ears
   name: The Walls Have Ears
   genres:
@@ -288,6 +292,7 @@ data:
 - code: yng-ones
   name: The Young Ones
   genres:
+  - hit
   - movie
   - tv
 - code: tr-light

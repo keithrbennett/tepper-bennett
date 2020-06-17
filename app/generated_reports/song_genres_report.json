@@ -1,6 +1,6 @@
 {
   "title": "Song Genres",
-  "generation_time": "2020-06-17 05:32 UTC",
+  "generation_time": "2020-06-17 07:06 UTC",
   "data": [
     {
       "code": "boy-like-me",
@@ -49,9 +49,9 @@
       "code": "angel",
       "name": "Angel",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
@@ -74,9 +74,9 @@
       "code": "beg-luck",
       "name": "Beginners Luck",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
@@ -184,9 +184,9 @@
       "code": "isl-love",
       "name": "Island of Love",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
@@ -252,6 +252,7 @@
       "code": "kiss-fire",
       "name": "Kiss of Fire",
       "genres": [
+        "hit",
         "romantic"
       ]
     },
@@ -291,7 +292,8 @@
       "code": "n-for-xmas",
       "name": "Nuttin' for Christmas",
       "genres": [
-        "children"
+        "children",
+        "hit"
       ]
     },
     {
@@ -306,24 +308,25 @@
       "code": "petunia",
       "name": "Petunia, the Gardener's Daughter",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
       "code": "puppet",
       "name": "Puppet on a String",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
       "code": "red-roses",
       "name": "Red Roses for a Blue Lady",
       "genres": [
+        "hit",
         "romantic"
       ]
     },
@@ -429,18 +432,18 @@
       "code": "bullfighter",
       "name": "The Bullfighter Was a Lady",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
       "code": "lady-loves",
       "name": "The Lady Loves Me",
       "genres": [
-        "romantic",
         "elvis",
-        "movie"
+        "movie",
+        "romantic"
       ]
     },
     {
@@ -454,7 +457,8 @@
       "code": "nty-lady",
       "name": "The Naughty Lady of Shady Lane",
       "genres": [
-        "funny"
+        "funny",
+        "hit"
       ]
     },
     {
@@ -476,6 +480,7 @@
       "code": "yng-ones",
       "name": "The Young Ones",
       "genres": [
+        "hit",
         "movie",
         "tv"
       ]

@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
-                                               Song Genres -- Generated 2020-06-17 05:32 UTC
+                                               Song Genres -- Generated 2020-06-17 07:06 UTC
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -7,13 +7,13 @@
 
 boy-like-me   A Boy Like Me, A Girl Like You                      elvis  movie
 cane-collar   A Cane and A High Starched Collar                   elvis  movie
-h-everything  A House That Has Everything                         romantic  elvis  movie
-all-i-am      All That I Am                                       romantic  elvis  movie
-am-i-ready    Am I Ready                                          romantic  elvis  movie
-angel         Angel                                               romantic  elvis  movie
+h-everything  A House That Has Everything                         elvis  movie  romantic
+all-i-am      All That I Am                                       elvis  movie  romantic
+am-i-ready    Am I Ready                                          elvis  movie  romantic
+angel         Angel                                               elvis  movie  romantic
 bagel-lox     Bagels & Lox                                        
 b-b-blues     Beach Boy Blues                                     blues  elvis  movie
-beg-luck      Beginners Luck                                      romantic  elvis  movie
+beg-luck      Beginners Luck                                      elvis  movie  romantic
 confidence    Confidence                                          elvis  movie
 run-back-me   Don't Come Running Back to Me                       romantic
 drums-isles   Drums of the Islands                                elvis  movie
@@ -27,7 +27,7 @@ glad          Glad All Over
 bye-boys      Goodbye Boys, Goodbye                               
 h-sunset      Hawaiian Sunset                                     elvis  movie
 one-girl      I Love Only One Girl                                elvis  movie
-isl-love      Island of Love                                      romantic  elvis  movie
+isl-love      Island of Love                                      elvis  movie  romantic
 ito-eats      Ito Eats                                            elvis  movie
 long-way      It's a Long Way from Your House to My House         romantic
 wond-world    It's a Wonderful World                              elvis  movie
@@ -36,16 +36,16 @@ jenny-kiss    Jenny Kissed Me                                     romantic
 old-sake      Just for Old Time Sake                              elvis
 kewpie-doll   Kewpie Doll                                         
 kismet        Kismet                                              elvis  movie
-kiss-fire     Kiss of Fire                                        romantic
+kiss-fire     Kiss of Fire                                        hit  romantic
 l-cowboy      Lonesome Cowboy                                     elvis  movie
 mexico        Mexico                                              elvis  movie
 mine          Mine                                                elvis  movie
 n-orleans     New Orleans                                         elvis  movie
-n-for-xmas    Nuttin' for Christmas                               children
+n-for-xmas    Nuttin' for Christmas                               children  hit
 once-enough   Once is Enough                                      elvis  movie
-petunia       Petunia, the Gardener's Daughter                    romantic  elvis  movie
-puppet        Puppet on a String                                  romantic  elvis  movie
-red-roses     Red Roses for a Blue Lady                           romantic
+petunia       Petunia, the Gardener's Daughter                    elvis  movie  romantic
+puppet        Puppet on a String                                  elvis  movie  romantic
+red-roses     Red Roses for a Blue Lady                           hit  romantic
 relax         Relax                                               elvis  movie
 santa-daddy   Santa Claus Looks Just Like Daddy                   children
 ssss-heart    Say Something Sweet to Your Sweetheart              romantic
@@ -59,13 +59,13 @@ smr-sounds    Summer Sounds
 suzy-snow     Suzy Snowflake                                      children
 take-me-fair  Take Me to the Fair                                 elvis  movie
 tear-rain     Teardrops in the Rain                               romantic
-bullfighter   The Bullfighter Was a Lady                          romantic  elvis  movie
-lady-loves    The Lady Loves Me                                   romantic  elvis  movie
+bullfighter   The Bullfighter Was a Lady                          elvis  movie  romantic
+lady-loves    The Lady Loves Me                                   elvis  movie  romantic
 train-ahchoo  The Little Train Who Said 'Ah Choo                  children
-nty-lady      The Naughty Lady of Shady Lane                      funny
+nty-lady      The Naughty Lady of Shady Lane                      funny  hit
 walls-ears    The Walls Have Ears                                 elvis  movie
 woodchuck     The Woodchuck Song                                  
-yng-ones      The Young Ones                                      movie  tv
+yng-ones      The Young Ones                                      hit  movie  tv
 tr-light      Travelling Light                                    
 t-t-fingers   Twenty Tiny Fingers                                 children
 vino          Vino, Dinero y Amor                                 elvis  movie

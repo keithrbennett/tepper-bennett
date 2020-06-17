@@ -1,6 +1,6 @@
 {
   "title": "Songs by Genre",
-  "generation_time": "2020-06-17 05:32 UTC",
+  "generation_time": "2020-06-17 07:06 UTC",
   "data": {
     "bluegrass": [
 
@@ -221,7 +221,26 @@
       }
     ],
     "hit": [
-
+      {
+        "code": "kiss-fire",
+        "name": "Kiss of Fire"
+      },
+      {
+        "code": "n-for-xmas",
+        "name": "Nuttin' for Christmas"
+      },
+      {
+        "code": "red-roses",
+        "name": "Red Roses for a Blue Lady"
+      },
+      {
+        "code": "nty-lady",
+        "name": "The Naughty Lady of Shady Lane"
+      },
+      {
+        "code": "yng-ones",
+        "name": "The Young Ones"
+      }
     ],
     "movie": [
       {

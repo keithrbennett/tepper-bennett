@@ -1,6 +1,6 @@
 {
   "title": "Genres",
-  "generation_time": "2020-06-17 05:32 UTC",
+  "generation_time": "2020-06-17 07:06 UTC",
   "data": [
     {
       "code": "bluegrass",
@@ -35,7 +35,7 @@
     {
       "code": "hit",
       "name": "hit",
-      "song_count": 0
+      "song_count": 5
     },
     {
       "code": "movie",

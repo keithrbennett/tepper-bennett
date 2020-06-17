@@ -1,5 +1,5 @@
 ----------------------------------------
-Genres -- Generated 2020-06-17 05:32 UTC
+Genres -- Generated 2020-06-17 07:06 UTC
 ----------------------------------------
 
 
@@ -11,7 +11,7 @@ children      children           6
 country       country            0
 elvis         elvis             42
 funny         funny              1
-hit           hit                0
+hit           hit                5
 movie         movie             42
 rock          rock               0
 romantic      romantic          19
