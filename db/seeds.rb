@@ -1,3 +1,6 @@
+# This script seeds the data base with all the data it needs for the application.
+# Data is not modified by the application.
+# Run rails db:reset to recreate the DB with this data
 
 def add_genres
   genres = %w(bluegrass blues children country elvis funny hit movie rock romantic tv)
@@ -132,21 +135,21 @@ def add_song(code:, name:, performers: [], genres: [], writers: default_writers,
   db_song = Song.new(code: code, name: name, writers: writers)
 
   performers ||= []
-  performers.each do |code|
+  performers.uniq.each do |code|
     performer = Performer.find_by_code(code)
     raise "Performer for code '#{code}' not found." if performer.nil?
     db_song.performers << performer
   end
 
   genres ||= []
-  genres.each do |code|
+  genres.uniq.each do |code|
     genre = Genre.find_by_code(code)
     raise "Genre for code '#{code}' not found." if genre.nil?
     db_song.genres << genre
   end
 
   movies ||= []
-  movies.each do |code|
+  movies.uniq.each do |code|
     movie = Movie.find_by_code(code)
     raise "Movie for code '#{code}' not found." if movie.nil?
     db_song.movies << movie
