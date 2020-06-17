@@ -1,9 +1,8 @@
 require_relative 'report'
 
-module ReportsHelper
+module StaticPagesHelper
 
-
-  def self.records_to_cell_data(records)
+  def records_to_cell_data(records)
     html = StringIO.new
     html << "\n"
     records.each do |record|
@@ -17,7 +16,7 @@ module ReportsHelper
   end
 
 
-  def self.html_report_table(column_headings, table_data)
+  def html_report_table(column_headings, table_data)
 
     html = <<HEREDOC
     <div class="table-responsive">
@@ -33,13 +32,13 @@ HEREDOC
   end
 
 
-  def self.html_code_name_report_table(ar_class)
+  def html_code_name_report_table(ar_class)
     table_data = records_to_cell_data(ar_class.order(:name).pluck(:code, :name))
     html_report_table(%w{Code Name}, table_data)
   end
 
 
-  def self.html_movie_report
+  def html_movie_report
     headings = ['Code', 'Year', 'IMDB Key', 'Name']
     table_data = Movie.order(:name).map do |m|
       imdb_anchor = %Q{<a href="#{m.imdb_url}", target="_blank">#{m.imdb_key}</a>}
@@ -50,7 +49,7 @@ HEREDOC
   end
 
 
-  def self.html_rights_admins_report
+  def html_rights_admins_report
     headings = ['Song Code', 'Song Name', 'RA Code', 'Rights Admin Name']
 
     data = Song.order(:name).map do |song|
@@ -65,7 +64,7 @@ HEREDOC
   end
 
 
-  def self.html_movie_songs_report
+  def html_movie_songs_report
     headings = ['Year', 'Code', 'Name', 'Song Code', 'Song Name']
 
     data = Movie.order(:name).map do |movie|
@@ -80,7 +79,7 @@ HEREDOC
   end
 
 
-  def self.html_genre_songs_report
+  def html_genre_songs_report
     html = StringIO.new
     headings = ['Song Code', 'Song Name']
 
@@ -100,7 +99,7 @@ HEREDOC
   end
 
 
-  def self.html_song_performers_report
+  def html_song_performers_report
     headings = ['Song Code', 'Song Name', 'Perf Code', 'Performer Name']
     data = Song.order(:name).map do |song|
       [
@@ -116,7 +115,7 @@ HEREDOC
   end
 
 
-  def self.html_performer_songs_report
+  def html_performer_songs_report
     headings = ['Perf Code', 'Performer Name', 'Song Code', 'Song Name']
     data = Performer.order(:name).map do |performer|
       [
@@ -132,7 +131,7 @@ HEREDOC
   end
 
 
-  def self.html_song_genres_report
+  def html_song_genres_report
     headings = ['Code', 'Name', 'Genres']
     data = Song.order(:name).map do |song|
       [
@@ -147,12 +146,32 @@ HEREDOC
   end
 
 
-  def self.init_reports_metadata
-    sample_html_report = '<h1>Sample</h1>'
+  def html_song_plays_report
+    headings = ['Song Code', 'Song Name', 'Perf Code', 'Performer Name', 'YouTube Key', 'Play']
+    data = SongPlay.joins(:song).all.order('songs.name, id').map do |song_play|
+      song = song_play.song
+      perfs = song_play.performers.order(:name)
+      # youtube_link = %Q{<a class="youtube-view" href="#{song_play.youtube_embed_url}">*</a>}
+      [
+          song.code,
+          song.name,
+          perfs.pluck(:code).join("\n"),
+          perfs.pluck(:name).join("\n"),
+          song_play.youtube_key,
+          youtube_image_link(song_play.youtube_embed_url)
+      ]
+    end
 
+    table_data = records_to_cell_data(data)
+    html_report_table(headings, table_data)
+  end
+
+
+  def init_reports_metadata
     @reports ||= [
         ['song_codes_names',          'Songs',             html_code_name_report_table(Song)],
         ['performer_codes_names',     'Performers',        html_code_name_report_table(Performer)],
+        ['song_plays',                'Song Plays',        html_song_plays_report],
         ['genres',                    'Genres',            html_code_name_report_table(Genre)],
         ['song_performers',           'Song Performers',   html_song_performers_report],
         ['performer_songs',           'Performer Songs',   html_performer_songs_report],

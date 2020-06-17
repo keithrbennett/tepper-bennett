@@ -1,26 +1,23 @@
 module ApplicationHelper
 
   def external_link(text, url)
-    tag.a(text.html_safe, href:url, target: '_blank').html_safe
+    tag.a(text, href:url, target: '_blank').html_safe
   end
 
-  def external_image_link(image_filename, url)
-    tag.a(href: url, target: '_blank') do
-      image_tag(image_filename, alt: 'YouTube')
-    end
-  end
-
-  def youtube_image_link(url)
-    external_image_link('youtube.png', url)
-  end
 
   def li_external_link(text, url)
     tag.li(external_link(text.html_safe, url)).html_safe
   end
 
-  def youtube_icon_image
-    image_path('youtube.png')
+
+  def youtube_image_link(url)
+    %Q{
+    <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal" data-url="#{url}">
+          #{image_tag('youtube.png', alt: 'Listen')}
+    </a>
+    }.html_safe
   end
+
 
   def youtube_embed_url(code)
     "https://www.youtube.com/embed/#{code}"
@@ -61,7 +58,6 @@ module ApplicationHelper
 HEREDOC
     html.html_safe
   end
-end
 
 
 def song_table(artist_or_movie)
@@ -126,7 +122,6 @@ def nav_content(name:, html_text: nil, active: false)
   end
 end
 
-
 def youtube_text_song_link(text, youtube_code)
   html = tag.a(
       href: '#',
@@ -134,9 +129,10 @@ def youtube_text_song_link(text, youtube_code)
       'data-url'.to_sym => youtube_embed_url(youtube_code),
       'data-toggle'.to_sym => 'modal',
       'data-target'.to_sym => '#youTubeViewerModal') do
-      # onclick: %Q{setPlayerYoutubeUrl('#{youtube_embed_url(youtube_code)}');}) do
+    # onclick: %Q{setPlayerYoutubeUrl('#{youtube_embed_url(youtube_code)}');}) do
     text
   end
 
   html.html_safe
+end
 end

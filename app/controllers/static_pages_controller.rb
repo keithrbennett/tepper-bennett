@@ -1,4 +1,4 @@
-require_relative '../helpers/reports_helper'
+require_relative '../helpers/static_pages_helper'
 
 class StaticPagesController < ActionController::Base
 
@@ -11,7 +11,6 @@ class StaticPagesController < ActionController::Base
   def initialize
     init_songs_pane_recordings
     init_elvis_pane_recordings
-    @reports = ReportsHelper.init_reports_metadata
   end
 
   def respond
