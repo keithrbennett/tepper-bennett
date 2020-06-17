@@ -1,5 +1,5 @@
 --------------------------------------------------------------
-           Movies -- Generated 2020-06-16 20:36 UTC
+           Movies -- Generated 2020-06-17 05:32 UTC
 --------------------------------------------------------------
 
 
@@ -9,9 +9,9 @@ b-hawaii        1961   tt0054692   Blue Hawaii
 clambake        1967   tt0061489   Clambake
 d-trouble       1967   tt0061595   Double Trouble
 flam-star       1960   tt0053825   Flaming Star
-foll-dream      1962   tt0054692   Follow That Dream
+foll-dream      1962   tt0055992   Follow That Dream
 f-johnny        1966   tt0060429   Frankie and Johnny
-acapulco        1963   tt0055626   Fun in Acapulco
+acapulco        1963   tt0057083   Fun in Acapulco
 g-i-blues       1960   tt0053848   G. I. Blues
 girl-happy      1964   tt0059224   Girl Happy
 girls           1962   tt0056023   Girls! Girls! Girls!

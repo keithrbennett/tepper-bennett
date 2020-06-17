@@ -1,6 +1,6 @@
 ---
 title: Songs Rights Administrators
-generation_time: 2020-06-16 20:36 UTC
+generation_time: 2020-06-17 05:32 UTC
 data:
 - code: boy-like-me
   name: A Boy Like Me, A Girl Like You
@@ -68,11 +68,11 @@ data:
 - code: one-girl
   name: I Love Only One Girl
   rights_admin_orgs: []
-- code: crush-ny
-  name: I've Got a Crush on New York Town
-  rights_admin_orgs: []
 - code: isl-love
   name: Island of Love
+  rights_admin_orgs: []
+- code: ito-eats
+  name: Ito Eats
   rights_admin_orgs: []
 - code: long-way
   name: It's a Long Way from Your House to My House
@@ -80,8 +80,8 @@ data:
 - code: wond-world
   name: It's a Wonderful World
   rights_admin_orgs: []
-- code: ito-eats
-  name: Ito Eats
+- code: crush-ny
+  name: I've Got a Crush on New York Town
   rights_admin_orgs: []
 - code: jenny-kiss
   name: Jenny Kissed Me

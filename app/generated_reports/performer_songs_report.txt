@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
-                                             Performer Songs -- Generated 2020-06-16 20:36 UTC
+                                             Performer Songs -- Generated 2020-06-17 05:32 UTC
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -8,11 +8,11 @@ Perf Code     Performer Name                                                Song
 a-sherman     Allan Sherman                                                 kiss-fire     Kiss of Fire
 andy-wms      Andy Williams                                                 red-roses     Red Roses for a Blue Lady
                                                                             ww-young      Wonderful World of the Young
-ann-margret   Ann-Margret                                                   lady-loves    The Lady Loves Me
 anne-lloyd    Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra       train-ahchoo  The Little Train Who Said 'Ah Choo
+ann-margret   Ann-Margret                                                   lady-loves    The Lady Loves Me
+a-prysock     Arthur Prysock                                                tear-rain     Teardrops in the Rain
 a-mooney      Art Mooney & His Orchestra                                    n-for-xmas    Nuttin' for Christmas
                                                                             santa-daddy   Santa Claus Looks Just Like Daddy
-a-prysock     Arthur Prysock                                                tear-rain     Teardrops in the Rain
 b-gordon      Barry Gordon                                                  n-for-xmas    Nuttin' for Christmas
                                                                             santa-daddy   Santa Claus Looks Just Like Daddy
 bert-kmft     Bert Kaempfert and His Orchestra                              red-roses     Red Roses for a Blue Lady
@@ -44,8 +44,8 @@ elvis         Elvis Presley                                                 boy-
                                                                             h-sunset      Hawaiian Sunset
                                                                             one-girl      I Love Only One Girl
                                                                             isl-love      Island of Love
-                                                                            wond-world    It's a Wonderful World
                                                                             ito-eats      Ito Eats
+                                                                            wond-world    It's a Wonderful World
                                                                             old-sake      Just for Old Time Sake
                                                                             kismet        Kismet
                                                                             l-cowboy      Lonesome Cowboy
@@ -85,8 +85,8 @@ p-como        Perry Como                                                    kewp
                                                                             red-roses     Red Roses for a Blue Lady
 plain-white   Plain White T's                                               n-for-xmas    Nuttin' for Christmas
 r-conniff     Ray Conniff Singers                                           red-roses     Red Roses for a Blue Lady
-rob-schneid   Rob Schneider                                                 bagel-lox     Bagels & Lox
 r-goulet      Robert Goulet                                                 smr-sounds    Summer Sounds
+rob-schneid   Rob Schneider                                                 bagel-lox     Bagels & Lox
 r-clooney     Rosemary Clooney                                              eggbert       Eggbert, The Easter Egg
                                                                             suzy-snow     Suzy Snowflake
 sugarland     Sugarland                                                     n-for-xmas    Nuttin' for Christmas

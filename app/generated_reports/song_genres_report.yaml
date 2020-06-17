@@ -1,6 +1,6 @@
 ---
 title: Song Genres
-generation_time: 2020-06-16 20:36 UTC
+generation_time: 2020-06-17 05:32 UTC
 data:
 - code: boy-like-me
   name: A Boy Like Me, A Girl Like You
@@ -33,9 +33,9 @@ data:
 - code: angel
   name: Angel
   genres:
+  - romantic
   - elvis
   - movie
-  - romantic
 - code: bagel-lox
   name: Bagels & Lox
   genres: []
@@ -48,9 +48,9 @@ data:
 - code: beg-luck
   name: Beginners Luck
   genres:
+  - romantic
   - elvis
   - movie
-  - romantic
 - code: confidence
   name: Confidence
   genres:
@@ -111,15 +111,17 @@ data:
   genres:
   - elvis
   - movie
-- code: crush-ny
-  name: I've Got a Crush on New York Town
-  genres: []
 - code: isl-love
   name: Island of Love
   genres:
+  - romantic
   - elvis
   - movie
-  - romantic
+- code: ito-eats
+  name: Ito Eats
+  genres:
+  - elvis
+  - movie
 - code: long-way
   name: It's a Long Way from Your House to My House
   genres:
@@ -129,11 +131,9 @@ data:
   genres:
   - elvis
   - movie
-- code: ito-eats
-  name: Ito Eats
-  genres:
-  - elvis
-  - movie
+- code: crush-ny
+  name: I've Got a Crush on New York Town
+  genres: []
 - code: jenny-kiss
   name: Jenny Kissed Me
   genres:
@@ -186,15 +186,15 @@ data:
 - code: petunia
   name: Petunia, the Gardener's Daughter
   genres:
+  - romantic
   - elvis
   - movie
-  - romantic
 - code: puppet
   name: Puppet on a String
   genres:
+  - romantic
   - elvis
   - movie
-  - romantic
 - code: red-roses
   name: Red Roses for a Blue Lady
   genres:
@@ -260,15 +260,15 @@ data:
 - code: bullfighter
   name: The Bullfighter Was a Lady
   genres:
+  - romantic
   - elvis
   - movie
-  - romantic
 - code: lady-loves
   name: The Lady Loves Me
   genres:
+  - romantic
   - elvis
   - movie
-  - romantic
 - code: train-ahchoo
   name: The Little Train Who Said 'Ah Choo
   genres:

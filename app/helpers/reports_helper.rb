@@ -86,6 +86,22 @@ HEREDOC
   end
 
 
+  def self.html_performer_songs_report
+    headings = ['Perf Code', 'Performer Name', 'Song Code', 'Song Name']
+    data = Performer.order(:name).map do |performer|
+      [
+          performer.code,
+          performer.name,
+          performer.songs.pluck(:code).join("<br/>"),
+          performer.songs.pluck(:name).join("<br/>"),
+      ]
+    end
+
+    table_data = records_to_cell_data(data)
+    html_report_table(headings, table_data)
+  end
+
+
   def self.init_reports_metadata
     sample_html_report = '<h1>Sample</h1>'
 
@@ -94,7 +110,7 @@ HEREDOC
         ['performer_codes_names',     'Performers',        html_code_name_report_table(Performer)],
         ['genres',                    'Genres',            html_code_name_report_table(Genre)],
         ['song_performers',           'Song Performers',   html_song_performers_report],
-        ['performer_songs',           'Performer Songs',   sample_html_report],
+        ['performer_songs',           'Performer Songs',   html_performer_songs_report],
         ['song_genres',               'Genres by Song',    sample_html_report],
         ['genre_songs',               'Songs by Genre',    sample_html_report],
         ['movies', 'Movies', html_movie_report],

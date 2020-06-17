@@ -1,6 +1,6 @@
 ---
 title: Performer Songs
-generation_time: 2020-06-16 20:36 UTC
+generation_time: 2020-06-17 05:32 UTC
 data:
 - code: a-sherman
   name: Allan Sherman
@@ -14,16 +14,21 @@ data:
     name: Red Roses for a Blue Lady
   - code: ww-young
     name: Wonderful World of the Young
-- code: ann-margret
-  name: Ann-Margret
-  songs:
-  - code: lady-loves
-    name: The Lady Loves Me
 - code: anne-lloyd
   name: Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra
   songs:
   - code: train-ahchoo
     name: The Little Train Who Said 'Ah Choo
+- code: ann-margret
+  name: Ann-Margret
+  songs:
+  - code: lady-loves
+    name: The Lady Loves Me
+- code: a-prysock
+  name: Arthur Prysock
+  songs:
+  - code: tear-rain
+    name: Teardrops in the Rain
 - code: a-mooney
   name: Art Mooney & His Orchestra
   songs:
@@ -31,11 +36,6 @@ data:
     name: Nuttin' for Christmas
   - code: santa-daddy
     name: Santa Claus Looks Just Like Daddy
-- code: a-prysock
-  name: Arthur Prysock
-  songs:
-  - code: tear-rain
-    name: Teardrops in the Rain
 - code: b-gordon
   name: Barry Gordon
   songs:
@@ -128,10 +128,10 @@ data:
     name: I Love Only One Girl
   - code: isl-love
     name: Island of Love
-  - code: wond-world
-    name: It's a Wonderful World
   - code: ito-eats
     name: Ito Eats
+  - code: wond-world
+    name: It's a Wonderful World
   - code: old-sake
     name: Just for Old Time Sake
   - code: kismet
@@ -252,16 +252,16 @@ data:
   songs:
   - code: red-roses
     name: Red Roses for a Blue Lady
-- code: rob-schneid
-  name: Rob Schneider
-  songs:
-  - code: bagel-lox
-    name: Bagels & Lox
 - code: r-goulet
   name: Robert Goulet
   songs:
   - code: smr-sounds
     name: Summer Sounds
+- code: rob-schneid
+  name: Rob Schneider
+  songs:
+  - code: bagel-lox
+    name: Bagels & Lox
 - code: r-clooney
   name: Rosemary Clooney
   songs:

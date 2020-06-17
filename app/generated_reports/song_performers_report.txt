@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
-                                             Song Performers -- Generated 2020-06-16 20:36 UTC
+                                             Song Performers -- Generated 2020-06-17 05:32 UTC
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -28,11 +28,11 @@ glad          Glad All Over                                       beatles       
 bye-boys      Goodbye Boys, Goodbye                               jay-amer      Jay and the Americans
 h-sunset      Hawaiian Sunset                                     elvis         Elvis Presley
 one-girl      I Love Only One Girl                                elvis         Elvis Presley
-crush-ny      I've Got a Crush on New York Town                   c-francis     Connie Francis
 isl-love      Island of Love                                      elvis         Elvis Presley
+ito-eats      Ito Eats                                            elvis         Elvis Presley
 long-way      It's a Long Way from Your House to My House         sinatra       Frank Sinatra
 wond-world    It's a Wonderful World                              elvis         Elvis Presley
-ito-eats      Ito Eats                                            elvis         Elvis Presley
+crush-ny      I've Got a Crush on New York Town                   c-francis     Connie Francis
 jenny-kiss    Jenny Kissed Me                                     ed-albert     Eddie Albert
 old-sake      Just for Old Time Sake                              elvis         Elvis Presley
 kewpie-doll   Kewpie Doll                                         p-como        Perry Como
@@ -61,9 +61,9 @@ red-roses     Red Roses for a Blue Lady                           andy-wms      
                                                                   p-como        Perry Como
                                                                   r-conniff     Ray Conniff Singers
                                                                   sinatra       Frank Sinatra
-                                                                  v-monroe      Vaughn Monroe
                                                                   vic-choir     Victoria Junior College Choir (Singapore)
                                                                   vic-dana      Vic Dana
+                                                                  v-monroe      Vaughn Monroe
                                                                   w-newton      Wayne Newton
 relax         Relax                                               elvis         Elvis Presley
 santa-daddy   Santa Claus Looks Just Like Daddy                   a-mooney      Art Mooney & His Orchestra
@@ -81,8 +81,8 @@ suzy-snow     Suzy Snowflake                                      r-clooney     
 take-me-fair  Take Me to the Fair                                 elvis         Elvis Presley
 tear-rain     Teardrops in the Rain                               a-prysock     Arthur Prysock
 bullfighter   The Bullfighter Was a Lady                          elvis         Elvis Presley
-lady-loves    The Lady Loves Me                                   ann-margret   Ann-Margret
-                                                                  elvis         Elvis Presley
+lady-loves    The Lady Loves Me                                   elvis         Elvis Presley
+                                                                  ann-margret   Ann-Margret
 train-ahchoo  The Little Train Who Said 'Ah Choo                  anne-lloyd    Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra
 nty-lady      The Naughty Lady of Shady Lane                      ames-bros     The Ames Brothers
 walls-ears    The Walls Have Ears                                 elvis         Elvis Presley
