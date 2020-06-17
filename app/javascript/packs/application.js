@@ -82,8 +82,12 @@ function setUpReportCopyButtons() {
         const contentTabId = "content-tab-" + elementKey;
         const contentElement = document.getElementById(contentTabId);
         const activeTab = contentElement.getElementsByClassName("active")[0];
-        const textToCopy = activeTab.innerHTML.split("<div><pre>")[1].split("</pre></div>")[0]
-        navigator.clipboard.writeText(textToCopy).then(() => { console.log("Copied to clipboard: " + activeTab.id); })
+        if(activeTab.id.includes("html")) {
+            alert("Sorry, the Copy command only works in Text, JSON, and YAML report formats.")
+        } else {
+            const textToCopy = activeTab.innerHTML.split("<div><pre>")[1].split("</pre></div>")[0]
+            navigator.clipboard.writeText(textToCopy).then(() => { console.log("Copied to clipboard: " + activeTab.id); })
+        }
     }
 
     for(const elem of document.getElementsByClassName("rpt-copy-button")) {
