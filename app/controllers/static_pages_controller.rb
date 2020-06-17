@@ -21,16 +21,10 @@ class StaticPagesController < ActionController::Base
   end
 
 
-  def index(include_reports = false)
-    @include_reports = include_reports
+  def index
     respond
     render :index, layout: "application"
   end
-
-  def include_reports
-    index(true)
-  end
-
 
   def about; end
 
