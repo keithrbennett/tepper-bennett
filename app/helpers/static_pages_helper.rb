@@ -151,7 +151,6 @@ HEREDOC
     data = SongPlay.joins(:song).all.order('songs.name, id').map do |song_play|
       song = song_play.song
       perfs = song_play.performers.order(:name)
-      # youtube_link = %Q{<a class="youtube-view" href="#{song_play.youtube_embed_url}">*</a>}
       [
           song.code,
           song.name,
@@ -184,7 +183,4 @@ HEREDOC
         ['writer_codes_names',        'Writers',           html_code_name_report_table(Writer)],
     ].map { |(key, title, html_report)| Report.new(key, title, html_report) }
   end
-
-
-
 end

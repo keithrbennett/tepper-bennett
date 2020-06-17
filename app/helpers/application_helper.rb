@@ -19,16 +19,6 @@ module ApplicationHelper
   end
 
 
-  def youtube_embed_url(code)
-    "https://www.youtube.com/embed/#{code}"
-  end
-
-
-  def youtube_watch_url(code)
-    "https://www.youtube.com/watch?v=#{code}"
-  end
-
-
   def validate_artist_or_movie(artist_or_movie)
     unless %i(artist movie).include?(artist_or_movie)
       raise "Invalid symbol: #{artist_or_movie}. Must be :artist or :movie."
@@ -126,7 +116,7 @@ def youtube_text_song_link(text, youtube_code)
   html = tag.a(
       href: '#',
       class: "youtube-view",
-      'data-url'.to_sym => youtube_embed_url(youtube_code),
+      'data-url'.to_sym => SongPlay.youtube_embed_url(youtube_code),
       'data-toggle'.to_sym => 'modal',
       'data-target'.to_sym => '#youTubeViewerModal') do
     # onclick: %Q{setPlayerYoutubeUrl('#{youtube_embed_url(youtube_code)}');}) do
