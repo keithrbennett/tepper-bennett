@@ -65,6 +65,41 @@ HEREDOC
   end
 
 
+  def self.html_movie_songs_report
+    headings = ['Year', 'Code', 'Name', 'Song Code', 'Song Name']
+
+    data = Movie.order(:name).map do |movie|
+      songs = movie.songs.order(:name)
+      song_codes = songs.pluck(:code).join("<br/>")
+      song_names = songs.pluck(:name).join("<br/>")
+      [movie.year, movie.code, movie.name, song_codes, song_names]
+    end
+
+    table_data = records_to_cell_data(data)
+    html_report_table(headings, table_data)
+  end
+
+
+  def self.html_genre_songs_report
+    html = StringIO.new
+    headings = ['Song Code', 'Song Name']
+
+    Genre.order(:name).all.each do |genre|
+      html << "<h2>Genre &mdash; #{genre.name}</h2>\n"
+      songs = genre.songs
+      if songs.empty?
+        html << "[No songs for this genre]</br>\n"
+      else
+        data = genre.songs.map { |song| [song.code, song.name]}
+        table_data = records_to_cell_data(data)
+        html << "<br/>\n" << html_report_table(headings, table_data)
+      end
+      html << "<br/><br/>\n"
+    end
+    html.string.html_safe
+  end
+
+
   def self.html_song_performers_report
     headings = ['Song Code', 'Song Name', 'Perf Code', 'Performer Name']
     data = Song.order(:name).map do |song|
@@ -122,9 +157,9 @@ HEREDOC
         ['song_performers',           'Song Performers',   html_song_performers_report],
         ['performer_songs',           'Performer Songs',   html_performer_songs_report],
         ['song_genres',               'Genres by Song',    html_song_genres_report],
-        ['genre_songs',               'Songs by Genre',    sample_html_report],
-        ['movies', 'Movies', html_movie_report],
-        ['movie_songs',               'Movies Songs',      sample_html_report],
+        ['genre_songs',               'Songs by Genre',    html_genre_songs_report],
+        ['movies',                    'Movies',            html_movie_report],
+        ['movie_songs',               'Movies Songs',      html_movie_songs_report],
         ['organization_codes_names',  'Organizations',     html_code_name_report_table(Organization)],
         ['song_rights_admins', 'Song Rights Administrators', html_rights_admins_report],
         ['writer_codes_names',        'Writers',           html_code_name_report_table(Writer)],
