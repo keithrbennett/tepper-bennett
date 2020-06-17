@@ -39,7 +39,7 @@ HEREDOC
   end
 
 
-  def self.movie_report
+  def self.html_movie_report
     headings = ['Code', 'Year', 'IMDB Key', 'Name']
     table_data = Movie.order(:name).map do |m|
       imdb_anchor = %Q{<a href="#{m.imdb_url}", target="_blank">#{m.imdb_key}</a>}
@@ -50,7 +50,7 @@ HEREDOC
   end
 
 
-  def self.rights_admins_report
+  def self.html_rights_admins_report
     headings = ['Song Code', 'Song Name', 'RA Code', 'Rights Admin Name']
 
     data = Song.order(:name).map do |song|
@@ -70,6 +70,22 @@ HEREDOC
   end
 
 
+  def self.html_song_performers_report
+    headings = ['Song Code', 'Song Name', 'Perf Code', 'Performer Name']
+    data = Song.order(:name).map do |song|
+      [
+          song.code,
+          song.name,
+          song.performers.pluck(:code).join("<br/>"),
+          song.performers.pluck(:name).join("<br/>"),
+      ]
+    end
+
+    table_data = records_to_cell_data(data)
+    html_report_table(headings, table_data)
+  end
+
+
   def self.init_reports_metadata
     sample_html_report = '<h1>Sample</h1>'
 
@@ -77,14 +93,14 @@ HEREDOC
         ['song_codes_names',          'Songs',             html_code_name_report_table(Song)],
         ['performer_codes_names',     'Performers',        html_code_name_report_table(Performer)],
         ['genres',                    'Genres',            html_code_name_report_table(Genre)],
-        ['song_performers',           'Song Performers',   sample_html_report],
+        ['song_performers',           'Song Performers',   html_song_performers_report],
         ['performer_songs',           'Performer Songs',   sample_html_report],
         ['song_genres',               'Genres by Song',    sample_html_report],
         ['genre_songs',               'Songs by Genre',    sample_html_report],
-        ['movies',                    'Movies',            movie_report],
+        ['movies', 'Movies', html_movie_report],
         ['movie_songs',               'Movies Songs',      sample_html_report],
         ['organization_codes_names',  'Organizations',     html_code_name_report_table(Organization)],
-        ['song_rights_admins',        'Song Rights Administrators', rights_admins_report],
+        ['song_rights_admins', 'Song Rights Administrators', html_rights_admins_report],
         ['writer_codes_names',        'Writers',           html_code_name_report_table(Writer)],
     ].map { |(key, title, html_report)| Report.new(key, title, html_report) }
   end
