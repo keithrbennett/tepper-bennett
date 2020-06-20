@@ -77,24 +77,14 @@ HEREDOC
 end
 
 
-def nav_tab(internal_name, display_name, active: false, additional_class: '')
+def nav_tab(internal_name, display_name, active: false)
   active_text = active ? ' active' : ''
   aria        = active ? 'true'    : 'false'
 
   html = <<HEREDOC
-    <a class="nav-item nav-link#{active_text} #{additional_class}" id="nav-#{internal_name}-tab" data-toggle="tab" href="#nav-#{internal_name}" role="tab" aria-selected="#{aria}">#{display_name}</a>
+    <a class="nav-item nav-link#{active_text} rpt-nav-tab " id="nav-#{internal_name}-tab" data-toggle="tab" href="#nav-#{internal_name}" role="tab" aria-selected="#{aria}">#{display_name}</a>
 HEREDOC
   html.html_safe
-end
-
-
-def report_formats_nav_tab(panel_internal_name, panel_display_name, active: false)
-  nav_tab(panel_internal_name, panel_display_name, active: active, additional_class: 'rpt-fmt-item')
-end
-
-
-def main_nav_tab(panel_internal_name, panel_display_name, active: false)
-  nav_tab(panel_internal_name, panel_display_name, active: active)
 end
 
 

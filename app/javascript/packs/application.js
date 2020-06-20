@@ -86,24 +86,39 @@ function setUpReportCopyButtons() {
 
     const handler = function(e) {
         const activeTab = getActiveTab(e);
-        if(activeTab.id.includes("html")) {
-            alert("Sorry, the Copy command only works in Text, JSON, and YAML report formats.")
-        } else {
-            const textToCopy = activeTab.innerHTML.split("<div><pre>")[1].split("</pre></div>")[0]
-            activeTab.focus();
-            navigator.clipboard.writeText(textToCopy)
-            .then(
-                () => {
-                    console.log("Copied to clipboard: " + activeTab.id);
-                    alert("Content copied to clipboard");
-                },
-                (error) => { console.log("Error copying text from", activeTab.id + ':', error); }
-            )
-        }
+        const textToCopy = activeTab.innerHTML.split("<div><pre>")[1].split("</pre></div>")[0]
+        activeTab.focus(); // without this, the clipboard copy fails
+        navigator.clipboard.writeText(textToCopy)
+        .then(
+            () => {
+                console.log("Copied to clipboard: " + activeTab.id);
+                alert("Content copied to clipboard");
+            },
+            (error) => { console.log("Error copying text from", activeTab.id + ':', error); }
+        )
     }
 
     for(const elem of document.getElementsByClassName("rpt-copy-button")) {
         elem.addEventListener("click", handler);
+    }
+}
+
+function setupCopyButtonVisibility() {
+    // Nothing to do on the button itself, but the tabs need to be set up to control its visibility.
+
+    const buttonVisibilityHandler = function (copyButton, visible) {
+        return function() {
+            copyButton.style.visibility = visible ? "visible" : "hidden";
+        }
+    }
+
+    for (const rptCard of document.getElementsByClassName("rpt-card")) {
+        const copyButton = rptCard.getElementsByClassName("rpt-copy-button")[0];
+        for (const rptTab of rptCard.getElementsByClassName("rpt-nav-tab")) {
+            const copyButtonVisible = !rptTab.id.includes("html");
+            rptTab.addEventListener("click", buttonVisibilityHandler(copyButton, copyButtonVisible));
+        }
+        copyButton.style.visibility = "hidden"; // hidden because initial tab selected is HTML
     }
 }
 
@@ -112,6 +127,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     setUpYouTubeClicks();
     setUpColorPicker();
     setUpReportCopyButtons();
+    setupCopyButtonVisibility();
 })
 
 
