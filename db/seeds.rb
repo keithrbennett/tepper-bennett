@@ -260,7 +260,7 @@ def add_non_elvis_songs
       { code: "n-for-xmas"    , name: "Nuttin' for Christmas" ,                    performers: %w(a-mooney b-gordon eartha-kitt homer-jethro plain-white sugarland),    genres: %w{children hit} },
       { code: "red-roses"     , name: "Red Roses for a Blue Lady" ,                performers: %w(andy-wms bert-kmft dean-martin moscow-jazz p-como r-conniff sinatra vic-choir vic-dana v-monroe w-newton), genres: %w{hit romantic} },
       { code: "santa-daddy"   , name: "Santa Claus Looks Just Like Daddy" ,        performers: %w(a-mooney b-gordon),    genres: %w{children} },
-      { code: "ssss-heart"    , name: "Say Something Sweet to Your Sweetheart" ,   performers: %w(ink-spots),   genres: %w{romantic} },
+      { code: "ssss-heart"    , name: "Say Something Sweet to Your Sweetheart" ,   performers: %w(ink-spots),   genres: %w{hit romantic} },
       { code: "soft-love"     , name: "Softly My Love" ,                           performers: %w(della-reese), genres: %w{romantic} },
       { code: "smr-sounds"    , name: "Summer Sounds" ,                            performers: %w(r-goulet) },
       { code: "suzy-snow"     , name: "Suzy Snowflake" ,                           performers: %w(r-clooney),   genres: %w{children} },
