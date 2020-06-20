@@ -90,8 +90,15 @@ function setUpReportCopyButtons() {
             alert("Sorry, the Copy command only works in Text, JSON, and YAML report formats.")
         } else {
             const textToCopy = activeTab.innerHTML.split("<div><pre>")[1].split("</pre></div>")[0]
-            navigator.clipboard.writeText(textToCopy).then(() => { console.log("Copied to clipboard: " + activeTab.id); })
-            alert("Content copied to clipboard");
+            activeTab.focus();
+            navigator.clipboard.writeText(textToCopy)
+            .then(
+                () => {
+                    console.log("Copied to clipboard: " + activeTab.id);
+                    alert("Content copied to clipboard");
+                },
+                (error) => { console.log("Error copying text from", activeTab.id + ':', error); }
+            )
         }
     }
 
