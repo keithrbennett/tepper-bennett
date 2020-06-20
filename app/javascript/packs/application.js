@@ -77,16 +77,21 @@ function setUpColorPicker() {
 
 function setUpReportCopyButtons() {
 
-    const handler = function(e) {
+    const getActiveTab = function(e) {
         const elementKey = e.target.id.split("btn-copy-")[1];
         const contentTabId = "content-tab-" + elementKey;
         const contentElement = document.getElementById(contentTabId);
-        const activeTab = contentElement.getElementsByClassName("active")[0];
+        return contentElement.getElementsByClassName("active")[0];
+    }
+
+    const handler = function(e) {
+        const activeTab = getActiveTab(e);
         if(activeTab.id.includes("html")) {
             alert("Sorry, the Copy command only works in Text, JSON, and YAML report formats.")
         } else {
             const textToCopy = activeTab.innerHTML.split("<div><pre>")[1].split("</pre></div>")[0]
             navigator.clipboard.writeText(textToCopy).then(() => { console.log("Copied to clipboard: " + activeTab.id); })
+            alert("Content copied to clipboard");
         }
     }
 
