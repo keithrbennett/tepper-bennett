@@ -1,6 +1,6 @@
 ---
 title: Song Performers
-generation_time: 2020-06-17 07:06 UTC
+generation_time: 2020-06-20 17:16 UTC
 data:
 - code: boy-like-me
   name: A Boy Like Me, A Girl Like You
@@ -114,13 +114,13 @@ data:
   performers:
   - code: elvis
     name: Elvis Presley
+- code: crush-ny
+  name: I've Got a Crush on New York Town
+  performers:
+  - code: c-francis
+    name: Connie Francis
 - code: isl-love
   name: Island of Love
-  performers:
-  - code: elvis
-    name: Elvis Presley
-- code: ito-eats
-  name: Ito Eats
   performers:
   - code: elvis
     name: Elvis Presley
@@ -134,11 +134,11 @@ data:
   performers:
   - code: elvis
     name: Elvis Presley
-- code: crush-ny
-  name: I've Got a Crush on New York Town
+- code: ito-eats
+  name: Ito Eats
   performers:
-  - code: c-francis
-    name: Connie Francis
+  - code: elvis
+    name: Elvis Presley
 - code: jenny-kiss
   name: Jenny Kissed Me
   performers:

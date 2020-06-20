@@ -1,19 +1,19 @@
 ---
 title: Performer Codes/Names
-generation_time: 2020-06-17 07:06 UTC
+generation_time: 2020-06-20 17:16 UTC
 data:
 - code: a-sherman
   name: Allan Sherman
 - code: andy-wms
   name: Andy Williams
-- code: anne-lloyd
-  name: Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra
 - code: ann-margret
   name: Ann-Margret
-- code: a-prysock
-  name: Arthur Prysock
+- code: anne-lloyd
+  name: Anne Lloyd, Sandpiper Singers, Mitch Miller & Orchestra
 - code: a-mooney
   name: Art Mooney & His Orchestra
+- code: a-prysock
+  name: Arthur Prysock
 - code: b-gordon
   name: Barry Gordon
 - code: bert-kmft
@@ -62,10 +62,10 @@ data:
   name: Plain White T's
 - code: r-conniff
   name: Ray Conniff Singers
-- code: r-goulet
-  name: Robert Goulet
 - code: rob-schneid
   name: Rob Schneider
+- code: r-goulet
+  name: Robert Goulet
 - code: r-clooney
   name: Rosemary Clooney
 - code: sugarland

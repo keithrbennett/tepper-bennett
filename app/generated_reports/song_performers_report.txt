@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
-                                             Song Performers -- Generated 2020-06-17 07:06 UTC
+                                             Song Performers -- Generated 2020-06-20 17:16 UTC
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -28,11 +28,11 @@ glad          Glad All Over                                       beatles       
 bye-boys      Goodbye Boys, Goodbye                               jay-amer      Jay and the Americans
 h-sunset      Hawaiian Sunset                                     elvis         Elvis Presley
 one-girl      I Love Only One Girl                                elvis         Elvis Presley
+crush-ny      I've Got a Crush on New York Town                   c-francis     Connie Francis
 isl-love      Island of Love                                      elvis         Elvis Presley
-ito-eats      Ito Eats                                            elvis         Elvis Presley
 long-way      It's a Long Way from Your House to My House         sinatra       Frank Sinatra
 wond-world    It's a Wonderful World                              elvis         Elvis Presley
-crush-ny      I've Got a Crush on New York Town                   c-francis     Connie Francis
+ito-eats      Ito Eats                                            elvis         Elvis Presley
 jenny-kiss    Jenny Kissed Me                                     ed-albert     Eddie Albert
 old-sake      Just for Old Time Sake                              elvis         Elvis Presley
 kewpie-doll   Kewpie Doll                                         p-como        Perry Como
