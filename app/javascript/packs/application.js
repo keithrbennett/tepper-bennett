@@ -92,7 +92,7 @@ function setUpReportCopyButtons() {
         .then(
             () => {
                 console.log("Copied to clipboard: " + activeTab.id);
-    A                alert("Content copied to clipboard.");
+                    alert("Content copied to clipboard.");
             },
             (error) => { console.log("Error copying text from", activeTab.id + ':', error); }
         )
