@@ -59,4 +59,8 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # This is so that clients can connect using any host alias they like, suitable for private networks
+  # (see https://github.com/rails/rails/pull/38140/files, https://stackoverflow.com/questions/53878453/upgraded-rails-to-6-getting-blocked-host-error)
+  config.hosts.clear if ENV['RAILS_DISABLE_HOSTNAME_CHECK']
 end
