@@ -90,3 +90,16 @@ heroku pg:reset
 heroku run rake db:migrate
 heroku run rake db:seed
 ```
+
+### Enabling Capybara Screenshots
+
+Gems need to be included (see test group in the `Gemfile`) and some configuration (see `spec/support/capybara.rb`).
+
+Then, to see the screenshot in the browser properly styled by the JS code, add `, js: true` to the RSpec `describe` call, e.g.:
+
+`RSpec.describe 'visit the home page', js: true do
+`
+
+In the spec, call `save_and_open_page`.
+
+Currently, on a Mac running Catalina, `save_and_open_page` seems to work with Firefox, Brave, Opera, Microsoft Edge, and Vivaldi as default browsers, but not Chrome.
