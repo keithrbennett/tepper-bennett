@@ -7,7 +7,7 @@ RSpec.describe 'visit the home page' do
     visit '/'
     # save_and_open_page
     expect(page).to have_selector('.title')
-    expect(page).to have_content('Bennett')
     expect(page).to have_content('Tepper')
+    expect(page).to have_content('Bennett')
   end
 end

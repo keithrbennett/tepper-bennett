@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%= render 'static_pages/google_analytics' %>
+    <%= render 'layouts/google_analytics' %>
 
     <title>Sid Tepper and Roy C. Bennett</title>
 
@@ -18,6 +18,49 @@
 
   <body>
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap" rel="stylesheet">
+
+
+<!--    <div class="container-fluid no-horiz-padding">-->
+
+<!--      <h3 class="title">The Songwriting Team of</h3>-->
+<!--      <div class="responsive-xs-only"><h1 class="title">Tepper & Bennett</h1></div>-->
+<!--      <div class="responsive-no-xs"><h1 class="title">Sid Tepper and Roy C. Bennett</h1></div>-->
+<!--      <div><h3 class="title">Esteemed Hitmakers of the 40's, 50's, and 60's</h3></div>-->
+<!--      <br/>-->
+
+<!--      <div class="container nav-container no-horiz-padding">-->
+<!--        <nav class="nav-justified">-->
+<!--          <div class="nav nav-tabs" role="tablist" style="align: center">-->
+            <%#= nav_tab('home', 'Home', active: true) %>
+            <%#= nav_tab('songs', 'Songs') %>
+            <%#= nav_tab('genres', 'Genres') %>
+            <%#= nav_tab('elvis', 'Elvis') %>
+            <%#= nav_tab('resources', 'Resources') %>
+            <%#= nav_tab('reports', 'Reports') %>
+            <%#= nav_tab('inquiries', 'Inquiries') %>
+<!--          </div>-->
+<!--        </nav>-->
+<!--      </div>-->
+
+<!--      <br/>-->
+<!--      <br/>-->
+
+<!--      <div class="container no-horiz-padding">-->
+<!--        <div class="tab-content" id="main-nav-tabContent">-->
+          <%#= nav_content(name: 'home', active: true) %>
+          <%#= nav_content(name: 'songs') %>
+          <%#= nav_content(name: 'genres') %>
+          <%#= nav_content(name: 'elvis') %>
+          <%#= nav_content(name: 'resources') %>
+          <%#= nav_content(name: 'reports') %>
+          <%#= nav_content(name: 'inquiries') %>
+<!--        </div>-->
+<!--      </div>-->
+
+      <%= render 'layouts/youtube-player-modal' %>
+
+    </div>
+
     <%= yield %>
 
     <div class="footer">
