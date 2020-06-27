@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   get 'home' => 'home#index'
   get 'genres' => 'genres#index'
+  get 'resources' => 'resources#index'
 
 end
