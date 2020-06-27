@@ -1,0 +1,27 @@
+<h3>The Elvis Movies</h3>
+<br>
+
+<div style="margin-bottom: 24px">
+  <%= image_tag 'elvis-chante-tepper-bennett.jpg', class: 'img-fluid', width: '100%', alt: 'Elvis Chante Tepper & Bennett' %>
+</div>
+
+<p>
+  Each time an Elvis movie was in the works, the Colonel would send the screenplay to their trusted songwriting teams,
+  who’d then submit their work for consideration. Some 42 songs by the pair made their way into the films, more than for
+  any other team, including two title songs —
+  <%= youtube_text_song_link('“GI Blues”', 'GkyjCJvHLsA') %>
+  and
+  <%= youtube_text_song_link('“Stay Away”', 'wr6MQtFLX6k') %>.
+  There were beautiful ballads and smart specialty songs, each crafted with the substance and style that would fit the
+  context of a particular scene. The Presley estate recognized the importance of the duo to The King’s career, with both
+  a lifetime achievement award and with the Elvis Fans Choice Award for Best Movie Soundtrack for their five songs in
+  the movie “Blue Hawaii”.
+</p>
+<br/>
+
+<p>
+  Here are a few of the Tepper-Bennett Elvis songs:
+</p>
+<br/>
+
+<%= song_table(:movie) %>

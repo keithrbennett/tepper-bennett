@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get 'genres' => 'genres#index'
   get 'resources' => 'resources#index'
   get 'songs' => 'songs#index'
+  get 'elvis' => 'elvis#index'
 
 end
