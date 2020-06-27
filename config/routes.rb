@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get 'resources' => 'resources#index'
   get 'songs' => 'songs#index'
   get 'elvis' => 'elvis#index'
+  get 'reports' => 'reports#index'
 
 end

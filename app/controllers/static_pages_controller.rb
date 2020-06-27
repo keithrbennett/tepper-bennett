@@ -1,6 +1,8 @@
-require_relative '../helpers/static_pages_helper'
+# require_relative '../lib/reports/reporter'
 
 class StaticPagesController < ActionController::Base
+
+  include Reports::Reporter
 
   Recording = Struct.new(:title, :artist, :yt_video_code, :movie, :embed_url, :watch_url)
   class Recording
@@ -8,10 +10,6 @@ class StaticPagesController < ActionController::Base
     def watch_url; "https://www.youtube.com/watch?v=#{yt_video_code}"; end
   end
 
-  def initialize
-    init_songs_pane_recordings
-    init_elvis_pane_recordings
-  end
 
   def respond
     respond_to do |format|
@@ -21,6 +19,11 @@ class StaticPagesController < ActionController::Base
 
 
   def index
+    # Rails.logger.info  image_tag('youtube.png', alt: 'Listen')
+
+    init_songs_pane_recordings
+    init_elvis_pane_recordings
+    init_reports_metadata
     respond
     render :index, layout: "application"
   end
@@ -32,7 +35,7 @@ class StaticPagesController < ActionController::Base
 
     r = ->(title, artist, code) { Recording.new(title, artist, code) }
 
-    @recordings = [
+    @recordings ||= [
         r.('Red Roses for a Blue Lady',                   'Andy Williams',                        'HssRO5b_ED0'),
         r.('Red Roses for a Blue Lady',                   'Bert Kaempfert and His Orchestra',     'zt6WdnrAvpE'),
         r.('Red Roses for a Blue Lady',                   'Dean Martin',                          'drU6kuih41w'),
@@ -69,7 +72,7 @@ class StaticPagesController < ActionController::Base
   def init_elvis_pane_recordings
     r = ->(title, code, movie) { Recording.new(title, 'Elvis Presley', code, movie) }
 
-    @elvis_recordings = [
+    @elvis_recordings ||= [
         r.('G. I. Blues',                       'GkyjCJvHLsA', 'G. I. Blues'),
         r.('Stay Away',                         'wr6MQtFLX6k', 'Stay Away, Joe'),
         r.('New Orleans',                       'A9C-oQ_mFSc', 'King Creole'),

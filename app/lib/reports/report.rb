@@ -1,3 +1,4 @@
+module Reports
 # Contains report metadata and data.
 class Report < Struct.new(:key, :title, :html_report) #, :report_text, :report_json, :report_yaml)
 
@@ -44,4 +45,5 @@ class Report < Struct.new(:key, :title, :html_report) #, :report_text, :report_j
   def report_yaml
     @report_yaml ||= preize_file_content('.yaml')
   end
+end
 end
