@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ElvisController, type: :controller do
+RSpec.describe InquiriesController, type: :controller do
 
   describe "GET #index" do
     # subject { get :index, params: default_params }
