@@ -10,15 +10,6 @@ module ApplicationHelper
   end
 
 
-  def youtube_image_link(url)
-    %Q{
-    <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal" data-url="#{url}">
-          #{image_tag('youtube.png', alt: 'Listen')}
-    </a>
-    }.html_safe
-  end
-
-
   def validate_artist_or_movie(artist_or_movie)
     unless %i(artist movie).include?(artist_or_movie)
       raise "Invalid symbol: #{artist_or_movie}. Must be :artist or :movie."
@@ -109,7 +100,6 @@ def youtube_text_song_link(text, youtube_code)
       'data-url'.to_sym => SongPlay.youtube_embed_url(youtube_code),
       'data-toggle'.to_sym => 'modal',
       'data-target'.to_sym => '#youTubeViewerModal') do
-    # onclick: %Q{setPlayerYoutubeUrl('#{youtube_embed_url(youtube_code)}');}) do
     text
   end
 

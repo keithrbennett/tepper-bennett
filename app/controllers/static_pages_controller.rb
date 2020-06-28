@@ -2,8 +2,8 @@
 
 class StaticPagesController < ActionController::Base
 
-  include Reports::Reporter
-
+  include ReportsHelper
+  
   Recording = Struct.new(:title, :artist, :yt_video_code, :movie, :embed_url, :watch_url)
   class Recording
     def embed_url; "https://www.youtube.com/embed/#{yt_video_code}";   end

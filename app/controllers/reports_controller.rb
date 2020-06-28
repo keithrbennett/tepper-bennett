@@ -1,8 +1,6 @@
-require_relative '../lib/reports/reporter'
-
 class ReportsController < ApplicationController
 
-  include Reports::Reporter
+  include ReportsHelper
 
   def index
     init_reports_metadata
@@ -186,7 +184,7 @@ HEREDOC
           perfs.pluck(:code).join("\n"),
           perfs.pluck(:name).join("\n"),
           song_play.youtube_key,
-          youtube_image_link(song_play.youtube_embed_url)
+          render_to_string('layouts/_youtube_image_link', locals: { url: song_play.youtube_embed_url })
       ]
     end
 
