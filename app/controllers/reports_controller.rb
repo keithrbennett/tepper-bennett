@@ -5,8 +5,7 @@ class ReportsController < ApplicationController
   def index
     init_reports_metadata
     respond_to { |format| format.html }
-    # render :index, layout: "application"
-    render :index
+    render :index, layout: "application"
   end
 
 

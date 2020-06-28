@@ -34,8 +34,7 @@ class ElvisController < ApplicationController
   def index
     init_recordings
     respond_to { |format| format.html }
-    # render :index, layout: "application"
-    render :index
+    render :index, layout: "application"
   end
 end
 
