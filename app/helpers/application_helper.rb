@@ -68,17 +68,6 @@ HEREDOC
 end
 
 
-def nav_tab(internal_name, display_name, active: false)
-  active_text = active ? ' active' : ''
-  aria        = active ? 'true'    : 'false'
-
-  html = <<HEREDOC
-    <a class="nav-item nav-link#{active_text} rpt-nav-tab " id="nav-#{internal_name}-tab" data-toggle="tab" href="#nav-#{internal_name}" role="tab" aria-selected="#{aria}">#{display_name}</a>
-HEREDOC
-  html.html_safe
-end
-
-
 # If html_text is specified, render that, else render the partial whose name is `name`.
 def nav_content(name:, html_text: nil, active: false)
   div_class = 'tab-pane'
