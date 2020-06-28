@@ -42,36 +42,27 @@
         </nav>
       </div>
 
-<!--      <br/>-->
-<!--      <br/>-->
+      <br/>
+      <br/>
 
-<!--      <div class="container no-horiz-padding">-->
-<!--        <div class="tab-content" id="main-nav-tabContent">-->
-          <%#= nav_content(name: 'home', active: true) %>
-          <%#= nav_content(name: 'songs') %>
-          <%#= nav_content(name: 'genres') %>
-          <%#= nav_content(name: 'elvis') %>
-          <%#= nav_content(name: 'resources') %>
-          <%#= nav_content(name: 'reports') %>
-          <%#= nav_content(name: 'inquiries') %>
-<!--        </div>-->
+      <div class="container no-horiz-padding">
+        <div class="tab-content" id="main-nav-tabContent">
+          <%= yield %>
+        </div>
       </div>
 
       <%= render 'layouts/youtube-player-modal' %>
 
+      <div class="footer">
+        © <%= external_link('Bennett Business Solutions, Inc.', 'https://www.bbs-software.com') %>, 2020
+        <span>&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;</span>
+        <label for="bgcolor-picker">Select a different background color: &nbsp;</label>
+        <input id="bgcolor-picker" type="color" name="bgcolor" value="#f5deb3">
+        <span>&nbsp;</span>
+        <span id="bg-color-value-text">#f5deb3</span>
+        or
+        <a id="bgcolor-resetter" href=#>reset to original color.</a>
     </div>
-
-    <%= yield %>
-
-    <div class="footer">
-      © <%= external_link('Bennett Business Solutions, Inc.', 'https://www.bbs-software.com') %>, 2020
-      <span>&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;</span>
-      <label for="bgcolor-picker">Select a different background color: &nbsp;</label>
-      <input id="bgcolor-picker" type="color" name="bgcolor" value="#f5deb3">
-      <span>&nbsp;</span>
-      <span id="bg-color-value-text">#f5deb3</span>
-      or
-      <a id="bgcolor-resetter" href=#>reset to original color.</a>
     </div>
   </body>
 </html>
