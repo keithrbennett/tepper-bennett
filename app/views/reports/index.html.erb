@@ -5,8 +5,8 @@
       <br/><br/>
 
       <% init_reports_metadata %>
-      <% @reports.each do |rm| %>
-        <%= render partial: 'report_card', locals: rm.locals %>
+      <% @reports.each do |report| %>
+        <%= render partial: 'report_card', locals: report.locals %>
       <% end %>
 
     </div>

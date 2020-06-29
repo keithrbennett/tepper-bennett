@@ -68,14 +68,15 @@ HEREDOC
 end
 
 
-def nav_content(name:, html_text: nil, active: false)
-  div_class = 'tab-pane'
-  div_class += ' show active' if active
+# def nav_content(name:, html_text: nil, active: false)
+#   div_class = 'tab-pane'
+#   div_class += ' show active' if active
+#
+#   tag.div(class: div_class, id: "nav-#{name}", role: 'tabpanel', 'aria-labelledby'.to_sym => "nav-#{name}-tab") do
+#       html_text
+#   end
+# end
 
-  tag.div(class: div_class, id: "nav-#{name}", role: 'tabpanel', 'aria-labelledby'.to_sym => "nav-#{name}-tab") do
-      html_text
-  end
-end
 
 
 def youtube_text_song_link(text, youtube_code)

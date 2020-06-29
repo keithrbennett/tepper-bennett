@@ -1,0 +1,13 @@
+<% active    ||= local_assigns[:locals][:active]    %>
+<% name      ||= local_assigns[:locals][:name]      %>
+<% html_text ||= local_assigns[:locals][:html_text] %>
+<%# Rails.logger.info "\n\n\local_assigns: #{local_assigns.ai}\n\n\n" %>
+
+<div
+     class="tab-pane<%= active ? ' show active' : '' %>"
+     id="nav-<%= name %>"
+     data-parent="nav-<%= name %>-tab"
+     role="tabpanel"
+     aria-labelledby="nav-<%= name %>-tab">
+  <%= html_text %>
+</div>
