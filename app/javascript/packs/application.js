@@ -15,10 +15,45 @@ function defaultBackgroundColor() {
     return "#c9d0f1";
 }
 
+// Set up main menu links so that:
+//
+// 1) When one is clicked, it is displayed as the active tab, and the content is changed.
+// 2) If a URL such as ".../elvis" is specified on startup, the correct tab will be active.
+function setUpMainMenuLinks() {
 
-function setUpMainLinks() {
+    const menuItems = function() {
+        return document.querySelectorAll(".main-menu-item");
+    }
 
+    const setActiveTabAppearance = function(event) {
+        for (const elem of menuItems()) {
+            if (elem.id == event.target.id) {
+                elem.classList.add('active');
+                elem.setAttribute("aria-selected", true);
+            } else {
+                elem.classList.remove('active');
+                elem.setAttribute("aria-selected", false);
+            }
+        }
+
+        window.location.href = event.target.getAttribute("href");
+    }
+
+    for (const elem of menuItems()) {
+        elem.addEventListener("click", setActiveTabAppearance);
+    }
 }
+
+
+function setInitialMenuChoice() {
+    const href = window.location.href;
+    const tokens = href.split("/");
+    const tabName = tokens[tokens.length - 1];
+    const activeMenuItemId = (tabName.length > 0) ? ("main-menu-" + tabName) : "main-menu-home";
+    document.getElementById(activeMenuItemId).classList.add("active");
+    // On initialization there will be no menu items already active, so no needed to remove active class anywhere.
+}
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -126,12 +161,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     setUpColorPicker();
     setUpReportCopyButtons();
     setupCopyButtonVisibility();
-})
+    setUpMainMenuLinks();
+    setInitialMenuChoice();
+});
 
 
 document.addEventListener("turbolinks:load", () => {
     $('[data-toggle="tooltip"]').tooltip()
     $('[data-toggle="popover"]').popover()
-})
+});
 
 
