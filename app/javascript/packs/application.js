@@ -11,16 +11,14 @@ require("channels")
 import "bootstrap"
 import "../stylesheets/application"
 
-document.addEventListener("turbolinks:load", () => {
-    $('[data-toggle="tooltip"]').tooltip()
-    $('[data-toggle="popover"]').popover()
-})
-
-
 function defaultBackgroundColor() {
     return "#c9d0f1";
 }
 
+
+function setUpMainLinks() {
+
+}
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -128,6 +126,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     setUpColorPicker();
     setUpReportCopyButtons();
     setupCopyButtonVisibility();
+})
+
+
+document.addEventListener("turbolinks:load", () => {
+    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="popover"]').popover()
 })
 
 

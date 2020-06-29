@@ -1,8 +1,10 @@
-<a class="nav-item nav-link<%= active ? ' active' : '' %> rpt-nav-tab "
+<button class="nav-item nav-link<%= active ? ' active' : '' %> rpt-nav-tab "
    id="nav-<%= internal_name %>-tab"
    data-toggle="tab"
-   href="#nav-<%= internal_name %>"
+   href="/<%= internal_name %>"
    role="tab"
-   aria-selected=<%= active ? 'true' : 'false' %>>
-  <%= display_name %>>
-</a>
+   aria-selected=<%= active ? 'true' : 'false' %>
+<!--<!--  <%##= display_name %>>-->-->
+</button>
+
+<!--<a href="/<%#= internal_name %>"><%#= 'foo ' + display_name %></a>-->
