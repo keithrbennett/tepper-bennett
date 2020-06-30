@@ -29,8 +29,7 @@
       <br/>
 
       <div class="container nav-container no-horiz-padding">
-        <nav class="nav-justified">
-          <div class="nav nav-tabs navbar-expand" role="tablist" style="align: center">
+        <nav class="nav nav-pills nav-fill navbar-expand nav-justified">
             <% %w(home songs genres elvis resources reports inquiries).each do |name| %>
               <a
                 class="nav-item nav-link main-menu-item"
@@ -41,7 +40,6 @@
                 <%= name.capitalize %>
               </a>
             <% end %>
-          </div>
         </nav>
       </div>
 
