@@ -1,10 +1,10 @@
+<% init_reports_metadata %>
 <div class="container-fluid no-horiz-padding">
   <h5>Here is some information about the Tepper-Bennett songs (the data is still a work in progress).</h5>
   <div>
-    <div id="reports-accordion">
+    <div id="reports-accordion" class="accordion">
       <br/><br/>
 
-      <% init_reports_metadata %>
       <% @reports.each do |report| %>
         <%= render partial: 'report_card', locals: report.locals %>
       <% end %>

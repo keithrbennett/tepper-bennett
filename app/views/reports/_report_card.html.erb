@@ -1,5 +1,5 @@
-<div  id="<%= card_button_id %>" class="card rpt-card" style="background-color: unset">
-  <div class="card-header">
+<div  class="card" style="background-color: unset">
+  <div class="card-header" id="<%= card_button_id %>">
     <h1 class="mb-0">
       <button
           class="btn btn-link accordion-btn-text"
@@ -12,7 +12,7 @@
     </h1>
   </div>
 
-  <div id="<%= card_content_id %>" class="collapse show" aria-labelledby="<%= card_button_id %>" data-parent="reports-accordion">
+  <div id="<%= card_content_id %>" class="collapse" aria-labelledby="<%= card_button_id %>" data-parent="#reports-accordion">
     <div class="card-body">
 
       <div class="container">

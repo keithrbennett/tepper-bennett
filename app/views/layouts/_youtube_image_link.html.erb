@@ -1,3 +1,5 @@
+<% url ||= local_assigns[:locals][:url]  %>
+
 <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal" data-url="<%= url %>">
   <%= image_tag('youtube.png', alt: 'Listen')  %>
 </a>

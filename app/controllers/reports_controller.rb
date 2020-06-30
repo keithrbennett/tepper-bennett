@@ -3,28 +3,8 @@ class ReportsController < ApplicationController
   include ReportsHelper
 
   def index
-    init_reports_metadata
     respond_to { |format| format.html }
     render :index, layout: "application"
-  end
-
-
-  def init_reports_metadata
-    @reports ||= [
-        ['song_codes_names',          'Songs',             html_code_name_report_table(Song)],
-        ['performer_codes_names',     'Performers',        html_code_name_report_table(Performer)],
-        ['song_plays',                'Song Plays',        html_song_plays_report],
-        ['genres',                    'Genres',            html_code_name_report_table(Genre)],
-        ['song_performers',           'Song Performers',   html_song_performers_report],
-        ['performer_songs',           'Performer Songs',   html_performer_songs_report],
-        ['song_genres',               'Genres by Song',    html_song_genres_report],
-        ['genre_songs',               'Songs by Genre',    html_genre_songs_report],
-        ['movies',                    'Movies',            html_movie_report],
-        ['movie_songs',               'Movies Songs',      html_movie_songs_report],
-        ['organization_codes_names',  'Organizations',     html_code_name_report_table(Organization)],
-        ['song_rights_admins', 'Song Rights Administrators', html_rights_admins_report],
-        ['writer_codes_names',        'Writers',           html_code_name_report_table(Writer)],
-    ].map { |(key, title, html_report)| Report.new(key, title, html_report) }
   end
 
 
