@@ -1,7 +1,6 @@
 <% active    ||= local_assigns[:locals][:active]    %>
 <% name      ||= local_assigns[:locals][:name]      %>
 <% html_text ||= local_assigns[:locals][:html_text] %>
-<%# Rails.logger.info "\n\n\local_assigns: #{local_assigns.ai}\n\n\n" %>
 
 <div
      class="tab-pane<%= active ? ' show active' : '' %>"
