@@ -1,4 +1,4 @@
-<div  class="card" style="background-color: unset">
+<div  class="card rpt-card" style="background-color: unset">
   <div class="card-header" id="<%= card_button_id %>">
     <h1 class="mb-0">
       <button
@@ -19,12 +19,14 @@
         <div class="row justify-content-between">
           <div class="col-8">
             <div class="container nav-container no-horiz-padding">
-              <nav class="nav-justified">
+              <nav class="navbar nav-justified">
+<!--                <nav class="nav nav-pills nav-fill navbar-expand nav-justified">-->
                 <div class="nav nav-tabs" role="tablist">
-                  <%= render 'layouts/report_format_nav_tab.html.erb', internal_name: name + '_html', display_name: 'HTML', active: true   %>
-                  <%= render 'layouts/report_format_nav_tab.html.erb', internal_name: name + '_text', display_name: 'Text', active: false  %>
-                  <%= render 'layouts/report_format_nav_tab.html.erb', internal_name: name + '_json', display_name: 'JSON', active: false  %>
-                  <%= render 'layouts/report_format_nav_tab.html.erb', internal_name: name + '_yaml', display_name: 'YAML', active: false  %>
+                  <div class="navbar-brand rpt-nav-tab">Format:</div>
+                  <%= render partial: 'layouts/report_format_nav_tab.html.erb', locals: { internal_name: name + '_html', display_name: 'HTML', active: true  }  %>
+                  <%= render partial: 'layouts/report_format_nav_tab.html.erb', locals: { internal_name: name + '_text', display_name: 'Text', active: false }  %>
+                  <%= render partial: 'layouts/report_format_nav_tab.html.erb', locals: { internal_name: name + '_json', display_name: 'JSON', active: false }  %>
+                  <%= render partial: 'layouts/report_format_nav_tab.html.erb', locals: { internal_name: name + '_yaml', display_name: 'YAML', active: false }  %>
                 </div>
               </nav>
             </div>
@@ -40,10 +42,10 @@
 
       <div class="container no-horiz-padding">
         <div class="tab-content" id="<%= content_tab_id %>">
-          <%= render 'layouts/report_format_nav_content', locals: {name: name + '_html', html_text: report_html, active: true } %>
-          <%= render 'layouts/report_format_nav_content', locals: {name: name + '_text', html_text: report_text, active: false } %>
-          <%= render 'layouts/report_format_nav_content', locals: {name: name + '_json', html_text: report_json, active: false } %>
-          <%= render 'layouts/report_format_nav_content', locals: {name: name + '_yaml', html_text: report_yaml, active: false } %>
+          <%= render partial: 'layouts/report_format_nav_content', locals: {name: name + '_html', html_text: report_html, active: true } %>
+          <%= render partial: 'layouts/report_format_nav_content', locals: {name: name + '_text', html_text: report_text, active: false } %>
+          <%= render partial: 'layouts/report_format_nav_content', locals: {name: name + '_json', html_text: report_json, active: false } %>
+          <%= render partial: 'layouts/report_format_nav_content', locals: {name: name + '_yaml', html_text: report_yaml, active: false } %>
         </div>
       </div>
     </div>
