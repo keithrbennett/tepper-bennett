@@ -5,14 +5,14 @@
           class="btn btn-link accordion-btn-text"
           data-toggle="collapse"
           data-target="#<%= card_content_id %>"
-          aria-expanded="false"
+          aria-expanded="<%= active %>>"
           aria-controls="<%= card_content_id %>">
         <%= report_title %>
       </button>
     </h1>
   </div>
 
-  <div id="<%= card_content_id %>" class="collapse" aria-labelledby="<%= card_button_id %>" data-parent="#reports-accordion">
+  <div id="<%= card_content_id %>" class="collapse<%= active ? ' show' : '' %>" aria-labelledby="<%= card_button_id %>" data-parent="#reports-accordion">
     <div class="card-body">
 
       <div class="container">

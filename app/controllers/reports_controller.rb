@@ -4,7 +4,7 @@ class ReportsController < ApplicationController
 
   def index
     respond_to { |format| format.html }
-    render :index, layout: "application"
+    render :index, layout: "application", locals: { report_type: params[:type] }
   end
 
 

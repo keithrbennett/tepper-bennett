@@ -6,7 +6,8 @@
       <br/><br/>
 
       <% @reports.each do |report| %>
-        <%= render partial: 'report_card', locals: report.locals %>
+        <% active = (report_type == report.locals[:name]) %>
+        <%= render partial: 'report_card', locals: report.locals.merge({ active: active }) %>
       <% end %>
 
     </div>
