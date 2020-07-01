@@ -163,7 +163,7 @@ HEREDOC
           perfs.pluck(:code).join("\n"),
           perfs.pluck(:name).join("\n"),
           song_play.youtube_key,
-          render_to_string( partial: 'layouts/_youtube_image_link', locals: { url: song_play.youtube_embed_url })
+          render_to_string( partial: '_youtube_image_link', locals: { url: song_play.youtube_embed_url })
       ]
     end
 

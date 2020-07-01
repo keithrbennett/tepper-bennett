@@ -23,10 +23,10 @@
 <!--                <nav class="nav nav-pills nav-fill navbar-expand nav-justified">-->
                 <div class="nav nav-tabs" role="tablist">
                   <div class="navbar-brand rpt-nav-tab">Format:</div>
-                  <%= render partial: 'layouts/report_format_nav_tab.html.erb', locals: { internal_name: name + '_html', display_name: 'HTML', active: true  }  %>
-                  <%= render partial: 'layouts/report_format_nav_tab.html.erb', locals: { internal_name: name + '_text', display_name: 'Text', active: false }  %>
-                  <%= render partial: 'layouts/report_format_nav_tab.html.erb', locals: { internal_name: name + '_json', display_name: 'JSON', active: false }  %>
-                  <%= render partial: 'layouts/report_format_nav_tab.html.erb', locals: { internal_name: name + '_yaml', display_name: 'YAML', active: false }  %>
+                  <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { internal_name: name + '_html', display_name: 'HTML', active: true  }  %>
+                  <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { internal_name: name + '_text', display_name: 'Text', active: false }  %>
+                  <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { internal_name: name + '_json', display_name: 'JSON', active: false }  %>
+                  <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { internal_name: name + '_yaml', display_name: 'YAML', active: false }  %>
                 </div>
               </nav>
             </div>
@@ -42,10 +42,10 @@
 
       <div class="container no-horiz-padding">
         <div class="tab-content" id="<%= content_tab_id %>">
-          <%= render partial: 'layouts/report_format_nav_content', locals: {name: name + '_html', html_text: report_html, active: true } %>
-          <%= render partial: 'layouts/report_format_nav_content', locals: {name: name + '_text', html_text: report_text, active: false } %>
-          <%= render partial: 'layouts/report_format_nav_content', locals: {name: name + '_json', html_text: report_json, active: false } %>
-          <%= render partial: 'layouts/report_format_nav_content', locals: {name: name + '_yaml', html_text: report_yaml, active: false } %>
+          <%= render partial: 'reports/report_format_nav_content', locals: {name: name + '_html', html_text: report_html, active: true } %>
+          <%= render partial: 'reports/report_format_nav_content', locals: {name: name + '_text', html_text: report_text, active: false } %>
+          <%= render partial: 'reports/report_format_nav_content', locals: {name: name + '_json', html_text: report_json, active: false } %>
+          <%= render partial: 'reports/report_format_nav_content', locals: {name: name + '_yaml', html_text: report_yaml, active: false } %>
         </div>
       </div>
     </div>
