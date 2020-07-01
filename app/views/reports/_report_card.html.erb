@@ -22,7 +22,7 @@
               <nav class="navbar nav-justified">
 <!--                <nav class="nav nav-pills nav-fill navbar-expand nav-justified">-->
                 <div class="nav nav-tabs" role="tablist">
-                  <div class="navbar-brand rpt-nav-tab">Format:</div>
+                  <div class="navbar-brand rpt-nav-tab nav-link">Format:</div>
                   <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { internal_name: name + '_html', display_name: 'HTML', active: true  }  %>
                   <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { internal_name: name + '_text', display_name: 'Text', active: false }  %>
                   <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { internal_name: name + '_json', display_name: 'JSON', active: false }  %>
