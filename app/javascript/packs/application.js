@@ -15,40 +15,31 @@ function defaultBackgroundColor() {
     return "#c9d0f1";
 }
 
-// Set up main menu links so that:
-//
-// 1) When one is clicked, it is displayed as the active tab, and the content is changed.
-// 2) If a URL such as ".../elvis" is specified on startup, the correct tab will be active.
+// Set up main menu links so that when one is clicked, it is displayed as the active tab, and the content is changed.
 function setUpMainMenuLinks() {
-
-    const menuItems = function() {
-        return document.querySelectorAll(".main-menu-item");
+    for (const elem of document.querySelectorAll(".main-menu-item")) {
+        elem.addEventListener("click", function(event) {
+            window.location.href = event.target.getAttribute("href");
+        });
     }
+}
 
-    const setActiveTabAppearance = function(event) {
-        for (const elem of menuItems()) {
-            if (elem.id == event.target.id) {
-                elem.classList.add('active');
-                elem.setAttribute("aria-selected", true);
-            } else {
-                elem.classList.remove('active');
-                elem.setAttribute("aria-selected", false);
-            }
-        }
 
-        window.location.href = event.target.getAttribute("href");
-    }
-
-    for (const elem of menuItems()) {
-        elem.addEventListener("click", setActiveTabAppearance);
+// Set up report links so that when one is clicked, it is displayed as the active tab, and the content is changed.
+function setUpReportLinks() {
+    for (const elem of document.querySelectorAll(".rpt-button")) {
+        console.log("Setting click listener on ", elem);
+        elem.addEventListener("click", function(event) {
+            console.log("Setting href to ", event.target.getAttribute("href"));
+            window.location.href = event.target.getAttribute("href");
+        });
     }
 }
 
 
 function setInitialMenuChoice() {
     const href = window.location.href;
-    const tokens = href.split("/");
-    const tabName = tokens[tokens.length - 1];
+    const tabName = href.split("/")[1].split("?")[0];
     const activeMenuItemId = (tabName.length > 0) ? ("main-menu-" + tabName) : "main-menu-home";
     document.getElementById(activeMenuItemId).classList.add("active");
     // On initialization there will be no menu items already active, so no needed to remove active class anywhere.
@@ -163,6 +154,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     setupCopyButtonVisibility();
     setUpMainMenuLinks();
     setInitialMenuChoice();
+    setUpReportLinks();
 });
 
 

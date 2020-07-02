@@ -2,11 +2,13 @@
   <div class="card-header" id="<%= card_button_id %>">
     <h1 class="mb-0">
       <button
-          class="btn btn-link accordion-btn-text"
+          class="btn btn-link accordion-btn-text rpt-button"
           data-toggle="collapse"
           data-target="#<%= card_content_id %>"
           aria-expanded="<%= active %>>"
-          aria-controls="<%= card_content_id %>">
+          aria-controls="<%= card_content_id %>"
+          href="reports?type=<%= name %>"
+        >
         <%= report_title %>
       </button>
     </h1>
