@@ -39,7 +39,8 @@ function setUpReportLinks() {
 
 function setInitialMenuChoice() {
     const href = window.location.href;
-    const tabName = href.split("/")[1].split("?")[0];
+    const tokens = href.split("/");
+    const tabName = tokens[tokens.length - 1].split("?")[0];
     const activeMenuItemId = (tabName.length > 0) ? ("main-menu-" + tabName) : "main-menu-home";
     document.getElementById(activeMenuItemId).classList.add("active");
     // On initialization there will be no menu items already active, so no needed to remove active class anywhere.
