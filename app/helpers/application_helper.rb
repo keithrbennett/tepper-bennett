@@ -77,7 +77,9 @@ end
 #   end
 # end
 
-
+  def inspect(object)
+    object.ai(html: true, plain:true, multiline: true)
+  end
 
 def youtube_text_song_link(text, youtube_code)
   html = tag.a(

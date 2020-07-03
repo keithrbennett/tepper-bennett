@@ -15,6 +15,8 @@
   </div>
 
   <div id="<%= card_content_id %>" class="collapse<%= active ? ' show' : '' %>" aria-labelledby="<%= card_button_id %>" data-parent="#reports-accordion">
+        <%= inspect(local_assigns) %>
+
     <div class="card-body">
 
       <div class="container">
@@ -41,10 +43,14 @@
 
       <div class="container no-horiz-padding">
         <div class="tab-content" id="<%= content_tab_id %>">
-          <%= render partial: 'reports/report_format_nav_content', locals: {name: name + '_html', html_text: report_html, active: true } %>
-          <%= render partial: 'reports/report_format_nav_content', locals: {name: name + '_text', html_text: report_text, active: false } %>
-          <%= render partial: 'reports/report_format_nav_content', locals: {name: name + '_json', html_text: report_json, active: false } %>
-          <%= render partial: 'reports/report_format_nav_content', locals: {name: name + '_yaml', html_text: report_yaml, active: false } %>
+          <%= render partial: 'reports/report_format_nav_content', locals: {name: name + '_html', active: true } %>
+          <%= render partial: 'reports/report_format_nav_content', locals: {name: name + '_text', active: false } %>
+          <%= render partial: 'reports/report_format_nav_content', locals: {name: name + '_json', active: false } %>
+          <%= render partial: 'reports/report_format_nav_content', locals: {name: name + '_yaml', active: false } %>
+          <%#= render partial: 'reports/report_format_nav_content', locals: {name: name + '_html', html_text: report_html, active: true } %>
+          <%#= render partial: 'reports/report_format_nav_content', locals: {name: name + '_text', html_text: report_text, active: false } %>
+          <%#= render partial: 'reports/report_format_nav_content', locals: {name: name + '_json', html_text: report_json, active: false } %>
+          <%#= render partial: 'reports/report_format_nav_content', locals: {name: name + '_yaml', html_text: report_yaml, active: false } %>
         </div>
       </div>
     </div>

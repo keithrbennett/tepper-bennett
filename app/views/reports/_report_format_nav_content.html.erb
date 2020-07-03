@@ -4,5 +4,7 @@
      data-parent="nav-<%= name %>-tab"
      role="tabpanel"
      aria-labelledby="nav-<%= name %>-tab">
-  <%= html_text %>
+  <% info = { "tab-id" => "nav-#{name}-tab", "id" => "nav-#{name}", "name" => name, "data-parent" => "nav-#{name}-tab" } %>
+  Placeholder text:<br/>
+  <%= inspect(info) %>
 </div>

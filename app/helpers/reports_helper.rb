@@ -1,6 +1,6 @@
 module ReportsHelper
 
-  class Report < Struct.new(:key, :title, :html_report) #, :report_text, :report_json, :report_yaml)
+  class Report < Struct.new(:key, :title, :fn_html_report) #, :report_text, :report_json, :report_yaml)
 
     include ApplicationHelper
 
@@ -18,10 +18,13 @@ module ReportsHelper
           card_button_id:  button_id,
           card_content_id: content_id,
           report_title:    title,
-          report_html:     html_report,
-          report_text:     report_text,
-          report_json:     report_json,
-          report_yaml:     report_yaml,
+          fn_url:          ->(format) { "/reports?type=#{content_id}&format=#{format}" },
+          reporters:       {
+              html: fn_html_report,
+              text: -> { report_text },
+              json: -> { report_json },
+              yaml: -> { report_yaml },
+          },
           copy_button_id:  "btn-copy-#{key}",
           content_tab_id:  "content-tab-#{key}"
       }
@@ -54,20 +57,20 @@ module ReportsHelper
 
   def init_reports_metadata
     @reports ||= [
-        ['song_codes_names',          'Songs',             html_code_name_report_table(Song)],
-        ['performer_codes_names',     'Performers',        html_code_name_report_table(Performer)],
-        ['song_plays',                'Song Plays',        html_song_plays_report],
-        ['genres',                    'Genres',            html_code_name_report_table(Genre)],
-        ['song_performers',           'Song Performers',   html_song_performers_report],
-        ['performer_songs',           'Performer Songs',   html_performer_songs_report],
-        ['song_genres',               'Genres by Song',    html_song_genres_report],
-        ['genre_songs',               'Songs by Genre',    html_genre_songs_report],
-        ['movies',                    'Movies',            html_movie_report],
-        ['movie_songs',               'Movies Songs',      html_movie_songs_report],
-        ['organization_codes_names',  'Organizations',     html_code_name_report_table(Organization)],
-        ['song_rights_admins', 'Song Rights Administrators', html_rights_admins_report],
-        ['writer_codes_names',        'Writers',           html_code_name_report_table(Writer)],
-    ].map { |(key, title, html_report)| Report.new(key, title, html_report) }
+        ['song_codes_names',          'Songs',               -> { html_code_name_report_table(Song) } ],
+        ['performer_codes_names',     'Performers',          -> { html_code_name_report_table(Performer) } ],
+        ['song_plays',                'Song Plays',          -> { html_song_plays_report }] ,
+        ['genres',                    'Genres',              -> { html_code_name_report_table(Genre) } ],
+        ['song_performers',           'Song Performers',     -> { html_song_performers_report } ],
+        ['performer_songs',           'Performer Songs',     -> { html_performer_songs_report } ],
+        ['song_genres',               'Genres by Song',      -> { html_song_genres_report } ],
+        ['genre_songs',               'Songs by Genre',      -> { html_genre_songs_report } ],
+        ['movies',                    'Movies',              -> { html_movie_report } ],
+        ['movie_songs',               'Movies Songs',        -> { html_movie_songs_report } ],
+        ['organization_codes_names',  'Organizations',       -> { html_code_name_report_table(Organization) } ],
+        ['song_rights_admins', 'Song Rights Administrators', -> { html_rights_admins_report } ],
+        ['writer_codes_names',        'Writers',             -> { html_code_name_report_table(Writer) } ],
+    ].map { |(key, title, fn_html_report)| Report.new(key, title, fn_html_report) }
   end
 
 
