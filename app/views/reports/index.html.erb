@@ -1,17 +1,12 @@
-<% init_reports_metadata %>
 <div class="container-fluid no-horiz-padding">
   <h5>Here is some information about the Tepper-Bennett songs (the data is still a work in progress).</h5>
   <div>
-    <%#= inspect(local_assigns) %>
-
-    <div id="reports-accordion" class="accordion">
       <br/><br/>
 
-      <% @reports.each do |report| %>
-        <% active = (target_rpt_type == report.locals[:rpt_type]) %>
-        <% locals = local_assigns.merge(report.locals).merge({ active: active }) %>
-        <%#= inspect(locals) %>
-        <%= render partial: 'report_card', locals: locals %>
+      <% report_metadata.each do |report| %>
+        <div>
+          <h3><%= link_to report.title, "/reports/#{report.rpt_type}" %></h3>
+        </div>
       <% end %>
 
     </div>

@@ -168,11 +168,11 @@ function setupCopyButtonVisibility() {
 document.addEventListener('DOMContentLoaded', (event) => {
     setUpYouTubeClicks();
     setUpColorPicker();
-    setUpReportCopyButtons();
-    setupCopyButtonVisibility();
+    // setUpReportCopyButtons();
+    // setupCopyButtonVisibility();
     setUpMainMenuLinks();
     setInitialMenuChoice();
-    setUpReportLinks();
+    // setUpReportLinks();
 });
 
 

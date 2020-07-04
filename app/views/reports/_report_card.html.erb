@@ -1,57 +1,35 @@
-<div id="rpt-card-<%= rpt_type %>" class="card rpt-card" style="background-color: unset">
-  <div class="card-header" id="<%= card_button_id %>">
-    <h1 class="mb-0">
-      <button
-          class="btn btn-link accordion-btn-text rpt-button"
-          data-button-rpt-type="<%= rpt_type %>"
-          data-toggle="collapse"
-          data-target="#<%= card_content_id %>"
-          aria-expanded="<%= active %>>"
-          aria-controls="<%= card_content_id %>"
-          href="reports?type=<%= rpt_type %>"
-        >
-        <%= report_title %>
-      </button>
-    </h1>
-  </div>
+<div id="rpt-card" class="card rpt-card" style="background-color: unset">
+</div>
+<%#= inspect(local_assigns) %>
+  <div>
+<!--      <div class="container">-->
+<!--        <div class="row justify-content-between">-->
+<!--          <div class="col-8">-->
+<!--            <div class="container nav-container no-horiz-padding">-->
+<!--                <nav class="nav nav-pills nav-fill navbar-expand nav-justified">-->
+<!--                  <div class="navbar-brand rpt-nav-tab nav-link">Format:</div>-->
+                  <%#= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'html', internal_name: rpt_type + '_html', display_name: 'HTML', active: target_rpt_format == 'html' } ) %>
+                  <%#= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'text', internal_name: rpt_type + '_text', display_name: 'Text', active: target_rpt_format == 'text' } ) %>
+                  <%#= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'json', internal_name: rpt_type + '_json', display_name: 'JSON', active: target_rpt_format == 'json' } ) %>
+                  <%#= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'yaml', internal_name: rpt_type + '_yaml', display_name: 'YAML', active: target_rpt_format == 'yaml' } ) %>
+<!--              </nav>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-4 align-self-center" style="text-align: right;">-->
+<!--            <button id="<%#= copy_button_id %>" class="rpt-copy-button btn btn-primary" alt="Copy to clipboard" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
 
-  <div
-    id="<%= card_content_id %>"
-    class="collapse report-content<%= active ? ' show' : '' %>"
-    aria-labelledby="<%= card_button_id %>"
-    data-parent="#reports-accordion">
-        <%#= inspect(local_assigns) %>
-
-    <div class="card-body">
-
-      <div class="container">
-        <div class="row justify-content-between">
-          <div class="col-8">
-            <div class="container nav-container no-horiz-padding">
-                <nav class="nav nav-pills nav-fill navbar-expand nav-justified">
-                  <div class="navbar-brand rpt-nav-tab nav-link">Format:</div>
-                  <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'html', internal_name: rpt_type + '_html', display_name: 'HTML', active: target_rpt_format == 'html' } ) %>
-                  <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'text', internal_name: rpt_type + '_text', display_name: 'Text', active: target_rpt_format == 'text' } ) %>
-                  <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'json', internal_name: rpt_type + '_json', display_name: 'JSON', active: target_rpt_format == 'json' } ) %>
-                  <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'yaml', internal_name: rpt_type + '_yaml', display_name: 'YAML', active: target_rpt_format == 'yaml' } ) %>
-              </nav>
-            </div>
-          </div>
-          <div class="col-4 align-self-center" style="text-align: right;">
-            <button id="<%= copy_button_id %>" class="rpt-copy-button btn btn-primary" alt="Copy to clipboard" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">Copy</button>
-          </div>
-        </div>
-      </div>
-
-      <br/>
-      <br/>
+<!--      <br/>-->
+<!--      <br/>-->
 
       <div class="container no-horiz-padding">
         <div class="tab-content" id="<%= content_tab_id %>">
           <%= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'html', internal_name: rpt_type + '_html', active: target_rpt_format == 'html' } ) %>
-          <%= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'text', internal_name: rpt_type + '_text', active: target_rpt_format == 'text' } ) %>
-          <%= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'json', internal_name: rpt_type + '_json', active: target_rpt_format == 'json' } ) %>
-          <%= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'yaml', internal_name: rpt_type + '_yaml', active: target_rpt_format == 'yaml' } ) %>
+          <%#= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'text', internal_name: rpt_type + '_text', active: target_rpt_format == 'text' } ) %>
+          <%#= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'json', internal_name: rpt_type + '_json', active: target_rpt_format == 'json' } ) %>
+          <%#= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'yaml', internal_name: rpt_type + '_yaml', active: target_rpt_format == 'yaml' } ) %>
         </div>
       </div>
     </div>

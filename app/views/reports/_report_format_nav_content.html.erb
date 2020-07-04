@@ -5,7 +5,5 @@
      role="tabpanel"
      aria-labelledby="nav-<%= internal_name %>-tab"
 >
-  <% if (rpt_type == target_rpt_type && rpt_format == target_rpt_format) %>
-    <%= reporters[rpt_format.to_sym].call %>
-  <% end %>
+    <%= html %>
 </div>

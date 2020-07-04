@@ -42,7 +42,7 @@ namespace :reports do
   %i(writer performer organization song).each { |task_type| gen_code_name_report_task(task_type) }
 
 
-  gen_report_task(:song_rights_admins, ReportSongRightsAdmins, 'List rights administrator(s) for each song')
+  gen_report_task(:rights_admins,      ReportSongRightsAdmins, 'List rights administrator(s) for each song')
   gen_report_task(:song_performers,    ReportSongPerformers,   'List songs and their performers')
   gen_report_task(:performer_songs,    ReportPerformerSongs,   'List performers and their songs')
   gen_report_task(:song_plays,         ReportSongPlays,        'List song plays (YouTube)')
