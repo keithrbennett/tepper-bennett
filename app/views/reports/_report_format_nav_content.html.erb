@@ -6,9 +6,6 @@
      aria-labelledby="nav-<%= internal_name %>-tab"
 >
   <% if (rpt_type == target_rpt_type && rpt_format == target_rpt_format) %>
-    <h1>You Win !!!</h1>
-    <br/>
-    <br/>
-    <% end %>
-  <%#= inspect(local_assigns) %>
+    <%= reporters[rpt_format.to_sym].call %>
+  <% end %>
 </div>

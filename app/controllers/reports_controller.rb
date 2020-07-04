@@ -4,8 +4,11 @@ class ReportsController < ApplicationController
 
   def index
     respond_to { |format| format.html }
-    rpt_format = params[:rpt_format] ? (params[:rpt_format].downcase) : 'html'
-    render :index, layout: "application", locals: { target_rpt_type: params[:type], target_rpt_format: rpt_format }
+    locals = {
+        target_rpt_format: params[:rpt_format]&.downcase,
+        target_rpt_type:   params[:type]
+    }
+    render :index, layout: "application", locals: locals
   end
 
 
