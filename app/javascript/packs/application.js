@@ -26,13 +26,18 @@ function setUpMainMenuLinks() {
 
 
 // Set up report links so that when one is clicked, it is displayed as the active tab, and the content is changed.
+// Also, set up the format (HTML, Text, JSON, YAML) buttons with click listeners.
 function setUpReportLinks() {
-    for (const elem of document.querySelectorAll(".rpt-button")) {
-        console.log("Setting click listener on ", elem);
-        elem.addEventListener("click", function(event) {
-            console.log("Setting href to ", event.target.getAttribute("href"));
+    for (const reportButton of document.querySelectorAll(".rpt-button")) {
+        reportButton.addEventListener("click", function(event) {
             window.location.href = event.target.getAttribute("href");
         });
+        const card = reportButton.closest(".rpt-card");
+        for (const formatButton of card.querySelectorAll(".rpt-nav-tab")) {
+            formatButton.addEventListener("click", function(event) {
+                window.location.href = event.target.getAttribute("href");
+            });
+        }
     }
 }
 

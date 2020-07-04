@@ -1,20 +1,20 @@
 module ReportsHelper
 
-  class Report < Struct.new(:key, :title, :fn_html_report) #, :report_text, :report_json, :report_yaml)
+  class Report < Struct.new(:rpt_type, :title, :fn_html_report) #, :report_text, :report_json, :report_yaml)
 
     include ApplicationHelper
 
     def button_id
-      key + '_button'
+      rpt_type + '_button'
     end
 
     def content_id
-      key + '_content'
+      rpt_type + '_content'
     end
 
     def locals
       {
-          name:            key,
+          rpt_type:        rpt_type,
           card_button_id:  button_id,
           card_content_id: content_id,
           report_title:    title,
@@ -25,13 +25,13 @@ module ReportsHelper
               json: -> { report_json },
               yaml: -> { report_yaml },
           },
-          copy_button_id:  "btn-copy-#{key}",
-          content_tab_id:  "content-tab-#{key}"
+          copy_button_id:  "btn-copy-#{rpt_type}",
+          content_tab_id:  "content-tab-#{rpt_type}"
       }
     end
 
     def report_filespec(extension)
-      File.join(Rails.root, 'app', 'generated_reports', "#{key}_report#{extension}")
+      File.join(Rails.root, 'app', 'generated_reports', "#{rpt_type}_report#{extension}")
     end
 
 

@@ -2,14 +2,16 @@
 <div class="container-fluid no-horiz-padding">
   <h5>Here is some information about the Tepper-Bennett songs (the data is still a work in progress).</h5>
   <div>
-    <%= inspect(local_assigns) %>
+    <%#= inspect(local_assigns) %>
 
     <div id="reports-accordion" class="accordion">
       <br/><br/>
 
       <% @reports.each do |report| %>
-        <% active = (report_type == report.locals[:name]) %>
-        <%= render partial: 'report_card', locals: report.locals.merge({ active: active }) %>
+        <% active = (target_rpt_type == report.locals[:rpt_type]) %>
+        <% locals = local_assigns.merge(report.locals).merge({ active: active }) %>
+        <%#= inspect(locals) %>
+        <%= render partial: 'report_card', locals: locals %>
       <% end %>
 
     </div>

@@ -1,10 +1,14 @@
 <div
      class="tab-pane<%= active ? ' show active' : '' %>"
-     id="nav-<%= name %>"
-     data-parent="nav-<%= name %>-tab"
+     id="nav-<%= internal_name %>"
+     data-parent="nav-<%= internal_name %>-tab"
      role="tabpanel"
-     aria-labelledby="nav-<%= name %>-tab">
-  <% info = { "tab-id" => "nav-#{name}-tab", "id" => "nav-#{name}", "name" => name, "data-parent" => "nav-#{name}-tab" } %>
-  Placeholder text:<br/>
-  <%= inspect(info) %>
+     aria-labelledby="nav-<%= internal_name %>-tab"
+>
+  <% if (rpt_type == target_rpt_type && rpt_format == target_rpt_format) %>
+    <h1>You Win !!!</h1>
+    <br/>
+    <br/>
+    <% end %>
+  <%#= inspect(local_assigns) %>
 </div>
