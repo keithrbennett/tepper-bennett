@@ -1,4 +1,4 @@
-<div  class="card rpt-card" style="background-color: unset">
+<div id="rpt-card-<%= rpt_type %>" class="card rpt-card" style="background-color: unset">
   <div class="card-header" id="<%= card_button_id %>">
     <h1 class="mb-0">
       <button
@@ -17,7 +17,7 @@
 
   <div
     id="<%= card_content_id %>"
-    class="collapse<%= active ? ' show' : '' %>"
+    class="collapse report-content<%= active ? ' show' : '' %>"
     aria-labelledby="<%= card_button_id %>"
     data-parent="#reports-accordion">
         <%#= inspect(local_assigns) %>

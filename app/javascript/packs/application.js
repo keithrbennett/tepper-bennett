@@ -39,6 +39,18 @@ function setUpReportLinks() {
             });
         }
     }
+
+    const url = new URL(window.location.href);
+    if (url.pathname.split("/")[1] == "reports") {
+        const searchParams = url.searchParams;
+        const target_rpt_type = searchParams.get("type");
+        const id = "rpt-card-" + target_rpt_type;
+        const card = $("#" + id);
+        console.log("card", card);
+        $('html,body').animate({
+            scrollTop: card.offsetTop - 50
+        }, 500);
+    }
 }
 
 
