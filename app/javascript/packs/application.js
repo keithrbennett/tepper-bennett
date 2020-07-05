@@ -146,6 +146,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 document.addEventListener("turbolinks:load", () => {
+    console.log("Turbolinks loaded.");
     $('[data-toggle="tooltip"]').tooltip()
     $('[data-toggle="popover"]').popover()
     setUpMainMenuLinks();
