@@ -25,35 +25,6 @@ function setUpMainMenuLinks() {
 }
 
 
-// Set up report links so that when one is clicked, it is displayed as the active tab, and the content is changed.
-// Also, set up the format (HTML, Text, JSON, YAML) buttons with click listeners.
-function setUpReportLinks() {
-    for (const reportButton of document.querySelectorAll(".rpt-button")) {
-        reportButton.addEventListener("click", function(event) {
-            window.location.href = event.target.getAttribute("href");
-        });
-        const card = reportButton.closest(".rpt-card");
-        for (const formatButton of card.querySelectorAll(".rpt-nav-tab")) {
-            formatButton.addEventListener("click", function(event) {
-                window.location.href = event.target.getAttribute("href");
-            });
-        }
-    }
-
-    const url = new URL(window.location.href);
-    if (url.pathname.split("/")[1] == "reports") {
-        const searchParams = url.searchParams;
-        const target_rpt_type = searchParams.get("type");
-        const id = "rpt-card-" + target_rpt_type;
-        const card = $("#" + id);
-        console.log("card", card);
-        $('html,body').animate({
-            scrollTop: card.offsetTop - 50
-        }, 500);
-    }
-}
-
-
 function setInitialMenuChoice() {
     const href = window.location.href;
     const tokens = href.split("/");
@@ -168,18 +139,17 @@ function setupCopyButtonVisibility() {
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log("DOM content loaded.");
     setUpYouTubeClicks();
-    setUpColorPicker();
     // setUpReportCopyButtons();
     // setupCopyButtonVisibility();
-    setUpMainMenuLinks();
     setInitialMenuChoice();
-    // setUpReportLinks();
 });
 
 
 document.addEventListener("turbolinks:load", () => {
     $('[data-toggle="tooltip"]').tooltip()
     $('[data-toggle="popover"]').popover()
+    setUpMainMenuLinks();
+    setUpColorPicker();
 });
 
 
