@@ -166,6 +166,7 @@ function setupCopyButtonVisibility() {
 
 // DOMContentLoaded event handling:
 document.addEventListener('DOMContentLoaded', (event) => {
+    console.log("DOM content loaded.");
     setUpYouTubeClicks();
     setUpColorPicker();
     // setUpReportCopyButtons();

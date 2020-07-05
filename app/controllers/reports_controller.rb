@@ -3,7 +3,8 @@ class ReportsController < ApplicationController
   include ReportsHelper
 
   # A hash consisting of the report type (first value below) as key, Report object as value.
-  REPORT_METADATA = [
+  def reports_metadata
+    @reports_metadata ||= [
           ['songs',               'Songs',               -> { html_code_name_report_table(Song) } ],
           ['performers',          'Performers',          -> { html_code_name_report_table(Performer) } ],
           ['song_plays',          'Song Plays',          -> { html_song_plays_report }] ,
@@ -19,73 +20,24 @@ class ReportsController < ApplicationController
           ['writers',             'Writers',             -> { html_code_name_report_table(Writer) } ],
       ].map { |(rpt_type, title, fn_html_report)| Report.new(rpt_type, title, fn_html_report) } \
       .each_with_object({}) { |report, report_hash| report_hash[report.rpt_type] = report }
+  end
+
 
   def index
     respond_to { |format| format.html }
-    render :index, layout: "application", locals: { report_metadata: REPORT_METADATA.values }
+    render :index, layout: "application", locals: { report_metadata: reports_metadata.values }
   end
 
 
-  def report_action(rpt_type, html_text)
+  def show
+    rpt_type = params[:rpt_type]
+    report_metadata = reports_metadata[rpt_type]
     locals = {
         target_rpt_format: 'html',
-        html: html_text,
-    }.merge(REPORT_METADATA[rpt_type].locals)
+        html: report_metadata.fn_html_report.call
+    }.merge(report_metadata.locals)
 
     render '/reports/report', layout: "application", locals: locals
-  end
-
-
-  def songs
-    report_action('songs', html_code_name_report_table(Song))
-  end
-
-  def performers
-    report_action('performers', html_code_name_report_table(Performer))
-  end
-
-  def song_plays
-    report_action('song_plays', html_song_plays_report)
-  end
-
-  def genres
-    report_action('genres', html_code_name_report_table(Genre))
-  end
-
-  def song_performers
-    report_action('song_performers', html_song_performers_report)
-  end
-
-  def performer_songs
-    report_action('performer_songs', html_performer_songs_report)
-  end
-
-  def song_genres
-    report_action('song_genres', html_song_genres_report)
-  end
-
-  def genre_songs
-    report_action('genre_songs', html_genre_songs_report)
-  end
-
-  def movies
-    report_action('movies', html_code_name_report_table(Movie))
-  end
-
-  def movie_songs
-    report_action('movie_songs', html_movie_songs_report)
-  end
-
-  def organizations
-    report_action('organizations', html_code_name_report_table(Organization))
-  end
-
-  def rights_admins
-    report_action('rights_admins', html_rights_admins_report)
-  end
-
-  def writers
-    report_action('writers', html_code_name_report_table(Writer))
   end
 
 
