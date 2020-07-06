@@ -49,7 +49,7 @@ namespace :reports do
   gen_report_task(:genres, GenresTextReport, 'List genres')
   gen_report_task(:song_genres, SongGenresTextReport, 'List song genres')
   gen_report_task(:genre_songs, GenreSongsTextReport, 'List songs of each genre')
-  gen_report_task(:movies, MoviesTextReport, 'List movies and their IMDB keys')
+  gen_report_task(:movies, MovieTextReport, 'List movies and their IMDB keys')
   gen_report_task(:movie_songs, MovieSongsTextReport, 'List movies and their songs')
 
 

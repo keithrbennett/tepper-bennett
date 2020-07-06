@@ -15,4 +15,9 @@ class MovieReport < BaseReport
 
     html_report_table(headings, table_data.join("\n"))
   end
+
+  def to_raw_text
+    MovieTextReport.new(records).report_string
+  end
+
 end
