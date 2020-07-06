@@ -27,8 +27,8 @@ class PerformerSongsReport < BaseReport
     html_report_table(headings, table_data)
   end
 
+
   def to_raw_text
     PerformerSongsTextReport.new(records).report_string
   end
-
 end
