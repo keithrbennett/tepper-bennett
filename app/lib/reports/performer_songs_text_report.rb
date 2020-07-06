@@ -1,6 +1,8 @@
-class ReportPerformerSongs < BaseReport
+require_relative 'base_text_report'
 
-  attr_reader :report_title, :line_length, :report_string_continuation_indent
+class PerformerSongsTextReport < BaseTextReport
+
+  attr_reader :title, :line_length, :report_string_continuation_indent
 
   def initialize
     @line_length = [Performer.max_code_length, Performer.max_name_length, Song.max_code_length, Song.max_name_length].sum + 6

@@ -1,8 +1,11 @@
-class ReportMovieSongs < BaseReport
+require_relative 'base_text_report'
 
-  attr_reader :report_title, :line_length, :report_string_continuation_indent
+class MovieSongsTextReport < BaseTextReport
 
-  def initialize
+  attr_reader :records, :title, :line_length, :report_string_continuation_indent
+
+  def initialize(records)
+    @records = records
     @line_length = [Song.max_code_length, Song.max_name_length, Performer.max_code_length, Performer.max_name_length].sum + 6
     @report_title = 'Songs by Movie'
     @report_string_continuation_indent = Movie.max_code_length + Movie.max_name_length + 4 + 6 # 6 = 4-digit year + 2

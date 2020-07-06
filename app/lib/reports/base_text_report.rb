@@ -1,4 +1,4 @@
-class BaseReport
+class BaseTextReport
 
   TITLE_TIME_LENGTH = 34
 
@@ -11,18 +11,18 @@ class BaseReport
   end
 
   def separator_line
-    @separator_line ||= ('-' * [line_length, (report_title.length + TITLE_TIME_LENGTH)].max)
+    @separator_line ||= ('-' * [line_length, (title.length + TITLE_TIME_LENGTH)].max)
   end
 
   def title_indentation
-    title_length_incl_timestamp = report_title.length + TITLE_TIME_LENGTH
+    title_length_incl_timestamp = title.length + TITLE_TIME_LENGTH
     ' ' * [((line_length - title_length_incl_timestamp) / 2), 0].max
   end
 
   def title_banner
     <<~HEREDOC
     #{separator_line}
-    #{title_indentation}#{title_with_gen_date(report_title)}
+    #{title_indentation}#{title_with_gen_date(title)}
     #{separator_line}
 
 
@@ -41,10 +41,6 @@ class BaseReport
     attributes.each_with_object({}) do |attr, attr_hash|
       attr_hash[attr] = record[attr]
     end
-  end
-
-  def to_text
-    report_string
   end
 
 

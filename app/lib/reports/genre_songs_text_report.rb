@@ -1,6 +1,8 @@
-class ReportGenreSongs < BaseReport
+require_relative 'base_text_report'
 
-  attr_reader :report_title, :ar_class
+class GenreSongsTextReport < BaseTextReport
+
+  attr_reader :title, :ar_class
 
 
   def initialize

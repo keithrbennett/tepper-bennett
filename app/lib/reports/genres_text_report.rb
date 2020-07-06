@@ -1,6 +1,8 @@
-class ReportGenres < BaseReport
+require_relative 'base_text_report'
 
-  attr_reader :report_title, :line_length, :report_string_continuation_indent
+class GenresTextReport < BaseTextReport
+
+  attr_reader :title, :line_length, :report_string_continuation_indent
 
   def initialize
     @line_length = [Genre.max_code_length, Genre.max_name_length].sum + 6

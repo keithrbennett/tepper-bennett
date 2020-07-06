@@ -1,6 +1,8 @@
-class ReportMovies < BaseReport
+require_relative 'base_text_report'
 
-  attr_reader :report_title, :line_length
+class MoviesTextReport < BaseTextReport
+
+  attr_reader :title, :line_length
 
   def initialize
     @report_title = "Movies"

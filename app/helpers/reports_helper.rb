@@ -17,7 +17,7 @@ module ReportsHelper
           rpt_type:        rpt_type,
           card_button_id:  button_id,
           card_content_id: content_id,
-          report_title:    title,
+          title:    title,
           # fn_url:          ->(format) { "/reports?type=#{content_id}&format=#{format}" },
           # reporters:       {
           #     html: fn_html_report,
