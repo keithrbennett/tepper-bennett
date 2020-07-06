@@ -2,20 +2,13 @@ require_relative 'base_text_report'
 
 class GenreSongsTextReport < BaseTextReport
 
-  attr_reader :title, :ar_class
+  attr_reader :records, :title
 
 
-  def initialize
-    @report_title = 'Songs by Genre'
-    build_report_hash(data)
-  end
-
-
-  def data
-    @data ||= Genre.order(:name).all.each_with_object({}) do |genre, songs_by_genre|
-      songs = genre.songs
-      songs_by_genre[genre.name] = songs.map { |song| attr_hash(song, %w{code name}) }
-    end
+  def initialize(records)
+    @records = records
+    @title = 'Songs by Genre'
+    build_report_hash(records)
   end
 
 
@@ -28,10 +21,10 @@ class GenreSongsTextReport < BaseTextReport
     report = StringIO.new
 
     report << title_banner
-    data.each do |genre, songs|
-      (report << separator_line << "\n") if genre != data.keys.first   # omit '----' on first genre
-      report << "Genre: #{genre}\n\n"
-      report << record_report_string(songs) << "\n"
+    records.each_with_index do |genre, index|
+      (report << separator_line << "\n") unless index == 0 # omit '----' on first genre
+      report << "Genre: #{genre[:name]}\n\n"
+      report << record_report_string(genre[:songs]) << "\n"
     end
     report << "\n\n"
     report.string
@@ -45,7 +38,7 @@ class GenreSongsTextReport < BaseTextReport
     else
       songs.each do |song|
         sio << ("%-*s  %-s\n" %
-            [Song.max_code_length, song['code'], song['name']])
+            [Song.max_code_length, song[:code], song[:name]])
       end
     end
 

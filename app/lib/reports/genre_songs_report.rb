@@ -31,4 +31,10 @@ class GenreSongsReport < BaseReport
     records.each { |genre| append_row.(genre) }
     html.string.html_safe
   end
+
+
+  def to_raw_text
+    GenreSongsTextReport.new(records).report_string
+  end
+
 end
