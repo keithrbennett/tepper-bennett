@@ -139,8 +139,6 @@ function setupCopyButtonVisibility() {
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log("DOM content loaded.");
     setUpYouTubeClicks();
-    // setUpReportCopyButtons();
-    // setupCopyButtonVisibility();
     setInitialMenuChoice();
 });
 
@@ -151,6 +149,8 @@ document.addEventListener("turbolinks:load", () => {
     $('[data-toggle="popover"]').popover()
     setUpMainMenuLinks();
     setUpColorPicker();
+    setUpReportCopyButtons();
+    setupCopyButtonVisibility();
 });
 
 

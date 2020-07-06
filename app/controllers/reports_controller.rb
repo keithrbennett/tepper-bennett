@@ -9,20 +9,20 @@ class ReportsController < ApplicationController
     end
 
     @reports_metadata ||= [
-          ['songs',               'Songs',               -> { CodeNameReport.new(Song).to_html } ],
-          ['performers',          'Performers',          -> { CodeNameReport.new(Performer).to_html } ],
-          ['song_plays',          'Song Plays',          -> { SongPlaysReport.new(youtube_link_generator).to_html }] ,
-          ['genres',              'Genres',              -> { CodeNameReport.new(Genre).to_html } ],
-          ['song_performers',     'Song Performers',     -> { SongPerformersReport.new.to_html } ],
-          ['performer_songs',     'Performer Songs',     -> { PerformerSongsReport.new.to_html } ],
-          ['song_genres',         'Genres by Song',      -> { SongGenresReport.new.to_html } ],
-          ['genre_songs',         'Songs by Genre',      -> { GenreSongsReport.new.to_html } ],
-          ['movies',              'Movies',              -> { MovieReport.new.to_html } ],
-          ['movie_songs',         'Movies Songs',        -> { MovieSongsReport.new.to_html } ],
-          ['organizations',       'Organizations',       -> { CodeNameReport.new(Organization).to_html } ],
-          ['rights_admins',       'Song Rights Administrators', -> { html_rights_admins_report } ],
-          ['writers',             'Writers',             -> { CodeNameReport.new(Writer).to_html } ],
-      ].map { |(rpt_type, title, fn_html_report)| Report.new(rpt_type, title, fn_html_report) } \
+          ['songs',               'Songs',               -> { CodeNameReport.new(Song) } ],
+          ['performers',          'Performers',          -> { CodeNameReport.new(Performer) } ],
+          ['song_plays',          'Song Plays',          -> { SongPlaysReport.new(youtube_link_generator) }] ,
+          ['genres',              'Genres',              -> { CodeNameReport.new(Genre) } ],
+          ['song_performers',     'Song Performers',     -> { SongPerformersReport.new } ],
+          ['performer_songs',     'Performer Songs',     -> { PerformerSongsReport.new } ],
+          ['song_genres',         'Genres by Song',      -> { SongGenresReport.new } ],
+          ['genre_songs',         'Songs by Genre',      -> { GenreSongsReport.new } ],
+          ['movies',              'Movies',              -> { MovieReport.new } ],
+          ['movie_songs',         'Movies Songs',        -> { MovieSongsReport.new } ],
+          ['organizations',       'Organizations',       -> { CodeNameReport.new(Organization) } ],
+          ['rights_admins',       'Song Rights Administrators', -> { RightsAdminReport.new } ],
+          ['writers',             'Writers',             -> { CodeNameReport.new(Writer) } ],
+      ].map { |(rpt_type, title, fn_report)| ReportMetadata.new(rpt_type, title, fn_report) } \
       .each_with_object({}) { |report, report_hash| report_hash[report.rpt_type] = report }
   end
 
@@ -38,7 +38,7 @@ class ReportsController < ApplicationController
     report_metadata = reports_metadata[rpt_type]
     locals = {
         target_rpt_format: 'html',
-        html: report_metadata.fn_html_report.call
+        report: report_metadata.fn_report.call,
     }.merge(report_metadata.locals)
 
     render '/reports/report', layout: "application", locals: locals
@@ -79,27 +79,34 @@ HEREDOC
   end
 
 
-  def html_code_name_report_table(ar_class)
-    table_data = records_to_html_table_data(ar_class.order(:name).pluck(:code, :name))
-    html_report_table(%w{Code Name}, table_data)
-  end
-
-
   class BaseReport
 
     attr_reader :field_names
 
-    # # Pass array of field names as symbols
-    # def initialize(field_names)
-    #   @field_names = field_names
-    # end
+    VALID_FORMATS = %w(html text json yaml)
 
-    # def to_hashes
-    #   pluck(field_names)
-    # end
+    def content(rpt_format)
+      unless VALID_FORMATS.include?(rpt_format)
+        raise "Invalid format (#{rpt_format}); must be one of #{VALID_FORMATS.join(', ')}"
+      end
+      case rpt_format
+      when 'html'
+        to_html
+      when 'text'
+        to_text
+      when 'json'
+        to_json
+      when 'yaml'
+        to_yaml
+      end
+    end
 
     def preize_text(text)
       "<div><pre>\n#{text}</pre></div>\n".html_safe
+    end
+
+    def to_text
+      to_yaml # TODO: Change this to real text report
     end
 
     def to_json
@@ -147,20 +154,31 @@ HEREDOC
       end
       html.string.html_safe
     end
+
+
+    def pluck_to_hash(ar_relation, *field_names)
+      ar_relation.pluck(*field_names).map do |field_values|
+        field_names.zip(field_values).each_with_object({}) do |(key, value), result_hash|
+          result_hash[key] = value
+        end
+      end
+    end
   end
 
 
   class CodeNameReport < BaseReport
 
-    attr_reader :records
+    attr_reader :records, :tuples
 
     def initialize(ar_class)
-      @records = ar_class.order(:name).pluck(:code, :name)
-      ap @records
+      @tuples = ar_class.order(:name).pluck(:code, :name)
+      @records = tuples.map do |tuple|
+        { code: tuple[0], name: tuple[1] }
+      end
     end
 
     def to_html
-      table_data = records_to_html_table_data(records)
+      table_data = records_to_html_table_data(tuples)
       html_report_table(%w{Code Name}, table_data)
     end
   end
@@ -168,17 +186,18 @@ HEREDOC
 
   class MovieReport < BaseReport
 
-    attr_reader :records, :headings
+    attr_reader :records, :tuples
 
     def initialize
-      @records = Movie.order(:name).all.to_a
-      @headings = ['Code', 'Year', 'IMDB Key', 'Name']
+      @records = pluck_to_hash(Movie.order(:name), :code, :year, :name, :imdb_key)
+      ap records
     end
 
     def to_html
+      headings = ['Code', 'Year', 'IMDB Key', 'Name']
       table_data = records.map do |m|
-        imdb_anchor = %Q{<a href="#{m.imdb_url}", target="_blank">#{m.imdb_key}</a>}
-        %Q{<tr><td>#{m.code}</td><td>#{m.year}</td><td>#{imdb_anchor}</td><td>#{m.name}</td></tr>}
+        imdb_anchor = %Q{<a href="#{m[:imdb_url]}", target="_blank">#{m[:imdb_key]}</a>}
+        %Q{<tr><td>#{m[:code]}</td><td>#{m[:year]}</td><td>#{imdb_anchor}</td><td>#{m[:name]}</td></tr>}
       end
 
       html_report_table(headings, table_data.join("\n"))
@@ -192,19 +211,21 @@ HEREDOC
 
     def initialize
       @records = Movie.order(:name).map do |movie|
-        songs = movie.songs.order(:name)
-        song_codes = songs.pluck(:code)
-        song_names = songs.pluck(:name)
-        {
-            year: movie.year, code: movie.code, name: movie.name, song_codes: song_codes, song_names: song_names
-        }
+        songs = pluck_to_hash(movie.songs.order(:name), :code, :name)
+        { year: movie.year, code: movie.code, name: movie.name, songs: songs }
       end
     end
 
     def to_html
       headings = ['Year', 'Code', 'Name', 'Song Code', 'Song Name']
       html_data = records.map do |r|
-        [r[:year], r[:code], r[:name], r[:song_codes].join("<br/>"), r[:song_names].join("<br/>")]
+        [
+            r[:year],
+            r[:code],
+            r[:name],
+            r[:songs].pluck(:code).join('<br/>') ,
+            r[:songs].pluck(:name).join('<br/>') ,
+        ]
       end
 
       table_data = records_to_html_table_data(html_data)
@@ -221,7 +242,7 @@ HEREDOC
       @records = Genre.order(:name).all.map do |genre|
         {
             name: genre.name,
-            songs: genre.songs.map { |s| { code: s[:code], name: s[:name] } }
+            songs: pluck_to_hash(genre.songs.order(:name), :code, :name)
         }
       end
     end
@@ -258,14 +279,19 @@ HEREDOC
         {
             code: song.code,
             name: song.name,
-            performers: song.performers.map { |p| { code: p[:code], name: p[:name] } }
+            performers: pluck_to_hash(song.performers.order(:name), :code, :name)
         }
       end
 
       def to_html
         headings = ['Song Code', 'Song Name', 'Perf Code', 'Performer Name']
         data = records.map do |r|
-          [r[:code], r[:name], r[:performers].pluck(:code).join("<br/>"), r[:performers].pluck(:name).join("<br/>") ]
+          [
+              r[:code],
+              r[:name],
+              r[:performers].pluck(:code).join("<br/>"),
+              r[:performers].pluck(:name).join("<br/>")
+          ]
         end
         table_data = records_to_html_table_data(data)
         html_report_table(headings, table_data)
@@ -283,7 +309,7 @@ HEREDOC
         {
             code: performer.code,
             name: performer.name,
-            songs: performer.songs.map { |s| { code: s[:code], name: s[:name] } }
+            songs: pluck_to_hash(performer.songs.order(:name), :code, :name)
         }
       end
 
@@ -291,8 +317,12 @@ HEREDOC
         headings = ['Perf Code', 'Performer Name', 'Song Code', 'Song Name']
         data = records.map do |r|
           songs = r[:songs]
-          raise "songs is null" unless songs
-          [r[:code], r[:name], songs.pluck(:code).join("<br/>"), songs.pluck(:name).join("<br/>") ]
+          [
+              r[:code],
+              r[:name],
+              songs.pluck(:code).join("<br/>"),
+              songs.pluck(:name).join("<br/>")
+          ]
         end
         table_data = records_to_html_table_data(data)
         html_report_table(headings, table_data)
@@ -310,7 +340,7 @@ HEREDOC
         {
             code: song.code,
             name: song.name,
-            genres: song.genres.pluck(:name)
+            genres: song.genres.order(:name).pluck(:name)
         }
       end
 
@@ -338,7 +368,7 @@ HEREDOC
         {
           song_code: song.code,
           song_name: song.name,
-          performers: perfs.map { |p| { code: p.code, name: p.name } },
+          performers: pluck_to_hash(perfs, :code, :name),
           youtube_key: song_play.youtube_key
         }
       end
@@ -348,12 +378,16 @@ HEREDOC
       headings = ['Song Code', 'Song Name', 'Perf Code', 'Performer Name', 'YouTube Key', 'Play']
       data = records.map do |r|
         performers = r[:performers]
-        perf_codes = performers.map { |p| p[:code] }.join("<br/>")
-        perf_names = performers.map { |p| p[:name] }.join("<br/>")
         youtube_key = r[:youtube_key]
         url = SongPlay.youtube_embed_url(youtube_key)
         youtube_link = youtube_link_renderer.(url)
-        [r[:song_code], r[:song_name], perf_codes, perf_names, youtube_key, youtube_link]
+        [
+            r[:song_code],
+            r[:song_name],
+            performers.pluck(:code).join("<br/>"),
+            performers.pluck(:name).join("<br/>"),
+            youtube_key,
+            youtube_link]
       end
       table_data = records_to_html_table_data(data)
       html_report_table(headings, table_data)
@@ -361,17 +395,35 @@ HEREDOC
   end
 
 
-  def html_rights_admins_report
-    headings = ['Song Code', 'Song Name', 'RA Code', 'Rights Admin Name']
+  class RightsAdminReport < BaseReport
 
-    data = Song.order(:name).map do |song|
-      rights_admins = song.rights_admin_orgs.order(:name)
-      rights_admin_codes = rights_admins.pluck(:code).join("<br/>")
-      rights_admin_names = rights_admins.pluck(:name).join("<br/>")
-      [song.code, song.name, rights_admin_codes, rights_admin_names]
+    attr_reader :records
+
+    def initialize
+      @records = Song.order(:name).map do |song|
+        rights_admins = song.rights_admin_orgs.order(:name)
+        {
+            code: song.code,
+            name: song.name,
+            rights_admins: pluck_to_hash(rights_admins, :code, :name),
+        }
+      end
+      ap records
     end
 
-    table_data = records_to_html_table_data(data)
-    html_report_table(headings, table_data)
+
+    def to_html
+      headings = ['Song Code', 'Song Name', 'RA Code', 'Rights Admin Name']
+      html_data = records.map do |r|
+        [
+            r[:code],
+            r[:name],
+            r[:rights_admins].pluck(:code).join("<br/>"),
+            r[:rights_admins].pluck(:name).join("<br/>"),
+        ]
+      end
+      table_data = records_to_html_table_data(html_data)
+      html_report_table(headings, table_data)
+    end
   end
 end

@@ -1,9 +1,9 @@
 <div
      class="tab-pane<%= active ? ' show active' : '' %>"
-     id="nav-<%= internal_name %>"
-     data-parent="nav-<%= internal_name %>-tab"
+     id="nav-rpt-<%= rpt_format %>"
+     data-parent="nav-rpt-<%= rpt_format %>-tab"
      role="tabpanel"
-     aria-labelledby="nav-<%= internal_name %>-tab"
+     aria-labelledby="nav-rpt-<%= rpt_format %>-tab"
 >
-    <%= html %>
+    <%= report.content(rpt_format) %>
 </div>
