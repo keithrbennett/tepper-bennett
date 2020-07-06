@@ -7,51 +7,46 @@ class MovieSongsTextReport < BaseTextReport
   def initialize(records)
     @records = records
     @line_length = [Song.max_code_length, Song.max_name_length, Performer.max_code_length, Performer.max_name_length].sum + 6
-    @report_title = 'Songs by Movie'
-    @report_string_continuation_indent = Movie.max_code_length + Movie.max_name_length + 4 + 6 # 6 = 4-digit year + 2
-    build_report_hash(data)
+    @title = 'Songs by Movie'
+    build_report_hash(records)
   end
 
 
-  def data
-    @data ||= Movie.order(:year, :name).all.map do |movie|
-      songs = movie.songs.order(:name).map { |song| attr_hash(song, %w{code name}) }
-      movie_hash = attr_hash(movie, %w{code year name})
-      movie_hash['songs'] = songs
-      movie_hash
-    end
+  def formatted_data_line(year, movie_code, movie_name, song_code, song_name)
+    '%-4.4s  %-*s  %-*s  %-*s  %-*s' % [
+        year.to_s,
+        Movie.max_code_length, movie_code,
+        Movie.max_name_length, movie_name,
+        Song.max_code_length,  song_code,
+        Song.max_name_length, song_name
+    ]
   end
-
 
   def heading
-    'Year  %-*s  %-*s  %-*s  %-*s' %
-        [Movie.max_code_length,      '   Code',
-         Movie.max_name_length,      'Name',
-         Song.max_code_length, 'Song Code',
-         Song.max_name_length, 'Song Name']
+    formatted_data_line('Year',  '   Code', 'Name', 'Song Code', 'Song Name')
   end
 
 
   def report_string
     report = StringIO.new
     report << "#{title_banner}#{heading}\n"
-    data.each { |record| report << record_report_string(record) << "\n" }
+    records.each { |record| report << record_report_string(record) << "\n" }
     report << "\n\n"
     report.string
   end
 
 
   def record_report_string(record)
-    songs = record['songs']
+    songs = record[:songs]
     sio = StringIO.new
     sio << "\n"
 
-    sio << '%4d  %-*s  %-*s  %-*s  %s' %
-        [record['year'], Movie.max_code_length, record['code'], Movie.max_name_length, record['name'],
-         Song.max_code_length, songs&.first&.[]('code'), songs&.first&.[]('name')]
+    ap record
+
+    sio << formatted_data_line(record[:year], record[:code], record[:name], songs.first&.[](:code), songs.first&.[](:name))
+
     (songs[1..-1] || []).each do |song|
-      sio << ("\n%-*s%-*s  %s" %
-          [@report_string_continuation_indent, '', Song.max_code_length, song['code'], song['name']])
+      sio << "\n" << formatted_data_line('', '', '', song[:code], song[:name])
     end
     sio.string
   end
