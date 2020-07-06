@@ -82,6 +82,7 @@ def add_performers
       { code: "jeff-beck"     , name: "Jeff Beck" },
       { code: "kilburn"       , name: "Kilburn and the High Roads" },
       { code: "louis-arm"     , name: "Louis Armstrong" },
+      { code: "m-robbins"     , name: "Marty Robbins" },
       { code: "mickey-katz"   , name: "Mickey Katz" },
       { code: "moscow-jazz"   , name: "Moscow City Jazz Band" },
       { code: "n-wilson"      , name: "Nancy Wilson" },
@@ -263,12 +264,14 @@ def add_non_elvis_songs
       { code: "ssss-heart"    , name: "Say Something Sweet to Your Sweetheart" ,   performers: %w(ink-spots),   genres: %w{hit romantic} },
       { code: "soft-love"     , name: "Softly My Love" ,                           performers: %w(della-reese), genres: %w{romantic} },
       { code: "smr-sounds"    , name: "Summer Sounds" ,                            performers: %w(r-goulet) },
+      { code: "stair-love"    , name: "Stairway of Love" ,                         performers: %w(m-robbins) },
+      { code: "stop-think"    , name: "Stop and Think it Over" ,                   performers: %w(p-como) },
       { code: "suzy-snow"     , name: "Suzy Snowflake" ,                           performers: %w(r-clooney),   genres: %w{children} },
       { code: "tear-rain"     , name: "Teardrops in the Rain" ,                    performers: %w(a-prysock),   genres: %w{romantic} },
       { code: "train-ahchoo"  , name: "The Little Train Who Said 'Ah Choo" ,       performers: %w(anne-lloyd),  genres: %w{children} },
       { code: "nty-lady"      , name: "The Naughty Lady of Shady Lane" ,           performers: %w(ames-bros),   genres: %w{funny hit} },
       { code: "woodchuck"     , name: "The Woodchuck Song" ,                       performers: %w(ben-mill) },
-      { code: "yng-ones"      , name: "The Young Ones" ,                           performers: %w(clf-rich),    genres: %w{hit movie tv}, movies: %w{young-ones} },
+      { code: "young-ones"    , name: "The Young Ones" ,                           performers: %w(clf-rich),    genres: %w{hit movie tv}, movies: %w{young-ones} },
       { code: "tr-light"      , name: "Travelling Light" ,                         performers: %w(clf-rich h-hermits jay-amer), genres: %w{} },
       { code: "t-t-fingers"   , name: "Twenty Tiny Fingers" ,                      performers: %w(kilburn stargazers),  genres: %w{children} },
       { code: "when-arms"     , name: "When the Boy (Girl) in Your Arms" ,         performers: %w(c-francis),   genres: %w{romantic} },
@@ -341,7 +344,9 @@ def add_song_plays
       { song_code: 'smr-sounds'    , performer_codes: 'r-goulet'      , youtube_key: '1gGJ8AHYloQ' },
       { song_code: 'soft-love'     , performer_codes: 'della-reese'   , youtube_key: 'f4MXVgw_3hg' },
       { song_code: 'ssss-heart'    , performer_codes: 'ink-spots'     , youtube_key: 'z617AUVXyMs' },
+      { song_code: 'stair-love'    , performer_codes: 'm-robbins'     , youtube_key: 'DxWBnm8Dbs0' },
       { song_code: 'stay-away'     , performer_codes: 'elvis'         , youtube_key: 'wr6MQtFLX6k' },
+      { song_code: 'stop-think'    , performer_codes: 'p-como'        , youtube_key: 'PE6n4SHZspY' },
       { song_code: 'suzy-snow'     , performer_codes: 'r-clooney'     , youtube_key: 'UiFXZhU5kp4' },
       { song_code: 't-t-fingers'   , performer_codes: 'stargazers'    , youtube_key: 'K0ozZZ_RhP8' },
       { song_code: 't-t-fingers'   , performer_codes: 'stargazers'    , youtube_key: 'K0ozZZ_RhP8' },
@@ -357,7 +362,7 @@ def add_song_plays
       { song_code: 'wond-world'    , performer_codes: 'elvis'         , youtube_key: '5GwapUKv5V4' },
       { song_code: 'woodchuck'     , performer_codes: 'ben-mill'      , youtube_key: '06BlIlEjhV8' },
       { song_code: 'ww-young'      , performer_codes: 'andy-wms'      , youtube_key: 'eoRVnPH8uUI' },
-      { song_code: 'yng-ones'      , performer_codes: 'clf-rich'      , youtube_key: 'BxNohANhJiA' },
+      { song_code: 'young-ones'    , performer_codes: 'clf-rich'      , youtube_key: 'BxNohANhJiA' },
   ]
 
   print "Adding #{plays.count} song plays..."
@@ -378,6 +383,34 @@ def add_song_plays
 end
 
 
+def add_rights_admin_links
+  warner_song_codes = %w{
+    bye-boys
+    crush-ny
+    eggbert
+    glad
+    jenny-kiss
+    kewpie-doll
+    kiss-fire
+    n-for-xmas
+    nty-lady
+    red-roses
+    run-back-me
+    suzy-snow
+    tear-rain
+    tr-light
+    when-arms
+    ww-young
+    young-ones
+  }
+
+  puts warner_song_codes.select { |code| Song.find_by_code(code).nil? }
+  warner_songs = warner_song_codes.map { |code| Song.find_by_code(code) }
+  warner = Organization.find_by_code('warner')
+  warner_songs.each { |song| song.rights_admin_orgs << warner }
+end
+
+
 add_genres
 add_writers
 add_movies
@@ -386,3 +419,7 @@ add_organizations
 add_elvis_songs
 add_non_elvis_songs
 add_song_plays
+add_rights_admin_links
+
+
+
