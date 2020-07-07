@@ -2,7 +2,7 @@ class BaseReport
 
   attr_reader :field_names
 
-  VALID_FORMATS = %w(html text json yaml)
+  VALID_FORMATS = %w(html text json yaml ap)
 
   def content(rpt_format)
     unless VALID_FORMATS.include?(rpt_format)
@@ -17,6 +17,8 @@ class BaseReport
       to_json
     when 'yaml'
       to_yaml
+    when 'ap'
+      to_awesome_print
     end
   end
 

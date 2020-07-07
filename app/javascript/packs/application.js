@@ -26,10 +26,18 @@ function setUpMainMenuLinks() {
 
 
 function setInitialMenuChoice() {
-    const href = window.location.href;
-    const tokens = href.split("/");
-    const tabName = tokens[tokens.length - 1].split("?")[0];
-    const activeMenuItemId = (tabName.length > 0) ? ("main-menu-" + tabName) : "main-menu-home";
+    const menuItemIds = function() {
+        return [...document.querySelectorAll(".main-menu-item")].map(elem => elem.id)
+        // e.g. ["main-menu-home", "main-menu-songs", "main-menu-genres", "main-menu-elvis", "main-menu-resources", "main-menu-reports", "main-menu-inquiries"]
+    }
+
+    const targetMenuItem = function(path_component) {
+        const targetId = "main-menu-" + path_component;
+        return menuItemIds().includes(targetId) ? targetId : "main-menu-home";
+    }
+
+    const pathTop = new URL(window.location.href).pathname.split('/')[1];
+    const activeMenuItemId = targetMenuItem(pathTop);
     document.getElementById(activeMenuItemId).classList.add("active");
     // On initialization there will be no menu items already active, so no needed to remove active class anywhere.
 }
@@ -90,16 +98,9 @@ function setUpColorPicker() {
 
 function setUpReportCopyButtons() {
 
-    const getActiveTab = function(e) {
-        const elementKey = e.target.id.split("btn-copy-")[1];
-        const contentTabId = "content-tab-" + elementKey;
-        const contentElement = document.getElementById(contentTabId);
-        return contentElement.getElementsByClassName("active")[0];
-    }
-
-    const handler = function(e) {
-        const activeTab = getActiveTab(e);
-        const textToCopy = activeTab.innerHTML.split("<div><pre>")[1].split("</pre></div>")[0]
+    const handler = function() {
+        const activePane = document.querySelector(".rpt-tab-pane.active");
+        const textToCopy = activePane.innerHTML.split("<div><pre>")[1].split("</pre></div>")[0]
         activeTab.focus(); // without this, the clipboard copy fails
         navigator.clipboard.writeText(textToCopy)
         .then(
@@ -111,27 +112,26 @@ function setUpReportCopyButtons() {
         )
     }
 
-    for(const elem of document.getElementsByClassName("rpt-copy-button")) {
-        elem.addEventListener("click", handler);
-    }
+    document.querySelector("#rpt-copy-button").addEventListener("click", handler);
 }
 
 function setupCopyButtonVisibility() {
     // Nothing to do on the button itself, but the tabs need to be set up to control its visibility.
 
-    const buttonVisibilityHandler = function (copyButton, visible) {
+    const copyButton = document.querySelector("#rpt-copy-button")
+    copyButton.style.visibility = "hidden"; // hidden because initial tab selected is HTML
+
+    const buttonVisibilityHandler = function (visible) {
         return function() {
+            console.log("in click event, visible = ", visible);
             copyButton.style.visibility = visible ? "visible" : "hidden";
         }
     }
 
-    for (const rptCard of document.getElementsByClassName("rpt-card")) {
-        const copyButton = rptCard.getElementsByClassName("rpt-copy-button")[0];
-        for (const rptTab of rptCard.getElementsByClassName("rpt-nav-tab")) {
-            const copyButtonVisible = !rptTab.id.includes("html");
-            rptTab.addEventListener("click", buttonVisibilityHandler(copyButton, copyButtonVisible));
-        }
-        copyButton.style.visibility = "hidden"; // hidden because initial tab selected is HTML
+    for (const rptTab of document.querySelectorAll(".rpt-nav-tab")) {
+        const copyButtonVisible = ! rptTab.id.includes("html");
+        console.log("Setting click handler on ", rptTab);
+        rptTab.addEventListener("click", buttonVisibilityHandler(copyButtonVisible));
     }
 }
 
