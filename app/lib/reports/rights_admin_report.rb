@@ -28,4 +28,9 @@ class RightsAdminReport < BaseReport
     table_data = records_to_html_table_data(html_data)
     html_report_table(headings, table_data)
   end
+
+
+  def to_raw_text
+    RightsAdminTextReport.new(records).report_string
+  end
 end

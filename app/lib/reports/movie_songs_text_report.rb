@@ -2,7 +2,7 @@ require_relative 'base_text_report'
 
 class MovieSongsTextReport < BaseTextReport
 
-  attr_reader :records, :title, :line_length, :report_string_continuation_indent
+  attr_reader :records, :title, :line_length
 
   def initialize(records)
     @records = records
