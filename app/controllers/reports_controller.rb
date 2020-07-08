@@ -12,7 +12,7 @@ class ReportsController < ApplicationController
           ['songs',               'Songs',               -> { CodeNameReport.new(Song) } ],
           ['performers',          'Performers',          -> { CodeNameReport.new(Performer) } ],
           ['song_plays',          'Song Plays',          -> { SongPlaysReport.new(youtube_link_generator) }] ,
-          ['genres',              'Genres',              -> { CodeNameReport.new(Genre) } ],
+          ['genres',              'Genres',              -> { GenreReport.new } ],
           ['song_performers',     'Song Performers',     -> { SongPerformersReport.new } ],
           ['performer_songs',     'Performer Songs',     -> { PerformerSongsReport.new } ],
           ['song_genres',         'Song Genres',         -> { SongGenresReport.new } ],

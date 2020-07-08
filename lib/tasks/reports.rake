@@ -47,7 +47,7 @@ namespace :reports do
   gen_report_task(:song_performers, SongPerformersTextReport, 'List songs and their performers')
   gen_report_task(:performer_songs, PerformerSongsTextReport, 'List performers and their songs')
   gen_report_task(:song_plays, SongPlaysTextReport, 'List song plays (YouTube)')
-  gen_report_task(:genres, GenresTextReport, 'List genres')
+  gen_report_task(:genres, GenreTextReport, 'List genres')
   gen_report_task(:song_genres, SongGenresTextReport, 'List song genres')
   gen_report_task(:genre_songs, GenreSongsTextReport, 'List songs of each genre')
   gen_report_task(:movies, MovieTextReport, 'List movies and their IMDB keys')
