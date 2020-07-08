@@ -1,5 +1,3 @@
-Dir[File.join(Rails.root, 'app', 'lib', 'reports', '*.rb')].each { |file| puts file; require file }
-
 class ReportsController < ApplicationController
 
   include ReportsHelper

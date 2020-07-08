@@ -33,6 +33,6 @@ module TepperBennett
     config.generators.system_tests = nil
 
 
-    config.autoload_paths << "#{Rails.root}/lib"
+    config.autoload_paths << "#{Rails.root}/app/lib/reports"
   end
 end
