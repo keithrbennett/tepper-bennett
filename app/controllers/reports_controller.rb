@@ -21,6 +21,7 @@ class ReportsController < ApplicationController
           ['movie_songs',         'Movies Songs',        -> { MovieSongsReport.new } ],
           ['organizations',       'Organizations',       -> { CodeNameReport.new(Organization) } ],
           ['song_rights_admins',  'Song Rights Administrators', -> { SongRightsAdminsReport.new } ],
+          ['rights_admin_songs',  'Rights Administrator Songs', -> { RightsAdminSongsReport.new } ],
           ['writers',             'Writers',             -> { CodeNameReport.new(Writer) } ],
       ].map { |(rpt_type, title, fn_report)| ReportMetadata.new(rpt_type, title, fn_report) } \
       .each_with_object({}) { |report, report_hash| report_hash[report.rpt_type] = report }
