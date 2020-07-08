@@ -109,8 +109,6 @@ end
 
 def add_organizations
   organizations = [
-      { code: "ascap"         , name: "ASCAP" },
-      { code: "bmi"           , name: "BMI" },
       { code: "emi-uk"        , name: "EMI (United Kingdom)" },
       { code: "emi-us"        , name: "EMI (United States)" },
       { code: "example"       , name: "Example Music" },
