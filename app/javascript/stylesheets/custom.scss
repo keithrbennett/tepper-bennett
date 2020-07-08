@@ -83,18 +83,10 @@ img {
   @extend .d-sm-block;
 }
 
-.rpt-format-item {
-  font-size:24px;
+.rpt-header-item {
+  font-size:18px;
 }
 
 pre {
   font-size: 14px;
-}
-
-#reports-accordion {
-  background-color: unset
-}
-
-.major-button {
-  font-size:24px;
 }

@@ -6,13 +6,13 @@
       <div class="row">
 
         <div class="col-2 no-horiz-padding" style="text-align: left;" >
-          <button id="rpt-back-button" class="btn btn-primary major-button" alt="Back to Reports Menu" data-toggle="tooltip" data-placement="top" title="Back to Reports Menu">Back</button>
+          <button id="rpt-back-button" class="btn btn-primary medium-button" alt="Back to Reports Menu" data-toggle="tooltip" data-placement="top" title="Back to Reports Menu">Back</button>
         </div>
 
         <div class="col-8">
           <div class="container nav-container no-horiz-padding">
             <nav class="nav nav-pills nav-fill navbar-expand nav-justified">
-              <div class="navbar-brand nav-link">Format:</div>
+              <div class="navbar-brand nav-link rpt-header-item">Format:</div>
               <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'html', internal_name: rpt_type + '_html', display_name: 'HTML', active: target_rpt_format == 'html' } ) %>
               <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'text', internal_name: rpt_type + '_text', display_name: 'Text', active: target_rpt_format == 'text' } ) %>
               <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'json', internal_name: rpt_type + '_json', display_name: 'JSON', active: target_rpt_format == 'json' } ) %>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="col-2 align-self-center no-horiz-padding" style="text-align: right;">
-          <button id="rpt-copy-button" class="btn btn-primary major-button" alt="Copy to clipboard" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
+          <button id="rpt-copy-button" class="btn btn-primary rpt-header-item" alt="Copy to clipboard" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
             Copy
           </button>
           </div>
