@@ -98,6 +98,10 @@ function setUpColorPicker() {
 
 function setUpReportCopyButtons() {
 
+    const button = document.querySelector("#rpt-copy-button");
+    if (! button)
+        return;
+
     const handler = function() {
         const activePane = document.querySelector(".rpt-tab-pane.active");
         const textToCopy = activePane.innerHTML.split("<div><pre>")[1].split("</pre></div>")[0]
@@ -112,13 +116,16 @@ function setUpReportCopyButtons() {
         )
     }
 
-    document.querySelector("#rpt-copy-button").addEventListener("click", handler);
+    button.addEventListener("click", handler);
 }
 
 function setupCopyButtonVisibility() {
     // Nothing to do on the button itself, but the tabs need to be set up to control its visibility.
 
-    const copyButton = document.querySelector("#rpt-copy-button")
+    const copyButton = document.querySelector("#rpt-copy-button");
+    if (! copyButton)
+        return;
+
     copyButton.style.visibility = "hidden"; // hidden because initial tab selected is HTML
 
     const buttonVisibilityHandler = function (visible) {
@@ -137,8 +144,12 @@ function setupCopyButtonVisibility() {
 
 
 function setupReportBackButton() {
+    const button = document.querySelector("#rpt-back-button");
+    if (! button)
+        return;
+
     const loadReportsPage = function() { window.location.href = "/reports"; };
-    document.querySelector("#rpt-back-button").addEventListener("click", loadReportsPage);
+    button.addEventListener("click", loadReportsPage);
 }
 
 
