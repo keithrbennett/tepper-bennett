@@ -1,6 +1,6 @@
 require_relative 'base_text_report'
 
-class RightsAdminTextReport < BaseTextReport
+class SongRightsAdminsTextReport < BaseTextReport
 
   attr_reader :records, :title, :line_length
 

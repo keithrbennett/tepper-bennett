@@ -1,4 +1,4 @@
-class RightsAdminReport < BaseReport
+class SongRightsAdminsReport < BaseReport
 
   attr_reader :records
 
@@ -31,6 +31,6 @@ class RightsAdminReport < BaseReport
 
 
   def to_raw_text
-    RightsAdminTextReport.new(records).report_string
+    SongRightsAdminsTextReport.new(records).report_string
   end
 end
