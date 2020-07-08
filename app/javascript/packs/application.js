@@ -101,14 +101,14 @@ function setUpReportCopyButtons() {
     const handler = function() {
         const activePane = document.querySelector(".rpt-tab-pane.active");
         const textToCopy = activePane.innerHTML.split("<div><pre>")[1].split("</pre></div>")[0]
-        activeTab.focus(); // without this, the clipboard copy fails
+        activePane.focus(); // without this, the clipboard copy fails
         navigator.clipboard.writeText(textToCopy)
         .then(
             () => {
-                console.log("Copied to clipboard: " + activeTab.id);
+                console.log("Copied to clipboard: " + activePane.id);
                     alert("Content copied to clipboard.");
             },
-            (error) => { console.log("Error copying text from", activeTab.id + ':', error); }
+            (error) => { console.log("Error copying text from", activePane.id + ':', error); }
         )
     }
 
@@ -135,11 +135,17 @@ function setupCopyButtonVisibility() {
     }
 }
 
+
+function setupReportBackButton() {
+    const loadReportsPage = function() { window.location.href = "/reports"; };
+    document.querySelector("#rpt-back-button").addEventListener("click", loadReportsPage);
+}
+
+
 // DOMContentLoaded event handling:
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log("DOM content loaded.");
     setUpYouTubeClicks();
-    setInitialMenuChoice();
 });
 
 
@@ -148,9 +154,11 @@ document.addEventListener("turbolinks:load", () => {
     $('[data-toggle="tooltip"]').tooltip()
     $('[data-toggle="popover"]').popover()
     setUpMainMenuLinks();
+    setInitialMenuChoice();
     setUpColorPicker();
     setUpReportCopyButtons();
     setupCopyButtonVisibility();
+    setupReportBackButton();
 });
 
 

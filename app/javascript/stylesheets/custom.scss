@@ -34,13 +34,6 @@ body {
   margin-bottom: 12px;
 }
 
-.contact-us {
-  font-family: 'Spectral', serif;
-  text-align: center;
-  font-size: 24px;
-  padding-top: 25px;
-}
-
 .footer {
   padding-top: 40px;
   text-align: center;
@@ -90,19 +83,18 @@ img {
   @extend .d-sm-block;
 }
 
-.accordion-btn-text {
-  font-size: 30px;
-  font-weight: bold;
-}
-
 .rpt-format-item {
   font-size:24px;
 }
 
 pre {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 #reports-accordion {
   background-color: unset
+}
+
+.major-button {
+  font-size:24px;
 }
