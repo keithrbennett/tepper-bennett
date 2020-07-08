@@ -1,6 +1,6 @@
+=begin
 require_relative '../../config/environment'
 
-=begin
 namespace :reports do
 
   # Would this be shared by other files? (Bad if so.)
