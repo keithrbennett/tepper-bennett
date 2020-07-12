@@ -103,3 +103,9 @@ Then, to see the screenshot in the browser properly styled by the JS code, add `
 In the spec, call `save_and_open_page`.
 
 Currently, on a Mac running Catalina, `save_and_open_page` seems to work with Firefox, Brave, Opera, Microsoft Edge, and Vivaldi as default browsers, but not Chrome.
+
+### FontAwesome
+
+* `yarn add @fortawesome/fontawesome-free`
+* Add to application.scss: `@import '@fortawesome/fontawesome-free';`
+* Add to application.js: `import "@fortawesome/fontawesome-free/js/all";`
