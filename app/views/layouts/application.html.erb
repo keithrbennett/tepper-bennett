@@ -28,25 +28,29 @@
   <div><h3 class="title">Esteemed Hitmakers of the 40's, 50's, and 60's</h3></div>
   <br/>
 
-<!--  # TODO: add collapse for small screens, about 9 minutes in video-->
-  <div class="container nav-container no-horiz-padding">
-    <nav class="nav nav-pills nav-fill navbar-expand nav-justified" style="display: block">
-      <ul class="navbar-nav nav-fill">
-      <% %w(home songs genres elvis resources reports inquiries).each do |name| %>
-        <li class="nav-item">
-          <a
-            class="nav-link main-menu-item"
-            id="main-menu-<%= name %>"
-            href="/<%= name %>"
-            data-toggle="tab"
-            role="tab">
-            <%= name.capitalize %>
-          </a>
-        </li>
-        <% end %>
-      </ul>
-    </nav>
-  </div>
+  <nav class="nav-pills nav-fill navbar-expand-md nav-justified navbar-light">
+    <div class="container nav-container no-horiz-padding" style="display: block">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu-navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="main-menu-navbar" class="collapse navbar-collapse">
+        <ul class="navbar-nav nav-fill mr-auto mt-2 mt-lg-0">
+          <% %w(home songs genres elvis resources reports inquiries).each do |name| %>
+            <li class="nav-item">
+              <a
+                class="nav-link main-menu-item"
+                id="main-menu-<%= name %>"
+                href="/<%= name %>"
+                data-toggle="tab"
+                role="tab">
+                <%= name.capitalize %>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <br/>
   <br/>
