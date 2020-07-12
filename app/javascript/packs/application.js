@@ -10,7 +10,6 @@ require("channels")
 
 import "bootstrap"
 import "../stylesheets/application"
-import "@fortawesome/fontawesome-free/js/all";
 
 function defaultBackgroundColor() {
     return "#c9d0f1";
