@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%= render 'google_analytics' %>
+<head>
+  <%= render 'google_analytics' %>
 
-    <title>Sid Tepper and Roy C. Bennett</title>
+  <title>Sid Tepper and Roy C. Bennett</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap" rel="stylesheet">
+<body>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500&display=swap" rel="stylesheet">
 
 
-    <div class="container-fluid no-horiz-padding">
+<div class="container-fluid no-horiz-padding">
 
-      <h3 class="title">The Songwriting Team of</h3>
-      <div class="responsive-xs-only"><h1 class="title">Tepper & Bennett</h1></div>
-      <div class="responsive-no-xs"><h1 class="title">Sid Tepper and Roy C. Bennett</h1></div>
-      <div><h3 class="title">Esteemed Hitmakers of the 40's, 50's, and 60's</h3></div>
-      <br/>
+  <h3 class="title">The Songwriting Team of</h3>
+  <div class="responsive-xs-only"><h1 class="title">Tepper & Bennett</h1></div>
+  <div class="responsive-no-xs"><h1 class="title">Sid Tepper and Roy C. Bennett</h1></div>
+  <div><h3 class="title">Esteemed Hitmakers of the 40's, 50's, and 60's</h3></div>
+  <br/>
 
-      <div class="container nav-container no-horiz-padding">
-        <nav class="nav nav-pills nav-fill navbar-expand-md nav-justified">
-            <% %w(home songs genres elvis resources reports inquiries).each do |name| %>
-              <a
-                class="nav-item nav-link main-menu-item"
-                id="main-menu-<%= name %>"
-                href="/<%= name %>"
-                data-toggle="tab"
-                role="tab">
-                <%= name.capitalize %>
-              </a>
-            <% end %>
-        </nav>
-      </div>
+<!--  # TODO: add collapse for small screens, about 9 minutes in video-->
+  <div class="container nav-container no-horiz-padding">
+    <nav class="nav nav-pills nav-fill navbar-expand nav-justified" style="display: block">
+      <ul class="navbar-nav nav-fill">
+      <% %w(home songs genres elvis resources reports inquiries).each do |name| %>
+        <li class="nav-item">
+          <a
+            class="nav-link main-menu-item"
+            id="main-menu-<%= name %>"
+            href="/<%= name %>"
+            data-toggle="tab"
+            role="tab">
+            <%= name.capitalize %>
+          </a>
+        </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
 
-      <br/>
-      <br/>
+  <br/>
+  <br/>
 
-      <div class="container no-horiz-padding">
-        <div class="tab-content" id="main-nav-tabContent">
-          <%= yield %>
-        </div>
-      </div>
-
-      <%= render 'youtube-player-modal' %>
-
-      <div class="footer">
-        © <%= external_link('Bennett Business Solutions, Inc.', 'https://www.bbs-software.com') %>, 2020
-        <span>&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;</span>
-        <label for="bgcolor-picker">Select a different background color: &nbsp;</label>
-        <input id="bgcolor-picker" type="color" name="bgcolor" value="#f5deb3">
-        <span>&nbsp;</span>
-        <span id="bg-color-value-text">#f5deb3</span>
-        or
-        <a id="bgcolor-resetter" href=#>reset to original color.</a>
+  <div class="container no-horiz-padding">
+    <div class="tab-content" id="main-nav-tabContent">
+      <%= yield %>
     </div>
-    </div>
-  </body>
+  </div>
+
+  <%= render 'youtube-player-modal' %>
+
+  <div class="footer">
+    © <%= external_link('Bennett Business Solutions, Inc.', 'https://www.bbs-software.com') %>, 2020
+    <span>&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;&nbsp;</span>
+    <label for="bgcolor-picker">Select a different background color: &nbsp;</label>
+    <input id="bgcolor-picker" type="color" name="bgcolor" value="#f5deb3">
+    <span>&nbsp;</span>
+    <span id="bg-color-value-text">#f5deb3</span>
+    or
+    <a id="bgcolor-resetter" href=#>reset to original color.</a>
+  </div>
+</div>
+</body>
 </html>
