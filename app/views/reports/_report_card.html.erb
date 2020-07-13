@@ -3,37 +3,55 @@
 <%#= inspect(local_assigns) %>
   <div>
     <div class="container">
-      <div class="row">
+      <div class="row mb-4">
+        <div class="btn-group" role="group" aria-label="Report">
+          <button type="button" class="btn btn-primary mr-2 mt-2 mb-2" id="rpt-back-button" alt="Back to Reports Menu" data-toggle="tooltip" data-placement="top" title="Back to Reports Menu">Back</button>
 
-        <div class="col-2 no-horiz-padding" style="text-align: left;" >
-          <button id="rpt-back-button" class="btn btn-primary medium-button" alt="Back to Reports Menu" data-toggle="tooltip" data-placement="top" title="Back to Reports Menu">Back</button>
-        </div>
 
-        <div class="col-8">
-          <div class="container nav-container no-horiz-padding">
-            <nav class="nav nav-pills nav-fill navbar-expand nav-justified">
-              <div class="navbar-brand nav-link rpt-header-item">Format:</div>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'html', internal_name: rpt_type + '_html', display_name: 'HTML', active: target_rpt_format == 'html' } ) %>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'text', internal_name: rpt_type + '_text', display_name: 'Text', active: target_rpt_format == 'text' } ) %>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'json', internal_name: rpt_type + '_json', display_name: 'JSON', active: target_rpt_format == 'json' } ) %>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'yaml', internal_name: rpt_type + '_yaml', display_name: 'YAML', active: target_rpt_format == 'yaml' } ) %>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'ap',   internal_name: rpt_type + '_ap',   display_name: 'AP',   active: target_rpt_format == 'ap' } ) %>
-            </nav>
-          </div>
-        </div>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a href="#" class="btn btn-primary dropdown-toggle mr-2 mt-2 mb-2" type="button" data-toggle="dropdown">Format</a>
+              <div class="dropdown-menu p-2 border-dark">
 
-        <div class="col-2 align-self-center no-horiz-padding" style="text-align: right;">
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="html-rpt-format" name="defaultExampleRadios" checked>
+                  <label class="custom-control-label" for="html-rpt-format">HTML</label>
+                </div>
+
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="text-rpt-format" name="defaultExampleRadios">
+                  <label class="custom-control-label" for="text-rpt-format">Text</label>
+                </div>
+
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="json-rpt-format" name="defaultExampleRadios">
+                  <label class="custom-control-label" for="json-rpt-format">JSON</label>
+                </div>
+
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="yaml-rpt-format" name="defaultExampleRadios">
+                  <label class="custom-control-label" for="yaml-rpt-format">YAML</label>
+                </div>
+
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="ap-rpt-format" name="defaultExampleRadios">
+                  <label class="custom-control-label" for="ap-rpt-format">AP</label>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+
+
           <button id="rpt-copy-button" class="btn btn-primary rpt-header-item" alt="Copy to clipboard" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
             Copy
           </button>
-          </div>
         </div>
       </div>
 
-      <br/>
-      <br/>
+      <div class="row">
 
-      <div class="container no-horiz-padding">
+<!--      <div class="container no-horiz-padding">-->
         <div class="tab-content" id="<%= content_tab_id %>">
           <%= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'html', internal_name: rpt_type + '_html', active: target_rpt_format == 'html' } ) %>
           <%= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'text', internal_name: rpt_type + '_text', active: target_rpt_format == 'text' } ) %>
