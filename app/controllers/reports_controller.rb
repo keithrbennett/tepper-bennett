@@ -35,6 +35,7 @@ class ReportsController < ApplicationController
 
 
   def show
+    Rails.logger.info params.to_h
     rpt_type = params[:rpt_type]
     report_metadata = reports_metadata[rpt_type]
     locals = {
@@ -44,42 +45,6 @@ class ReportsController < ApplicationController
 
     render '/reports/report', layout: "application", locals: locals
   end
-
-  # @param an array of field strings
-  # @return the multiline string of <tr> and <td> elements.
-  # def records_to_html_table_data(records)
-  #   html = StringIO.new
-  #   html << "\n"
-  #   records.each do |record|
-  #     html << "<tr>"
-  #     record.each do |field_value|
-  #       html << "<td>" << field_value << "</td>"
-  #     end
-  #     html << "</tr>\n"
-  #   end
-  #   html.string.html_safe
-  # end
-  #
-  #
-  # @param column_headings array of column heading strings'
-  # @param table_data a multiline string of <tr> elements
-  # @return a string containing the HTML for the table, including surrounding div's.
-  # def html_report_table(column_headings, table_data)
-  #
-  #   html = <<HEREDOC
-  #   <div class="table-responsive">
-  #   <table class="table thead-dark table-striped">
-  #   <thead class="thead-dark">
-  #     <tr>#{column_headings.map { |h| "<th>#{h}</th>"}.join}</tr>
-  #   </thead>
-  #   {table_data}
-    # </table>
-    # </div>
-# HEREDOC
-#     html.html_safe
-#   end
-
-
 end
 
 

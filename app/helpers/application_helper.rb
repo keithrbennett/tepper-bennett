@@ -68,29 +68,19 @@ HEREDOC
 end
 
 
-# def nav_content(name:, html_text: nil, active: false)
-#   div_class = 'tab-pane'
-#   div_class += ' show active' if active
-#
-#   tag.div(class: div_class, id: "nav-#{name}", role: 'tabpanel', 'aria-labelledby'.to_sym => "nav-#{name}-tab") do
-#       html_text
-#   end
-# end
-
   def inspect(object)
     object.ai(html: true, plain:true, multiline: true)
   end
 
-def youtube_text_song_link(text, youtube_code)
-  html = tag.a(
-      href: '#',
-      class: "youtube-view",
-      'data-url'.to_sym => SongPlay.youtube_embed_url(youtube_code),
-      'data-toggle'.to_sym => 'modal',
-      'data-target'.to_sym => '#youTubeViewerModal') do
-    text
+  def youtube_text_song_link(text, youtube_code)
+    html = tag.a(
+        href: '#',
+        class: "youtube-view",
+        'data-url'.to_sym => SongPlay.youtube_embed_url(youtube_code),
+        'data-toggle'.to_sym => 'modal',
+        'data-target'.to_sym => '#youTubeViewerModal') do
+      text
+    end
+    html.html_safe
   end
-
-  html.html_safe
-end
 end
