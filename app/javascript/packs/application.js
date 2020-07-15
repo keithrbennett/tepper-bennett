@@ -52,13 +52,11 @@ function setInitialMenuChoice() {
 
 
 function setUpYouTubeClicks() {
-    const handler = function() {
-        const url = this.getAttribute("data-url");
-        document.getElementById("youtube-player-iframe").setAttribute("src", url);
-    }
-
     for(const elem of document.getElementsByClassName("youtube-view")) {
-        elem.addEventListener("click", handler);
+        elem.addEventListener("click", function() {
+            const url = this.getAttribute("data-url");
+            document.getElementById("youtube-player-iframe").setAttribute("src", url);
+        })
     }
 }
 
@@ -77,7 +75,7 @@ function setUpColorPicker() {
     }
 
     function setInitialColor() {
-        let color = localStorage.getItem("background-color") || defaultBackgroundColor();
+        const color = localStorage.getItem("background-color") || defaultBackgroundColor();
         setBackgroundColor(color);
     }
 
@@ -103,14 +101,17 @@ function setUpReportCopyButtons() {
         return;
 
     const handler = function() {
+        const textToCopy = new RegExp("<div><pre>(.*)</pre></div>").
+                exec(activePane.innerHTML)[1]
+
         const activePane = document.querySelector(".rpt-tab-pane.active");
-        const textToCopy = activePane.innerHTML.split("<div><pre>")[1].split("</pre></div>")[0]
         activePane.focus(); // without this, the clipboard copy fails
+
         navigator.clipboard.writeText(textToCopy)
         .then(
             () => {
                 console.log("Copied to clipboard: " + activePane.id);
-                    alert("Content copied to clipboard.");
+                alert("Content copied to clipboard.");
             },
             (error) => { console.log("Error copying text from", activePane.id + ':', error); }
         )
@@ -130,14 +131,12 @@ function setupCopyButtonVisibility() {
 
     const buttonVisibilityHandler = function (visible) {
         return function() {
-            console.log("in click event, visible = ", visible);
             copyButton.style.visibility = visible ? "visible" : "hidden";
         }
     }
 
     for (const rptTab of document.querySelectorAll(".rpt-nav-tab")) {
         const copyButtonVisible = ! rptTab.id.includes("html");
-        console.log("Setting click handler on ", rptTab);
         rptTab.addEventListener("click", buttonVisibilityHandler(copyButtonVisible));
     }
 }
@@ -145,7 +144,7 @@ function setupCopyButtonVisibility() {
 
 function setupReportBackButton() {
     const button = document.querySelector("#rpt-back-button");
-    if (! button)
+    if (! button) // this will be called on all pages, some without the button
         return;
 
     const loadReportsPage = function() { window.location.href = "/reports"; };
@@ -153,7 +152,6 @@ function setupReportBackButton() {
 }
 
 
-// DOMContentLoaded event handling:
 document.addEventListener('DOMContentLoaded', (event) => {
     console.log("DOM content loaded.");
     setUpYouTubeClicks();

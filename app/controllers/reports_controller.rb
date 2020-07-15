@@ -35,7 +35,8 @@ class ReportsController < ApplicationController
 
 
   def show
-    Rails.logger.info params.to_h
+    # The route is "get 'reports/:rpt_type', to: 'reports#show'" so the report type
+    # is accessed as a parameter.
     rpt_type = params[:rpt_type]
     report_metadata = reports_metadata[rpt_type]
     locals = {
