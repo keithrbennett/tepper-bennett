@@ -1,4 +1,6 @@
+// This function is called in application.js:
 
+initialize_reports = function() {
 
 function setUpReportCopyButtons() {
 
@@ -57,9 +59,6 @@ function setupReportBackButton() {
     button.addEventListener("click", loadReportsPage);
 }
 
-
-
-
 document.addEventListener("turbolinks:load", () => {
     console.log("Turbolinks loaded, initializing reports.");
     setUpReportCopyButtons();
@@ -67,4 +66,5 @@ document.addEventListener("turbolinks:load", () => {
     setupReportBackButton();
 });
 
+}
 
