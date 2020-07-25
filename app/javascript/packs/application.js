@@ -8,6 +8,10 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("packs/reports")
+require('datatables.net-bs4')
+
+import $ from 'jquery';
+global.$ = jQuery;
 
 import "bootstrap"
 import "../stylesheets/application"
@@ -110,6 +114,7 @@ const initialize_application = function() {
         setUpMainMenuLinks();
         setInitialMenuChoice();
         setUpColorPicker();
+        $('.data-table').DataTable();
     });
 
 }

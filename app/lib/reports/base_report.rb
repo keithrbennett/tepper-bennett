@@ -50,7 +50,7 @@ class BaseReport
 
     html = <<HEREDOC
     <div class="table-responsive">
-    <table class="table thead-dark table-striped">
+    <table class="table data-table thead-dark table-striped">
     <thead class="thead-dark">
       <tr>#{column_headings.map { |h| "<th>#{h}</th>"}.join}</tr>
     </thead>

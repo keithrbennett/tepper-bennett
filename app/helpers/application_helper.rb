@@ -49,7 +49,7 @@ def song_table(artist_or_movie)
 
   html = <<HEREDOC
     <div class="table-responsive">
-      <table class="table thead-dark table-striped">
+      <table class="data-table table thead-dark table-striped">
         <thead class="thead-dark">
         <tr>
           <th>Title</th>
@@ -57,8 +57,9 @@ def song_table(artist_or_movie)
           <th style="text-align: center;">Listen</th>
         </tr>
         </thead>
-    
-        #{recordings_html}
+        <tbody>
+          #{recordings_html}
+        </tbody>
       </table>
     </div>
 
