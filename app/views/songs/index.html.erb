@@ -9,4 +9,4 @@
 
 <br/>
 
-<%= song_table(:artist) %>
+<%= render partial: 'song_table', locals: { recordings: @recordings, col2_field: :artist } %>

@@ -29,4 +29,4 @@
 </p>
 <br/>
 
-<%= song_table(:movie) %>
+<%= render partial: 'song_table', locals: { recordings: @elvis_recordings, col2_field: :movie } %>

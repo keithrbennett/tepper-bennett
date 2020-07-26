@@ -1,0 +1,22 @@
+<% heading = col2_field == :artist ? 'Artist' : 'Movie' %>
+<% col2_val_fetcher = col2_field == :artist ?  ->(recording) { recording.artist} : ->(recording) { recording.movie} %>
+
+<div class="table-responsive">
+  <table class="data-table table thead-dark table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <th>Title</th>
+      <th><%= heading %></th>
+      <th style="text-align: center;">Listen</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% recordings.each do |recording| %>
+      <%= render partial: 'song_table_row', locals: {
+          recording: recording,
+          artist_or_movie_name: col2_val_fetcher.(recording),
+      } %>
+    <% end %>
+    </tbody>
+  </table>
+</div>

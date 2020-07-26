@@ -1,0 +1,9 @@
+<tr>
+  <td><%= recording.title %></td>
+  <td><%= artist_or_movie_name %></td>
+  <td align="center">
+    <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal" data-url="<%= recording.embed_url %>"/>
+      <%= image_tag('youtube.png', alt: 'Listen') %>
+    </a>
+  </td>
+</tr>
