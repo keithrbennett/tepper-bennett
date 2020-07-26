@@ -90,3 +90,15 @@ img {
 pre {
   font-size: 14px;
 }
+
+.custom-select {
+  width: auto;
+}
+
+.dataTables_filter label {
+  display: flex;
+}
+
+.dataTables_filter .form-control {
+  margin-left: 10px;
+}
