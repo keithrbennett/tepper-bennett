@@ -15,13 +15,10 @@ class SongPerformersReport < BaseReport
 
   def to_html
     headings = ['Song Code', 'Song Name', 'Perf Code', 'Performer Name']
-    data = records.map do |r|
-      [
-          r[:code],
-          r[:name],
-          r[:performers].pluck(:code).join("<br/>"),
-          r[:performers].pluck(:name).join("<br/>")
-      ]
+    data = records.each_with_object([])  do |r, data|
+      r[:performers].each do |p|
+        data << [r[:code], r[:name], p[:code], p[:name]]
+      end
     end
     table_data = records_to_html_table_data(data)
     html_report_table(headings, table_data)
