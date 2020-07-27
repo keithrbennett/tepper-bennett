@@ -15,10 +15,7 @@ module ReportsHelper
     def locals
       {
           rpt_type:        rpt_type,
-          card_button_id:  button_id,
-          card_content_id: content_id,
           title:    title,
-          copy_button_id:  "btn-copy-#{rpt_type}",
           content_tab_id:  "content-tab-#{rpt_type}"
       }
     end
