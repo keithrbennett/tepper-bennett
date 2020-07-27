@@ -22,7 +22,9 @@ class HasManyReport < BaseReport
     end
 
     append_row = ->(primary) do
-      html << "<h2>#{@primary_ar_class.name.capitalize} &mdash; #{primary[:name]}</h2>\n"
+      name = primary[:name]
+      name = (name == name.downcase) ? name.capitalize : name
+      html << "<h2>#{name}</h2>\n"
       secondaries = primary[secondary_key]
       if secondaries.empty?
         html << "[No songs for this #{primary_ar_class.name.downcase}]</br>\n"
