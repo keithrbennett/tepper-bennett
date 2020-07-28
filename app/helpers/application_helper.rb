@@ -23,14 +23,6 @@ module ApplicationHelper
 
 
   def youtube_text_song_link(text, youtube_code)
-    html = tag.a(
-        href: '#',
-        class: "youtube-view",
-        'data-url'.to_sym => SongPlay.youtube_embed_url(youtube_code),
-        'data-toggle'.to_sym => 'modal',
-        'data-target'.to_sym => '#youTubeViewerModal') do
-      text
-    end
-    html.html_safe
+    render partial: 'application/youtube_text_song_link', locals: { text: text, youtube_code: youtube_code }
   end
 end
