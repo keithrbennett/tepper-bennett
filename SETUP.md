@@ -7,14 +7,23 @@ To install a nodejs version recent enough to work you may need to follow the ins
 
 ### Creating the Postgres Role
 
-Even though the data base is not used at this time, a dummy connection is created and used, so you will need to do a `rails db:setup`, possibly preceded by `rails db:migrate`. When you do, if you get an error like this:
+On Linux you might get an error like this:
 
-`PG::ConnectionBad: FATAL:  role "kbennett" does not exist`
+```
+PG::ConnectionBad: FATAL:  role "kbennett" does not exist
+```
 
-Do this:
+If so, do this:
 
 `sudo -u postgres psql -c "create user kbennett with createdb"`
 
+On a Mac, if having weird configuration problems, you may need to do something like this:
+
+```
+brew uninstall postgresql
+sudo rm -rf /Library/PostgreSQL /usr/local/var/postgres
+brew install postgresql
+```
 
 ### Removing tzinfo Warnings
 
