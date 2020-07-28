@@ -1,12 +1,12 @@
 module ApplicationHelper
 
   def external_link(text, url)
-    tag.a(text, href:url, target: '_blank').html_safe
+    render partial: 'application/external_link', locals: { text: text, url: url}
   end
 
 
   def li_external_link(text, url)
-    tag.li(external_link(text.html_safe, url)).html_safe
+    render partial: 'application/li_external_link', locals: { text: text, url: url}
   end
 
 
