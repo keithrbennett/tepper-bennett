@@ -13,11 +13,9 @@
           <div class="container nav-container no-horiz-padding">
             <nav class="nav nav-pills nav-fill navbar-expand nav-justified">
               <div class="navbar-brand nav-link rpt-header-item">Format:</div>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { rpt_format: 'html', display_name: 'HTML', active: target_rpt_format == 'html' } %>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { rpt_format: 'text', display_name: 'Text', active: target_rpt_format == 'text' } %>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { rpt_format: 'json', display_name: 'JSON', active: target_rpt_format == 'json' } %>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { rpt_format: 'yaml', display_name: 'YAML', active: target_rpt_format == 'yaml' } %>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { rpt_format: 'ap',   display_name: 'AP',   active: target_rpt_format == 'ap' } %>
+              <% [%w{html HTML}, %w{text Text}, %w{json JSON}, %w{yaml YAML}, %w{ap AP}].each do |(format, display_name)| %>
+                <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { rpt_format: format, display_name: display_name, active: target_rpt_format == format } %>
+              <% end %>
             </nav>
           </div>
         </div>
