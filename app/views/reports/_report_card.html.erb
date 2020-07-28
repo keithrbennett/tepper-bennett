@@ -13,11 +13,11 @@
           <div class="container nav-container no-horiz-padding">
             <nav class="nav nav-pills nav-fill navbar-expand nav-justified">
               <div class="navbar-brand nav-link rpt-header-item">Format:</div>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'html', internal_name: rpt_type + '_html', display_name: 'HTML', active: target_rpt_format == 'html' } ) %>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'text', internal_name: rpt_type + '_text', display_name: 'Text', active: target_rpt_format == 'text' } ) %>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'json', internal_name: rpt_type + '_json', display_name: 'JSON', active: target_rpt_format == 'json' } ) %>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'yaml', internal_name: rpt_type + '_yaml', display_name: 'YAML', active: target_rpt_format == 'yaml' } ) %>
-              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: local_assigns.merge( { rpt_format: 'ap',   internal_name: rpt_type + '_ap',   display_name: 'AP',   active: target_rpt_format == 'ap' } ) %>
+              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { rpt_format: 'html', display_name: 'HTML', active: target_rpt_format == 'html' } %>
+              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { rpt_format: 'text', display_name: 'Text', active: target_rpt_format == 'text' } %>
+              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { rpt_format: 'json', display_name: 'JSON', active: target_rpt_format == 'json' } %>
+              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { rpt_format: 'yaml', display_name: 'YAML', active: target_rpt_format == 'yaml' } %>
+              <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { rpt_format: 'ap',   display_name: 'AP',   active: target_rpt_format == 'ap' } %>
             </nav>
           </div>
         </div>
