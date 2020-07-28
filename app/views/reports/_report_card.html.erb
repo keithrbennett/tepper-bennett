@@ -14,7 +14,7 @@
             <nav class="nav nav-pills nav-fill navbar-expand nav-justified">
               <div class="navbar-brand nav-link rpt-header-item">Format:</div>
               <% [%w{html HTML}, %w{text Text}, %w{json JSON}, %w{yaml YAML}, %w{ap AP}].each do |(format, display_name)| %>
-                <%= render partial: 'reports/report_format_nav_tab.html.erb', locals: { rpt_format: format, display_name: display_name, active: target_rpt_format == format } %>
+                <%= render partial: 'reports/report_format_nav_tab', locals: { rpt_format: format, display_name: display_name, active: target_rpt_format == format } %>
               <% end %>
             </nav>
           </div>
@@ -33,11 +33,9 @@
 
       <div class="container no-horiz-padding">
         <div class="tab-content" id="<%= content_tab_id %>">
-          <%= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'html', internal_name: rpt_type + '_html', active: target_rpt_format == 'html' } ) %>
-          <%= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'text', internal_name: rpt_type + '_text', active: target_rpt_format == 'text' } ) %>
-          <%= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'json', internal_name: rpt_type + '_json', active: target_rpt_format == 'json' } ) %>
-          <%= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'yaml', internal_name: rpt_type + '_yaml', active: target_rpt_format == 'yaml' } ) %>
-          <%= render partial: 'reports/report_format_nav_content', locals: local_assigns.merge( { rpt_type: rpt_type, rpt_format: 'ap',   internal_name: rpt_type + '_ap',   active: target_rpt_format == 'ap'   } ) %>
+          <% %w{html text json yaml ap}.each do |format| %>
+            <%= render partial: 'reports/report_format_nav_content', locals: { rpt_format: format, content: report.content(format), active: target_rpt_format == format } %>
+          <% end %>
         </div>
     </div>
   </div>

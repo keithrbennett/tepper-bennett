@@ -15,7 +15,7 @@ module ReportsHelper
     def locals
       {
           rpt_type:        rpt_type,
-          title:    title,
+          title:           title,
           content_tab_id:  "content-tab-#{rpt_type}"
       }
     end

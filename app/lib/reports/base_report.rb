@@ -6,7 +6,7 @@ class BaseReport
 
   def content(rpt_format)
     unless VALID_FORMATS.include?(rpt_format)
-      raise "Invalid format (#{rpt_format}); must be one of #{VALID_FORMATS.join(', ')}"
+      raise "Invalid format (#{rpt_format.inspect}); must be one of #{VALID_FORMATS.join(', ')}"
     end
     case rpt_format
     when 'html'
