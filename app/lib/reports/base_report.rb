@@ -2,45 +2,55 @@ class BaseReport
 
   attr_reader :field_names
 
-  VALID_FORMATS = %w(html text json yaml ap)
-
-  def content(rpt_format)
-    unless VALID_FORMATS.include?(rpt_format)
-      raise "Invalid format (#{rpt_format.inspect}); must be one of #{VALID_FORMATS.join(', ')}"
-    end
-    case rpt_format
-    when 'html'
-      to_html
-    when 'text'
-      to_text
-    when 'json'
-      to_json
-    when 'yaml'
-      to_yaml
-    when 'ap'
-      to_awesome_print
-    end
-  end
-
   def preize_text(text)
     "<div><pre>\n#{text}</pre></div>\n".html_safe
   end
+
+
+  def to_html
+    raise "This method must be overridden by subclasses."
+  end
+
 
   def to_json
     preize_text(JSON.pretty_generate(records))
   end
 
+
   def to_yaml
     preize_text(records.to_yaml)
   end
+
 
   def to_awesome_print
     preize_text(records.ai(html: true, plain: true, multiline: true))
   end
 
+
   def to_text
     preize_text(to_raw_text)
   end
+
+
+  def content_provider(format)
+  end
+
+
+  def content(rpt_format)
+    @content_provider_hash ||= {
+        'html' => -> { to_html },
+        'text' => -> { to_text },
+        'json' => -> { to_json },
+        'yaml' => -> { to_yaml },
+        'ap'   => -> { to_awesome_print },
+    }
+    content_provider = @content_provider_hash[rpt_format]
+    unless content_provider
+      raise "Bad format type: #{format.inspect}. Must be one of #{FORMAT_CONTENT.keys.join(', ')}."
+    end
+    content_provider.()
+  end
+
 
 
   # @param column_headings array of column heading strings'
@@ -59,6 +69,7 @@ class BaseReport
 HEREDOC
     html.html_safe
   end
+
 
   # @param an array of field strings
   # @return the multiline string of <tr> and <td> elements.
