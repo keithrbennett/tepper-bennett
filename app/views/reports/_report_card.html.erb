@@ -24,19 +24,18 @@
           <button id="rpt-copy-button" class="btn btn-primary rpt-header-item" alt="Copy to clipboard" data-toggle="tooltip" data-placement="top" title="Copy to clipboard">
             Copy
           </button>
-          </div>
         </div>
       </div>
-
-      <br/>
-      <br/>
-
-      <div class="container no-horiz-padding">
-        <div class="tab-content" id="<%= content_tab_id %>">
-          <% %w{html text json yaml ap}.each do |format| %>
-            <%= render partial: 'reports/report_format_nav_content', locals: { rpt_format: format, content: report.content(format), active: target_rpt_format == format } %>
-          <% end %>
-        </div>
     </div>
+
+    <br/>
+    <br/>
+
+    <div class="container no-horiz-padding">
+      <div class="tab-content" id="<%= content_tab_id %>">
+        <% %w{html text json yaml ap}.each do |format| %>
+          <%= render partial: 'reports/report_format_nav_content', locals: { rpt_format: format, content: report.content(format), active: target_rpt_format == format } %>
+        <% end %>
+      </div>
   </div>
 </div>
