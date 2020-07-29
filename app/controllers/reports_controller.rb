@@ -1,7 +1,5 @@
 class ReportsController < ApplicationController
 
-  include ReportsHelper
-
   # A hash consisting of the report type (first value below) as key, Report object as value.
   def reports_metadata
     youtube_link_generator = ->(url) do
