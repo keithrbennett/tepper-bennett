@@ -1,5 +1,5 @@
 <div class="table-responsive">
-  <table class="table <%= ' data-table' if records.count >= 12 %> thead-dark table-striped">
+  <table class="table <%= ' data-table' if records.count > 1 %> thead-dark table-striped">
     <thead class="thead-dark">
       <tr>
       <% column_headings.each do |heading| %>
