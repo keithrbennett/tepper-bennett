@@ -16,8 +16,7 @@ class GenreReport < BaseReport
   end
 
   def to_html
-    table_data = records_to_html_table_data(tuples)
-    html_report_table(['Genre Code', 'Genre Name', 'Song Count'], table_data)
+    html_report_table(['Genre Code', 'Genre Name', 'Song Count'], tuples)
   end
 
   def to_raw_text

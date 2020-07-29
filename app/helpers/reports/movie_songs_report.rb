@@ -17,12 +17,11 @@ class MovieSongsReport < BaseReport
     headings = ['Year', 'Code', 'Name', 'Song Code', 'Song Name']
     data = records.each_with_object([])  do |r, data|
       r[:songs].each do |s|
-        data << [r[:code], r[:name], s[:code], s[:name]]
+        data << [r[:year], r[:code], r[:name], s[:code], s[:name]]
       end
     end
 
-    table_data = records_to_html_table_data(data)
-    html_report_table(headings, table_data)
+    html_report_table(headings, data)
   end
 
   def to_raw_text

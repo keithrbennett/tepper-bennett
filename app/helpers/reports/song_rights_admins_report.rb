@@ -27,8 +27,7 @@ class SongRightsAdminsReport < BaseReport
           r[:rights_admins].pluck(:name).join("<br/>"),
       ]
     end
-    table_data = records_to_html_table_data(html_data)
-    html_report_table(headings, table_data)
+    html_report_table(headings, html_data)
   end
 
 

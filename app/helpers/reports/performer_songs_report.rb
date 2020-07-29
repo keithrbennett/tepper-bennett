@@ -24,8 +24,7 @@ class PerformerSongsReport < BaseReport
       end
     end
 
-    table_data = records_to_html_table_data(data)
-    html_report_table(headings, table_data)
+    html_report_table(headings, data)
   end
 
 
