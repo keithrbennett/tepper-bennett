@@ -6,6 +6,7 @@ class ReportsController < ApplicationController
       render_to_string( partial: 'youtube_image_link', locals: { url: url })
     end
 
+    # Creates a hash whose keys are report type and values are ReportMetadata instances.
     @reports_metadata ||= [
           ['songs',               'Songs',               CodeNameReport.new(Song)],
           ['performers',          'Performers',          CodeNameReport.new(Performer)],

@@ -1,0 +1,12 @@
+<div class="table-responsive">
+  <table class="table <%= ' data-table' if table_data.count("\n") >= 12 %> thead-dark table-striped">
+    <thead class="thead-dark">
+      <tr>
+      <% column_headings.each do |heading| %>
+        <%= "<th>#{heading}</th>" %>
+      <% end %>
+      </tr>
+    </thead>
+    <%= table_data %>
+  </table>
+</div>

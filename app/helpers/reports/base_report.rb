@@ -68,17 +68,7 @@ class BaseReport
   # @param table_data a multiline string of <tr> elements
   # @return a string containing the HTML for the table, including surrounding div's.
   def html_report_table(column_headings, table_data)
-    html = <<HEREDOC
-    <div class="table-responsive">
-    <table class="table #{'data-table' if table_data.count("\n") >= 12} thead-dark table-striped">
-    <thead class="thead-dark">
-      <tr>#{column_headings.map { |h| "<th>#{h}</th>"}.join}</tr>
-    </thead>
-    #{table_data}
-    </table>
-    </div>
-HEREDOC
-    html.html_safe
+    render partial: 'report_table', locals: { column_headings: column_headings, table_data: table_data }
   end
 
 
