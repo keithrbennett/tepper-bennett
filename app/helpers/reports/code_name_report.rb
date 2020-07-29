@@ -16,8 +16,7 @@ class CodeNameReport < BaseReport
   end
 
   def to_html
-    table_data = records_to_html_table_data(tuples)
-    html_report_table(%w{Code Name}, table_data)
+    html_report_table(%w{Code Name}, tuples)
   end
 
   def to_raw_text

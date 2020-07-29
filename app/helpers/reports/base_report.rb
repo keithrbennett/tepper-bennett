@@ -2,6 +2,17 @@ class BaseReport
 
   attr_reader :field_names
 
+  # TODO: replace this with alias_method?
+  def render(*args)
+    @renderer ||= ApplicationController.renderer
+    @renderer.render(*args)
+  end
+
+  def render_to_string(*args)
+    @renderer_to_string ||= ActionController::Base.new
+    @renderer_to_string.render_to_string(*args)
+  end
+
   def report_type
     raise "This method must be implemented in a subclass."
   end
@@ -63,28 +74,11 @@ class BaseReport
   end
 
 
-
   # @param column_headings array of column heading strings'
   # @param table_data a multiline string of <tr> elements
   # @return a string containing the HTML for the table, including surrounding div's.
-  def html_report_table(column_headings, table_data)
-    render partial: 'report_table', locals: { column_headings: column_headings, table_data: table_data }
-  end
-
-
-  # @param an array of field strings
-  # @return the multiline string of <tr> and <td> elements.
-  def records_to_html_table_data(records)
-    html = StringIO.new
-    html << "\n"
-    records.each do |record|
-      html << "<tr>"
-      record.each do |field_value|
-        html << "<td>" << field_value << "</td>"
-      end
-      html << "</tr>\n"
-    end
-    html.string.html_safe
+  def html_report_table(column_headings, records)
+    render partial: 'reports/report_table', locals: { column_headings: column_headings, records: records }
   end
 
 

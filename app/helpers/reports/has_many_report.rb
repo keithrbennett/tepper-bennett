@@ -14,28 +14,20 @@ class HasManyReport < BaseReport
 
 
   def to_html
+    headings = %w(Code Name).map { |field_name| "#{secondary_ar_class.name.capitalize} #{field_name}" }
+
+    fn_name = ->(primary) do
+      n = primary[:name]
+      n == n.downcase ? n : n.capitalize
+    end
+
     html = StringIO.new
 
-    headings = -> do
-      %w(Code Name).map { |field_name| "#{secondary_ar_class.name.capitalize} #{field_name}" }
+    records.each do |primary|
+      name = fn_name.(primary)
+      secondaries = primary[secondary_key].pluck(:code, :name)
+      html << render_to_string(partial: 'reports/has_many_report', locals: { column_headings: headings, name: name, secondaries: secondaries })
     end
-
-    append_row = ->(primary) do
-      name = primary[:name]
-      name = (name == name.downcase) ? name.capitalize : name
-      html << "<h2>#{name}</h2>\n"
-      secondaries = primary[secondary_key]
-      if secondaries.empty?
-        html << "[No songs for this #{primary_ar_class.name.downcase}]</br>\n"
-      else
-        data = secondaries.map { |primary| [primary[:code], primary[:name]] }
-        table_data = records_to_html_table_data(data)
-        html << "<br/>\n" << html_report_table(headings.(), table_data)
-      end
-      html << "<br/><br/>\n"
-    end
-
-    records.each { |primary| append_row.(primary) }
     html.string.html_safe
   end
 
