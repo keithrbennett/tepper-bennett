@@ -11,7 +11,7 @@ class SongRightsAdminsReport < BaseReport
           rights_admins: pluck_to_hash(rights_admins, :code, :name),
       }
     end
-    ap records
+    @report_type = 'song_rights_admins'
   end
 
 

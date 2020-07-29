@@ -9,6 +9,7 @@ class GenreReport < BaseReport
     @records = tuples.map do |tuple|
       { code: tuple[0], name: tuple[1], song_count: tuple[2] }
     end
+    @report_type = 'genres'
   end
 
   def to_html

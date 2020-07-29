@@ -8,6 +8,7 @@ class GenreSongsReport < HasManyReport
         secondary_ar_class: Song,
         text_report_class_name: GenreSongsTextReport
     )
+    @report_type = 'genre_songs'
   end
 
   def build_records

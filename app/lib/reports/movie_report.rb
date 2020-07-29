@@ -4,6 +4,7 @@ class MovieReport < BaseReport
 
   def initialize
     @records = pluck_to_hash(Movie.order(:name), :code, :year, :name, :imdb_key)
+    @report_type = 'movies'
   end
 
   def to_html

@@ -2,13 +2,18 @@ class BaseReport
 
   attr_reader :field_names
 
+  def report_type
+    raise "This method must be implemented in a subclass."
+  end
+
+
   def preize_text(text)
     "<div><pre>\n#{text}</pre></div>\n".html_safe
   end
 
 
   def to_html
-    raise "This method must be overridden by subclasses."
+    raise "This method must be implemented in a subclass."
   end
 
 

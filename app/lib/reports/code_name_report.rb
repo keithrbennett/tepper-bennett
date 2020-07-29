@@ -1,9 +1,10 @@
-class CodeNameReport < BaseReport
+class OkCodeNameReport < BaseReport
 
-  attr_reader :ar_class, :records, :tuples
+  attr_reader :ar_class, :records, :report_type, :tuples
 
   def initialize(ar_class)
     @ar_class = ar_class
+    @report_type = ar_class.pluralize
     @tuples = ar_class.order(:name).pluck(:code, :name)
     @records = tuples.map do |tuple|
       { code: tuple[0], name: tuple[1] }

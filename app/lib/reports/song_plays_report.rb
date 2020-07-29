@@ -14,6 +14,7 @@ class SongPlaysReport < BaseReport
           youtube_key: song_play.youtube_key
       }
     end
+    @report_type = 'song_plays'
   end
 
   def to_html

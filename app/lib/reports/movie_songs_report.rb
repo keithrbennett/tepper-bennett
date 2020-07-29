@@ -7,6 +7,7 @@ class MovieSongsReport < BaseReport
       songs = pluck_to_hash(movie.songs.order(:name), :code, :name)
       { year: movie.year, code: movie.code, name: movie.name, songs: songs }
     end
+    @report_type = 'movie_songs'
   end
 
   def to_html

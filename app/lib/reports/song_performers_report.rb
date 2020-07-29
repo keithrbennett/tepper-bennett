@@ -10,6 +10,7 @@ class SongPerformersReport < BaseReport
           performers: pluck_to_hash(song.performers.order(:name), :code, :name)
       }
     end
+    @report_type = 'song_performers'
   end
 
 

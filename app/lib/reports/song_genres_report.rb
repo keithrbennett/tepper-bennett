@@ -10,6 +10,7 @@ class SongGenresReport < BaseReport
           genres: song.genres.order(:name).pluck(:name)
       }
     end
+    @report_type = 'song_genres'
   end
 
 

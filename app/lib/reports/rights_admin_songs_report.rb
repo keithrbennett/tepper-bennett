@@ -8,6 +8,7 @@ class RightsAdminSongsReport < HasManyReport
         secondary_ar_class: Song,
         text_report_class_name: RightsAdminSongsTextReport
     )
+    @report_type = 'rights_admins'
   end
 
   def build_records
