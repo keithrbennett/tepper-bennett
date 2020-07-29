@@ -2,15 +2,11 @@ class ReportsController < ApplicationController
 
   # A hash consisting of the report type (first value below) as key, Report object as value.
   def reports_metadata
-    youtube_link_generator = ->(url) do
-      render_to_string( partial: 'youtube_image_link', locals: { url: url })
-    end
-
     # Creates a hash whose keys are report type and values are ReportMetadata instances.
     @reports_metadata ||= [
           ['songs',               'Songs',               CodeNameReport.new(Song)],
           ['performers',          'Performers',          CodeNameReport.new(Performer)],
-          ['song_plays',          'Song Plays',          SongPlaysReport.new(youtube_link_generator)],
+          ['song_plays',          'Song Plays',          SongPlaysReport.new],
           ['genres',              'Genres',              GenreReport.new],
           ['song_performers',     'Song Performers',     SongPerformersReport.new],
           ['performer_songs',     'Performer Songs',     PerformerSongsReport.new],

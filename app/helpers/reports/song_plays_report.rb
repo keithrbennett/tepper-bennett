@@ -2,8 +2,7 @@ class SongPlaysReport < BaseReport
 
   attr_reader :records, :youtube_link_renderer
 
-  def initialize(youtube_link_renderer)
-    @youtube_link_renderer = youtube_link_renderer
+  def initialize
     @report_type = 'song_plays'
   end
 
@@ -26,17 +25,18 @@ class SongPlaysReport < BaseReport
       performers = r[:performers]
       youtube_key = r[:youtube_key]
       url = SongPlay.youtube_embed_url(youtube_key)
-      youtube_link = youtube_link_renderer.(url)
+      youtube_link = render_to_string( partial: 'application/youtube_image_link', locals: { url: url })
+
       [
           r[:song_code],
           r[:song_name],
           performers.pluck(:code).join("<br/>"),
           performers.pluck(:name).join("<br/>"),
           youtube_key,
-          youtube_link]
+          youtube_link
+      ]
     end
-    table_data = records_to_html_table_data(data)
-    html_report_table(headings, table_data)
+    html_report_table(headings, data)
   end
 
   def to_raw_text
