@@ -7,6 +7,12 @@ class BaseReport
   end
 
 
+  # Populates @data with data from the DB
+  def populate
+    raise "This method must be implemented in a subclass."
+  end
+
+
   def preize_text(text)
     "<div><pre>\n#{text}</pre></div>\n".html_safe
   end

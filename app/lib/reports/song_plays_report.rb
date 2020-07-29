@@ -4,6 +4,10 @@ class SongPlaysReport < BaseReport
 
   def initialize(youtube_link_renderer)
     @youtube_link_renderer = youtube_link_renderer
+    @report_type = 'song_plays'
+  end
+
+  def populate
     @records = SongPlay.joins(:song).all.order('songs.name, id').map do |song_play|
       song = song_play.song
       perfs = song_play.performers.order(:name)
@@ -14,7 +18,6 @@ class SongPlaysReport < BaseReport
           youtube_key: song_play.youtube_key
       }
     end
-    @report_type = 'song_plays'
   end
 
   def to_html

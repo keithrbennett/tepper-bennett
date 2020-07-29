@@ -3,6 +3,10 @@ class SongGenresReport < BaseReport
   attr_reader :records
 
   def initialize
+    @report_type = 'song_genres'
+  end
+
+  def populate
     @records = Song.order(:name).map do |song|
       {
           code: song.code,
@@ -10,9 +14,7 @@ class SongGenresReport < BaseReport
           genres: song.genres.order(:name).pluck(:name)
       }
     end
-    @report_type = 'song_genres'
   end
-
 
   def to_html
     headings = ['Code', 'Name', 'Genres']

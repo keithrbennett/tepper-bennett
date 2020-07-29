@@ -4,8 +4,7 @@ class HasManyReport < BaseReport
   attr_reader :records, :title, :primary_ar_class, :secondary_ar_class, :secondary_key, :text_report_class_name
 
 
-  def initialize(records:, title:, primary_ar_class:, secondary_ar_class:, text_report_class_name:)
-    @records = records
+  def initialize(title:, primary_ar_class:, secondary_ar_class:, text_report_class_name:)
     @title = title
     @primary_ar_class = primary_ar_class
     @secondary_ar_class = secondary_ar_class

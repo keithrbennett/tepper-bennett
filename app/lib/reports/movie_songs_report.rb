@@ -3,11 +3,14 @@ class MovieSongsReport < BaseReport
   attr_reader :records
 
   def initialize
+    @report_type = 'movie_songs'
+  end
+
+  def populate
     @records = Movie.order(:name).map do |movie|
       songs = pluck_to_hash(movie.songs.order(:name), :code, :name)
       { year: movie.year, code: movie.code, name: movie.name, songs: songs }
     end
-    @report_type = 'movie_songs'
   end
 
   def to_html

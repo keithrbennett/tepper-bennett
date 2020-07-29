@@ -3,6 +3,10 @@ class SongPerformersReport < BaseReport
   attr_reader :records
 
   def initialize
+    @report_type = 'song_performers'
+  end
+
+  def populate
     @records = Song.order(:name).all.map do |song|
       {
           code: song.code,
@@ -10,9 +14,7 @@ class SongPerformersReport < BaseReport
           performers: pluck_to_hash(song.performers.order(:name), :code, :name)
       }
     end
-    @report_type = 'song_performers'
   end
-
 
   def to_html
     headings = ['Song Code', 'Song Name', 'Perf Code', 'Performer Name']

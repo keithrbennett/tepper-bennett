@@ -1,6 +1,6 @@
 module ReportsHelper
 
-  class ReportMetadata < Struct.new(:rpt_type, :title, :fn_report)
+  class ReportMetadata < Struct.new(:rpt_type, :title, :report)
 
     include ApplicationHelper
 
