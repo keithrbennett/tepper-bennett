@@ -12,12 +12,16 @@ class MovieReport < BaseReport
 
   def to_html
     headings = ['Code', 'Year', 'IMDB Key', 'Name']
-    table_data = records.map do |m|
-      imdb_anchor = %Q{<a href="#{m[:imdb_url]}", target="_blank">#{m[:imdb_key]}</a>}
-      %Q{<tr><td>#{m[:code]}</td><td>#{m[:year]}</td><td>#{imdb_anchor}</td><td>#{m[:name]}</td></tr>}
+    table_data = records.map do |movie|
+      [
+          movie[:code],
+          movie[:year],
+          render_to_string(partial: 'reports/movie_imdb_field', locals: { imdb_key: movie[:imdb_key] }),
+          movie[:name],
+      ]
     end
 
-    html_report_table(headings, table_data.join("\n"))
+    html_report_table(headings, table_data)
   end
 
   def to_raw_text
