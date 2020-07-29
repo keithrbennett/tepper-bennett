@@ -34,5 +34,6 @@ module TepperBennett
 
 
     config.autoload_paths << "#{Rails.root}/app/lib/reports"
+    config.autoload_paths << "#{Rails.root}/app/lib/reports/text_reports"
   end
 end
