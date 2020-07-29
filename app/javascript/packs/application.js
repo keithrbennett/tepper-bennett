@@ -101,10 +101,9 @@ const initialize_application = function() {
     }
 
 
-    document.addEventListener('DOMContentLoaded', (event) => {
-        console.log("DOM content loaded, initializing application.");
-        setUpYouTubeClicks();
-    });
+    // document.addEventListener('DOMContentLoaded', (event) => {
+    //     console.log("DOM content loaded, initializing application.");
+    // });
 
 
     document.addEventListener("turbolinks:load", () => {
@@ -113,6 +112,7 @@ const initialize_application = function() {
         $('[data-toggle="popover"]').popover()
         setUpMainMenuLinks();
         setInitialMenuChoice();
+        setUpYouTubeClicks();
         setUpColorPicker();
         $('.data-table').DataTable();
     });
