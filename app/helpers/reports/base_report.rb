@@ -2,10 +2,8 @@ class BaseReport
 
   attr_reader :field_names
 
-  # TODO: replace this with alias_method?
   def render(*args)
-    @renderer ||= ApplicationController.renderer
-    @renderer.render(*args)
+    ApplicationController.renderer.render(*args)
   end
 
   def render_to_string(*args)

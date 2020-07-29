@@ -19,3 +19,4 @@ class GenreSongsReport < HasManyReport
     end
   end
 end
+      
