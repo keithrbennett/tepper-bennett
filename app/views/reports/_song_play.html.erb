@@ -1,0 +1,10 @@
+<% performers = record[:performers] %>
+<% youtube_key = record[:youtube_key] %>
+<% url = SongPlay.youtube_embed_url(youtube_key) %>
+
+<td><%= record[:song_code] %></td>
+<td><%= record[:song_name] %></td>
+<td><%= performers.pluck(:code).join("<br/>") %></td>
+<td><%= performers.pluck(:name).join("<br/>") %></td>
+<td><%= youtube_key %></td>
+<td><%= render partial: 'application/youtube_image_link', locals: { url: url } %></td>

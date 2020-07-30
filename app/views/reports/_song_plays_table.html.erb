@@ -1,20 +1,18 @@
 <div class="table-responsive">
   <table class="table <%= ' data-table' if records.count > 1 %> thead-dark table-striped">
     <thead class="thead-dark">
-      <tr>
+    <tr>
       <% column_headings.each do |heading| %>
         <th><%= heading %></th>
       <% end %>
-      </tr>
+    </tr>
     </thead>
     <tbody>
-      <% records.each do |record| %>
-        <tr>
-        <% record.each do |field_value| %>
-          <td><%= field_value %></td>
-        <% end %>
-        </tr>
-      <% end %>
+    <% records.each do |record| %>
+      <tr>
+        <%= render partial: 'reports/song_play', locals: { record: record } %>
+      </tr>
+    <% end %>
     </tbody>
   </table>
 </div>

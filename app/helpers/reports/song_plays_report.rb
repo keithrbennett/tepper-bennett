@@ -21,22 +21,7 @@ class SongPlaysReport < BaseReport
 
   def to_html
     headings = ['Song Code', 'Song Name', 'Perf Code', 'Performer Name', 'YouTube Key', 'Play']
-    data = records.map do |r|
-      performers = r[:performers]
-      youtube_key = r[:youtube_key]
-      url = SongPlay.youtube_embed_url(youtube_key)
-      youtube_link = render_to_string( partial: 'application/youtube_image_link', locals: { url: url })
-
-      [
-          r[:song_code],
-          r[:song_name],
-          performers.pluck(:code).join("<br/>"),
-          performers.pluck(:name).join("<br/>"),
-          youtube_key,
-          youtube_link
-      ]
-    end
-    html_report_table(headings, data)
+    render partial: 'reports/song_plays_table', locals: { column_headings: headings, records: records }
   end
 
   def to_raw_text
