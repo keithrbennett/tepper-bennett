@@ -20,7 +20,7 @@ class SongPlaysReport < BaseReport
   end
 
   def to_html
-    headings = ['Song Code', 'Song Name', 'Perf Code', 'Performer Name', 'YouTube Key', 'Play']
+    headings = ['Song Name', 'Performer Name', 'YouTube Key', 'Play']
     render partial: 'reports/song_plays_table', locals: { column_headings: headings, records: records }
   end
 

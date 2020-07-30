@@ -1,10 +1,15 @@
-<% performers = record[:performers] %>
 <% youtube_key = record[:youtube_key] %>
 <% url = SongPlay.youtube_embed_url(youtube_key) %>
+<% performers = record[:performers] %>
+<% performer_names = performers.pluck(:name).join("<br/>") %>
+<% performer_code_text = performers.count == 1 \
+    ? "Performer code: #{performers.first[:code]}"
+    : "Performer codes: #{performers.pluck(:code).join(', ')}"%>
+<% tooltip_td = ->(text, tooltip) do
+  %Q{<td alt="#{tooltip}" title="#{tooltip}" data-toggle="tooltip" data-placement="bottom">#{text}</td>}.html_safe
+end %>
 
-<td><%= record[:song_code] %></td>
-<td><%= record[:song_name] %></td>
-<td><%= performers.pluck(:code).join("<br/>") %></td>
-<td><%= performers.pluck(:name).join("<br/>") %></td>
+<%= tooltip_td.(record[:song_name], "Song code: #{record[:song_code]}") %>
+<%= tooltip_td.(performer_names, performer_code_text) %>
 <td><%= youtube_key %></td>
 <td><%= render partial: 'application/youtube_image_link', locals: { url: url } %></td>
