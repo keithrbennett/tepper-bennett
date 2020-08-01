@@ -17,14 +17,7 @@ class PerformerSongsReport < BaseReport
   end
 
   def to_html
-    headings = ['Perf Code', 'Performer Name', 'Song Code', 'Song Name']
-    data = records.each_with_object([])  do |r, data|
-      r[:songs].each do |s|
-        data << [r[:code], r[:name], s[:code], s[:name]]
-      end
-    end
-
-    html_report_table(headings, data)
+    render(partial: 'reports/performer_songs', locals: { records: records })
   end
 
 
