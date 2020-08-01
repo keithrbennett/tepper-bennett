@@ -1,0 +1,20 @@
+<div class="table-responsive">
+  <table class="table data-table   thead-dark table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <th>Song</th>
+      <th>Performer</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% records.each do |song| %>
+        <% song[:performers].each do |perf| %>
+        <tr>
+          <%= render partial: 'application/tooltip_td', locals: { text: song[:name], tooltip_text: "Song Code: #{song[:code]}" } %>
+          <%= render partial: 'application/tooltip_td', locals: { text: perf[:name], tooltip_text: "Performer Code: #{perf[:code]}" } %>
+        </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
