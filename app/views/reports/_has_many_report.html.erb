@@ -1,9 +1,7 @@
-<section>
-  <h2><%= name %></h2>
-  <% if secondaries.empty? %>
-    <p><%= "[No entries for this #{name}]" %></p>
-  <% else %>
-    <p><%= render partial: 'reports/report_table', locals: { column_headings: column_headings, records: secondaries } %></p><br/><br/>
-  <% end %>
-  <br/><br />
-</section>
+<% fn_name = ->(primary) { n = primary[:name]; (n == n.downcase ? n : n.capitalize) } %>
+
+<% records.each do |primary| %>
+  <% secondaries = primary[secondary_key].pluck(:code, :name) %>
+  <% locals =  { column_headings: headings, name: fn_name.(primary), secondaries: secondaries } %>
+  <%= render(partial: 'reports/has_many_report_section', locals: locals) %>
+<% end %>

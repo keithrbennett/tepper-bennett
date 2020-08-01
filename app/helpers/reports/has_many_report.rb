@@ -16,19 +16,12 @@ class HasManyReport < BaseReport
   def to_html
     headings = %w(Code Name).map { |field_name| "#{secondary_ar_class.name.capitalize} #{field_name}" }
 
-    fn_name = ->(primary) do
-      n = primary[:name]
-      n == n.downcase ? n : n.capitalize
-    end
-
-    html = StringIO.new
-
-    records.each do |primary|
-      name = fn_name.(primary)
-      secondaries = primary[secondary_key].pluck(:code, :name)
-      html << render_to_string(partial: 'reports/has_many_report', locals: { column_headings: headings, name: name, secondaries: secondaries })
-    end
-    html.string.html_safe
+    locals = {
+        records: records,
+        secondary_key: secondary_key,
+        headings: headings,
+    }
+    render(partial: 'reports/has_many_report', locals: locals)
   end
 
 
