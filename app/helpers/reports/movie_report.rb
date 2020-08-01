@@ -21,7 +21,7 @@ class MovieReport < BaseReport
       ]
     end
 
-    html_report_table(headings, table_data)
+    render partial: 'reports/report_table', locals: { column_headings: headings, records: table_data }
   end
 
   def to_raw_text

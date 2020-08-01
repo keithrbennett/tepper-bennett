@@ -27,7 +27,7 @@ class SongRightsAdminsReport < BaseReport
           r[:rights_admins].pluck(:name).join("<br/>"),
       ]
     end
-    html_report_table(headings, html_data)
+    render partial: 'reports/report_table', locals: { column_headings: headings, records: html_data }
   end
 
 

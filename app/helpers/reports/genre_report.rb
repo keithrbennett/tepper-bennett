@@ -16,7 +16,8 @@ class GenreReport < BaseReport
   end
 
   def to_html
-    html_report_table(['Genre Code', 'Genre Name', 'Song Count'], tuples)
+    render partial: 'reports/report_table', locals:
+        { column_headings: ['Genre Code', 'Genre Name', 'Song Count'], records: tuples }
   end
 
   def to_raw_text

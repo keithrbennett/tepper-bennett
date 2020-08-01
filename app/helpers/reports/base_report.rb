@@ -72,14 +72,6 @@ class BaseReport
   end
 
 
-  # @param column_headings array of column heading strings'
-  # @param table_data a multiline string of <tr> elements
-  # @return a string containing the HTML for the table, including surrounding div's.
-  def html_report_table(column_headings, records)
-    render partial: 'reports/report_table', locals: { column_headings: column_headings, records: records }
-  end
-
-
   def pluck_to_hash(enumerable, *field_names)
     enumerable.pluck(*field_names).map do |field_values|
       field_names.zip(field_values).each_with_object({}) do |(key, value), result_hash|

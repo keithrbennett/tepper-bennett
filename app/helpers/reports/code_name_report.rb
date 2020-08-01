@@ -16,7 +16,7 @@ class CodeNameReport < BaseReport
   end
 
   def to_html
-    html_report_table(%w{Code Name}, tuples)
+    render partial: 'reports/report_table', locals: { column_headings: %w{Code Name}, records: tuples }
   end
 
   def to_raw_text
