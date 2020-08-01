@@ -11,5 +11,4 @@ end %>
 
 <%= tooltip_td.(record[:song_name], "Song code: #{record[:song_code]}") %>
 <%= tooltip_td.(performer_names, performer_code_text) %>
-<td><%= youtube_key %></td>
 <td><%= render partial: 'application/youtube_image_link', locals: { url: url } %></td>
