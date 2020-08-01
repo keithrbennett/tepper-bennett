@@ -5,10 +5,7 @@
 <% performer_code_text = performers.count == 1 \
     ? "Performer code: #{performers.first[:code]}"
     : "Performer codes: #{performers.pluck(:code).join(', ')}"%>
-<% tooltip_td = ->(text, tooltip) do
-  %Q{<td alt="#{tooltip}" title="#{tooltip}" data-toggle="tooltip" data-placement="bottom">#{text}</td>}.html_safe
-end %>
 
-<%= tooltip_td.(record[:song_name], "Song code: #{record[:song_code]}") %>
-<%= tooltip_td.(performer_names, performer_code_text) %>
+<%= tooltip_td(record[:song_name], "Song code: #{record[:song_code]}") %>
+<%= tooltip_td(performer_names, performer_code_text) %>
 <td><%= render partial: 'application/youtube_image_link', locals: { url: url } %></td>

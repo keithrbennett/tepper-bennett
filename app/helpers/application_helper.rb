@@ -25,4 +25,8 @@ module ApplicationHelper
   def youtube_text_song_link(text, youtube_code)
     render partial: 'application/youtube_text_song_link', locals: { text: text, youtube_code: youtube_code }
   end
+
+  def tooltip_td(text, tooltip)
+    %Q{<td alt="#{tooltip}" title="#{tooltip}" data-toggle="tooltip" data-placement="bottom">#{text}</td>}.html_safe
+  end
 end
