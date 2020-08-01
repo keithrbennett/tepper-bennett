@@ -18,18 +18,8 @@ class SongRightsAdminsReport < BaseReport
   end
 
   def to_html
-    headings = ['Song Code', 'Song Name', 'RA Code', 'Rights Admin Name']
-    html_data = records.map do |r|
-      [
-          r[:code],
-          r[:name],
-          r[:rights_admins].pluck(:code).join("<br/>"),
-          r[:rights_admins].pluck(:name).join("<br/>"),
-      ]
-    end
-    render partial: 'reports/report_table', locals: { column_headings: headings, records: html_data }
+    render partial: 'reports/song_rights_admins', locals: { records: records }
   end
-
 
   def to_raw_text
     SongRightsAdminsTextReport.new(records).report_string

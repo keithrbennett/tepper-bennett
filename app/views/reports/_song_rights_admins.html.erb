@@ -1,0 +1,21 @@
+<div class="table-responsive">
+  <table class="table <%= ' data-table' if records.count > 1 %> thead-dark table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <th>Song</th>
+      <th>Rights Administrator</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% records.each do |song| %>
+      <tr>
+        <%= render partial: 'application/tooltip_td', locals: { text: song[:name], tooltip_text: "Song Code: #{song[:code]}" } %>
+
+        <% ra_names = song[:rights_admins].pluck(:name).join("<br />") %>
+        <% ra_codes = song[:rights_admins].pluck(:code).join("<br />") %>
+        <%= render partial: 'application/tooltip_td', locals: { text: ra_names, tooltip_text: "Rights Admin Code(s): #{ra_codes}" } %>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

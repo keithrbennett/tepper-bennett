@@ -1,20 +1,18 @@
-<% column_headings = ['Song Name', 'Performer Name', 'Play'] %>
-
 <div class="table-responsive">
   <table class="table <%= ' data-table' if records.count > 1 %> thead-dark table-striped">
     <thead class="thead-dark">
-    <tr>
-      <% column_headings.each do |heading| %>
-        <th><%= heading %></th>
-      <% end %>
-    </tr>
+      <tr>
+        <th>Song</th>
+        <th>Performer</th>
+        <th>Play</th>
+      </tr>
     </thead>
     <tbody>
-    <% records.each do |record| %>
-      <tr>
-        <%= render partial: 'reports/song_play', locals: { record: record } %>
-      </tr>
-    <% end %>
+      <% records.each do |record| %>
+        <tr>
+          <%= render partial: 'reports/song_play', locals: { record: record } %>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </div>
