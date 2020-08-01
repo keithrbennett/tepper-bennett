@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <table class="table data-table   thead-dark table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <th>Year</th>
+      <th>Movie</th>
+      <th>Song</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% records.each do |movie| %>
+      <% movie[:songs].each do |song| %>
+        <tr>
+          <td><%= movie[:year] %></td>
+          <%= render partial: 'application/tooltip_td', locals: { text: movie[:name], tooltip_text: "Movie Code: #{movie[:code]}" } %>
+          <%= render partial: 'application/tooltip_td', locals: { text: song[:name], tooltip_text: "Song Code: #{song[:code]}" } %>
+        </tr>
+      <% end %>
+    <% end %>
+    </tbody>
+  </table>
+</div>

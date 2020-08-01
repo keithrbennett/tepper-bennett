@@ -14,14 +14,7 @@ class MovieSongsReport < BaseReport
   end
 
   def to_html
-    headings = ['Year', 'Code', 'Name', 'Song Code', 'Song Name']
-    data = records.each_with_object([])  do |r, data|
-      r[:songs].each do |s|
-        data << [r[:year], r[:code], r[:name], s[:code], s[:name]]
-      end
-    end
-
-    render partial: 'reports/report_table', locals: { column_headings: headings, records: data }
+    render partial: 'reports/movie_songs', locals: { records: records }
   end
 
   def to_raw_text
