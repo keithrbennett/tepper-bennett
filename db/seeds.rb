@@ -365,15 +365,13 @@ def add_song_plays
   print "Adding #{plays.count} song plays..."
 
   plays.each do |play|
-    song = Song.find_by_code(play[:song_code])
-    performer_codes = Array(play[:performer_codes]) # convert to array if it's a string
-    performers = performer_codes.each_with_object([]) do |code, performers|
-      performer = Performer.find_by_code(code)
-      raise "Performer whose code is #{code} not found." if performer.nil?
-      performers << performer
-    end
-    youtube_key = play[:youtube_key]
-    SongPlay.create!(song: song, performers: performers, youtube_key: youtube_key)
+    song_code = play[:song_code]
+    song = Song.find_by_code(song_code)
+    performer_codes = Array(play[:performer_codes])
+    performers = performer_codes.map { |code| Performer.find_by_code(code) }
+    code = song_code + '.' + performer_codes.first
+
+    SongPlay.create!(song: song, performers: performers, youtube_key: play[:youtube_key], code: code)
   end
 
   puts 'done.'
