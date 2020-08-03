@@ -1,8 +1,8 @@
 <% genres = song.genres.pluck(:name).join(', ') %>
 <% writers = song.writers.pluck(:name).join(', ') %>
-<% performers = song.performers.pluck(:name).join(', ') %>
+<% performers = song.performers.pluck(:name) %>
 <% movies = song.movies.pluck(:name).join(', ') %>
-<% rights_admins = song.rights_admin_orgs.count == 0 ? '(Unknown)' : song.rights_admin_orgs.pluck(:name).join(', ') %>
+<% rights_admins = song.rights_admin_orgs.count == 0 ? '(Unknown)' : song.rights_admin_orgs.pluck(:name).join('<br/>').html_safe %>
 <% song_plays = song.song_plays %>
 
 <h2>Song: <%= song.name %></h2>
@@ -22,7 +22,11 @@
     </tr>
     <tr>
       <th>Performers</th>
-      <td><%= performers %></td>
+      <td>
+        <% performers.each do |performer| %>
+          <%= performer %><br />
+        <% end %>
+      </td>
     </tr>
     <tr>
       <th>Movies</th>
