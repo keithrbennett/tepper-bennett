@@ -1,0 +1,51 @@
+<% genres = song.genres.pluck(:name).join(', ') %>
+<% writers = song.writers.pluck(:name).join(', ') %>
+<% performers = song.performers.pluck(:name).join(', ') %>
+<% movies = song.movies.pluck(:name).join(', ') %>
+<% rights_admins = song.rights_admin_orgs.count == 0 ? '(Unknown)' : song.rights_admin_orgs.pluck(:name).join(', ') %>
+
+<h2>Song: <%= song.name %></h2>
+<br/>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead></thead>
+    <tbody>
+    <tr>
+      <th>Genres</th>
+      <td><%= genres %></td>
+    </tr>
+    <tr>
+      <th>Writers</th>
+      <td><%= writers %></td>
+    </tr>
+    <tr>
+      <th>Performers</th>
+      <td><%= performers %></td>
+    </tr>
+    <tr>
+      <th>Movies</th>
+      <td><%= movies %></td>
+    </tr>
+    <tr>
+      <th>Rights Administrators</th>
+      <td><%= rights_admins %></td>
+    </tr>
+    </tbody>
+
+    <% if song.best_song_plays.count > 0 %>
+      <tr>
+        <th>Plays</th>
+        <td>
+          <table class="table table-borderless">
+            <% song.best_song_plays.each do |play| %>
+              <tr>
+                <td><%= play.performers.pluck(:name).join(', ') %></td>
+                <td><%= render partial: 'youtube_image_link', locals: { url: play.youtube_embed_url } %></td>
+              </tr>
+            <% end %>
+          </table>
+      </tr>
+    <% end %>
+  </table>
+</div>

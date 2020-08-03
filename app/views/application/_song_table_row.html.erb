@@ -1,5 +1,5 @@
 <tr>
-  <th scope="row"><%= recording.title %></th>
+  <th scope="row"><a href="/songs/<%= recording.song.code %>"><%= recording.title %></a></th>
   <td><%= artist_or_movie_name %></td>
   <td align="center">
     <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal" data-url="<%= recording.embed_url %>"/>
