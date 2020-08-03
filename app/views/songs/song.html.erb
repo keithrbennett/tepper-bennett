@@ -5,7 +5,7 @@
 <% rights_admins = song.rights_admin_orgs.count == 0 ? '(Unknown)' : song.rights_admin_orgs.pluck(:name).join('<br/>').html_safe %>
 <% song_plays = song.song_plays %>
 
-<h2>Song: <%= song.name %></h2>
+<h2 class="title">Song: <%= song.name %></h2>
 <br/>
 
 <div class="table-responsive">
