@@ -1,21 +1,30 @@
-<% heading = col2_field == :artist ? 'Artist' : 'Movie' %>
-<% col2_val_fetcher = col2_field == :artist ?  ->(recording) { recording.artist} : ->(recording) { recording.movie} %>
-
 <div class="table-responsive">
   <table class="data-table table thead-dark table-striped">
     <thead class="thead-dark">
     <tr>
       <th scope="col">Title</th>
-      <th scope="col"><%= heading %></th>
+      <th scope="col">Artist</th>
+      <th scope="col">Movie</th>
       <th scope="col" style="text-align: center;">Listen</th>
     </tr>
     </thead>
     <tbody>
-    <% recordings.each do |recording| %>
-      <%= render partial: 'song_table_row', locals: {
-          recording: recording,
-          artist_or_movie_name: col2_val_fetcher.(recording),
-      } %>
+    <!--    TODO: Enable selection of Elvis, best, or all songs.-->
+    <% song_plays.each do |play| %>
+      <% song = play.song %>
+      <% title = song.name %>
+      <% performers = play.performers.pluck(:name).join('; ') %>
+      <% url = play.youtube_embed_url %>
+      <tr>
+        <th scope="row"><a href="/songs/<%= song.code %>"><%= title %></a></th>
+        <td><%= performers %></td>
+        <td><%= song.movies.pluck(:name).join('; ') %></td>
+        <td align="center">
+          <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal" data-url="<%= url %>"/>
+          <%= image_tag('youtube.png', alt: %Q{Listen to "#{title}" by #{performers}}) %>
+          </a>
+        </td>
+      </tr>
     <% end %>
     </tbody>
   </table>

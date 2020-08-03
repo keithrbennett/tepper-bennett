@@ -29,4 +29,4 @@
 </p>
 <br/>
 
-<%= render partial: 'song_table', locals: { recordings: @elvis_recordings, col2_field: :movie } %>
+<%= render partial: 'application/song_table', locals: { song_plays: SongPlay.elvis } %>

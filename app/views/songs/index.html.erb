@@ -9,36 +9,4 @@
 
 <br/>
 
-<div class="table-responsive">
-  <table class="data-table table thead-dark table-striped">
-    <thead class="thead-dark">
-    <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Artist</th>
-      <th scope="col">Movie</th>
-      <th scope="col" style="text-align: center;">Listen</th>
-    </tr>
-    </thead>
-    <tbody>
-<!--    TODO: Enable selection of Elvis, best, or all songs.-->
-    <% SongPlay.best.each do |play| %>
-      <% song = play.song %>
-      <% title = song.name %>
-      <% performers = play.performers.pluck(:name).join('; ') %>
-      <% url = play.youtube_embed_url %>
-      <tr>
-        <th scope="row"><a href="/songs/<%= song.code %>"><%= title %></a></th>
-        <td><%= performers %></td>
-        <td><%= song.movies.pluck(:name).join('; ') %></td>
-        <td align="center">
-          <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal" data-url="<%= url %>"/>
-          <%= image_tag('youtube.png', alt: %Q{Listen to "#{title}" by #{performers}}) %>
-          </a>
-        </td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
-</div>
-
-<%#= render partial: 'application/songs_table', locals: {best_song_plays: best_song_plays, col2_field: :artist } %>
+<%= render partial: 'application/song_table', locals: { song_plays: SongPlay.best } %>
