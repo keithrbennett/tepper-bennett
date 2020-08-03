@@ -22,7 +22,9 @@
     <tbody>
 <!--    TODO: Enable selection of Elvis, best, or all songs.-->
     <% SongPlay.best.each do |play| %>
-      <% song = play.song; title = song.name; performers = play.performers.pluck(:name).join('; ') %>
+      <% song = play.song %>
+      <% title = song.name %>
+      <% performers = play.performers.pluck(:name).join('; ') %>
       <% url = play.youtube_embed_url %>
       <tr>
         <th scope="row"><a href="/songs/<%= song.code %>"><%= title %></a></th>

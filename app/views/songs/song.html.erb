@@ -3,6 +3,7 @@
 <% performers = song.performers.pluck(:name).join(', ') %>
 <% movies = song.movies.pluck(:name).join(', ') %>
 <% rights_admins = song.rights_admin_orgs.count == 0 ? '(Unknown)' : song.rights_admin_orgs.pluck(:name).join(', ') %>
+<% song_plays = song.song_plays %>
 
 <h2>Song: <%= song.name %></h2>
 <br/>
@@ -33,12 +34,12 @@
     </tr>
     </tbody>
 
-    <% if song.best_song_plays.count > 0 %>
+    <% if song_plays.count > 0 %>
       <tr>
         <th>Plays</th>
         <td>
           <table class="table table-borderless">
-            <% song.best_song_plays.each do |play| %>
+            <% song_plays.each do |play| %>
               <tr>
                 <td><%= play.performers.pluck(:name).join(', ') %></td>
                 <td><%= render partial: 'youtube_image_link', locals: { url: play.youtube_embed_url } %></td>
