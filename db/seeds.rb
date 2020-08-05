@@ -356,7 +356,7 @@ def add_song_plays
       { song_code: 'stay-away'     , performer_codes: 'elvis'         , youtube_key: 'wr6MQtFLX6k' },
       { song_code: 'stop-think'    , performer_codes: 'p-como'        , youtube_key: 'PE6n4SHZspY' },
       { song_code: 'suzy-snow'     , performer_codes: 'r-clooney'     , youtube_key: 'UiFXZhU5kp4' },
-      { song_code: 't-t-fingers'   , performer_codes: 'naysayers'     , youtube_key: '8tdJg3oB5DM' },
+      { song_code: 't-t-fingers'   , performer_codes: 'naysayer'      , youtube_key: '8tdJg3oB5DM' },
       { song_code: 't-t-fingers'   , performer_codes: 'stargazers'    , youtube_key: 'K0ozZZ_RhP8' },
       { song_code: 'take-me-fair'  , performer_codes: 'elvis'         , youtube_key: 'DaOGCwGkdCE' },
       { song_code: 'tear-rain'     , performer_codes: 'a-prysock'     , youtube_key: '7xVk2GY-TOI' },
@@ -382,7 +382,12 @@ def add_song_plays
     performers = performer_codes.map { |code| Performer.find_by_code(code) }
     code = song_code + '.' + performer_codes.first
 
-    SongPlay.create!(song: song, performers: performers, youtube_key: play[:youtube_key], code: code)
+    begin
+      SongPlay.create!(song: song, performers: performers, youtube_key: play[:youtube_key], code: code)
+    rescue => e
+      $stderr.puts "Error adding song play code ''#{code}''"
+      raise
+    end
   end
 
   puts 'done.'
