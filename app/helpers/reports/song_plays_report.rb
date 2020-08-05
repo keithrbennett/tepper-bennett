@@ -20,7 +20,7 @@ class SongPlaysReport < BaseReport
   end
 
   def to_html
-    render partial: 'reports/song_plays_table', locals: { records: records }
+    render partial: 'application/song_table', locals: { table_id: 'reportsSongTable', song_plays: SongPlay.all }
   end
 
   def to_raw_text

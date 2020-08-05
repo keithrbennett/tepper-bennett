@@ -102,15 +102,20 @@ const initialize_application = function() {
 
 
     function setUpDataTableStateHandling() {
-        $('.data-table').DataTable( {
-            stateSave: true,
-            stateSaveCallback: function(settings,data) {
-                localStorage.setItem( 'DataTables_' + settings.sInstance, JSON.stringify(data) )
-            },
-            stateLoadCallback: function(settings) {
-                return JSON.parse( localStorage.getItem( 'DataTables_' + settings.sInstance ) )
-            }
-        } );
+        function setUpTable(tableId) {
+            $("#" + tableId).DataTable({
+                stateSave: true,
+                stateSaveCallback: function (settings, data) {
+                    localStorage.setItem('DataTables_' + settings.sInstance, JSON.stringify(data))
+                },
+                stateLoadCallback: function (settings) {
+                    return JSON.parse(localStorage.getItem('DataTables_' + settings.sInstance))
+                }
+            });
+        }
+        setUpTable("songsSongTable")
+        setUpTable("elvisSongTable")
+        setUpTable("reportsSongTable")
     }
 
     // document.addEventListener('DOMContentLoaded', (event) => {
@@ -136,7 +141,8 @@ initialize_reports();  // defined in reports.js
 
 
 document.addEventListener("turbolinks:before-cache", function() {
-    const dataTable = $('.data-table').dataTable();
+    const dataTable = $('.data-table').DataTable();
+    console.log(".data-table", dataTable);
     if (dataTable !== null) {
         dataTable.destroy();
     }
