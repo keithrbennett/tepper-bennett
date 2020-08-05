@@ -1,0 +1,15 @@
+<% records.each do |org| %>
+  <% name = org[:name] %>
+  <% songs = org[:songs].pluck(:code, :name) %>
+  <section>
+    <h2><%= name %></h2>
+    <% if songs.empty? %>
+      <p><%= "[No entries for this #{name}]" %></p>
+    <% else %>
+      <p><%= render partial: 'reports/report_table', locals: { column_headings: ['Song Code', 'Song Name'], records: songs } %></p><br/><br/>
+    <% end %>
+    <br/><br />
+  </section>
+<% end %>
+
+

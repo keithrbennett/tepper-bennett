@@ -1,12 +1,9 @@
-class RightsAdminSongsReport < HasManyReport
+class RightsAdminSongsReport < BaseReport
+
+  attr_reader :records
 
   def initialize
-    super(
-        title: 'Rights Administrator Songs',
-        primary_ar_class: Organization,
-        secondary_ar_class: Song,
-        text_report_class_name: RightsAdminSongsTextReport
-    )
+    @title = 'Rights Administrator Songs',
     @report_type = 'rights_admins'
   end
 
@@ -17,5 +14,13 @@ class RightsAdminSongsReport < HasManyReport
           songs: pluck_to_hash(org.songs.order(:name), :code, :name)
       }
     end
+  end
+
+  def to_html
+    render partial: 'reports/rights_admin_songs', locals: { records: records }
+  end
+
+  def to_raw_text
+    RightsAdminSongsTextReport.new(records).report_string
   end
 end
