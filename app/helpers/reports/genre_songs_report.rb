@@ -1,12 +1,7 @@
 class GenreSongsReport < HasManyReport
 
   def initialize
-    super(
-        title: 'Genre Songs',
-        primary_ar_class: Genre,
-        secondary_ar_class: Song,
-        text_report_class_name: GenreSongsTextReport
-    )
+    @title = 'Genre Songs'
     @report_type = 'genre_songs'
   end
 
@@ -17,6 +12,14 @@ class GenreSongsReport < HasManyReport
           songs: pluck_to_hash(genre.songs.order(:name), :code, :name)
       }
     end
+  end
+
+  def to_html
+    render partial: 'reports/genre_songs', locals: { records: records }
+  end
+
+  def to_raw_text
+    GenreSongsTextReport.new(records).report_string
   end
 end
       
