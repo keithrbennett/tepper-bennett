@@ -121,3 +121,12 @@ const initialize_application = function() {
 
 initialize_application();
 initialize_reports();  // defined in reports.js
+
+
+var dataTable = $('.data-table').DataTable();
+document.addEventListener("turbolinks:before-cache", function() {
+    if (dataTable !== null) {
+        dataTable.destroy();
+        dataTable = null;
+    }
+});
