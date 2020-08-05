@@ -101,6 +101,18 @@ const initialize_application = function() {
     }
 
 
+    function setUpDataTableStateHandling() {
+        $('.data-table').DataTable( {
+            stateSave: true,
+            stateSaveCallback: function(settings,data) {
+                localStorage.setItem( 'DataTables_' + settings.sInstance, JSON.stringify(data) )
+            },
+            stateLoadCallback: function(settings) {
+                return JSON.parse( localStorage.getItem( 'DataTables_' + settings.sInstance ) )
+            }
+        } );
+    }
+
     // document.addEventListener('DOMContentLoaded', (event) => {
     //     console.log("DOM content loaded, initializing application.");
     // });
@@ -114,7 +126,7 @@ const initialize_application = function() {
         setInitialMenuChoice();
         setUpYouTubeClicks();
         setUpColorPicker();
-        $('.data-table').DataTable();
+        setUpDataTableStateHandling();
     });
 
 }
@@ -123,10 +135,9 @@ initialize_application();
 initialize_reports();  // defined in reports.js
 
 
-var dataTable = $('.data-table').DataTable();
 document.addEventListener("turbolinks:before-cache", function() {
+    const dataTable = $('.data-table').dataTable();
     if (dataTable !== null) {
         dataTable.destroy();
-        dataTable = null;
     }
 });
