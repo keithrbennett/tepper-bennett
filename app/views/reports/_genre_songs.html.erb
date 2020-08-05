@@ -7,7 +7,7 @@
     <% if songs.empty? %>
       <p><%= "[No songs for genre '#{name}']" %></p>
     <% else %>
-      <p><%= render partial: 'reports/report_table', locals: { column_headings: ['Genre Code', 'Genre Name'], records: songs } %></p><br/><br/>
+      <p><%= render partial: 'reports/report_table', locals: { column_headings: ['Song Code', 'Song Name'], records: songs } %></p><br/><br/>
     <% end %>
     <br/><br />
   </section>
