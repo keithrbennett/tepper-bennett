@@ -4,7 +4,7 @@
     <tr>
       <th scope="col">Title</th>
       <th scope="col">Artist</th>
-      <th scope="col">Movie</th>
+      <th scope="col">Rights Admin</th>
       <th scope="col" style="text-align: center;">Listen</th>
     </tr>
     </thead>
@@ -18,7 +18,7 @@
       <tr>
         <th scope="row"><a href="/songs/<%= song.code %>"><%= title %></a></th>
         <td><%= performers %></td>
-        <td><%= song.movies.pluck(:name).join('; ') %></td>
+        <td><%= song.rights_admin_orgs.pluck(:name).join('; ') %></td>
         <td align="center">
           <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal" data-url="<%= url %>"/>
           <%= image_tag('youtube.png', alt: %Q{Listen to "#{title}" by #{performers}}) %>
