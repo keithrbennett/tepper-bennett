@@ -113,6 +113,16 @@ const initialize_application = function() {
         });
     }
 
+
+    function setUpBackButtons() {
+        for (const elem of document.getElementsByClassName("back-action")) {
+            elem.addEventListener("click", function () {
+                history.back();
+            });
+        }
+    }
+
+
     // document.addEventListener('DOMContentLoaded', (event) => {
     //     console.log("DOM content loaded, initializing application.");
     // });
@@ -127,6 +137,7 @@ const initialize_application = function() {
         setUpYouTubeClicks();
         setUpColorPicker();
         setUpDataTableStateHandling();
+        setUpBackButtons();
     });
 
 }
