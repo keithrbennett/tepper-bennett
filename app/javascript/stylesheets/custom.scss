@@ -102,3 +102,9 @@ pre {
 .dataTables_filter .form-control {
   margin-left: 10px;
 }
+
+// To prevent scroll bar from appearing below the data table.
+// Setting the div to have padding (class "p-3" worked too, but used less space for the table.
+.data-table-div {
+  overflow-x: hidden;
+}
