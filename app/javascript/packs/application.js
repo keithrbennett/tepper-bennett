@@ -102,20 +102,15 @@ const initialize_application = function() {
 
 
     function setUpDataTableStateHandling() {
-        function setUpTable(tableId) {
-            $("#" + tableId).DataTable({
-                stateSave: true,
-                stateSaveCallback: function (settings, data) {
-                    localStorage.setItem('DataTables_' + settings.sInstance, JSON.stringify(data))
-                },
-                stateLoadCallback: function (settings) {
-                    return JSON.parse(localStorage.getItem('DataTables_' + settings.sInstance))
-                }
-            });
-        }
-        setUpTable("songsSongTable")
-        setUpTable("elvisSongTable")
-        setUpTable("reportsSongTable")
+        $(".data-table").DataTable({
+            stateSave: true,
+            stateSaveCallback: function (settings, data) {
+                localStorage.setItem('DataTables_' + settings.sInstance, JSON.stringify(data))
+            },
+            stateLoadCallback: function (settings) {
+                return JSON.parse(localStorage.getItem('DataTables_' + settings.sInstance))
+            }
+        });
     }
 
     // document.addEventListener('DOMContentLoaded', (event) => {
