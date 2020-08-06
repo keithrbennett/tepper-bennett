@@ -1,31 +1,31 @@
-<div class="table-responsive">
-  <table id="<%= table_id %>" class="data-table table thead-dark table-striped">
-    <thead class="thead-dark">
-    <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Performer</th>
-      <th scope="col">Rights Admin</th>
-      <th scope="col" style="text-align: center;">Listen</th>
-    </tr>
-    </thead>
-    <tbody>
-    <!--    TODO: Enable selection of Elvis, best, or all songs.-->
-    <% song_plays.each do |play| %>
-      <% song = play.song %>
-      <% title = song.name %>
-      <% performers = play.performers.pluck(:name).join('; ') %>
-      <% url = play.youtube_embed_url %>
+  <div class="table-responsive p-3">
+    <table id="<%= table_id %>" class="data-table table thead-dark table-striped">
+      <thead class="thead-dark">
       <tr>
-        <th scope="row"><a href="/songs/<%= song.code %>"><%= title %></a></th>
-        <td><%= performers %></td>
-        <td><%= song.rights_admin_orgs.pluck(:name).join('; ') %></td>
-        <td align="center">
-          <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal" data-url="<%= url %>"/>
-          <%= image_tag('youtube.png', alt: %Q{Listen to "#{title}" by #{performers}}) %>
-          </a>
-        </td>
+        <th scope="col">Title</th>
+        <th scope="col">Performer</th>
+        <th scope="col">Rights Admin</th>
+        <th scope="col" style="text-align: center;">Listen</th>
       </tr>
-    <% end %>
-    </tbody>
-  </table>
-</div>
+      </thead>
+      <tbody>
+      <!--    TODO: Enable selection of Elvis, best, or all songs.-->
+      <% song_plays.each do |play| %>
+        <% song = play.song %>
+        <% title = song.name %>
+        <% performers = play.performers.pluck(:name).join('; ') %>
+        <% url = play.youtube_embed_url %>
+        <tr>
+          <th scope="row"><a href="/songs/<%= song.code %>"><%= title %></a></th>
+          <td><%= performers %></td>
+          <td><%= song.rights_admin_orgs.pluck(:name).join('; ') %></td>
+          <td align="center">
+            <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal" data-url="<%= url %>"/>
+            <%= image_tag('youtube.png', alt: %Q{Listen to "#{title}" by #{performers}}) %>
+            </a>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
