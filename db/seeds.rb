@@ -113,7 +113,6 @@ def add_organizations
   organizations = [
       { code: "emi-uk"        , name: "EMI (United Kingdom)" },
       { code: "emi-us"        , name: "EMI (United States)" },
-      { code: "example"       , name: "Example Music" },
       { code: "kobalt"        , name: "Kobalt Music Group" },
       { code: "mem-lane"      , name: "Memory Lane" },
       { code: "raleigh"       , name: "Peter Raleigh Music" },
