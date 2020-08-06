@@ -1,13 +1,15 @@
 <% records.each do |genre| %>
-  <% name = genre[:name].capitalize %>
+  <% name = genre[:name].capitalize; name = 'TV' if name == 'Tv' %>
   <% songs = genre[:songs].pluck(:code, :name) %>
+  <% table_id = "genre-songs-#{genre[:name]}-report-table" %>
 
   <section>
     <h2><%= name %></h2>
     <% if songs.empty? %>
       <p><%= "[No songs for genre '#{name}']" %></p>
     <% else %>
-      <p><%= render partial: 'reports/report_table', locals: { column_headings: ['Song Code', 'Song Name'], records: songs } %></p><br/><br/>
+      <% locals =  { table_id: table_id, column_headings: ['Song Code', 'Song Name'], records: songs } %>
+      <p><%= render partial: 'reports/report_table', locals: locals %></p><br/><br/>
     <% end %>
     <br/><br />
   </section>

@@ -6,7 +6,8 @@
     <% if songs.empty? %>
       <p><%= "[No songs for this organization]" %></p>
     <% else %>
-      <p><%= render partial: 'reports/report_table', locals: { column_headings: ['Song Code', 'Song Name'], records: songs } %></p><br/><br/>
+      <% locals = { table_id: "rights-admin-songs-#{org[:code]}-report-table", column_headings: ['Song Code', 'Song Name'], records: songs } %>
+      <p><%= render partial: 'reports/report_table', locals: locals %></p><br/><br/>
     <% end %>
     <br/><br />
   </section>

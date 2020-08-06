@@ -20,8 +20,8 @@ class MovieReport < BaseReport
           movie[:name],
       ]
     end
-
-    render partial: 'reports/report_table', locals: { column_headings: headings, records: table_data }
+    locals = { table_id: 'movie-report-table', column_headings: headings, records: table_data }
+    render partial: 'reports/report_table', locals: locals
   end
 
   def to_raw_text

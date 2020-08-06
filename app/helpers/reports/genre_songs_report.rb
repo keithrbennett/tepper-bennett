@@ -1,4 +1,6 @@
-class GenreSongsReport < HasManyReport
+class GenreSongsReport < BaseReport
+
+  attr_reader :records
 
   def initialize
     @title = 'Genre Songs'

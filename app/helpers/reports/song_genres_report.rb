@@ -21,7 +21,8 @@ class SongGenresReport < BaseReport
     data = records.map do |record|
       [record[:code], record[:name], record[:genres].join(', ')]
     end
-    render partial: 'reports/report_table', locals: { column_headings: headings, records: data }
+    locals = { table_id: 'song-genres-report-table', column_headings: headings, records: data }
+    render partial: 'reports/report_table', locals: locals
   end
 
 

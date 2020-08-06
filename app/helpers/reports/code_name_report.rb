@@ -16,7 +16,8 @@ class CodeNameReport < BaseReport
   end
 
   def to_html
-    render partial: 'reports/report_table', locals: { column_headings: %w{Code Name}, records: tuples }
+    locals = { table_id: "#{ar_class.name.downcase}-report-table", column_headings: %w{Code Name}, records: tuples }
+    render partial: 'reports/report_table', locals: locals
   end
 
   def to_raw_text
