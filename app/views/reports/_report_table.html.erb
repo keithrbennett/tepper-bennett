@@ -1,5 +1,9 @@
 <div class="table-responsive data-table-div">
-  <table id="<%= table_id %>" class="table <%= ' data-table' if records.count > 1 %> thead-dark table-striped">
+A  <table
+      id="<%= table_id %>"
+      class="table <%= ' data-table' if records.count > 1 %> thead-dark table-striped"
+      data-show-search-clear-button="true"
+  >
     <thead class="thead-dark">
       <tr>
       <% column_headings.each do |heading| %>

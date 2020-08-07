@@ -1,11 +1,16 @@
+<% col_sort_tooltip = "Click a column heading to sort on that column (toggles ascending and descending)." %>
     <div class="table-responsive data-table-div" >
-      <table id="<%= table_id %>" class="data-table table thead-dark table-striped">
-        <thead class="thead-dark" title="Click a column heading to sort on that column (toggles ascending and descending)." data-toggle="tooltip" data-placement="bottom">
+      <table
+          id="<%= table_id %>"
+          class="data-table table thead-dark table-striped"
+          data-show-search-clear-button="true"
+      >
+        <thead class="thead-dark" title="<%= col_sort_tooltip %>" alt="<%= col_sort_tooltip %>" data-toggle="tooltip" data-placement="bottom">
         <tr>
           <th scope="col">Title</th>
           <th scope="col">Performer</th>
           <th scope="col">Rights Admin</th>
-          <th scope="col" style="text-align: center;">Listen</th>
+          <th scope="col" class="text-center">Listen</th>
         </tr>
         </thead>
         <tbody>
