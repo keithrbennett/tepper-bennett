@@ -49,7 +49,7 @@ const initialize_application = function() {
             // e.g. ["main-menu-home", "main-menu-songs", "main-menu-genres", "main-menu-elvis", "main-menu-resources", "main-menu-reports", "main-menu-inquiries"]
         }
 
-        const targetMenuItem = function (path_component) {
+        const targetMenuItem = function(path_component) {
             const targetId = "main-menu-" + path_component;
             return menuItemIds().includes(targetId) ? targetId : "main-menu-home";
         }
@@ -71,6 +71,7 @@ const initialize_application = function() {
         const targetId = 'songs-scope-' + targetScope;
         const targetElement = document.getElementById(targetId);
         targetElement.classList.add("active");
+        // On initialization there will be no menu items already active, so no needed to remove active class anywhere.
     }
 
 
