@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("packs/reports")
 require('datatables.net-bs4')
+require("datatables.net-bs4/css/dataTables.bootstrap4.min.css")
 
 import $ from 'jquery';
 global.$ = jQuery;
