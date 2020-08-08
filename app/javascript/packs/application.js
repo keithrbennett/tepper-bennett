@@ -61,6 +61,19 @@ const initialize_application = function() {
     }
 
 
+    function setInitialSongsScopeChoice() {
+
+        const paths = new URL(window.location.href).pathname.split('/');
+        if(paths[1] != 'songs')
+            return;
+
+        const targetScope = paths[2] || 'best';
+        const targetId = 'songs-scope-' + targetScope;
+        const targetElement = document.getElementById(targetId);
+        targetElement.classList.add("active");
+    }
+
+
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
@@ -144,8 +157,9 @@ const initialize_application = function() {
         $('[data-toggle="tooltip"]').tooltip()
         $('[data-toggle="popover"]').popover()
         setUpMainMenuLinks();
-        setUpSongScopeLinks();
         setInitialMenuChoice();
+        setUpSongScopeLinks();
+        setInitialSongsScopeChoice();
         setUpYouTubeClicks();
         setUpColorPicker();
         setUpDataTableStateHandling();
