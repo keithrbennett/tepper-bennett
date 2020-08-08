@@ -7,11 +7,21 @@ class SongsController < ApplicationController
   end
 
 
+  def scope_string_to_scope(scope_string)
+    {
+        'best'  => SongPlay.best,
+        'elvis' => SongPlay.elvis,
+        'all'   => SongPlay.all
+    }.fetch(scope_string)
+  end
+
 
   def index
     respond_to { |format| format.html }
-    render :index, layout: "application"
+    songs_scope = scope_string_to_scope(params[:songs_scope] || 'best')
+    render :index, layout: "application", locals: { songs_scope: songs_scope }
   end
+
 
   def show
     render :song, layout: 'application', locals: { song: Song.find_by_code(params[:code]) }

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'home' => 'home#index'
   get 'genres' => 'genres#index'
   get 'resources' => 'resources#index'
-  get 'songs' => 'songs#index'
+  get 'songs/(:songs_scope)' => 'songs#index'
   get "songs/:code", to: "songs#show"
   get 'elvis' => 'elvis#index'
   get 'reports' => 'reports#index'

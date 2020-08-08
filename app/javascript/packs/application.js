@@ -33,6 +33,16 @@ const initialize_application = function() {
     }
 
 
+// Set up main menu links so that when one is clicked, it is displayed as the active tab, and the content is changed.
+    function setUpSongScopeLinks() {
+        for (const elem of document.querySelectorAll(".song-scope-item")) {
+            elem.addEventListener("click", function (event) {
+                window.location.href = event.target.getAttribute("href");
+            });
+        }
+    }
+
+
     function setInitialMenuChoice() {
         const menuItemIds = function () {
             return [...document.querySelectorAll(".main-menu-item")].map(elem => elem.id)
@@ -134,6 +144,7 @@ const initialize_application = function() {
         $('[data-toggle="tooltip"]').tooltip()
         $('[data-toggle="popover"]').popover()
         setUpMainMenuLinks();
+        setUpSongScopeLinks();
         setInitialMenuChoice();
         setUpYouTubeClicks();
         setUpColorPicker();
