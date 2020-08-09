@@ -21,7 +21,7 @@
           <% performers = play.performers.pluck(:name).join('; ') %>
           <% url = play.youtube_embed_url %>
           <tr>
-            <th scope="row"><a href="/songs/<%= song.code %>"><%= title %></a></th>
+            <th scope="row"><a href="/songs/code/<%= song.code %>"><%= title %></a></th>
             <td><%= performers %></td>
             <td><%= song.rights_admin_orgs.pluck(:name).join('; ') %></td>
             <td align="center">

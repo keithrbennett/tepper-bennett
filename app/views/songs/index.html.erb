@@ -17,15 +17,15 @@
     </button>
     <div id="songs-scope-navbar" class="collapse navbar-collapse justify-content-center">
       <ul class="navbar-nav nav-fill mt-2 mt-lg-0">
-        <% %w(best elvis all).each do |name| %>
+        <% %w(best elvis all).each do |scope| %>
           <li class="nav-item">
             <a
               class="nav-link song-scope-item"
-              id="songs-scope-<%= name %>"
-              href="/songs/<%= name %>"
+              id="songs-scope-<%= scope %>"
+              href="/songs/list/<%= scope %>"
               data-toggle="tab"
               role="tab">
-              <%= name.capitalize %>
+              <%= scope.capitalize %>
             </a>
           </li>
         <% end %>

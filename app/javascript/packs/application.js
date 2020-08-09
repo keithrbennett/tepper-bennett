@@ -64,10 +64,11 @@ const initialize_application = function() {
     function setInitialSongsScopeChoice() {
 
         const paths = new URL(window.location.href).pathname.split('/');
-        if(paths[1] != 'songs')
+        console.log('paths', paths);
+        if(paths[1] != 'songs' || paths[2] == 'song')
             return;
 
-        const targetScope = paths[2] || 'best';
+        const targetScope = paths[3] || 'best';
         const targetId = 'songs-scope-' + targetScope;
         const targetElement = document.getElementById(targetId);
         targetElement.classList.add("active");
