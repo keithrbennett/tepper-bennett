@@ -63,4 +63,8 @@ Rails.application.configure do
   # This is so that clients can connect using any host alias they like, suitable for private networks
   # (see https://github.com/rails/rails/pull/38140/files, https://stackoverflow.com/questions/53878453/upgraded-rails-to-6-getting-blocked-host-error)
   config.hosts.clear if ENV['RAILS_DISABLE_HOSTNAME_CHECK']
+
+  # Eliminate non-essential SQL log messages.
+  config.after_initialize { ActiveRecord::Base.logger.level = Logger::ERROR }
 end
+
