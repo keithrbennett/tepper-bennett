@@ -64,8 +64,9 @@ const initialize_application = function() {
     function setInitialSongsScopeChoice() {
 
         const paths = new URL(window.location.href).pathname.split('/');
-        console.log('paths', paths);
-        if(paths[1] != 'songs' || paths[2] == 'song')
+
+        const isListPage = (paths[1] == 'songs' && (paths[2] == 'list' || paths[2] == null))
+        if (! isListPage)
             return;
 
         const targetScope = paths[3] || 'best';
