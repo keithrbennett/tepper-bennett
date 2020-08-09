@@ -19,8 +19,7 @@ class SongsController < ApplicationController
   def index
     respond_to { |format| format.html }
     songs_scope_key = params[:scope] || 'best'
-    Rails.logger.info "Scope = #{scope_string_to_scope(songs_scope_key)}"
-    render :index, layout: "application", locals: { songs_scope: songs_scope }
+    render :index, layout: "application", locals: { songs_scope: scope_string_to_scope(songs_scope_key) }
   end
 
 
