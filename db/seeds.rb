@@ -68,7 +68,7 @@ def add_performers
       { code: "ben-mill"      , name: "Tex Beneke and The Miller Orchestra" },
       { code: "bert-kmft"     , name: "Bert Kaempfert and His Orchestra" },
       { code: "c-francis"     , name: "Connie Francis" },
-      { code: "clf-rich"      , name: "Cliff Richards" },
+      { code: "clf-rich"      , name: "Cliff Richard" },
       { code: "dean-martin"   , name: "Dean Martin" },
       { code: "della-reese"   , name: "Della Reese" },
       { code: "eartha-kitt"   , name: "Eartha Kitt" },
@@ -248,6 +248,7 @@ def add_non_elvis_songs
 
   songs = [
       { code: "bagel-lox"     , name: "Bagels & Lox",                              performers: %w(rob-schneid) },
+      { code: "d-in-love"     , name: "D in Love",                                 performers: %w(clf-rich) },
       { code: "run-back-me"   , name: "Don't Come Running Back to Me" ,            performers: %w(n-wilson),    genres: %w{romantic} },
       { code: "eggbert"       , name: "Eggbert, The Easter Egg" ,                  performers: %w(r-clooney),   genres: %w{children} },
       { code: "glad"          , name: "Glad All Over" ,                            performers: %w(beatles jeff-beck) },
@@ -299,6 +300,7 @@ def add_song_plays
       { song_code: 'cane-collar'   , performer_codes: 'elvis'         , youtube_key: 'AE78rPjs6Mo' },
       { song_code: 'confidence'    , performer_codes: 'elvis'         , youtube_key: 'DE9Mc9cnBkg' },
       { song_code: 'crush-ny'      , performer_codes: 'c-francis'     , youtube_key: '0_Gycn0UJ9M' },
+      { song_code: 'd-in-love'     , performer_codes: 'clf-rich'      , youtube_key: '4C4CYLQp1-U' },
       { song_code: 'drums-isles'   , performer_codes: 'elvis'         , youtube_key: '4pXqiV-gbEk' },
       { song_code: 'earth-boy'     , performer_codes: 'elvis'         , youtube_key: 'h_i4Dmfowjs' },
       { song_code: 'eggbert'       , performer_codes: 'r-clooney'     , youtube_key: 'xkLGm9B60oY' },
@@ -394,6 +396,7 @@ end
 
 
 def add_rights_admin_links
+  # TODO: not kiss-fire?
   warner_song_codes = %w{
     bye-boys
     crush-ny
@@ -401,14 +404,15 @@ def add_rights_admin_links
     glad
     jenny-kiss
     kewpie-doll
-    kiss-fire
     n-for-xmas
     nty-lady
     red-roses
     run-back-me
+    stop-think
     suzy-snow
     tear-rain
     tr-light
+    t-t-fingers
     when-arms
     ww-young
     young-ones

@@ -72,6 +72,7 @@ class SongPlay < ApplicationRecord
         puppet.elvis
         tear-rain.a-prysock
         kewpie-doll.p-como
+        d-in-love.clf-rich
         santa-daddy.b-gordon
         long-way.sinatra
         t-t-fingers.stargazers
