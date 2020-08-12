@@ -129,13 +129,13 @@ def add_organizations
 end
 
 
-def default_writers
-  @default_writers ||= [Writer.find_by_code('tepper'), Writer.find_by_code('bennett')]
+def default_writer_codes
+  @default_writers ||= %w{tepper bennett}
 end
 
 
-def add_song(code:, name:, performers: [], genres: [], writers: default_writers, movies: nil)
-  db_song = Song.new(code: code, name: name, writers: writers)
+def add_song(code:, name:, performers: [], genres: [], writers: default_writer_codes, movies: nil)
+  db_song = Song.new(code: code, name: name, writers: writers.map { |code| Writer.find_by_code(code) })
 
   performers ||= []
   performers.uniq.each do |code|
@@ -283,7 +283,8 @@ def add_non_elvis_songs
 
   print "Adding #{songs.count} non-Elvis songs..."
   songs.each do |s|
-    add_song(code: s[:code], name: s[:name], performers: s[:performers], genres: s[:genres], movies: s[:movies])
+    s[:writers] ||= default_writer_codes
+    add_song(code: s[:code], name: s[:name], performers: s[:performers], genres: s[:genres], movies: s[:movies], writers: s[:writers])
   end
 
   puts 'done.'
