@@ -12,10 +12,13 @@ end
 
 def add_writers
   writers = [
+
       { code: 'bennett'  , name: 'Roy C. Bennett' },
+      { code: 'art-kent' , name: 'Arthur Kent' },
+      { code: 'les-allen', name: 'Lester Allen' },
       { code: 'tepper'   , name: 'Sid Tepper' },
+      { code: 'rob-hill' , name: 'Robert Hill' },
       { code: 'shayne'   , name: 'Gloria Shayne' },
-      { code: 'kent'     , name: 'Arthur Kent' },
   ]
   print "Adding #{writers.count} writers..."
   writers.each { |writer| Writer.create!(code: writer[:code], name: writer[:name]) }
@@ -257,7 +260,7 @@ def add_non_elvis_songs
       { code: "long-way"      , name: "It's a Long Way from Your House to My House" , performers: %w(sinatra),  genres: %w{romantic} },
       { code: "jenny-kiss"    , name: "Jenny Kissed Me" ,                          performers: %w(ed-albert),   genres: %w{romantic} },
       { code: "kewpie-doll"   , name: "Kewpie Doll" ,                              performers: %w(p-como) },
-      { code: "kiss-fire"     , name: "Kiss of Fire" ,                             performers: %w(a-sherman louis-arm mickey-katz),   genres: %w{ hit romantic} },
+      { code: "kiss-fire"     , name: "Kiss of Fire" ,                             performers: %w(louis-arm geo-gibbs),   genres: %w{ hit romantic}, writers: %w{les-allen rob-hill} },
       { code: "n-for-xmas"    , name: "Nuttin' for Christmas" ,                    performers: %w(a-mooney b-gordon eartha-kitt homer-jethro plain-white sugarland),    genres: %w{children hit} },
       { code: "red-roses"     , name: "Red Roses for a Blue Lady" ,                performers: %w(andy-wms bert-kmft dean-martin moscow-jazz p-como r-conniff sinatra vic-choir vic-dana v-monroe w-newton), genres: %w{hit romantic} },
       { code: "santa-daddy"   , name: "Santa Claus Looks Just Like Daddy" ,        performers: %w(a-mooney b-gordon),    genres: %w{children} },
@@ -282,6 +285,7 @@ def add_non_elvis_songs
   songs.each do |s|
     add_song(code: s[:code], name: s[:name], performers: s[:performers], genres: s[:genres], movies: s[:movies])
   end
+
   puts 'done.'
 end
 
