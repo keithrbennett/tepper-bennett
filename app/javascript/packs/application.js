@@ -3,13 +3,17 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-require("packs/reports")
-require('datatables.net-bs4')
-require("datatables.net-bs4/css/dataTables.bootstrap4.min.css")
+import Ujs from '@rails/ujs'
+import TurboLinks from 'turbolinks'
+import * as ActiveStorage from '@rails/activestorage'
+import 'channels'
+import 'packs/reports'
+import 'datatables.net-bs4'
+import 'datatables.net-bs4/css/dataTables.bootstrap4.min.css'
+
+Ujs.start();
+TurboLinks.start();
+ActiveStorage.start()
 
 import $ from 'jquery';
 global.$ = jQuery;
