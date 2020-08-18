@@ -121,7 +121,7 @@ def add_organizations
       { code: "raleigh"       , name: "Peter Raleigh Music" },
       { code: "sony"          , name: "Sony ATV Music" },
       { code: "univ"          , name: "Universal Music" },
-      { code: "warner"        , name: "Warner Chappell Music" },
+      { code: "warner"        , name: "Chappell & Co., Inc." },  # Warner Chappell Music
   ]
   print "Adding #{organizations.size} organizations..."
   organizations.each { |o| Organization.create!(code: o[:code], name: o[:name]) }
