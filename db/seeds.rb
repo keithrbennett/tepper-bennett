@@ -120,7 +120,7 @@ def add_organizations
       { code: "mem-lane"      , name: "Memory Lane" },
       { code: "raleigh"       , name: "Peter Raleigh Music" },
       { code: "sony"          , name: "Sony ATV Music" },
-      { code: "univ"          , name: "Universal Music" },
+      { code: "universal"     , name: "Universal Music" },
       { code: "warner"        , name: "Chappell & Co., Inc." },  # Warner Chappell Music
   ]
   print "Adding #{organizations.size} organizations..."
@@ -135,25 +135,25 @@ end
 
 
 def add_song(code:, name:, performers: [], genres: [], writers: default_writer_codes, movies: nil)
-  db_song = Song.new(code: code, name: name, writers: writers.map { |code| Writer.find_by_code(code) })
+  db_song = Song.new(code: code, name: name, writers: writers.map { |code| Writer.find_by_code!(code) })
 
   performers ||= []
   performers.uniq.each do |code|
-    performer = Performer.find_by_code(code)
+    performer = Performer.find_by_code!(code)
     raise "Performer for code '#{code}' not found." if performer.nil?
     db_song.performers << performer
   end
 
   genres ||= []
   genres.uniq.each do |code|
-    genre = Genre.find_by_code(code)
+    genre = Genre.find_by_code!(code)
     raise "Genre for code '#{code}' not found." if genre.nil?
     db_song.genres << genre
   end
 
   movies ||= []
   movies.uniq.each do |code|
-    movie = Movie.find_by_code(code)
+    movie = Movie.find_by_code!(code)
     raise "Movie for code '#{code}' not found." if movie.nil?
     db_song.movies << movie
   end
@@ -383,9 +383,9 @@ def add_song_plays
 
   plays.each do |play|
     song_code = play[:song_code]
-    song = Song.find_by_code(song_code)
+    song = Song.find_by_code!(song_code)
     performer_codes = Array(play[:performer_codes])
-    performers = performer_codes.map { |code| Performer.find_by_code(code) }
+    performers = performer_codes.map { |code| Performer.find_by_code!(code) }
     code = song_code + '.' + performer_codes.first
 
     begin
@@ -401,7 +401,8 @@ end
 
 
 def add_rights_admin_links
-  # TODO: not kiss-fire?
+  # TODO: who is kiss-fire's other rights admin?
+
   warner_song_codes = %w{
     bye-boys
     crush-ny
@@ -409,6 +410,7 @@ def add_rights_admin_links
     glad
     jenny-kiss
     kewpie-doll
+    kiss-fire
     n-for-xmas
     nty-lady
     red-roses
@@ -423,10 +425,27 @@ def add_rights_admin_links
     young-ones
   }
 
-  puts warner_song_codes.select { |code| Song.find_by_code(code).nil? }
-  warner_songs = warner_song_codes.map { |code| Song.find_by_code(code) }
-  warner = Organization.find_by_code('warner')
-  warner_songs.each { |song| song.rights_admin_orgs << warner }
+  universal_song_codes = %w{
+      crush-ny
+      d-in-love
+      run-back-me
+      stop-think
+      tear-rain
+      when-arms
+      ww-young
+  }
+
+  add_data = ->(org_code, song_codes) do
+    org = Organization.find_by_code!(org_code)
+    song_codes.each do |code|
+      song = Song.find_by_code(code)
+      raise "Couldn't find song for code #{code}" unless song
+      song.rights_admin_orgs << org
+    end
+  end
+
+  add_data.('warner',    warner_song_codes)
+  add_data.('universal', universal_song_codes)
 end
 
 
