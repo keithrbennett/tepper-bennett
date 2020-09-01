@@ -23,7 +23,7 @@
           <tr>
             <th scope="row"><a href="/songs/code/<%= song.code %>"><%= title %></a></th>
             <td><%= performers %></td>
-            <td><%= song.rights_admin_orgs.pluck(:name).join('; ') %></td>
+            <td><%= song.rights_admin_orgs.pluck(:name).sort.join('; ') %></td>
             <td align="center">
               <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal" data-url="<%= url %>"/>
               <%= image_tag('youtube.png', alt: %Q{Listen to "#{title}" by #{performers}}) %>
