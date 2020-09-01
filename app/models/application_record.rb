@@ -9,4 +9,12 @@ class ApplicationRecord < ActiveRecord::Base
   def self.max_name_length
     40
   end
+
+  def self.get_by_code!(code)
+    object = find_by_code(code)
+    if object.nil?
+      raise "Could not find #{to_s} instance for code '#{code}'."
+    end
+    object
+  end
 end
