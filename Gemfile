@@ -1,12 +1,18 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.1'
+IS_JRUBY = (RUBY_PLATFORM == 'java')
+if IS_JRUBY
+  ruby '2.5.7'
+  gem 'activerecord-jdbc-adapter', '>= 60.2'
+  gem 'activerecord-jdbcpostgresql-adapter'
+else
+  ruby '2.7.1'
+  gem 'pg', '>= 0.18', '< 2.0'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
-# Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets

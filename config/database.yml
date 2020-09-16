@@ -14,8 +14,15 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
+
+# You can create the Postgres user with:
+# sudo -u postgres psql -c "create user $(whoami) with createdb password 'password'"
+
+
+<% IS_JRUBY = (RUBY_PLATFORM == 'java') %>
+
 default: &default
-  adapter: postgresql
+  adapter: <%= IS_JRUBY ? 'jdbcpostgresql' : 'postgresql' %>
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
@@ -24,6 +31,10 @@ default: &default
 development:
   <<: *default
   database: tepper_bennett_development
+  <% if IS_JRUBY %>
+  username: <%= `whoami` %>
+  password: <%= ENV.fetch('POSTGRES_PW') { 'password' } %>
+  <% end %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +69,10 @@ development:
 test:
   <<: *default
   database: tepper_bennett_test
+  <% if IS_JRUBY %>
+  username: <%= `whoami` %>
+  password: <%= ENV.fetch('POSTGRES_PW') { 'password' } %>
+  <% end %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
