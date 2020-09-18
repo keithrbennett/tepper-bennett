@@ -10,6 +10,7 @@ class ElvisController < ApplicationController
 
   def index
     respond_to { |format| format.html }
+    @title_suffix = 'Elvis'
     render :index, layout: "application"
   end
 end
