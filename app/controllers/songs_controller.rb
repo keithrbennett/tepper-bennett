@@ -18,7 +18,6 @@ class SongsController < ApplicationController
 
   def index
     respond_to { |format| format.html }
-    @title_suffix = 'Songs'
     songs_scope_key = params[:scope] || 'best'
     render :index, layout: "application", locals: { songs_scope: scope_string_to_scope(songs_scope_key) }
   end

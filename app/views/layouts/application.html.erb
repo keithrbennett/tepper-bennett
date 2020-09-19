@@ -1,8 +1,10 @@
+<% title = 'Tepper & Bennett' %>
+<% if content_for?(:title_suffix); title += " - " + yield(:title_suffix); end %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <%= render 'google_analytics' %>
-  <% title = 'Tepper & Bennett'; title += " - #{@title_suffix}" if @title_suffix %>
   <title><%= title %></title>
 
   <meta charset="utf-8">

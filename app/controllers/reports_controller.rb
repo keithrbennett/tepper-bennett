@@ -25,7 +25,6 @@ class ReportsController < ApplicationController
 
   def index
     respond_to { |format| format.html }
-    @title_suffix = 'Reports'
     render :index, layout: "application", locals: { report_metadata: reports_metadata.values }
   end
 
