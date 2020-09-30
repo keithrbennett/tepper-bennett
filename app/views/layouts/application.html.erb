@@ -1,11 +1,15 @@
-<% title = 'Tepper & Bennett' %>
-<% if content_for?(:title_suffix); title += " - " + yield(:title_suffix); end %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <%= render 'google_analytics' %>
+
+  <% title = 'Tepper & Bennett' %>
+  <% if content_for?(:title_suffix); title += " - " + yield(:title_suffix); end %>
   <title><%= title %></title>
+
+  <% if content_for?(:meta_description) %>
+  <meta name="description" content="<%= yield(:meta_description) %>" />
+  <% end %>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
