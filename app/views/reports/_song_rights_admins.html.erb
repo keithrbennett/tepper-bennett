@@ -11,8 +11,8 @@
       <tr>
         <%= render partial: 'application/tooltip_td', locals: { text: song[:name], tooltip_text: "Song Code: #{song[:code]}" } %>
 
-        <% ra_names = song[:rights_admins].pluck(:name).join("<br />") %>
-        <% ra_codes = song[:rights_admins].pluck(:code).join("<br />") %>
+        <% ra_names = song[:rights_admins].pluck(:name).join("<br />").html_safe %>
+        <% ra_codes = song[:rights_admins].pluck(:code).join("<br />").html_safe %>
         <%= render partial: 'application/tooltip_td', locals: { text: ra_names, tooltip_text: "Rights Admin Code(s): #{ra_codes}" } %>
       </tr>
     <% end %>

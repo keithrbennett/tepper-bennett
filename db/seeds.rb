@@ -428,6 +428,7 @@ def add_rights_admin_links
   universal_song_codes = %w{
       crush-ny
       d-in-love
+      kiss-fire
       run-back-me
       stop-think
       tear-rain
