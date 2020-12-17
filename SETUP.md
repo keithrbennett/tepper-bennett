@@ -95,7 +95,7 @@ This setting is on the "Overview" panel of the Cloudflare dashboard.
 ### Recreating the Postgres Data Base on Heroku
 
 ```
-heroku pg:reset
+heroku pg:reset # --confirm tepper-bennett to bypass confirmation
 heroku run rake db:migrate
 heroku run rake db:seed
 ```
