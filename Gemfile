@@ -7,12 +7,12 @@ if IS_JRUBY
   gem 'activerecord-jdbc-adapter', '>= 60.2'
   gem 'activerecord-jdbcpostgresql-adapter'
 else
-  ruby '2.7.1'
+  ruby '3.1.3'
   gem 'pg', '>= 0.18', '< 2.0'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.0'
+gem 'rails', '~> 6.1.7'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
