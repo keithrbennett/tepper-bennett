@@ -94,7 +94,4 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: tepper_bennett_production
-  username: tepper_bennett
-  password: <%= ENV['TEPPER_BENNETT_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
