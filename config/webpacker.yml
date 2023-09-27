@@ -87,12 +87,9 @@ production:
   <<: *default
 
   # Production depends on precompilation of packs prior to booting for performance.
-  compile: false
+  compile: true
 
-  # See https://stackoverflow.com/questions/59161189/rails-webpacker-4-2-cant-find-application-in-app-public-packs-manifest-json-h
-  # for the reason for this:
-  #  extract_css: true
-  extract_css: false
+  extract_css: true
 
   # Cache manifest.json for performance
   cache_manifest: true
