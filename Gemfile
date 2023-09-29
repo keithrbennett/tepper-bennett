@@ -7,12 +7,12 @@ if IS_JRUBY
   gem 'activerecord-jdbc-adapter', '>= 60.2'
   gem 'activerecord-jdbcpostgresql-adapter'
 else
-  ruby '3.2.2'
+  ruby '3.2.0'
   gem 'pg', '>= 1.4.5', '< 2.0'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 6.1.7.6', '< 7'
+gem 'rails', '~> 6.1.7'
 
 gem 'nokogiri', '>= 1.14.1', '< 2'
 
