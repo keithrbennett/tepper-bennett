@@ -12,7 +12,7 @@ else
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.7'
+gem 'rails', '6.1.7.6'
 
 gem 'nokogiri', '>= 1.14.1', '< 2'
 
