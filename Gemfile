@@ -20,7 +20,7 @@ gem 'nokogiri', '>= 1.14.1', '< 2'
 gem "activerecord", ">= 6.1.7.1"
 
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '>= 6.3.1', '< 7'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
