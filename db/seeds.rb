@@ -339,7 +339,7 @@ def add_song_plays
       { song_code: 'one-girl'      , performer_codes: 'elvis'         , youtube_key: 'ito_RR2kwS0' },
       { song_code: 'petunia'       , performer_codes: 'elvis'         , youtube_key: 'wuzbUsy6snc' },
       { song_code: 'puppet'        , performer_codes: 'elvis'         , youtube_key: 'RjWoFTu0W28' },
-      { song_code: 'red-roses'     , performer_codes: 'andy-wms'      , youtube_key: 'HssRO5b_ED0' },
+      { song_code: 'red-roses'     , performer_codes: 'andy-wms'      , youtube_key: 'UwFMV5AP__I' },
       { song_code: 'red-roses'     , performer_codes: 'bert-kmft'     , youtube_key: 'zt6WdnrAvpE' },
       { song_code: 'red-roses'     , performer_codes: 'dean-martin'   , youtube_key: 'drU6kuih41w' },
       { song_code: 'red-roses'     , performer_codes: 'guy-lomb'      , youtube_key: '_41H2cpTzNc' },
