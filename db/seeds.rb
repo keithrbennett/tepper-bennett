@@ -379,7 +379,7 @@ def add_song_plays
       { song_code: 'young-ones'    , performer_codes: 'clf-rich'      , youtube_key: 'BxNohANhJiA' },
   ]
 
-  print "Adding #{plays.count} song plays..."
+  puts "Adding #{plays.count} song plays..."
 
   plays.each do |play|
     song_code = play[:song_code]
@@ -387,9 +387,11 @@ def add_song_plays
     performer_codes = Array(play[:performer_codes])
     performers = performer_codes.map { |code| Performer.get_by_code!(code) }
     code = song_code + '.' + performer_codes.first
+    youtube_key = play[:youtube_key]
+    $stderr.puts "Adding: " + '%-20s%-30s%-20s' % [song_code, performer_codes, youtube_key]
 
     begin
-      SongPlay.create!(song: song, performers: performers, youtube_key: play[:youtube_key], code: code)
+      SongPlay.create!(song: song, performers: performers, youtube_key: youtube_key, code: code)
     rescue => e
       $stderr.puts "Error adding song play code ''#{code}''"
       raise
