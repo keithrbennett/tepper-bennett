@@ -7,7 +7,7 @@ if IS_JRUBY
   gem 'activerecord-jdbc-adapter', '>= 60.2'
   gem 'activerecord-jdbcpostgresql-adapter'
 else
-  ruby '3.2.2'
+  ruby "3.3.0"
   gem 'pg', '>= 1.4.5', '< 2.0'
 end
 
