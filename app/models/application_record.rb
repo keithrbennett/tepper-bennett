@@ -18,4 +18,3 @@ class ApplicationRecord < ActiveRecord::Base
     object
   end
 end
-
