@@ -21,9 +21,5 @@ module TepperBennett
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-
-
-    config.autoload_paths << "#{Rails.root}/app/helpers/reports"
-    config.autoload_paths << "#{Rails.root}/app/helpers/reports/text_reports"
   end
 end

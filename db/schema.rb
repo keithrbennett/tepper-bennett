@@ -10,23 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_14_200723) do
-
+ActiveRecord::Schema[7.0].define(version: 2024_03_24_074230) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "dummies", force: :cascade do |t|
     t.string "dummy"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "genres", force: :cascade do |t|
     t.string "code"
     t.string "name"
     t.text "notes"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["code"], name: "index_genres_on_code"
     t.index ["name"], name: "index_genres_on_name"
   end
@@ -41,8 +40,8 @@ ActiveRecord::Schema.define(version: 2023_01_14_200723) do
     t.string "name"
     t.integer "year"
     t.text "notes"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "imdb_key"
     t.index ["code"], name: "index_movies_on_code"
     t.index ["name"], name: "index_movies_on_name"
@@ -58,8 +57,8 @@ ActiveRecord::Schema.define(version: 2023_01_14_200723) do
     t.string "code"
     t.string "name"
     t.text "notes"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["code"], name: "index_organizations_on_code"
     t.index ["name"], name: "index_organizations_on_name"
   end
@@ -73,8 +72,8 @@ ActiveRecord::Schema.define(version: 2023_01_14_200723) do
     t.string "code"
     t.string "name"
     t.text "notes"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["code"], name: "index_performers_on_code"
     t.index ["name"], name: "index_performers_on_name"
   end
@@ -94,8 +93,8 @@ ActiveRecord::Schema.define(version: 2023_01_14_200723) do
     t.string "youtube_key"
     t.string "url"
     t.text "notes"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "song_id"
     t.index ["code"], name: "index_song_plays_on_code"
     t.index ["song_id"], name: "index_song_plays_on_song_id"
@@ -107,8 +106,8 @@ ActiveRecord::Schema.define(version: 2023_01_14_200723) do
     t.string "code"
     t.string "name"
     t.text "notes"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["code"], name: "index_songs_on_code"
     t.index ["name"], name: "index_songs_on_name"
   end
@@ -122,8 +121,8 @@ ActiveRecord::Schema.define(version: 2023_01_14_200723) do
     t.string "code"
     t.string "name"
     t.text "notes"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["code"], name: "index_writers_on_code"
     t.index ["name"], name: "index_writers_on_name"
   end
