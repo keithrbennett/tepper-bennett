@@ -1,4 +1,2 @@
-module Models
-  class Dummy < ApplicationRecord
-  end
+class Dummy < ApplicationRecord
 end

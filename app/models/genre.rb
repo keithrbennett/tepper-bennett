@@ -1,14 +1,14 @@
-module Models
-  class Genre < ApplicationRecord
-    has_and_belongs_to_many :songs
+class Genre < ApplicationRecord
 
-    def self.max_name_length
-      12
-    end
+  has_and_belongs_to_many :songs
 
-    validates_length_of :code, maximum: max_code_length
-    validates_length_of :name, maximum: max_name_length
-    validates :name, presence: true
-    validates :name, uniqueness: true
+  def self.max_name_length
+    12
   end
+
+  validates_length_of :code, maximum: max_code_length
+  validates_length_of :name, maximum: max_name_length
+  validates :name, presence: true
+  validates :name, uniqueness: true
+
 end
