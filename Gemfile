@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+plugin 'bundler-graph'
+
 IS_JRUBY = (RUBY_PLATFORM == 'java')
 if IS_JRUBY
   ruby '2.5.7'
@@ -68,6 +70,10 @@ group :test do
 end
 
 group :development do
+  # For the `bundle graph` command:
+  gem 'bundler-graph'
+  gem 'ruby-graphviz'
+
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.5'

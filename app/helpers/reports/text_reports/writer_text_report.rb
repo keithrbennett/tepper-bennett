@@ -1,9 +1,11 @@
 require_relative 'code_name_text_report'
 
-class WriterTextReport < CodeNameTextReport
+module Reports; module TextReports
+  class WriterTextReport < CodeNameTextReport
 
-  def initialize
-    super(Writer)
+    def initialize(records)
+      super(Writer, records)
+    end
+
   end
-
-end
+end end
