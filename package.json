@@ -2,8 +2,8 @@
   "name": "tepper_bennett",
   "private": true,
   "engines": {
-    "yarn": "1.x",
-    "node": "15.3.0"
+    "yarn": "1.22.22",
+    "node": "20.12.0"
   },
   "dependencies": {
     "@rails/actioncable": "^7.0.0",
