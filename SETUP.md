@@ -2,7 +2,7 @@
 
 ### NodeJS Version Errors
 
-To install a nodejs version recent enough to work you may need to follow the instructinos at [https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/](https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/).
+To install a nodejs version recent enough to work you may need to follow the instructions at [https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/](https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/).
 
 
 ### Creating the Postgres Role
