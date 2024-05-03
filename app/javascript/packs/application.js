@@ -3,6 +3,7 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+import 'stylesheets/application'
 import Ujs from '@rails/ujs'
 import TurboLinks from 'turbolinks'
 import * as ActiveStorage from '@rails/activestorage'
