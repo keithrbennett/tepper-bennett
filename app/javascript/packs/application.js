@@ -4,6 +4,8 @@
 // that code so it'll be compiled.
 
 import 'stylesheets/application'
+import '../images/youtube.png'
+
 import Ujs from '@rails/ujs'
 import TurboLinks from 'turbolinks'
 import * as ActiveStorage from '@rails/activestorage'
