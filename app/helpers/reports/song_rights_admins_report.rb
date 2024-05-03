@@ -23,7 +23,7 @@ module Reports
     end
 
     def to_raw_text
-      SongRightsAdminsTextReport.new(records).report_string
+      TextReports::SongRightsAdminsTextReport.new(records).report_string
     end
   end
 end

@@ -22,7 +22,7 @@ module Reports
     end
 
     def to_raw_text
-      CodeNameTextReport.new(ar_class, records).report_string
+      TextReports::CodeNameTextReport.new(ar_class, records).report_string
     end
   end
 end

@@ -19,7 +19,7 @@ module Reports
     end
 
     def to_raw_text
-      MovieSongsTextReport.new(records).report_string
+      TextReports::MovieSongsTextReport.new(records).report_string
     end
 
   end

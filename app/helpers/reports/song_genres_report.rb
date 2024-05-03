@@ -28,7 +28,7 @@ module Reports
 
 
     def to_raw_text
-      SongGenresTextReport.new(records).report_string
+      TextReports::SongGenresTextReport.new(records).report_string
     end
   end
 end

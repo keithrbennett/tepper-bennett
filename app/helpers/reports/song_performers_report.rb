@@ -23,7 +23,7 @@ module Reports
 
 
     def to_raw_text
-      SongPerformersTextReport.new(records).report_string
+      TextReports::SongPerformersTextReport.new(records).report_string
     end
   end
 end

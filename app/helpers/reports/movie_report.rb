@@ -26,7 +26,7 @@ module Reports
     end
 
     def to_raw_text
-      MovieTextReport.new(records).report_string
+      TextReports::MovieTextReport.new(records).report_string
     end
 
   end

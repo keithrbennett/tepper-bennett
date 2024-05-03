@@ -25,7 +25,7 @@ module Reports
     end
 
     def to_raw_text
-      SongPlaysTextReport.new(records).report_string
+      TextReports::SongPlaysTextReport.new(records).report_string
     end
 
   end
