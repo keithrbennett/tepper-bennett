@@ -4,6 +4,9 @@
 // that code so it'll be compiled.
 
 import 'stylesheets/application'
+
+import '../images/elvis-chante-tepper-bennett.jpg'
+import '../images/roy-and-sid.jpg'
 import '../images/youtube.png'
 
 import Ujs from '@rails/ujs'
