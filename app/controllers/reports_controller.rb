@@ -1,23 +1,25 @@
+# require_relative '../helpers/reports/code_name_report'
+
 class ReportsController < ApplicationController
 
   # A hash consisting of the report type (first value below) as key, Report object as value.
   def reports_metadata
     # Creates a hash whose keys are report type and values are ReportMetadata instances.
     @reports_metadata ||= [
-          ['songs',               'Songs',               CodeNameReport.new(Song)],
-          ['performers',          'Performers',          CodeNameReport.new(Performer)],
-          ['song_plays',          'Song Plays',          SongPlaysReport.new],
-          ['genres',              'Genres',              GenreReport.new],
-          ['song_performers',     'Song Performers',     SongPerformersReport.new],
-          ['performer_songs',     'Performer Songs',     PerformerSongsReport.new],
-          ['song_genres',         'Song Genres',         SongGenresReport.new],
-          ['genre_songs',         'Genre Songs',         GenreSongsReport.new],
-          ['movies',              'Movies',              MovieReport.new],
-          ['movie_songs',         'Movies Songs',        MovieSongsReport.new],
-          ['organizations',       'Organizations',       CodeNameReport.new(Organization)],
-          ['song_rights_admins',  'Song Rights Administrators', SongRightsAdminsReport.new],
-          ['rights_admin_songs',  'Rights Administrator Songs', RightsAdminSongsReport.new],
-          ['writers',             'Writers',             CodeNameReport.new(Writer)],
+          ['songs',               'Songs',               Reports::CodeNameReport.new(Song)],
+          ['performers',          'Performers',          Reports::CodeNameReport.new(Performer)],
+          ['song_plays',          'Song Plays',          Reports::SongPlaysReport.new],
+          ['genres',              'Genres',              Reports::GenreReport.new],
+          ['song_performers',     'Song Performers',     Reports::SongPerformersReport.new],
+          ['performer_songs',     'Performer Songs',     Reports::PerformerSongsReport.new],
+          ['song_genres',         'Song Genres',         Reports::SongGenresReport.new],
+          ['genre_songs',         'Genre Songs',         Reports::GenreSongsReport.new],
+          ['movies',              'Movies',              Reports::MovieReport.new],
+          ['movie_songs',         'Movies Songs',        Reports::MovieSongsReport.new],
+          ['organizations',       'Organizations',       Reports::CodeNameReport.new(Organization)],
+          ['song_rights_admins',  'Song Rights Administrators', Reports::SongRightsAdminsReport.new],
+          ['rights_admin_songs',  'Rights Administrator Songs', Reports::RightsAdminSongsReport.new],
+          ['writers',             'Writers',             Reports::CodeNameReport.new(Writer)],
       ].map { |(rpt_type, title, report)| ReportMetadata.new(rpt_type, title, report) } \
       .each_with_object({}) { |report, report_hash| report_hash[report.rpt_type] = report }
   end
