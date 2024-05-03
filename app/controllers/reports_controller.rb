@@ -1,5 +1,3 @@
-# require_relative '../helpers/reports/code_name_report'
-
 class ReportsController < ApplicationController
 
   # A hash consisting of the report type (first value below) as key, Report object as value.
@@ -46,12 +44,3 @@ class ReportsController < ApplicationController
     render '/reports/report', layout: "application", locals: locals
   end
 end
-
-
-
-
-
-
-
-
-
