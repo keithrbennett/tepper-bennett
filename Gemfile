@@ -45,9 +45,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # Psych 4 no longer supports aliases, and webpacker uses that feature.
-# Keep checkig over time to see if we can remove this constraint.k
+# Keep checking over time to see if we can remove this constraint.
 gem 'psych', '< 4'
-
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
