@@ -19,7 +19,7 @@
 # sudo -u postgres psql -c "create user $(whoami) with createdb password 'password'"
 
 
-<% IS_JRUBY = (RUBY_PLATFORM == 'java') %>
+<% IS_JRUBY = (RUBY_PLATFORM == 'java') unless defined?(IS_JRUBY) %>
 
 default: &default
   adapter: <%= IS_JRUBY ? 'jdbcpostgresql' : 'postgresql' %>
