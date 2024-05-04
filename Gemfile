@@ -25,9 +25,10 @@ gem 'nokogiri', '>= 1.14.1', '< 2'
 gem 'puma', '>= 6.3.1', '< 7'
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'webpacker', '~> 5.4'
+
+# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+gem "turbo-rails"
 
 # Psych 4 no longer supports aliases, and webpacker uses that feature.
 # Keep checking over time to see if we can remove this constraint.
