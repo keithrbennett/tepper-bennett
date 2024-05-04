@@ -3,29 +3,24 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import 'stylesheets/application'
+import "../images/elvis-chante-tepper-bennett.jpg"
+import "../images/roy-and-sid.jpg"
+import "../images/youtube.png"
 
-import '../images/elvis-chante-tepper-bennett.jpg'
-import '../images/roy-and-sid.jpg'
-import '../images/youtube.png'
+import "../stylesheets/application"
+import "bootstrap"
+import 'datatables.net-bs5'
+import 'packs/reports'
 
 import Ujs from '@rails/ujs'
-import TurboLinks from 'turbolinks'
-import * as ActiveStorage from '@rails/activestorage'
-import 'channels'
-import 'packs/reports'
-import 'datatables.net-bs4'
-import 'datatables.net-bs4/css/dataTables.bootstrap4.min.css'
+import { Turbo } from "@hotwired/turbo-rails"
 
 Ujs.start();
-TurboLinks.start();
-ActiveStorage.start()
+Turbo.start();
 
 import $ from 'jquery';
 global.$ = jQuery;
 
-import "bootstrap"
-import "../stylesheets/application"
 
 const initialize_application = function() {
 
@@ -49,7 +44,7 @@ const initialize_application = function() {
             // e.g. ["main-menu-home", "main-menu-songs", "main-menu-genres", "main-menu-elvis", "main-menu-resources", "main-menu-reports", "main-menu-inquiries"]
         }
 
-        const targetMenuItem = function(path_component) {
+        const targetMenuItem = function (path_component) {
             const targetId = "main-menu-" + path_component;
             return menuItemIds().includes(targetId) ? targetId : "main-menu-home";
         }
@@ -76,7 +71,7 @@ const initialize_application = function() {
         const paths = new URL(window.location.href).pathname.split('/');
 
         const isListPage = (paths[1] == 'songs' && (paths[2] == 'list' || paths[2] == null))
-        if (! isListPage)
+        if (!isListPage)
             return;
 
         const targetScope = paths[3] || 'best';
@@ -87,13 +82,12 @@ const initialize_application = function() {
     }
 
 
-// Uncomment to copy all static images under ../images to the output folder and reference
-// them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
-// or the `imagePath` JavaScript helper below.
-//
-// const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
-
+    // Uncomment to copy all static images under ../images to the output folder and reference
+    // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
+    // or the `imagePath` JavaScript helper below.
+    //
+    // const images = require.context('../images', true)
+    // const imagePath = (name) => images(name, true)
 
     function setUpYouTubeClicks() {
         for (const elem of document.getElementsByClassName("youtube-view")) {
@@ -165,30 +159,41 @@ const initialize_application = function() {
     // });
 
 
-    document.addEventListener("turbolinks:load", () => {
-        console.log("Turbolinks loaded, initializing application.");
-        $('[data-toggle="tooltip"]').tooltip()
-        $('[data-toggle="popover"]').popover()
-        setUpMainMenuLinks();
-        setInitialMenuChoice();
-        setUpSongScopeLinks();
-        setInitialSongsScopeChoice();
-        setUpYouTubeClicks();
-        setUpColorPicker();
-        setUpDataTableStateHandling();
-        setUpBackButtons();
+    // Set up Bootstrap.
+    document.addEventListener("turbo:load", () => {
+        try {
+            console.log("turbo loaded, initializing application.");
+            $('[data-bs-toggle="tooltip"]').tooltip();
+            $('[data-bs-toggle="popover"]').popover();
+
+            var tabTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tab"]'))
+            var tabList = tabTriggerList.map(function (tabTriggerEl) {
+                return new bootstrap.Tab(tabTriggerEl)
+            });
+            setUpMainMenuLinks();
+            setInitialMenuChoice();
+            setUpSongScopeLinks();
+            setInitialSongsScopeChoice();
+            setUpYouTubeClicks();
+            setUpColorPicker();
+            setUpDataTableStateHandling();
+            setUpBackButtons();
+            console.log("turbo finished initialization.");
+        } catch (error) {
+            console.error('An error occurred:', error);
+        }
     });
 
+    document.addEventListener("turbo:before-cache", function () {
+        console.log("turbo:before-cache")
+        const dataTable = $('.data-table').DataTable();
+        console.log(".data-table", dataTable);
+        if (dataTable !== null) {
+            dataTable.destroy();
+        }
+    });
 }
 
 initialize_application();
 initialize_reports();  // defined in reports.js
 
-
-document.addEventListener("turbolinks:before-cache", function() {
-    const dataTable = $('.data-table').DataTable();
-    console.log(".data-table", dataTable);
-    if (dataTable !== null) {
-        dataTable.destroy();
-    }
-});
