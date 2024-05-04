@@ -59,8 +59,7 @@ initialize_reports = function() {
         button.addEventListener("click", loadReportsPage);
     }
 
-    document.addEventListener("turbolinks:load", () => {
-        console.log("Turbolinks loaded, initializing reports.");
+    document.addEventListener("turbo:load", () => {
         setUpReportCopyButtons();
         setupCopyButtonVisibility();
         setupReportBackButton();
