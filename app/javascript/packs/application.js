@@ -3,14 +3,16 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+import "bootstrap"
+import "../stylesheets/application"
+import 'datatables.net-bs5'
+import '../packs/reports'
+
 import "../images/elvis-chante-tepper-bennett.jpg"
 import "../images/roy-and-sid.jpg"
 import "../images/youtube.png"
 
-import "../stylesheets/application"
-import "bootstrap"
-import 'datatables.net-bs5'
-import 'packs/reports'
+import 'channels'
 
 import Ujs from '@rails/ujs'
 import { Turbo } from "@hotwired/turbo-rails"
@@ -23,7 +25,7 @@ global.$ = jQuery;
 
 
 const initialize_application = function() {
-
+try {
     function defaultBackgroundColor() {
         return "#c9d0f1";
     }
@@ -44,7 +46,7 @@ const initialize_application = function() {
             // e.g. ["main-menu-home", "main-menu-songs", "main-menu-genres", "main-menu-elvis", "main-menu-resources", "main-menu-reports", "main-menu-inquiries"]
         }
 
-        const targetMenuItem = function (path_component) {
+        const targetMenuItem = function(path_component) {
             const targetId = "main-menu-" + path_component;
             return menuItemIds().includes(targetId) ? targetId : "main-menu-home";
         }
@@ -163,6 +165,7 @@ const initialize_application = function() {
     document.addEventListener("turbo:load", () => {
         try {
             console.log("turbo loaded, initializing application.");
+            setUpColorPicker();
             $('[data-bs-toggle="tooltip"]').tooltip();
             $('[data-bs-toggle="popover"]').popover();
 
@@ -175,7 +178,6 @@ const initialize_application = function() {
             setUpSongScopeLinks();
             setInitialSongsScopeChoice();
             setUpYouTubeClicks();
-            setUpColorPicker();
             setUpDataTableStateHandling();
             setUpBackButtons();
             console.log("turbo finished initialization.");
@@ -192,6 +194,10 @@ const initialize_application = function() {
             dataTable.destroy();
         }
     });
+} catch (error) {
+    console.error('An error occurred during application initialization:', error);
+}
+
 }
 
 initialize_application();
