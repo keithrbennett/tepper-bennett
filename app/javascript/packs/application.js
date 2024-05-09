@@ -34,11 +34,16 @@ try {
     function setUpMainMenuLinks() {
         for (const elem of document.querySelectorAll(".main-menu-item")) {
             elem.addEventListener("click", function (event) {
+                // Remove 'active' class from all menu items
+                document.querySelectorAll(".main-menu-item").forEach((item) => {
+                    item.classList.remove("active");
+                });
+                // Add 'active' class to clicked item
+                event.target.classList.add("active");
                 window.location.href = event.target.getAttribute("href");
             });
         }
     }
-
 
     function setInitialMenuChoice() {
         const menuItemIds = function () {
@@ -164,25 +169,10 @@ try {
     // Set up Bootstrap.
     document.addEventListener("turbo:load", () => {
         try {
-            console.log("turbo loaded, initializing application.");
             setUpColorPicker();
-            $('[data-bs-toggle="tooltip"]').tooltip();
-            $('[data-bs-toggle="popover"]').popover();
-
-            var tabTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tab"]'))
-            var tabList = tabTriggerList.map(function (tabTriggerEl) {
-                return new bootstrap.Tab(tabTriggerEl)
-            });
-            setUpMainMenuLinks();
-            setInitialMenuChoice();
-            setUpSongScopeLinks();
-            setInitialSongsScopeChoice();
-            setUpYouTubeClicks();
-            setUpDataTableStateHandling();
-            setUpBackButtons();
-            console.log("turbo finished initialization.");
         } catch (error) {
             console.error('An error occurred:', error);
+            throw error;
         }
     });
 
@@ -194,7 +184,23 @@ try {
             dataTable.destroy();
         }
     });
-} catch (error) {
+
+    document.addEventListener("DOMContentLoaded", function () {
+        try {
+            setUpMainMenuLinks();
+            setInitialMenuChoice();
+            setUpSongScopeLinks();
+            setInitialSongsScopeChoice();
+            setUpYouTubeClicks();
+            setUpDataTableStateHandling();
+            setUpBackButtons();
+        } catch (error) {
+            console.error('An error occurred:', error);
+            throw error;
+        }
+    });
+
+    } catch (error) {
     console.error('An error occurred during application initialization:', error);
 }
 
