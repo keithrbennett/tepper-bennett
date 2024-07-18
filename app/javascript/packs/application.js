@@ -23,6 +23,20 @@ Turbo.start();
 import $ from 'jquery';
 global.$ = jQuery;
 
+function rgbToHex(r, g, b) {
+    r = r.toString(16);
+    g = g.toString(16);
+    b = b.toString(16);
+
+    if (r.length == 1)
+        r = "0" + r;
+    if (g.length == 1)
+        g = "0" + g;
+    if (b.length == 1)
+        b = "0" + b;
+
+    return "#" + r + g + b;
+}
 
 const initialize_application = function() {
 try {
@@ -105,6 +119,58 @@ try {
         }
     }
 
+    function updateTableColors() {
+        console.log('in update table colors')
+        function darken(color, percentage) {
+            // Remove the hash from the color if it's there
+            color = color.charAt(0) === '#' ? color.substring(1, 7) : color;
+
+            // Convert the color to RGB
+            let r = parseInt(color.substring(0, 2), 16);
+            let g = parseInt(color.substring(2, 4), 16);
+            let b = parseInt(color.substring(4, 6), 16);
+
+            // Darken the color by the given percentage
+            r = Math.floor(r * (100 - percentage) / 100);
+            g = Math.floor(g * (100 - percentage) / 100);
+            b = Math.floor(b * (100 - percentage) / 100);
+
+            // Convert the color back to hexadecimal
+            r = r.toString(16).padStart(2, '0');
+            g = g.toString(16).padStart(2, '0');
+            b = b.toString(16).padStart(2, '0');
+
+            // Return the darkened color
+            return '#' + r + g + b;
+        }
+        // const bgColor = getComputedStyle(document.body).getPropertyValue('--bs-table-accent-bg');
+        const bgColor = document.body.style.background;
+
+        // Format color as hex:
+        const rgbColorMatch = document.body.style.background.match(/\d+,\s*\d+,\s*\d+/);
+        const rgbColor = rgbColorMatch[0].split(',').map(Number);
+        // Convert the RGB color to hexadecimal
+        const hexColor = rgbToHex(...rgbColor);
+
+
+        console.log("current background color: " + hexColor);
+
+        // console.log('getComputedStyle(document.body).getPropertyValue(\'--bs-table-accent-bg\')')
+        // console.log(getComputedStyle(document.body).getPropertyValue('--bs-table-accent-bg'))
+        //
+        // console.log('getComputedStyle(document.body).getPropertyValue(\'--bs-table-striped-bg\')')
+        // console.log(getComputedStyle(document.body).getPropertyValue('--bs-table-striped-bg'))
+        //
+        const stripedColor = bgColor; // Set this to your desired text color for striped rows
+        const stripedBg = darken(bgColor, 10);
+        document.body.style.setProperty('--bs-table-striped-color', stripedColor);
+        document.body.style.setProperty('--bs-table-striped-bg', stripedBg);
+        document.body.style.setProperty('--bs-table-bg', stripedBg);
+
+        console.log('after set, getComputedStyle(document.body).getPropertyValue(\'--bs-table-striped-bg \')')
+        console.log(getComputedStyle(document.body).getPropertyValue('--bs-table-accent-bg'))
+
+    }
 
     function setUpColorPicker() {
 
@@ -117,19 +183,26 @@ try {
             document.body.style.background = color;
             localStorage.setItem("background-color", color);
             document.getElementById("bg-color-value-text").innerHTML = color;
+
+            updateTableColors();
         }
 
         function setInitialColor() {
+            console.log('in set initial color');
             const color = localStorage.getItem("background-color") || defaultBackgroundColor();
             setBackgroundColor(color);
+            updateTableColors();
         }
 
         function colorChangeHandler(event) {
             setBackgroundColor(event.target.value);
+            updateTableColors();
         }
 
         function resetBackgroundColor() {
+            console.log('in reset bg color')
             setBackgroundColor(defaultBackgroundColor());
+            updateTableColors();
         }
 
         setInitialColor();
@@ -151,6 +224,22 @@ try {
         });
     }
 
+    function setUpTableRowBackgroundColorChangeHandling() {
+        // Create a new MutationObserver instance
+        const observer = new MutationObserver((mutationsList, observer) => {
+            // Look through all mutations that just occured
+            for(let mutation of mutationsList) {
+                // If the style attribute was modified
+                if(mutation.attributeName === 'style') {
+                    // Call your function to update the table row colors
+                    updateTableColors();
+                }
+            }
+        });
+
+// Start observing the body element for attribute changes
+        observer.observe(document.body, { attributes: true });
+    }
 
     function setUpBackButtons() {
         for (const elem of document.getElementsByClassName("back-action")) {
@@ -169,7 +258,9 @@ try {
     // Set up Bootstrap.
     document.addEventListener("turbo:load", () => {
         try {
-            setUpColorPicker();
+            // setUpColorPicker();
+            setUpTableRowBackgroundColorChangeHandling();
+
         } catch (error) {
             console.error('An error occurred:', error);
             throw error;
@@ -186,7 +277,9 @@ try {
     });
 
     document.addEventListener("DOMContentLoaded", function () {
+        console.log('in dom content loaded listener')
         try {
+            setUpColorPicker();
             setUpMainMenuLinks();
             setInitialMenuChoice();
             setUpSongScopeLinks();
@@ -194,6 +287,8 @@ try {
             setUpYouTubeClicks();
             setUpDataTableStateHandling();
             setUpBackButtons();
+            document.getElementById("bgcolor-picker").addEventListener("change", updateTableColors);
+
         } catch (error) {
             console.error('An error occurred:', error);
             throw error;
@@ -208,4 +303,3 @@ try {
 
 initialize_application();
 initialize_reports();  // defined in reports.js
-
