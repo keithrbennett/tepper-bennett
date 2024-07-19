@@ -124,13 +124,13 @@ pre {
 //   background-color: #ffffff; // Change this to the color you want for even rows
 // }
 
-:root {
-  --bs-table-accent-bg: #2fc726; // Your desired background color
-  --bs-table-striped-color: #000; // Your desired text color for striped rows
-  --bs-table-striped-bg: darken(var(--bs-table-accent-bg), 10%); // Darker version of the background color for striped rows
-}
-
-.table-striped > tbody > tr:nth-of-type(odd) {
-  --bs-table-accent-bg: var(--bs-table-striped-bg);
-  color: var(--bs-table-striped-color);
-}
+//:root {
+//  --bs-table-accent-bg: #2fc726; // Your desired background color
+//  --bs-table-striped-color: #000; // Your desired text color for striped rows
+//  --bs-table-striped-bg: darken(var(--bs-table-accent-bg), 10%); // Darker version of the background color for striped rows
+//}
+//
+//.table-striped > tbody > tr:nth-of-type(odd) {
+//  --bs-table-accent-bg: var(--bs-table-striped-bg);
+//  color: var(--bs-table-striped-color);
+//}
