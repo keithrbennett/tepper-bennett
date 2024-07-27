@@ -9,7 +9,8 @@
   "description": "Tepper/Bennett web site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
   },
   "keywords": [],
   "author": "keithrbennett",
@@ -24,6 +25,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "datatables.net-bs5": "^2.0.6",
+    "esbuild": "^0.23.0",
     "jquery": "^3.7.1",
     "postcss": "^8.0.0",
     "postcss-scss": "^3.0.0",

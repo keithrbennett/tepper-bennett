@@ -4,9 +4,9 @@
 // that code so it'll be compiled.
 
 import "bootstrap"
-import "../stylesheets/application"
+import "./stylesheets/application.scss"
 import 'datatables.net-bs5'
-import '../packs/reports'
+import './packs/reports'
 
 import "../images/elvis-chante-tepper-bennett.jpg"
 import "../images/roy-and-sid.jpg"
