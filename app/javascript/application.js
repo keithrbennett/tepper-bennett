@@ -3,25 +3,19 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import "bootstrap"
-import "../stylesheets/application"
+import 'bootstrap'
 import 'datatables.net-bs5'
-import '../packs/reports'
-
-import "../images/elvis-chante-tepper-bennett.jpg"
-import "../images/roy-and-sid.jpg"
-import "../images/youtube.png"
-
-import 'channels'
 
 import Ujs from '@rails/ujs'
 import { Turbo } from "@hotwired/turbo-rails"
+
+import { initialize_reports } from './src/reports'
 
 Ujs.start();
 Turbo.start();
 
 import $ from 'jquery';
-global.$ = jQuery;
+window.$ = $;
 
 function rgbToHex(r, g, b) {
     r = r.toString(16);
@@ -39,7 +33,7 @@ function rgbToHex(r, g, b) {
 }
 
 const initialize_application = function() {
-try {
+  try {
     function defaultBackgroundColor() {
         return "#c9d0f1";
     }
@@ -276,7 +270,7 @@ try {
         }
     });
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("turbo:load", function () {
         console.log('in dom content loaded listener')
         try {
             setUpColorPicker();
