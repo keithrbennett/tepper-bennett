@@ -1,7 +1,6 @@
 // This function is called in application.js:
 
-initialize_reports = function() {
-
+export function initialize_reports() {
     function setUpReportCopyButtons() {
 
         const button = document.querySelector("#rpt-copy-button");
@@ -65,4 +64,3 @@ initialize_reports = function() {
         setupReportBackButton();
     });
 }
-
