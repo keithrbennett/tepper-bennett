@@ -11,7 +11,6 @@
     "@rails/actioncable": "^7.1.0",
     "@rails/activestorage": "^7.1.0",
     "@rails/ujs": "^7.0.0",
-    "@rails/webpacker": "5.4.4",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "datatables.net-bs5": "^2.0.6",
