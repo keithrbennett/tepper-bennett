@@ -312,7 +312,7 @@ DEPENDENCIES
   pry
   psych (< 4)
   puma (>= 6.3.1, < 7)
-  rails (~> 7.2, >= 7.2.0)
+  rails (~> 7.2.0)
   rspec-rails
   ruby-graphviz
   shoulda-matchers
@@ -327,4 +327,4 @@ RUBY VERSION
    ruby 3.3.4p94
 
 BUNDLED WITH
-   2.5.9
+   2.5.17
