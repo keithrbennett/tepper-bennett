@@ -110,7 +110,6 @@ const initialize_application = function() {
             console.log()
             elem.addEventListener("click", function () {
                 const url = this.getAttribute("data-url");
-                console.log("Opening YouTube video: " + url);
                 document.getElementById("youtube-player-iframe").setAttribute("src", url);
             })
         }

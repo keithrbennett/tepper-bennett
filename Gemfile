@@ -38,6 +38,13 @@ gem 'psych', '< 4'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# To deal with the warning below, remove when spring is updated:
+# warning: /Users/kbennett/.rvm/rubies/ruby-3.3.4/lib/ruby/3.3.0/mutex_m.rb was loaded from the standard library,
+# but will no longer be part of the default gems since Ruby 3.4.0.
+# Add mutex_m to your Gemfile or gemspec.
+# Also contact author of spring-2.1.1 to add mutex_m into its gemspec.
+gem 'mutex_m'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
