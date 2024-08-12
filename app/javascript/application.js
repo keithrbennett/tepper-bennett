@@ -105,9 +105,12 @@ const initialize_application = function() {
     // const imagePath = (name) => images(name, true)
 
     function setUpYouTubeClicks() {
+        console.log("Setting up YouTube clicks");
         for (const elem of document.getElementsByClassName("youtube-view")) {
+            console.log()
             elem.addEventListener("click", function () {
                 const url = this.getAttribute("data-url");
+                console.log("Opening YouTube video: " + url);
                 document.getElementById("youtube-player-iframe").setAttribute("src", url);
             })
         }
