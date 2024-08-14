@@ -20,7 +20,7 @@
 
 <nav class="nav-pills nav-fill navbar-expand-md nav-justified navbar-light">
   <div class="container nav-container no-horiz-padding" style="display: block">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#songs-scope-navbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#songs-scope-navbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div id="songs-scope-navbar" class="collapse navbar-collapse justify-content-center">
@@ -31,7 +31,7 @@
               class="nav-link song-scope-item"
               id="songs-scope-<%= scope %>"
               href="/songs/list/<%= scope %>"
-              data-toggle="tab"
+              data-bs-toggle="tab"
               role="tab">
               <%= scope.capitalize %>
             </a>

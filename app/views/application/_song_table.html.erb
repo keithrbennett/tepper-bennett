@@ -5,7 +5,7 @@
           class="table thead-dark table-striped data-table"
           data-show-search-clear-button="true"
       >
-        <thead class="thead-dark" title="<%= col_sort_tooltip %>" alt="<%= col_sort_tooltip %>" data-toggle="tooltip" data-placement="bottom">
+        <thead class="thead-dark" title="<%= col_sort_tooltip %>" alt="<%= col_sort_tooltip %>" data-bs-toggle="tooltip" data-placement="bottom">
         <tr>
           <th scope="col">Title</th>
           <th scope="col">Performer</th>
@@ -25,7 +25,7 @@
             <td><%= performers %></td>
             <td><%= song.rights_admin_orgs.pluck(:name).sort.join('; ') %></td>
             <td align="center">
-              <a class="image-cell youtube-view" data-toggle="modal" data-target="#youTubeViewerModal" data-url="<%= url %>"/>
+              <a class="image-cell youtube-view" data-bs-toggle="modal" data-target="#youTubeViewerModal" data-url="<%= url %>"/>
               <%= image_tag(image_path('youtube.png'), alt: 'Listen') %>
               </a>
             </td>

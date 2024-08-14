@@ -1,7 +1,5 @@
-// This file is automatically compiled by Webpack, along with any other files
-// present in this directory. You're encouraged to place your actual application logic in
-// a relevant structure within app/javascript and only use these pack files to reference
-// that code so it'll be compiled.
+import $ from 'jquery';
+window.$ = $;
 
 import 'bootstrap'
 import 'datatables.net-bs5'
@@ -13,9 +11,6 @@ import { initialize_reports } from './src/reports'
 
 Ujs.start();
 Turbo.start();
-
-import $ from 'jquery';
-window.$ = $;
 
 function rgbToHex(r, g, b) {
     r = r.toString(16);
@@ -35,7 +30,7 @@ function rgbToHex(r, g, b) {
 const initialize_application = function() {
   try {
     function defaultBackgroundColor() {
-        return "#c9d0f1";
+        return "lightskyblue";
     }
 
 // Set up main menu links so that when one is clicked, it is displayed as the active tab, and the content is changed.
@@ -71,7 +66,6 @@ const initialize_application = function() {
     }
 
 
-// Set up main menu links so that when one is clicked, it is displayed as the active tab, and the content is changed.
     function setUpSongScopeLinks() {
         for (const elem of document.querySelectorAll(".song-scope-item")) {
             elem.addEventListener("click", function (event) {
@@ -93,7 +87,7 @@ const initialize_application = function() {
         const targetId = 'songs-scope-' + targetScope;
         const targetElement = document.getElementById(targetId);
         targetElement.classList.add("active");
-        // On initialization there will be no menu items already active, so no needed to remove active class anywhere.
+        // On initialization there will be no menu items already active, so no need to remove active class anywhere.
     }
 
 
@@ -106,31 +100,25 @@ const initialize_application = function() {
 
     function setUpYouTubeClicks() {
         console.log("Setting up YouTube clicks");
-        for (const elem of document.getElementsByClassName("youtube-view")) {
-            console.log()
-            elem.addEventListener("click", function () {
+        document.querySelectorAll('.youtube-view').forEach(function (element) {
+            console.log("! Found youtube-view element: " + element);
+            console.log(element)
+            element.addEventListener('click', function (event) {
+                event.preventDefault();
                 const url = this.getAttribute("data-url");
-                document.getElementById("youtube-player-iframe").setAttribute("src", url);
-            })
-        }
+                console.log("Got YouTube video URL: " + url);
+                var modal = document.querySelector('#youTubeViewerModal');
+                console.log("Modal: " + modal);
+                console.log(modal);
+                var iframe = modal.querySelector('iframe');
+                console.log("iframe: " + iframe);
+                iframe.src = url;
+                $(modal).modal('show');
+                // $('#youTubeViewerModal').modal('show');
+                // window.$('#youTubeViewerModal').modal('show');
+            });
+        });
     }
-
-      document.addEventListener('DOMContentLoaded', function() {
-          document.querySelectorAll('.youtube-view').forEach(function(element) {
-              element.addEventListener('click', function(event) {
-                  event.preventDefault();
-                  var url = this.getAttribute('data-url');
-                  console.log("Opening YouTube video: " + url);
-                  var modal = document.querySelector('#youTubeViewerModal');
-                  console.log("Modal: " + modal);
-                  var iframe = modal.querySelector('iframe');
-                  console.log("iframe: " + iframe);
-                  iframe.src = url;
-                  $(modal).modal('show');
-              });
-          });
-      });
-
 
 
     function setUpDataTableStateHandling() {
@@ -170,24 +158,6 @@ const initialize_application = function() {
         }
     }
 
-
-    // document.addEventListener('DOMContentLoaded', (event) => {
-    //     console.log("DOM content loaded, initializing application.");
-    // });
-
-
-    // Set up Bootstrap.
-    document.addEventListener("turbo:load", () => {
-        try {
-            // setUpColorPicker();
-            setUpTableRowBackgroundColorChangeHandling();
-
-        } catch (error) {
-            console.error('An error occurred:', error);
-            throw error;
-        }
-    });
-
     document.addEventListener("turbo:before-cache", function () {
         // console.log("turbo:before-cache")
         const dataTable = $('.data-table').DataTable();
@@ -198,7 +168,10 @@ const initialize_application = function() {
     });
 
     document.addEventListener("turbo:load", function () {
-        console.log('in dom content loaded listener')
+        console.log('in turbo:load listener')
+        console.log('jQuery version:', $.fn.jquery); // Should output the jQuery version
+        console.log('Bootstrap modal function:', typeof $.fn.modal); // Should output 'function'
+
         try {
             // setUpColorPicker();
             setUpMainMenuLinks();
@@ -208,6 +181,7 @@ const initialize_application = function() {
             setUpYouTubeClicks();
             setUpDataTableStateHandling();
             setUpBackButtons();
+            setUpTableRowBackgroundColorChangeHandling();
             // document.getElementById("bgcolor-picker").addEventListener("change", updateTableColors);
 
         } catch (error) {

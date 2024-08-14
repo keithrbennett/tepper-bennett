@@ -82,7 +82,7 @@
     end
 
     def tooltip_td(text, tooltip_text)
-      %Q{<td alt="#{tooltip_text}" title="#{tooltip_text}" data-toggle="tooltip" data-placement="bottom">#{text}</td>}.html_safe
+      %Q{<td alt="#{tooltip_text}" title="#{tooltip_text}" data-bs-toggle="tooltip" data-placement="bottom">#{text}</td>}.html_safe
     end
 
   end
