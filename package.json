@@ -15,7 +15,6 @@
     "bootstrap-icons": "^1.11.3",
     "datatables.net-bs5": "^2.0.6",
     "esbuild": "^0.23.0",
-    "jquery": "^3.7.1",
     "sass": "^1.77.8"
   },
   "devDependencies": {
