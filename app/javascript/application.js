@@ -1,4 +1,6 @@
-import 'bootstrap'
+import * as bootstrap from 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import 'datatables.net-bs5'
 import DataTable from 'datatables.net-bs5';
 
