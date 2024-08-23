@@ -1,4 +1,4 @@
-<% url = SongPlay.youtube_embed_url(youtube_code) %>
-<a href="#" class="youtube-view" data-url="<%= url %>" data-bs-target="#youTubeViewerModal" data-bs-toggle="modal">
+<% url = SongPlay.youtube_watch_url(youtube_code) %>
+<a href="<%= url %>" class="youtube-view" target="_blank">
   <%= text %>
 </a>

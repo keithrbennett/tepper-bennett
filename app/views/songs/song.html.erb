@@ -51,7 +51,7 @@ end.join(', ') %>
             <% song_plays.each do |play| %>
               <tr>
                 <td><%= play.performers.pluck(:name).join(', ') %></td>
-                <td><%= render partial: 'youtube_image_link', locals: { url: play.youtube_embed_url } %></td>
+                <td><%= render partial: 'youtube_image_link', locals: { url: play.youtube_watch_url } %></td>
               </tr>
             <% end %>
           </table>

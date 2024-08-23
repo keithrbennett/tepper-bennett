@@ -1,5 +1,5 @@
 <% youtube_key = record[:youtube_key] %>
-<% url = SongPlay.youtube_embed_url(youtube_key) %>
+<% url = SongPlay.youtube_watch_url(youtube_key) %>
 <% performers = record[:performers] %>
 <% performer_names = performers.pluck(:name).join("<br/>") %>
 <% performer_code_text = performers.count == 1 \

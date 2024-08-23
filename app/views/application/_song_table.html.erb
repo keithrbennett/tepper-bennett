@@ -1,36 +1,36 @@
 <% col_sort_tooltip = "Click a column heading to sort on that column (toggles ascending and descending)." %>
-    <div class="table-responsive data-table-div" >
-      <table
-          id="<%= table_id %>"
-          class="table thead-dark table-striped data-table"
-          data-show-search-clear-button="true"
-      >
-        <thead class="thead-dark" title="<%= col_sort_tooltip %>" alt="<%= col_sort_tooltip %>" data-bs-toggle="tooltip" data-placement="bottom">
-        <tr>
-          <th scope="col">Title</th>
-          <th scope="col">Performer</th>
-          <th scope="col">Rights Admin</th>
-          <th scope="col" class="text-center">Listen</th>
-        </tr>
-        </thead>
-        <tbody>
-        <!--    TODO: Enable selection of Elvis, best, or all songs.-->
-        <% song_plays.each do |play| %>
-          <% song = play.song %>
-          <% title = song.name %>
-          <% performers = play.performers.pluck(:name).join('; ') %>
-          <% url = play.youtube_embed_url %>
-          <tr>
-            <th scope="row"><a href="/songs/code/<%= song.code %>"><%= title %></a></th>
-            <td><%= performers %></td>
-            <td><%= song.rights_admin_orgs.pluck(:name).sort.join('; ') %></td>
-            <td align="center">
-              <a class="image-cell youtube-view" data-bs-toggle="modal" data-target="#youTubeViewerModal" data-url="<%= url %>"/>
-              <%= image_tag(image_path('youtube.png'), alt: 'Listen') %>
-              </a>
-            </td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
-    </div>
+<div class="table-responsive data-table-div">
+  <table
+      id="<%= table_id %>"
+      class="table thead-dark table-striped data-table"
+      data-show-search-clear-button="true"
+  >
+    <thead class="thead-dark" title="<%= col_sort_tooltip %>" alt="<%= col_sort_tooltip %>" data-bs-toggle="tooltip" data-placement="bottom">
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Performer</th>
+      <th scope="col">Rights Admin</th>
+      <th scope="col" class="text-center">Listen</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--    TODO: Enable selection of Elvis, best, or all songs.-->
+    <% song_plays.each do |play| %>
+      <% song = play.song %>
+      <% title = song.name %>
+      <% performers = play.performers.pluck(:name).join('; ') %>
+      <% url = play.youtube_watch_url %>
+      <tr>
+        <th scope="row"><a href="/songs/code/<%= song.code %>"><%= title %></a></th>
+        <td><%= performers %></td>
+        <td><%= song.rights_admin_orgs.pluck(:name).sort.join('; ') %></td>
+        <td align="center">
+          <a class="image-cell youtube-view" href="<%= url %>" target="_blank">
+            <%= image_tag(image_path('youtube.png'), alt: 'Listen') %>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
