@@ -17,10 +17,6 @@ const initialize_application = function() {
     console.log("Bootstrap 5 JS is " + (bootstrap_ok ? '' : 'not') + "loaded.");
 
     try {
-        function defaultBackgroundColor() {
-            return "lightskyblue";
-    }
-
     // Set up main menu links so that when one is clicked, it is displayed as the active tab, and the content is changed.
     function setUpMainMenuLinks() {
         document.querySelectorAll(".main-menu-item").forEach((elem) => {
