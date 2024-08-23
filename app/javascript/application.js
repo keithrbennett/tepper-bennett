@@ -13,11 +13,8 @@ Ujs.start();
 Turbo.start();
 
 const initialize_application = function() {
-    if (typeof bootstrap !== 'undefined' && typeof bootstrap.Modal !== 'undefined') {
-        console.log('Bootstrap 5 JS is loaded.');
-    } else {
-        console.log('Bootstrap 5 JS is not loaded.');
-    }
+    const bootstrap_ok = (typeof bootstrap !== 'undefined' && typeof bootstrap.Modal !== 'undefined')
+    console.log("Bootstrap 5 JS is " + (bootstrap_ok ? '' : 'not') + "loaded.");
 
     try {
         function defaultBackgroundColor() {
