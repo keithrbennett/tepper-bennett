@@ -3,23 +3,22 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 plugin 'bundler-graph'
 
-IS_JRUBY = (RUBY_PLATFORM == 'java')
+gem 'activerecord'
+
+IS_JRUBY = (defined? JRUBY_VERSION)
 if IS_JRUBY
-  ruby '2.5.7'
-  gem 'activerecord-jdbc-adapter', '>= 60.2'
-  gem 'activerecord-jdbcpostgresql-adapter'
+  ruby '3.1.4'
+  gem 'activerecord-jdbc-adapter'
+  gem 'jdbc-sqlite3'
 else
   ruby "3.3.4"
-  gem 'pg', '>= 1.4.5', '< 2.0'
+  gem 'sqlite3', '>= 2.0.4', '~> 2.0'
 end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.0"
 
 gem 'nokogiri', '>= 1.14.1', '< 2'
-
-# Suggested by dependabot alert at https://github.com/keithrbennett/tepper-bennett/security/dependabot/116.
-# gem "activerecord", ">= 6.1.7.1"
 
 # Use Puma as the app server
 gem 'puma', '>= 6.3.1', '< 7'
@@ -49,6 +48,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry'
+  gem 'error_highlight', '>= 0.4.0'
 end
 
 group :test do

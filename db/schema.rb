@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_24_074230) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
+ActiveRecord::Schema[7.2].define(version: 2024_03_24_074230) do
   create_table "dummies", force: :cascade do |t|
     t.string "dummy"
     t.datetime "created_at", null: false
@@ -31,8 +28,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_24_074230) do
   end
 
   create_table "genres_songs", id: false, force: :cascade do |t|
-    t.bigint "song_id", null: false
-    t.bigint "genre_id", null: false
+    t.integer "song_id", null: false
+    t.integer "genre_id", null: false
   end
 
   create_table "movies", force: :cascade do |t|
@@ -49,8 +46,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_24_074230) do
   end
 
   create_table "movies_songs", id: false, force: :cascade do |t|
-    t.bigint "song_id", null: false
-    t.bigint "movie_id", null: false
+    t.integer "song_id", null: false
+    t.integer "movie_id", null: false
   end
 
   create_table "organizations", force: :cascade do |t|
@@ -64,8 +61,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_24_074230) do
   end
 
   create_table "organizations_songs", id: false, force: :cascade do |t|
-    t.bigint "song_id", null: false
-    t.bigint "organization_id", null: false
+    t.integer "song_id", null: false
+    t.integer "organization_id", null: false
   end
 
   create_table "performers", force: :cascade do |t|
@@ -79,13 +76,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_24_074230) do
   end
 
   create_table "performers_song_plays", id: false, force: :cascade do |t|
-    t.bigint "performer_id", null: false
-    t.bigint "song_play_id", null: false
+    t.integer "performer_id", null: false
+    t.integer "song_play_id", null: false
   end
 
   create_table "performers_songs", id: false, force: :cascade do |t|
-    t.bigint "song_id", null: false
-    t.bigint "performer_id", null: false
+    t.integer "song_id", null: false
+    t.integer "performer_id", null: false
   end
 
   create_table "song_plays", force: :cascade do |t|
@@ -113,8 +110,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_24_074230) do
   end
 
   create_table "songs_writers", id: false, force: :cascade do |t|
-    t.bigint "song_id", null: false
-    t.bigint "writer_id", null: false
+    t.integer "song_id", null: false
+    t.integer "writer_id", null: false
   end
 
   create_table "writers", force: :cascade do |t|
