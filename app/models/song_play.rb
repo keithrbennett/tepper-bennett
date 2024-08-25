@@ -35,6 +35,8 @@ class SongPlay < ApplicationRecord
     self.class.youtube_watch_url(youtube_key)
   end
 
+  # We are not using the embed_url methods at runtime,
+  # but they are used by a rake task.
   def self.youtube_embed_url(youtube_key)
     "https://www.youtube.com/embed/#{youtube_key}"
   end

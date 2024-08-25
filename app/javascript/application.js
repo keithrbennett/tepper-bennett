@@ -77,26 +77,6 @@ const initialize_application = function() {
     // const images = require.context('../images', true)
     // const imagePath = (name) => images(name, true)
 
-    function setUpYouTubeClicks() {
-        console.log("Setting up YouTube clicks");
-        document.querySelectorAll('.youtube-view').forEach(function (element) {
-            element.addEventListener('click', function (event) {
-                event.preventDefault();
-                const url = this.getAttribute("data-url");
-                console.log("Got YouTube video URL: " + url);
-                var modal = document.querySelector('#youTubeViewerModal');
-                console.log("Modal: " + modal);
-                console.log(modal);
-                var iframe = modal.querySelector('iframe');
-                console.log("iframe: " + iframe);
-                iframe.src = url;
-                const bootstrapModal = new bootstrap.Modal(modal);
-                bootstrapModal.show();
-            });
-        });
-    }
-
-
     function setUpDataTableStateHandling() {
         document.querySelectorAll(".data-table").forEach((table) => {
             new DataTable(table, {
@@ -153,7 +133,6 @@ const initialize_application = function() {
             setInitialMenuChoice();
             setUpSongScopeLinks();
             setInitialSongsScopeChoice();
-            setUpYouTubeClicks();
             setUpDataTableStateHandling();
             setUpBackButtons();
             setUpTableRowBackgroundColorChangeHandling();
