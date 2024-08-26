@@ -20,20 +20,21 @@
 
 
 <% IS_JRUBY = (RUBY_PLATFORM == 'java') unless defined?(IS_JRUBY) %>
+<% DATABASE_URL = ENV.fetch('DATABASE_URL', '') %>
 
 default: &default
   adapter: <%= IS_JRUBY ? 'jdbcpostgresql' : 'postgresql' %>
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS', 5) %>
 
 development:
   <<: *default
   database: tepper_bennett_development
   <% if IS_JRUBY %>
   username: <%= `whoami` %>
-  password: <%= ENV.fetch('POSTGRES_PW') { 'password' } %>
+  password: <%= ENV.fetch('POSTGRES_PW', 'password') %>
   <% end %>
 
   # The specified database role being used to connect to postgres.
@@ -91,7 +92,7 @@ test:
 # You can use this database configuration with:
 #
 #   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+#     url: <%= DATABASE_URL %>
 #
 production:
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= DATABASE_URL %>

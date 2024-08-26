@@ -312,12 +312,12 @@ DEPENDENCIES
   listen (~> 3.5)
   mutex_m
   nokogiri (>= 1.14.1, < 2)
-  pg (>= 1.4.5, < 2.0)
+  pg (>= 1.5.7, < 2.0)
   propshaft
   pry
   psych (< 4)
   puma (>= 6.3.1, < 7)
-  rails (~> 7.2.0)
+  rails (~> 7.2.1)
   rspec-rails
   ruby-graphviz
   shoulda-matchers
