@@ -16,18 +16,20 @@ module VideoChecker
     end
   end
 
-  def self.run
+  def self.call
     videos = get_all_videos
     puts "Checking #{videos.length} videos..."
     Async do
-      internet = Async::HTTP::Internet.new
-
-      videos.each do |video|
-        Async do
-          response = internet.get(video[:uri])
-          available = ! response.read.include?("This video isn't available anymore")
-          video[:available] = available
+      begin
+        internet = Async::HTTP::Internet.new
+        videos.each do |video|
+          Async do
+            response = internet.get(video[:uri])
+            video[:available] = ! response.read.include?("This video isn't available anymore")
+          end
         end
+      ensure
+        internet&.close
       end
     end
     videos
@@ -37,7 +39,7 @@ end
 namespace :links do
   desc "Show all YouTube video links that do not exist."
   task :show_unavailable_videos do
-    videos = VideoChecker.run
+    videos = VideoChecker.call
     unavailable_videos = videos.select { |v| ! v[:available] }
     puts JSON.pretty_generate(unavailable_videos)
   end
