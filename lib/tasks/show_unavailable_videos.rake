@@ -10,12 +10,6 @@ module VideoChecker
   def self.get_all_videos
     yaml_file = File.join(File.dirname(__FILE__), '../../db/song-plays.yml')
     YAML.load_file(yaml_file)
-
-    # For experimentation:
-    # https://www.youtube.com/watch?v=E2J13o-RsxA
-    # [
-    #   { title: 'am-i-ready', performer: 'elvis', youtube_key: 'E2J13o-RsxA'}
-    # ]
   end
 
   def self.video_unavailable?(video)
@@ -29,9 +23,21 @@ module VideoChecker
 
   def self.unavailable_videos
     videos = get_all_videos
-    unavail_videos = videos.select { |video| video_unavailable?(video) }
-    puts "Found #{unavail_videos.size} unavailable video(s):\n"
-    unavail_videos
+    unavailable_videos = []
+    max_threads = 20
+
+    videos.each_slice(max_threads) do |video_batch|
+      thread_pool = []
+      video_batch.each do |video|
+        thread_pool << Thread.new do
+          unavailable_videos << video if video_unavailable?(video)
+        end
+      end
+      thread_pool.each(&:join)
+    end
+
+    puts "Found #{unavailable_videos.size} unavailable video(s):\n"
+    unavailable_videos
   end
 end
 
