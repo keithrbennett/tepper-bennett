@@ -3,23 +3,20 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 plugin 'bundler-graph'
 
-IS_JRUBY = (RUBY_PLATFORM == 'java')
+IS_JRUBY = (defined? JRUBY_VERSION)
 if IS_JRUBY
-  ruby '2.5.7'
-  gem 'activerecord-jdbc-adapter', '>= 60.2'
+  ruby '3.1.4'
+  gem 'activerecord-jdbc-adapter', '>= 70.2'
   gem 'activerecord-jdbcpostgresql-adapter'
 else
   ruby "3.3.4"
-  gem 'pg', '>= 1.4.5', '< 2.0'
+  gem 'pg', '>= 1.5.7', '< 2.0'
 end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.2.0"
+gem "rails", "~> 7.2.1"
 
 gem 'nokogiri', '>= 1.14.1', '< 2'
-
-# Suggested by dependabot alert at https://github.com/keithrbennett/tepper-bennett/security/dependabot/116.
-# gem "activerecord", ">= 6.1.7.1"
 
 # Use Puma as the app server
 gem 'puma', '>= 6.3.1', '< 7'
@@ -46,8 +43,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'mutex_m'
 
 group :development, :test do
+  # Async gems used in rake task show_unavailable_videos
+  gem 'async'
+  gem 'async-http'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
   gem 'pry'
 end
 
