@@ -27,11 +27,9 @@ module VideoChecker
     max_threads = 20
 
     videos.each_slice(max_threads) do |video_batch|
-      thread_pool = []
-      video_batch.each do |video|
-        thread_pool << Thread.new do
-          unavailable_videos << video if video_unavailable?(video)
-        end
+      thread_pool = video_batch.map do |video|
+        # The code below is not threadsafe!
+        Thread.new { unavailable_videos << video if video_unavailable?(video) }
       end
       thread_pool.each(&:join)
     end
