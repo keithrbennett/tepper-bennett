@@ -3,19 +3,22 @@
 # Shows all YouTube video links that do not exist.
 
 require 'json'
+require 'net/http'
+require 'yaml'
 
 module VideoChecker
   def self.get_all_videos
     yaml_file = File.join(File.dirname(__FILE__), '../../db/song-plays.yml')
     YAML.load_file(yaml_file)
 
+    # For experimentation:
     # https://www.youtube.com/watch?v=E2J13o-RsxA
     # [
     #   { title: 'am-i-ready', performer: 'elvis', youtube_key: 'E2J13o-RsxA'}
     # ]
   end
 
-  private def self.video_unavailable?(video)
+  def self.video_unavailable?(video)
     uri = URI.parse("https://www.youtube.com/watch?v=#{video[:youtube_key]}")
     print("Checking #{uri}...")
     response = Net::HTTP.get_response(uri)
