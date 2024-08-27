@@ -43,8 +43,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'mutex_m'
 
 group :development, :test do
+  # Async gems used in rake task show_unavailable_videos
+  gem 'async'
+  gem 'async-http'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
   gem 'pry'
 end
 

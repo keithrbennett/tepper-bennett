@@ -1,47 +1,44 @@
 # frozen_string_literal: true
 
-# Shows all YouTube video links that do not exist.
+# Shows all YouTube video links whose resources do not exist.
 
-require 'json'
-require 'net/http'
+require 'async'
+require 'async/http/internet'
 require 'yaml'
 
 module VideoChecker
   def self.get_all_videos
     yaml_file = File.join(File.dirname(__FILE__), '../../db/song-plays.yml')
-    YAML.load_file(yaml_file)
-  end
-
-  def self.video_unavailable?(video)
-    uri = URI.parse("https://www.youtube.com/watch?v=#{video[:youtube_key]}")
-    print("Checking #{uri}...")
-    response = Net::HTTP.get_response(uri)
-    unavailable = response.body.include?("This video isn't available anymore")
-    puts(unavailable ? ' unavailable' : ' available')
-    unavailable
-  end
-
-  def self.unavailable_videos
-    videos = get_all_videos
-    unavailable_videos = []
-    max_threads = 20
-
-    videos.each_slice(max_threads) do |video_batch|
-      thread_pool = video_batch.map do |video|
-        # The code below is not threadsafe!
-        Thread.new { unavailable_videos << video if video_unavailable?(video) }
-      end
-      thread_pool.each(&:join)
+    videos = YAML.load_file(yaml_file)
+    videos.each do |video|
+      video[:uri] = URI.parse("https://www.youtube.com/watch?v=#{video[:youtube_key]}")
+      video[:available] = :uninitialized
     end
+  end
 
-    puts "Found #{unavailable_videos.size} unavailable video(s):\n"
-    unavailable_videos
+  def self.run
+    videos = get_all_videos
+    puts "Checking #{videos.length} videos..."
+    Async do
+      internet = Async::HTTP::Internet.new
+
+      videos.each do |video|
+        Async do
+          response = internet.get(video[:uri])
+          available = ! response.read.include?("This video isn't available anymore")
+          video[:available] = available
+        end
+      end
+    end
+    videos
   end
 end
 
 namespace :links do
   desc "Show all YouTube video links that do not exist."
   task :show_unavailable_videos do
-    puts JSON.pretty_generate(VideoChecker.unavailable_videos)
+    videos = VideoChecker.run
+    unavailable_videos = videos.select { |v| ! v[:available] }
+    puts JSON.pretty_generate(unavailable_videos)
   end
 end
