@@ -41,6 +41,7 @@ namespace :links do
   task :show_unavailable_videos do
     videos = VideoChecker.call
     unavailable_videos = videos.select { |v| ! v[:available] }
+    puts "#{unavailable_videos.length} unavailable videos found. JSON output below:"
     puts JSON.pretty_generate(unavailable_videos)
   end
 end
