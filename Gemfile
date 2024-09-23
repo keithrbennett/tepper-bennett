@@ -33,10 +33,6 @@ gem "propshaft"
 gem "jsbundling-rails"
 gem "dartsass-rails"
 
-# Psych 4 no longer supports aliases, and webpacker uses that feature.
-# Keep checking over time to see if we can remove this constraint.
-gem 'psych', '< 4'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
