@@ -23,7 +23,8 @@ gem "rails", "~> 7.2.1"
 gem 'nokogiri', '>= 1.14.1', '< 2'
 
 # Use Puma as the app server
-gem 'puma', '>= 6.3.1', '< 7'
+gem 'puma', '>= 6.4.3' # Dependabot recommendation
+
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -45,6 +46,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Add mutex_m to your Gemfile or gemspec.
 # Also contact author of spring-2.1.1 to add mutex_m into its gemspec.
 gem 'mutex_m'
+
+gem "google-protobuf", ">= 4.27.5"  # Dependabot recommendation
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
