@@ -20,7 +20,7 @@
 
 
 <% IS_JRUBY = (RUBY_PLATFORM == 'java') unless defined?(IS_JRUBY) %>
-<% PG_DEV_USERNAME ||= ENV.fetch('PG_DEV_USERNAME', `whoami`) %>
+<% PG_DEV_USERNAME ||= ENV.fetch('PG_DEV_USERNAME') { `whoami`} %>
 <% PG_DEV_PASSWORD ||= ENV.fetch('PG_DEV_PASSWORD', 'password') %>
 
 default: &default
