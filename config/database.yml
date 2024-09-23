@@ -20,7 +20,8 @@
 
 
 <% IS_JRUBY = (RUBY_PLATFORM == 'java') unless defined?(IS_JRUBY) %>
-<% DATABASE_URL = ENV.fetch('DATABASE_URL', '') %>
+<% PG_DEV_USERNAME ||= ENV.fetch('PG_DEV_USERNAME', `whoami`) %>
+<% PG_DEV_PASSWORD ||= ENV.fetch('PG_DEV_PASSWORD', 'password') %>
 
 default: &default
   adapter: <%= IS_JRUBY ? 'jdbcpostgresql' : 'postgresql' %>
@@ -32,10 +33,8 @@ default: &default
 development:
   <<: *default
   database: tepper_bennett_development
-  <% if IS_JRUBY %>
-  username: <%= `whoami` %>
-  password: <%= ENV.fetch('POSTGRES_PW', 'password') %>
-  <% end %>
+  username: <%= PG_DEV_USERNAME %>
+  password: <%= PG_DEV_PASSWORD %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -70,10 +69,8 @@ development:
 test:
   <<: *default
   database: tepper_bennett_test
-  <% if IS_JRUBY %>
-  username: <%= `whoami` %>
-  password: <%= ENV.fetch('POSTGRES_PW') { 'password' } %>
-  <% end %>
+  username: <%= PG_DEV_USERNAME %>
+  password: <%= PG_DEV_PASSWORD %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -92,7 +89,7 @@ test:
 # You can use this database configuration with:
 #
 #   production:
-#     url: <%= DATABASE_URL %>
+#     url: <%= ENV.fetch('DATABASE_URL', '') %>
 #
 production:
-  url: <%= DATABASE_URL %>
+  url: <%= ENV.fetch('DATABASE_URL', '') %>
