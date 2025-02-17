@@ -80,3 +80,7 @@ end
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 gem 'amazing_print'
+
+gem "actionpack", ">= 7.2.2.1" # Dependabot recommendation
+gem "net-imap", ">= 0.5.6" # Dependabot recommendation
+

@@ -15,10 +15,11 @@
     "bootstrap-icons": "^1.11.3",
     "datatables.net-bs5": "^2.0.6",
     "esbuild": "^0.23.0",
-    "sass": "^1.77.8",
-    "micromatch": "~>4.0.8"
+    "micromatch": "~>4.0.8",
+    "sass": "^1.77.8"
   },
   "devDependencies": {
+    "postcss": "^8.4.29",
     "stylelint": "^16.7.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-scss": "^6.4.1"
