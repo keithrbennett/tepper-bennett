@@ -9,7 +9,7 @@ if IS_JRUBY
   gem 'activerecord-jdbc-adapter', '>= 70.2'
   gem 'activerecord-jdbcpostgresql-adapter'
 else
-  ruby "3.3.5"
+  ruby "3.4.2"
   gem 'pg', '>= 1.5.7', '< 2.0'
 end
 
@@ -60,7 +60,7 @@ group :test do
   # gem 'selenium-webdriver', '~> 3.141'
   gem 'shoulda-matchers'
   gem 'launchy'
-  gem 'webdrivers'
+  gem 'webdrivers', '>= 5.3.1', '< 6'
 end
 
 group :development do
