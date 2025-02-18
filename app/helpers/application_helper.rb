@@ -18,4 +18,9 @@ module ApplicationHelper
   def youtube_text_song_link(text, youtube_code)
     render partial: 'application/youtube_text_song_link', locals: { text: text, youtube_code: youtube_code }
   end
+
+  def canonical_url
+    # Force HTTPS, remove query params, use preferred domain
+    root_url(protocol: 'https', host: 'tepper-bennett.com') + request.path
+  end
 end
