@@ -20,10 +20,9 @@ module ApplicationHelper
   end
 
   def canonical_url
-    # Ensure the host is correctly set and the path is appended without extra slashes
-    url = root_url(protocol: 'https', host: 'tepper-bennett.com') + request.path
+    # Ensure the host is correctly set to 'www.tepper-bennett.com' and the path is appended without extra slashes
+    url = root_url(protocol: 'https', host: 'www.tepper-bennett.com') + request.path
     url.chomp!('/') if url.end_with?('//') # Remove double trailing slashes if present
-    Rails.logger.info "canonical_url: #{url}"
     url
   end
 end
