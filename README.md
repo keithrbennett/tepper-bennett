@@ -25,6 +25,12 @@ Of course, if the data base is not set up, that will need to be done as well.
 
 ----
 
+### Sitemap Management
+
+The sitemap is stored in the repository and should be updated when routes or content changes.
+A `bin/regen-sitemap` script is provided to regenerate the sitemap. 
+After running it, the public/sitemap* files need to be git added, committed, and pushed.
+
 ### Old Note Re: Running Locally in Production Mode
 
 This is an old note, may no longer be true:

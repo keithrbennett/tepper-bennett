@@ -1,7 +1,29 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://www.tepper-bennett.com"
 SitemapGenerator::Sitemap.create_index = true
+
+# Sitemap files will be gzipped (you can disable if needed)
 SitemapGenerator::Sitemap.compress = true
+
+# Store sitemaps in public/ directory for committing to the repository
+SitemapGenerator::Sitemap.public_path = 'public/'
+
+# If running on Heroku, configure for AWS S3 storage
+# Uncomment and fill in AWS credentials if you want to store sitemaps on S3
+# Note: For Heroku, this is recommended as the filesystem is ephemeral
+# if ENV['HEROKU_APP_NAME']
+#   # Note: these gems are required: 'aws-sdk-s3', 'fog-aws'
+#   SitemapGenerator::Sitemap.adapter = SitemapGenerator::AwsSdkAdapter.new(
+#     ENV['AWS_BUCKET'],
+#     aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+#     aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+#     aws_region: ENV['AWS_REGION'] || 'us-east-1'
+#   )
+#   
+#   # Make robots.txt aware of our sitemap's new location
+#   SitemapGenerator::Sitemap.sitemaps_host = "https://#{ENV['AWS_BUCKET']}.s3.amazonaws.com/"
+#   SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
+# end
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.

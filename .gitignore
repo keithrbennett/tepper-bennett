@@ -35,5 +35,3 @@ yarn-debug.log*
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
-
-/public/sitemap*.xml.gz
