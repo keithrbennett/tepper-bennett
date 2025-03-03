@@ -21,6 +21,7 @@
   <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
   <%= stylesheet_link_tag 'dartsass', media: 'all', 'data-turbo-track': 'reload' %>
   <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  <link rel="canonical" href="<%= canonical_url %>" />
 </head>
 
 <body>
@@ -42,7 +43,7 @@
               <a
                 class="nav-link main-menu-item"
                 id="main-menu-<%= name %>"
-                href="/<%= name %>"
+                href="<%= name == 'home' ? root_path : "/#{name}" %>"
                 data-bs-toggle="tab"
                 role="tab">
                 <%= name.capitalize %>

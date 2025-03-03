@@ -18,4 +18,11 @@ module ApplicationHelper
   def youtube_text_song_link(text, youtube_code)
     render partial: 'application/youtube_text_song_link', locals: { text: text, youtube_code: youtube_code }
   end
+
+  def canonical_url
+    # Ensure the host is correctly set to 'www.tepper-bennett.com' and the path is appended without extra slashes
+    url = root_url(protocol: 'https', host: 'www.tepper-bennett.com') + request.path
+    url.chomp!('/') if url.end_with?('//') # Remove double trailing slashes if present
+    url
+  end
 end
