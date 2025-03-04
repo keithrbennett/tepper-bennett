@@ -20,8 +20,9 @@ module ApplicationHelper
   end
 
   def canonical_url
-    # Ensure the host is correctly set to 'www.tepper-bennett.com' and the path is appended without extra slashes
-    url = root_url(protocol: 'https', host: 'www.tepper-bennett.com') + request.path
+    base_uri = URI(root_url(protocol: 'https', host: 'www.tepper-bennett.com'))
+    path_uri = URI(request.path)
+    url = (base_uri + path_uri.path).to_s
     url.chomp!('/') if url.end_with?('//') # Remove double trailing slashes if present
     url
   end
