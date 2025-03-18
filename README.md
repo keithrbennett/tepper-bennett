@@ -25,6 +25,12 @@ Of course, if the data base is not set up, that will need to be done as well.
 
 ----
 
+If there are any problems with assets such as images, try precompiling them again:
+
+`bin/rails assets:precompile`
+ß
+----
+
 ### Sitemap Management
 
 The sitemap is stored in the repository and should be updated when routes or content changes.
