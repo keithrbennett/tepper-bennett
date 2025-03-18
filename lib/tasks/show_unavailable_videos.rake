@@ -25,7 +25,20 @@ module VideoChecker
         videos.each do |video|
           Async do
             response = internet.get(video[:uri])
-            video[:available] = ! response.read.include?("This video isn't available anymore")
+            response_body = response.read
+            if response_body.nil?
+              puts "Error #{response.status} fetching #{video[:uri]}; response body is nil"
+              return
+            else
+              if response_body.length < 1000
+                puts "Response body for #{video[:uri]} is too short: #{response_body.length} characters:\n#{response_body}\n\n"
+                sleep 0.5
+                return
+              end
+            end
+
+            unavailable_phrases = ['This video is not available', "This video isn't available anymore"]
+            video[:available] = unavailable_phrases.none? { |phrase| response_body.include?(phrase) }
           end
         end
       ensure
