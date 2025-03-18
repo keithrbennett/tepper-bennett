@@ -25,10 +25,24 @@ Of course, if the data base is not set up, that will need to be done as well.
 
 ----
 
+### Asset Precompilation
+
 If there are any problems with assets such as images, try precompiling them again:
 
 `bin/rails assets:precompile`
-ß
+
+----
+
+### Regenerating the Production Database
+
+If the production data needs to be reseeded, run the following from the project root:
+
+```bash
+heroku config:set DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+heroku run rails db:seed:replant
+heroku config:unset DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+```
+
 ----
 
 ### Sitemap Management
