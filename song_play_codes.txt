@@ -2,7 +2,6 @@ all-i-am.elvis
 am-i-ready.elvis
 angel.elvis
 b-b-blues.elvis
-bagel-lox.rob-schneid
 beg-luck.elvis
 boy-like-me.elvis
 bullfighter.elvis
