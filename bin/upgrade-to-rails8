@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Rails 8 Upgrade Script
+
+echo "Starting Rails 8 upgrade process..."
+
+# Update dependencies
+echo "Updating dependencies..."
+bundle install
+yarn install
+
+# Clear cache and temporary files
+echo "Clearing caches and temporary files..."
+bin/rails tmp:clear
+bin/rails log:clear
+bin/rails assets:clobber
+
+# Run database migrations
+echo "Running database migrations..."
+bin/rails db:migrate
+
+# Precompile assets 
+echo "Precompiling assets..."
+bin/rails assets:precompile
+
+# Rails 8 specific updates
+echo "Running Rails 8 specific updates..."
+
+# Check for credentials
+if [ ! -f config/master.key ]; then
+  echo "Warning: config/master.key not found! Make sure you have your credentials properly set up."
+fi
+
+# Run app in development mode
+echo "===================="
+echo "Rails 8 upgrade completed!"
+echo "To start your application, run: bin/dev"
+echo "====================" 

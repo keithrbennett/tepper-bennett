@@ -18,7 +18,7 @@ gem 'async'
 gem 'async-http'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", ">= 7.2.2", "< 8"
+gem "rails", "~> 8.0.2"
 
 gem 'nokogiri', '>= 1.14.1', '< 2'
 
@@ -81,7 +81,8 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 
 gem 'amazing_print'
 
-gem "actionpack", ">= 7.2.2.1" # Dependabot recommendation
-gem "net-imap", ">= 0.5.6" # Dependabot recommendation
+# Explicitly specify Rails components with their new minimum versions
+gem "actionpack", ">= 8.0.2"
+gem "net-imap", ">= 0.5.6"
 
 gem 'sitemap_generator'
