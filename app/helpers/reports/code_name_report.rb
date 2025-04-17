@@ -5,7 +5,6 @@ module Reports
 
     def initialize(ar_class)
       @ar_class = ar_class
-      puts ar_class.name.inspect
       @report_type = ar_class.name.underscore.pluralize
     end
 

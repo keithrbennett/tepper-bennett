@@ -8,6 +8,9 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 require "capybara-screenshot/rspec"
 
+# Add system test configuration
+require 'capybara/rspec'
+require 'selenium-webdriver'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -49,6 +52,15 @@ RSpec.configure do |config|
   config.before(:each, type: :view) do
     # Add content_for helper for view specs
     view.extend ActionView::Helpers::CaptureHelper
+  end
+
+  # System test configuration
+  config.before(:each, type: :system) do
+    driven_by :rack_test
+  end
+
+  config.before(:each, type: :system, js: true) do
+    driven_by :selenium_chrome_headless
   end
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
