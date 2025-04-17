@@ -41,9 +41,6 @@ module Reports; module TextReports
       songs = record[:songs]
       sio = StringIO.new
       sio << "\n"
-
-      ap record
-
       sio << formatted_data_line(record[:year], record[:code], record[:name], songs.first&.[](:code), songs.first&.[](:name))
 
       (songs[1..-1] || []).each do |song|
