@@ -59,6 +59,7 @@ group :test do
   gem 'capybara-screenshot'
   # gem 'selenium-webdriver', '~> 3.141'
   gem 'shoulda-matchers'
+  gem 'factory_bot_rails'
   gem 'launchy'
   gem 'webdrivers', '>= 5.3.1', '< 6'
 end
