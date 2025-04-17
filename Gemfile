@@ -60,6 +60,7 @@ group :test do
   # gem 'selenium-webdriver', '~> 3.141'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
   gem 'launchy'
   gem 'webdrivers', '>= 5.3.1', '< 6'
 end
