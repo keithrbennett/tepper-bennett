@@ -75,9 +75,7 @@ RSpec.describe "Reports Comprehensive Tests", type: :system do
         "Rights Administrator Songs", "Writers"
       ]
       
-      report_types.each do |report_type|
-        expect(page).to have_link(report_type)
-      end
+      report_types.each { |report_type| expect(page).to have_link(report_type) }
     end
   end
   

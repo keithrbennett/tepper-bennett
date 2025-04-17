@@ -7,9 +7,7 @@ class Song < ApplicationRecord
   has_and_belongs_to_many :rights_admin_orgs, class_name: 'Organization'
   has_many :song_plays
 
-  def self.max_name_length
-    50
-  end
+  def self.max_name_length = 50
 
   validates_length_of :code, maximum: max_code_length
   validates_length_of :name, maximum: max_name_length
@@ -29,11 +27,7 @@ class Song < ApplicationRecord
   end
 
 
-  def performer_codes
-    performers.pluck(:code).sort
-  end
+  def performer_codes = performers.pluck(:code).sort
 
-  def genre_codes
-    genres.pluck(:code).sort
-  end
+  def genre_codes = genres.pluck(:code).sort
 end

@@ -23,27 +23,17 @@ class SongPlay < ApplicationRecord
      )")
   end
 
-  def self.max_code_length
-    25
-  end
+  def self.max_code_length = 25
 
-  def self.youtube_watch_url(youtube_key)
-    "https://www.youtube.com/watch?v=#{youtube_key}"
-  end
+  def self.youtube_watch_url(youtube_key) = "https://www.youtube.com/watch?v=#{youtube_key}"
 
-  def youtube_watch_url
-    self.class.youtube_watch_url(youtube_key)
-  end
+  def youtube_watch_url = self.class.youtube_watch_url(youtube_key)
 
   # We are not using the embed_url methods at runtime,
   # but they are used by a rake task.
-  def self.youtube_embed_url(youtube_key)
-    "https://www.youtube.com/embed/#{youtube_key}"
-  end
+  def self.youtube_embed_url(youtube_key) = "https://www.youtube.com/embed/#{youtube_key}"
 
-  def youtube_embed_url
-    self.class.youtube_embed_url(youtube_key)
-  end
+  def youtube_embed_url = self.class.youtube_embed_url(youtube_key)
 
   def self.best_codes
     @best_codes ||= %w{

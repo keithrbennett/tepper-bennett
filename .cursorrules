@@ -1,0 +1,21 @@
+
+For trivial methods that easily fit on one line, use Ruby 3.0+ 1-line method definition format, e.g.:
+  `def foo = 123`
+
+----
+
+For *trivial* method calls that pass code blocks, use 1-line format, e.g.:
+  `performers.each { |performer| song.performers << performer }`, not:
+
+  `performers.each do |performer|
+       song.performers << performer
+     end`
+
+If there is nontrivial complexity, do not change the multiline format.
+
+----
+
+For code blocks, always use curly braces if the entire expression (method call and code block) is on the same
+ line; otherwise, always use do/end
+
+----

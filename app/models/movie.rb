@@ -9,11 +9,7 @@ class Movie < ApplicationRecord
   IMDB_KEY_LENGTH = 9
   IMDB_URL_LENGTH = 27 + IMDB_KEY_LENGTH
 
-  def self.imdb_url(imdb_key)
-    "https://www.imdb.com/title/#{imdb_key}/"
-  end
+  def self.imdb_url(imdb_key) = "https://www.imdb.com/title/#{imdb_key}/"
 
-  def imdb_url
-    self.class.imdb_url(imdb_key)
-  end
+  def imdb_url = self.class.imdb_url(imdb_key)
 end
