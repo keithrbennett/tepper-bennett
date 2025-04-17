@@ -45,6 +45,12 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 
+  # Add configuration for view specs
+  config.before(:each, type: :view) do
+    # Add content_for helper for view specs
+    view.extend ActionView::Helpers::CaptureHelper
+  end
+
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
 
