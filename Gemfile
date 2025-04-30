@@ -20,11 +20,8 @@ gem 'async-http'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
 
-gem 'nokogiri', '>= 1.14.1', '< 2'
-
 # Use Puma as the app server
 gem 'puma', '>= 6.4.3' # Dependabot recommendation
-
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -85,6 +82,9 @@ gem 'amazing_print'
 
 # Explicitly specify Rails components with their new minimum versions
 gem "actionpack", ">= 8.0.2"
-gem "net-imap", ">= 0.5.6"
 
 gem 'sitemap_generator'
+
+# Dependabot recommendations
+gem 'nokogiri', '>= 1.18.8', '< 2'
+gem 'net-imap', '>= 0.5.7', '< 1'
