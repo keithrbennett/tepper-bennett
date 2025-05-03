@@ -5,26 +5,6 @@
 To install a nodejs version recent enough to work you may need to follow the instructions at [https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/](https://linuxize.com/post/how-to-install-node-js-on-ubuntu-18.04/).
 
 
-### Creating the Postgres Role
-
-On Linux you might get an error like this:
-
-```
-PG::ConnectionBad: FATAL:  role "kbennett" does not exist
-```
-
-If so, do this:
-
-`sudo -u postgres psql -c "create user kbennett with createdb"`
-
-On a Mac, if having weird configuration problems, you may need to do something like this:
-
-```
-brew uninstall postgresql
-sudo rm -rf /Library/PostgreSQL /usr/local/var/postgres
-brew install postgresql
-```
-
 ### Removing tzinfo Warnings
 
 `bundle config [--local] disable_platform_warnings true`
@@ -91,14 +71,6 @@ Since Cloudflare is doing the caching, disabling the cache may result in much mo
 
 This setting is on the "Overview" panel of the Cloudflare dashboard.
 
-
-### Recreating the Postgres Data Base on Heroku
-
-```
-heroku pg:reset # --confirm tepper-bennett to bypass confirmation
-heroku run rake db:migrate
-heroku run rake db:seed
-```
 
 ### Enabling Capybara Screenshots
 
