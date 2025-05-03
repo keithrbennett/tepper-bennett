@@ -33,18 +33,6 @@ If there are any problems with assets such as images, try precompiling them agai
 
 ----
 
-### Regenerating the Production Database
-
-If the production data needs to be reseeded, run the following from the project root:
-
-```bash
-heroku config:set DISABLE_DATABASE_ENVIRONMENT_CHECK=1
-heroku run rails db:seed:replant
-heroku config:unset DISABLE_DATABASE_ENVIRONMENT_CHECK=1
-```
-
-----
-
 ### Sitemap Management
 
 The sitemap is stored in the repository and should be updated when routes or content changes.
