@@ -7,10 +7,10 @@ IS_JRUBY = (defined? JRUBY_VERSION)
 if IS_JRUBY
   ruby '3.1.4'
   gem 'activerecord-jdbc-adapter', '>= 70.2'
-  gem 'activerecord-jdbcpostgresql-adapter'
+  gem 'activerecord-jdbcsqlite3-adapter'
 else
   ruby "3.4.2"
-  gem 'pg', '>= 1.5.7', '< 2.0'
+  gem 'sqlite3', '~> 2.1'
 end
 
 # Async gems used in rake task show_unavailable_videos
