@@ -1,0 +1,5 @@
+#!/bin/sh
+HOOKS_DIR="$(dirname "$0")"
+ln -sf "$HOOKS_DIR/pre-commit" .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+echo "Git hooks installed."

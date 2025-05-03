@@ -36,6 +36,7 @@ namespace :db do
     if data_file_stale?
       puts "WARNING: #{DATA_FILE} is stale (a migration, YAML, or seeds.rb file is newer)."
       puts "Please run: RAILS_ENV=production rails db:setup"
+      exit(1)
     else
       puts "#{DATA_FILE} is up to date."
     end
