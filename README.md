@@ -71,12 +71,27 @@ To resolve: run RAILS_ENV=production rails db:setup and commit the updated db/da
 
 Run:
    ```sh
-   RAILS_ENV=production rails db:setup && git add db/data.sqlite3
+   rm -f db/data.sqlite3 && RAILS_ENV=production rails db:setup && git add db/data.sqlite3
    ```
 
 ...and then try your commit again.
 
 This ensures your production data file is always in sync with your migrations and seed data.
+
+---
+
+### Developer Impact
+
+- **No more Postgres setup required** for development or production.
+- **To update production data:**  
+  1. Run:
+     ```sh
+     rm -f db/data.sqlite3 && RAILS_ENV=production rake db:setup
+     git add db/data.sqlite3
+     git commit
+     ```
+- **Pre-commit hook** will enforce data freshness and inclusion in commits.
+- **Deployment is simplified:** The app reads from the committed SQLite file—no migrations or seeds run on deploy.
 
 ---
 

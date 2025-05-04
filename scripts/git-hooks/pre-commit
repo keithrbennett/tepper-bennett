@@ -2,11 +2,13 @@
 
 # Pre-commit hook: Check if db/data.sqlite3 is up to date and staged or committed
 
-bundle exec rake db:check_production_data_file_stale 1>/dev/null
+# bundle exec rake db:check_production_data_file_stale 1>/dev/null
+bundle exec rake db:check_production_data_file_stale
+
 RESULT=$?
 if [ $RESULT -ne 0 ]; then
-  echo "Pre-commit hook: db/data.sqlite3 is missing, stale, or an error occurred."
-  echo "To resolve: run \033[1mRAILS_ENV=production rails db:setup\033[0m and commit the updated db/data.sqlite3 file."
+  echo
+  echo "To resolve: run \033[1mrm -f db/data.sqlite3 && RAILS_ENV=production rails db:setup\033[0m and commit the updated db/data.sqlite3 file."
   exit 1
 fi
 
@@ -15,7 +17,8 @@ if git diff --cached --quiet -- db/data.sqlite3; then
   if git diff --quiet HEAD -- db/data.sqlite3; then
     :
   else
-    echo "\nPre-commit hook: db/data.sqlite3 is up to date but not staged for commit."
+    echo
+    echo "Pre-commit hook: db/data.sqlite3 is up to date but not staged for commit."
     echo "Please add db/data.sqlite3 to your commit:"
     echo "    git add db/data.sqlite3"
     exit 1
