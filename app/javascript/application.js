@@ -91,22 +91,6 @@ const initialize_application = function() {
         });
     }
 
-    function setUpTableRowBackgroundColorChangeHandling() {
-        // Create a new MutationObserver instance
-        const observer = new MutationObserver((mutationsList, observer) => {
-            // Look through all mutations that just occured
-            for(let mutation of mutationsList) {
-                // If the style attribute was modified
-                if(mutation.attributeName === 'style') {
-                    // Call your function to update the table row colors
-                    updateTableColors();
-                }
-            }
-        });
-        // Start observing the body element for attribute changes
-        observer.observe(document.body, { attributes: true });
-    }
-
     function setUpBackButtons() {
         document.querySelectorAll(".back-action").forEach((elem) => {
             elem.addEventListener("click", function () {
@@ -128,15 +112,12 @@ const initialize_application = function() {
         console.log('in turbo:load listener')
 
         try {
-            // setUpColorPicker();
             setUpMainMenuLinks();
             setInitialMenuChoice();
             setUpSongScopeLinks();
             setInitialSongsScopeChoice();
             setUpDataTableStateHandling();
             setUpBackButtons();
-            setUpTableRowBackgroundColorChangeHandling();
-            // document.getElementById("bgcolor-picker").addEventListener("change", updateTableColors);
 
         } catch (error) {
             console.error('An error occurred:', error);
