@@ -16,6 +16,15 @@ module VideoChecker
     end
   end
 
+  def self.video_available?(response_body)
+    unavailable_phrases = [
+      'This video is not available',
+      "This video isn't available anymore",
+      'Video unavailable'
+    ]
+    unavailable_phrases.none? { |phrase| response_body.include?(phrase) }
+  end
+
   def self.call
     videos = get_all_videos
     puts "Checking #{videos.length} videos..."
@@ -37,8 +46,7 @@ module VideoChecker
               end
             end
 
-            unavailable_phrases = ['This video is not available', "This video isn't available anymore"]
-            video[:available] = unavailable_phrases.none? { |phrase| response_body.include?(phrase) }
+            video[:available] = video_available?(response_body)
           end
         end
       ensure
