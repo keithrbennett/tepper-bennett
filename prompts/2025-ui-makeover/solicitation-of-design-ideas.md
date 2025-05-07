@@ -4,7 +4,12 @@ This prompt relates to the web site at https://www.tepper-bennett.com. Roy C. Be
 
 ### Objective
 
-##### The design is currently old-fashioned and boring. I would like you to give me ideas, preferably including images, for how it could be changed to be more engaging, modern, and attractive.
+##### The design is currently old-fashioned and boring. I would like you to give me ideas, preferably including images, for how it could be changed to be more engaging, modern, and attractive. I do not need code yet, as long as the designs you provide are implementable without unreasonable complexity or difficulty. As a start, the following would be helpful for a start:
+
+* suggested home page designs incorporating the photo of Tepper and Bennett, with text superimposed on the photo or outside of it
+* suggested organization of the available data (see below for more on that), possibly with multiple view modes (summary/detail, etc.)
+* suggested ways to present the song play tables
+* other suggestions
 
 ### Resources for You to Consult
 
@@ -12,9 +17,9 @@ I will upload images of the web site screens for your review. You can also look 
 
 ### Web Site Purposes
 
-* to be a memorial to the songwriters 
-* to be a resource for music enthusiasts
-* to be a resource for producers of movies, TV, etc., who would be interested in using the songs in their productions
+* To be a memorial to the songwriters 
+* To be a resource for music enthusiasts
+* To be a resource for producers of movies, TV, etc., who would be interested in using the songs in their productions
 
 ### Current Web Site Layout
 
@@ -58,6 +63,9 @@ The Songs and Elvis panels contain tables for viewing the song titles, performer
 * There is a search bar to search the table data (titles, performers, and administrators) for the specified string.
 * The titles double as hyperlinks to a song page displaying the known information about that song.
 * The YouTube link opens a new browser tab and opens the YouTube link.
+
+These tables are currently implemented using DataTables.js and Bootstrap 5, but the new implementation does not have to use those tools.
+
 
 ### Web Framework
 
