@@ -40,7 +40,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Also contact author of spring-2.1.1 to add mutex_m into its gemspec.
 gem 'mutex_m'
 
-gem "google-protobuf", ">= 4.27.5"  # Dependabot recommendation
+# Dependabot recommendations:
+gem "google-protobuf", ">= 4.27.5"
+gem "rack", ">= 3.1.14"
 
 
 group :development, :test do
