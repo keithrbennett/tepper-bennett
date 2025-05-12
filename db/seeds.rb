@@ -7,7 +7,6 @@ def read_data(data_type)
   YAML.load_file(File.join(File.dirname(__FILE__), "#{data_type}.yml"))
 end
 
-
 def add_genres
   genres = read_data('genres')
   print "Adding #{genres.size} genres..."
@@ -170,11 +169,14 @@ def add_rights_admin_links
     end
   end
 
-  warner_song_codes = read_data('warner-song-codes')
-  add_data.('warner',    warner_song_codes)
-
-  universal_song_codes = read_data('universal-song-codes')
-  add_data.('universal', universal_song_codes)
+  rights_admin_songs = read_data('rights-admin-songs')
+  puts "Adding rights administration links for #{rights_admin_songs.keys.size} organizations..."
+  
+  rights_admin_songs.each do |org_code, song_codes|
+    add_data.(org_code, song_codes)
+  end
+  
+  puts 'done.'
 end
 
 
