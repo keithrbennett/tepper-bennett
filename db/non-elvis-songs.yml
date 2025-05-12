@@ -157,8 +157,7 @@
   - hit
   - movie
   - tv
-  :movies:
-  - young-ones
+  :movie: young-ones
 - :code: tr-light
   :name: Travelling Light
   :performers:

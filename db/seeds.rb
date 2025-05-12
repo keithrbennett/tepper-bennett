@@ -53,8 +53,14 @@ def default_writer_codes
 end
 
 
-def add_song(code:, name:, performers: [], genres: [], writers: default_writer_codes, movies: nil)
-  db_song = Song.new(code: code, name: name, writers: writers.map { |code| Writer.get_by_code!(code) })
+def add_song(code:, name:, performers: [], genres: [], writers: default_writer_codes, movie: nil)
+  movie_obj = nil
+  if movie.present?
+    movie_obj = Movie.get_by_code!(movie)
+    raise "Movie for code '#{movie}' not found." if movie_obj.nil?
+  end
+  
+  db_song = Song.new(code: code, name: name, writers: writers.map { |code| Writer.get_by_code!(code) }, movie: movie_obj)
 
   performers ||= []
   performers.uniq.each do |code|
@@ -68,13 +74,6 @@ def add_song(code:, name:, performers: [], genres: [], writers: default_writer_c
     genre = Genre.get_by_code!(code)
     raise "Genre for code '#{code}' not found." if genre.nil?
     db_song.genres << genre
-  end
-
-  movies ||= []
-  movies.uniq.each do |code|
-    movie = Movie.get_by_code!(code)
-    raise "Movie for code '#{code}' not found." if movie.nil?
-    db_song.movies << movie
   end
 
   db_song.save!
@@ -111,7 +110,7 @@ def add_elvis_songs
         performers << 'naysayer'
       end
 
-      add_song(code: s[:code], name: s[:name], performers: performers, genres: s[:genres], movies: s[:movies])
+      add_song(code: s[:code], name: s[:name], performers: performers, genres: s[:genres], movie: s[:movie])
     end
   end
 
@@ -129,7 +128,7 @@ def add_non_elvis_songs
   print "Adding #{songs.count} non-Elvis songs..."
   songs.each do |s|
     s[:writers] ||= default_writer_codes
-    add_song(code: s[:code], name: s[:name], performers: s[:performers], genres: s[:genres], movies: s[:movies], writers: s[:writers])
+    add_song(code: s[:code], name: s[:name], performers: s[:performers], genres: s[:genres], movie: s[:movie], writers: s[:writers])
   end
 
   puts 'done.'

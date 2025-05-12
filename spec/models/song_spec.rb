@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Song, type: :model do
   describe 'associations' do
-    it { should have_and_belong_to_many(:movies) }
+    it { should belong_to(:movie).optional }
     it { should have_and_belong_to_many(:genres) }
     it { should have_and_belong_to_many(:performers) }
     it { should have_and_belong_to_many(:writers) }

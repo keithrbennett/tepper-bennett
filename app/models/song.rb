@@ -1,6 +1,6 @@
 class Song < ApplicationRecord
 
-  has_and_belongs_to_many :movies
+  belongs_to :movie, optional: true
   has_and_belongs_to_many :genres
   has_and_belongs_to_many :performers
   has_and_belongs_to_many :writers
@@ -30,4 +30,8 @@ class Song < ApplicationRecord
   def performer_codes = performers.pluck(:code).sort
 
   def genre_codes = genres.pluck(:code).sort
+  
+  def movie_code
+    movie&.code
+  end
 end

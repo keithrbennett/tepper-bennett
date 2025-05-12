@@ -13,7 +13,7 @@ RSpec.describe "songs/song", type: :view do
     allow(song).to receive(:genres).and_return(double(pluck: ["Pop"]))
     allow(song).to receive(:writers).and_return(double(pluck: ["Tepper and Bennett"]))
     allow(song).to receive(:performers).and_return(double(pluck: ["Elvis Presley"]))
-    allow(song).to receive(:movies).and_return(double(pluck: [["Blue Hawaii", 1961]]))
+    allow(song).to receive(:movie).and_return(movie)
     allow(song).to receive(:rights_admin_orgs).and_return(double(count: 1, pluck: ["Sony Music"]))
     allow(song).to receive(:song_plays).and_return([])
     song
@@ -41,7 +41,7 @@ RSpec.describe "songs/song", type: :view do
             <td>Elvis Presley</td>
           </tr>
           <tr>
-            <th>Movies</th>
+            <th>Movie</th>
             <td>Blue Hawaii (1961)</td>
           </tr>
           <tr>
@@ -80,7 +80,7 @@ RSpec.describe "songs/song", type: :view do
     expect(rendered).to have_css("th", text: "Performers")
     expect(rendered).to have_css("td", text: /Elvis Presley/)
     
-    expect(rendered).to have_css("th", text: "Movies")
+    expect(rendered).to have_css("th", text: "Movie")
     expect(rendered).to have_css("td", text: "Blue Hawaii (1961)")
     
     expect(rendered).to have_css("th", text: "Rights Administrators")
@@ -113,7 +113,7 @@ RSpec.describe "songs/song", type: :view do
               <td>Elvis Presley</td>
             </tr>
             <tr>
-              <th>Movies</th>
+              <th>Movie</th>
               <td>Blue Hawaii (1961)</td>
             </tr>
             <tr>

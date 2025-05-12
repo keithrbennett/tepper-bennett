@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_03_24_074230) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_12_145851) do
   create_table "dummies", force: :cascade do |t|
     t.string "dummy"
     t.datetime "created_at", null: false
@@ -43,11 +43,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_03_24_074230) do
     t.index ["code"], name: "index_movies_on_code"
     t.index ["name"], name: "index_movies_on_name"
     t.index ["year"], name: "index_movies_on_year"
-  end
-
-  create_table "movies_songs", id: false, force: :cascade do |t|
-    t.integer "song_id", null: false
-    t.integer "movie_id", null: false
   end
 
   create_table "organizations", force: :cascade do |t|
@@ -105,7 +100,9 @@ ActiveRecord::Schema[8.0].define(version: 2024_03_24_074230) do
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "movie_id"
     t.index ["code"], name: "index_songs_on_code"
+    t.index ["movie_id"], name: "index_songs_on_movie_id"
     t.index ["name"], name: "index_songs_on_name"
   end
 
