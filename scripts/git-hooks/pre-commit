@@ -8,7 +8,7 @@ bundle exec rake db:check_production_data_file_stale
 RESULT=$?
 if [ $RESULT -ne 0 ]; then
   echo
-  echo "To resolve: run \033[1mrm -f db/data.sqlite3 && RAILS_ENV=production rails db:setup\033[0m and commit the updated db/data.sqlite3 file."
+  echo "To resolve: run \033[1mrm -f db/data.sqlite3 && RAILS_ENV=production rails db:setup && git add db/data.sqlite3\033[0m and commit the updated db/data.sqlite3 file."
   exit 1
 fi
 
