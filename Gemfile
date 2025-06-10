@@ -42,7 +42,7 @@ gem 'mutex_m'
 
 # Dependabot recommendations:
 gem "google-protobuf", ">= 4.27.5"
-gem "rack", ">= 3.1.14"
+gem "rack", ">= 3.1.16"
 gem "rack-session", ">= 2.1.1"
 
 
