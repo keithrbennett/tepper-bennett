@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -9,7 +10,7 @@ if IS_JRUBY
   gem 'activerecord-jdbc-adapter', '>= 70.2'
   gem 'activerecord-jdbcsqlite3-adapter'
 else
-  ruby "3.4.2"
+  ruby "3.4.5"
   gem 'sqlite3', '~> 2.1'
 end
 
@@ -48,7 +49,7 @@ gem "rack-session", ">= 2.1.1"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: [:mri, :windows]
 
   gem 'pry'
 end
