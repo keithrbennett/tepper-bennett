@@ -1,4 +1,3 @@
-
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -10,7 +9,7 @@ if IS_JRUBY
   gem 'activerecord-jdbc-adapter', '>= 70.2'
   gem 'activerecord-jdbcsqlite3-adapter'
 else
-  ruby "3.4.5"
+  ruby "4.0.3"
   gem 'sqlite3', '~> 2.1'
 end
 
@@ -92,3 +91,4 @@ gem 'sitemap_generator'
 # Dependabot recommendations
 gem 'nokogiri', '>= 1.18.8', '< 2'
 gem 'net-imap', '>= 0.5.7', '< 1'
+gem 'rexml', '>= 3.4.4', '< 4.0'
